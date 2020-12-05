@@ -1,0 +1,428 @@
+[annexpointprofile]
+
+:appendix-caption: Annex G
+== Annex G: I3S Scene Layer Profile for Points
+
+=== 3DSceneLayerInfo [Point Profile]
+The object 3DSceneLayerInfo describes the properties of a layer in a store. Every scene layer contains 3DSceneLayerInfo. For features based scene layers, such as 3D objects or point scene layers, may include the default symbology, as specified in the drawingInfo, which contains stylization information for a feature layer.
+The following are the mandatory 3DSceneLayerInfo properties for the Point Scene Layer Profile. Go to Class 3DSceneLayerInfo for a complete description of this class and its properties.
+
+|===
+|Property	|Type	|Description
+|*id*	|integer	|Unique numeric ID of the layer.
+|*layerType*	|string	|The user-visible layer type. +
+Shall be: _Point_
+|*version*	|string	|The ID of the last update session in which any resource belonging to this layer has been updated.
+|*capabilities*	|string[]	|Capabilities supported by this layer.
+Possible values for each array string: +
+-	View: View is supported. +
+-	Query: Query is supported. +
+-	Edit: Edit is defined.
+|*store*	|<<store>> |The store object describes the exact physical storage of a layer and enables the client to detect when multiple layers are served from the same store.
+|===
+
+The following is an example JSON encoding for the 3DSceneLayerInfo Point Scene Layer Profile.
+
+```
+{
+    "id": 0,
+    "version": "39054BC8-A656-489C-B574-A717BC399259",
+    "name": "Trees_Portland_AllTypes",
+    "serviceUpdateTimeStamp": {
+        "lastUpdate": 1543373967000
+    },
+    "href": "./layers/0",
+    "layerType": "Point",
+    "spatialReference": {
+        "wkid": 4326,
+        "latestWkid": 4326,
+        "vcsWkid": 105790,
+        "latestVcsWkid": 3855
+    },
+    "heightModelInfo": {
+        "heightModel": "gravity_related_height",
+        "vertCRS": "EGM2008_Geoid",
+        "heightUnit": "meter"
+    },
+    "ZFactor": 0.30480060960121924,
+    "alias": "Trees_Portland_AllTypes",
+    "description": "Trees_Portland_AllTypes",
+    "copyrightText": "",
+    "capabilities": [
+        "View",
+        "Query"
+    ],
+    "elevationInfo": {
+        "mode": "relativeToGround",
+        "featureExpression": {
+            "value": 0
+        },
+        "unit": "us-foot"
+    },
+    "drawingInfo": {
+        "renderer": {
+            "type": "uniqueValue",
+            "styleName": "RealisticTreesStyle",
+            "field1": "type",
+            "visualVariables": [
+                {
+                    "type": "sizeInfo",
+                    "field": "height",
+                    "axis": "height",
+                    "valueUnit": "feet"
+                },
+                {
+                    "type": "sizeInfo",
+                    "field": "diameter",
+                    "axis": "widthAndDepth",
+                    "valueUnit": "feet"
+                }
+            ]
+        }
+    },
+    "popupInfo": {
+        "title": "{name}",
+        "mediaInfos": [],
+        "fieldInfos": [
+            {
+                "fieldName": "OBJECTID",
+                "visible": true,
+                "isEditable": false,
+                "label": "OBJECTID"
+            },
+            {
+                "fieldName": "name",
+                "visible": true,
+                "isEditable": true,
+                "label": "Name"
+            },
+            {
+                "fieldName": "TreeFID",
+                "visible": true,
+                "isEditable": true,
+                "label": "Tree Feature ID"
+            },
+            {
+                "fieldName": "description",
+                "visible": true,
+                "isEditable": true,
+                "label": "Description"
+            },
+            {
+                "fieldName": "attribution",
+                "visible": true,
+                "isEditable": true,
+                "label": "Attribution/Source"
+            }
+        ],
+        "popupElements": [
+            {
+                "fieldInfos": [
+                    {
+                        "fieldName": "OBJECTID",
+                        "visible": true,
+                        "isEditable": false,
+                        "label": "OBJECTID"
+                    },
+                    {
+                        "fieldName": "name",
+                        "visible": true,
+                        "isEditable": true,
+                        "label": "Name"
+                    },
+                    {
+                        "fieldName": "TreeFID",
+                        "visible": true,
+                        "isEditable": true,
+                        "label": "Tree Feature ID"
+                    },
+                    {
+                        "fieldName": "description",
+                        "visible": true,
+                        "isEditable": true,
+                        "label": "Description"
+                    }
+                ],
+                "type": "fields"
+            }
+        ],
+        "expressionInfos": []
+    },
+    "disablePopup": false,
+    "store": {
+        "id": "9FA4A13D-2FA3-4F35-B662-D0280C291EB8",
+        "profile": "points",
+        "resourcePattern": [
+            "3dNodeIndexDocument",
+            "Attributes",
+            "featureData"
+        ],
+        "rootNode": "./nodes/root",
+        "version": "1.6",
+        "extent": [
+            -122.679052770042688,
+            45.520252738397879,
+            -122.673035202944419,
+            45.5241044684515472
+        ],
+        "indexCRS": "http://www.opengis.net/def/crs/EPSG/0/4326",
+        "vertexCRS": "http://www.opengis.net/def/crs/EPSG/0/4326",
+        "nidEncoding": "application/vnd.esri.i3s.json+gzip; version=1.6",
+        "featureEncoding": "application/vnd.esri.i3s.json+gzip; version=1.6",
+        "attributeEncoding": "application/octet-stream; version=1.6",
+        "lodType": "AutoThinning",
+        "lodModel": "node-switching"
+    },
+    "fields": [
+        {
+            "name": "OBJECTID",
+            "type": "FieldTypeOID",
+            "alias": "OBJECTID"
+        },
+        {
+            "name": "name",
+            "type": "FieldTypeString",
+            "alias": "Name"
+        },
+        {
+            "name": "TreeFID",
+            "type": "FieldTypeString",
+            "alias": "Tree Feature ID"
+        },
+        {
+            "name": "description",
+            "type": "FieldTypeString",
+            "alias": "Description"
+        },
+        {
+            "name": "attribution",
+            "type": "FieldTypeString",
+            "alias": "Attribution/Source"
+        }
+    ],
+    "attributeStorageInfo": [
+        {
+            "key": "f_0",
+            "name": "OBJECTID",
+            "header": [
+                {
+                    "property": "count",
+                    "valueType": "UInt32"
+                }
+            ],
+            "ordering": [
+                "ObjectIds"
+            ],
+            "objectIds": {
+                "valueType": "UInt32",
+                "valuesPerElement": 1
+            }
+        },
+        {
+            "key": "f_1",
+            "name": "name",
+            "header": [
+                {
+                    "property": "count",
+                    "valueType": "UInt32"
+                },
+                {
+                    "property": "attributeValuesByteCount",
+                    "valueType": "UInt32"
+                }
+            ],
+            "ordering": [
+                "attributeByteCounts",
+                "attributeValues"
+            ],
+            "attributeByteCounts": {
+                "valueType": "UInt32",
+                "valuesPerElement": 1
+            },
+            "attributeValues": {
+                "valueType": "String",
+                "encoding": "UTF-8",
+                "valuesPerElement": 1
+            }
+        },
+        {
+            "key": "f_2",
+            "name": "TreeFID",
+            "header": [
+                {
+                    "property": "count",
+                    "valueType": "UInt32"
+                },
+                {
+                    "property": "attributeValuesByteCount",
+                    "valueType": "UInt32"
+                }
+            ],
+            "ordering": [
+                "attributeByteCounts",
+                "attributeValues"
+            ],
+            "attributeByteCounts": {
+                "valueType": "UInt32",
+                "valuesPerElement": 1
+            },
+            "attributeValues": {
+                "valueType": "String",
+                "encoding": "UTF-8",
+                "valuesPerElement": 1
+            }
+        },
+        {
+            "key": "f_3",
+            "name": "description",
+            "header": [
+                {
+                    "property": "count",
+                    "valueType": "UInt32"
+                },
+                {
+                    "property": "attributeValuesByteCount",
+                    "valueType": "UInt32"
+                }
+            ],
+            "ordering": [
+                "attributeByteCounts",
+                "attributeValues"
+            ],
+            "attributeByteCounts": {
+                "valueType": "UInt32",
+                "valuesPerElement": 1
+            },
+            "attributeValues": {
+                "valueType": "String",
+                "encoding": "UTF-8",
+                "valuesPerElement": 1
+            }
+        },
+        {
+            "key": "f_4",
+            "name": "attribution",
+            "header": [
+                {
+                    "property": "count",
+                    "valueType": "UInt32"
+                },
+                {
+                    "property": "attributeValuesByteCount",
+                    "valueType": "UInt32"
+                }
+            ],
+            "ordering": [
+                "attributeByteCounts",
+                "attributeValues"
+            ],
+            "attributeByteCounts": {
+                "valueType": "UInt32",
+                "valuesPerElement": 1
+            },
+            "attributeValues": {
+                "valueType": "String",
+                "encoding": "UTF-8",
+                "valuesPerElement": 1
+            }
+        }
+    ],
+    "statisticsInfo": [
+        {
+            "key": "f_1",
+            "name": "name",
+            "href": "./statistics/f_1"
+        },
+        {
+            "key": "f_2",
+            "name": "TreeFID",
+            "href": "./statistics/f_2"
+        },
+        {
+            "key": "f_3",
+            "name": "description",
+            "href": "./statistics/f_3"
+        },
+        {
+            "key": "f_4",
+            "name": "attribution",
+            "href": "./statistics/f_4"
+        }
+    ]
+} 
+``` 
+=== 3DNodeIndexDocument
+The 3dNodeIndexDocument JSON file describes a single index node within a store. It includes links to other nodes (e.g. children, sibling, and parent), links to feature data, geometry data, texture data resources, metadata (e.g. metrics used for LoD selection), and spatial extent. 
+
+All mandatory properties of the 3DNodeIndexDocument shall be implemented in the I3S Point Scene Layer profile.
+
+The following is an example JSON encoding for the 3DNodeIndexDocument class for the Point Scene Layer Profile.
+
+```
+{
+    "id": "root",
+    "level": 1,
+    "version": "ee4fbf04-e882-444e-854d-cd519b68594a",
+    "mbs": [
+        -120.235609902853241,
+        39.1981414865211661,
+        1895.23079465422779,
+        446.269165373884221
+    ],
+    "created": "2014-07-23T00:00:00.000Z",
+    "expires": "2015-07-23T00:00:00.000Z",
+    "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "lodSelection": [
+        {
+            "metricType": "screenSpaceRelative",
+            "maxError": 0
+        },
+        {
+            "metricType": "distanceRangeFromDefaultCamera",
+            "maxError": 0
+        }
+    ],
+    "featureData": [
+        {
+            "href": "./features/0",
+            "featureRange": [
+                0,
+                3
+            ]
+        }
+    ],
+    "parentNode": null,
+    "children": null,
+    "attributeData": [
+        {
+            "href": "./attributes/f_0/0"
+        },
+        {
+            "href": "./attributes/f_1/0"
+        },
+        {
+            "href": "./attributes/f_2/0"
+        },
+        {
+            "href": "./attributes/f_3/0"
+        }
+    ]
+} 
+```
