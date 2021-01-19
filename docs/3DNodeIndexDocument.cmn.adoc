@@ -52,13 +52,13 @@ zone (see http://www.w3.org/TR/NOTE-datetime).
 |transform |number[16] |Optional, 3D (4x4) transformation matrix
 expressed as a linear array of 16 values.
 
-|parentNode |link:nodeReference.cmn.md[nodeReference] |Reference to the
+|parentNode |link:nodeReference.cmn.adoc[nodeReference] |Reference to the
 parent node of a node.
 
-|children |link:nodeReference.cmn.md[nodeReference][] |Reference to the
+|children |link:nodeReference.cmn.adoc[nodeReference][] |Reference to the
 child nodes of a node.
 
-|neighbors |link:nodeReference.cmn.md[nodeReference][] |Reference to the
+|neighbors |link:nodeReference.cmn.adoc[nodeReference][] |Reference to the
 neighbor (same level, spatial proximity) nodes of a node.
 
 |sharedResource |link:resource.cmn.md[resource] |Resource reference
