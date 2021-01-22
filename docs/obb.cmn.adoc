@@ -9,30 +9,42 @@ When constructing an OBB for I3S use, there are two considerations an
 implementer needs to be make based on the Coordinate Reference System
 (CRS) of the layer:
 
-=== Constructing OBB for a global scene layer
+=== Constructing an OBB for a global scene layer
 
 For an I3S layer in WGS84 geographic coordinate system, referred to as a
 _global scene layer_ and identified by the wkid value of 4326 (see
 link:/docs/1.7/spatialReference.cmn.adoc[spatial reference] in
 link:/docs/1.7/3DSceneLayer.cmn.adoc[3DSceneLayer] resource):
-docs/1.7/3DSceneLayer.cmn.adoc - the OBB should be constructed in an
+docs/1.7/3DSceneLayer.cmn.adoc 
+
+- the OBB should be constructed in an
 earth-centered, earth-fixed (ECEF) coordinate system equivalent to the
-layers’ CRS. - the center component of the OBB is specified as
+layers’ CRS. 
+- the center component of the OBB is specified as
 longitude, latitude (in decimal degrees) and the elevation (z) in
-meters. - the halfSize component of the OBB is specified in meters. -
-the quaternion component is in reference to an ECEF coordinate system.
+meters. 
+- the halfSize component of the OBB is specified in meters. 
+- the quaternion component is in reference to an ECEF coordinate system.
 
 When constructing an OBB for a global scene layer, the following steps
-must occur: - project vertices of interests to ECEF. - Compute OBB in
-ECEF. - Convert only the center of the OBB from ECEF back to the CRS of
+must occur:
+
+- project vertices of interests to ECEF. 
+- Compute OBB in
+ECEF. 
+- Convert only the center of the OBB from ECEF back to the CRS of
 the layer.
 
-=== Constructing OBB for a local scene layer
+=== Constructing an OBB for a local scene layer
 
 For an I3S layer, with a CRS _other_ than wkid value of 4326, referred
-to as a _local scene layer_: - the OBB should be constructed in the same
-CRS as the layer. - the units for the center and halfSize components of
-the OBB should be in the unit of the CRS. - both center and quaternion
+to as a _local scene layer_: 
+
+- the OBB should be constructed in the same
+CRS as the layer. 
+- the units for the center and halfSize components of
+the OBB should be in the unit of the CRS. 
+- both center and quaternion
 are specified in reference to the CRS of the layer.
 
 The OBB construction steps described in the global scene layer use case
