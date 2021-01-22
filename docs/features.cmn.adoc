@@ -1,0 +1,26 @@
+== features
+
+Declaration of the attributes per feature in the geometry, such as
+feature ID or face range.
+
+=== Related:
+
+link:3DNodeIndexDocument.cmn.adoc[cmn::3DNodeIndexDocument] 
+
+=== Properties
+
+[cols=",,",options="header",]
+|===
+|Property |Type |Description
+|featureData |link:featureData.cmn.adoc[featureData][] |
+|geometryData |link:geometry.cmn.adoc[geometry][] |
+|===
+
+=== Examples
+
+==== Example:
+
+[source,json]
+----
+ None 
+----
