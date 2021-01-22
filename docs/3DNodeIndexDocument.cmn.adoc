@@ -39,7 +39,7 @@ decimal degrees, latitude of in decimal degrees, elevation in meters and
 radius in meters. For all other CRS, the values of x,y,z and r are in
 the same unit.
 
-|obb |link:obb.cmn.md[obb] |Describes oriented bounding box.
+|obb |link:obb.cmn.adoc[obb] |Describes oriented bounding box.
 
 |created |string |Creation date of this node in UTC, presented as a
 string in the format YYYY-MM-DDThh:mm:ss.sTZD, with a fixed `Z' time
@@ -61,25 +61,25 @@ child nodes of a node.
 |neighbors |link:nodeReference.cmn.adoc[nodeReference][] |Reference to the
 neighbor (same level, spatial proximity) nodes of a node.
 
-|sharedResource |link:resource.cmn.md[resource] |Resource reference
+|sharedResource |link:resource.cmn.adoc[resource] |Resource reference
 describing a shared resource document.
 
-|featureData |link:resource.cmn.md[resource][] |Resource reference
+|featureData |link:resource.cmn.adoc[resource][] |Resource reference
 describing a FeatureData document.
 
-|geometryData |link:resource.cmn.md[resource][] |Resource reference
+|geometryData |link:resource.cmn.adoc[resource][] |Resource reference
 describing a geometry resource.
 
-|textureData |link:resource.cmn.md[resource][] |Resource reference
+|textureData |link:resource.cmn.adoc[resource][] |Resource reference
 describing a texture resource.
 
-|attributeData |link:resource.cmn.md[resource][] |Resource reference
+|attributeData |link:resource.cmn.adoc[resource][] |Resource reference
 describing a featureData document.
 
-|lodSelection |link:lodSelection.cmn.md[lodSelection][] |Metrics for LoD
+|lodSelection |link:lodSelection.cmn.adoc[lodSelection][] |Metrics for LoD
 selection, to be evaluated by the client.
 
-|features |link:features.cmn.md[features][] |*Deprecated.* A list of
+|features |link:features.cmn.adoc[features][] |*Deprecated.* A list of
 summary information on the features present in this node, used for
 pre-visualisation and LoD switching in featureTree LoD stores.
 |===
