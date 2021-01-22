@@ -209,12 +209,12 @@ _Note: properties in *bold* are required_
   "fields": [
     {
       "name": "OID",
-      "type": "esriFieldTypeOID",
+      "type": "FieldTypeOID",
       "alias": "ObjectIdent"
     },
     {
       "name": "Name",
-      "type": "esriFieldTypeString",
+      "type": "FieldTypeString",
       "alias": "File Name"
     }
   ],
