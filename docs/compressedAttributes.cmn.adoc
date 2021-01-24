@@ -1,0 +1,61 @@
+== compressedAttributes
+
+I3S version 1.7 supports compressing the geometryBuffer of Integrated
+Mesh and 3D Object Layers using https://github.com/google/draco[Draco]
+compression. Draco compression is optimized for compressing and
+decompressing 3D geometric meshes and point clouds.
+
+Draco reduces the size of the geometryBuffer payload, thereby reducing
+storage size and optimizing transmission rate.
+
+All _vertexAttributes_ of a Meshpyramids profile can be compressed with
+Draco.
+
+NOTE: Check which version your client software supports. The latest version is 1.3.6. Some clients may only still support 1.3.5 of
+https://github.com/google/draco/blob/master/README.md#version-135-release[Draco]._
+
+=== Related:
+
+link:geometryBuffer.cmn.adoc[cmn::geometryBuffer] 
+
+=== Properties
+
+[cols=",,",options="header",]
+|===
+|Property |Type |Description
+
+| *encoding* | string |
+
+Must be:
+
+`draco`
+
+| *attributes* | string[] |
+
+Possible values for each array string:
+
+`position`: `Draco` _double_ meta-data `i3s-scale_x`, `i3s-scale_y`. If
+present, must be applied to `x` and `y` coordinates to reverse `XY`/`Z`
+ratio preserving scaling that may have been applied before encoding.
+(i.e.avoid quantization issue when `XY` is in degrees and `Z` is in
+meters)
+
+`normal`
+
+`uv0`
+
+`color`
+
+`uv-region`: Uses `draco::GeometryAttribute::Type::GENERIC` with type
+`4xUINT16`. The attribute meta-data key `i3s-attribute-type` _must_ be
+set to `"uv-region"` (string).
+
+`feature-index`: Uses `draco::GeometryAttribute::Type::GENERIC` with
+type `1xUINT32`. The attribute meta-data key `i3s-attribute-type` _must_
+be set to `"feature-index"` (string). The `feature-ids` values must be
+stored in the `feature-index` attribute meta-data with
+`key:"i3s-feature-ids"` (metadata data entry type is array of int32)
+
+|===
+
+_Note: properties in *bold* are required_
