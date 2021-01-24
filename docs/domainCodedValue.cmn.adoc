@@ -1,0 +1,49 @@
+== domainCodedValue
+
+Quite often, in a controlled vocabulary, such as in a land use classification, coded values are used represent categories of a feature. For example, "Res" could refer to Residential. The domainCodedValue class allows for the specification of these codes values.Attribute domains are rules that describe the legal values of a field
+type, providing a method for enforcing data integrity. 
+
+More specifically, attribute domains
+are used to constrain the values allowed in any particular attribute.
+Whenever a domain is associated with an attribute field, only the values
+within that domain are valid for the field. Using domains helps ensure
+data integrity by limiting the choice of values for a particular field.
+The domain code value contains the coded values for a domain as well as
+an associated description of what that value represents.
+
+=== Related:
+
+link:domain.cmn.adoc[cmn::domain]
+
+=== Properties
+
+[cols=",,",options="header",]
+|===
+|Property |Type |Description
+|*name* |string |Text representation of the domain value.
+|*code* |string, number |Coded value (i.e. field value).
+|===
+
+_Note: properties in *bold* are required_
+
+=== Examples
+
+==== Example: Example 1
+
+[source,json]
+----
+ {
+  "name": "code 1.5 description",
+  "code": 1.5
+} 
+----
+
+==== Example: Example 1
+
+[source,json]
+----
+ {
+  "name": "coded 3000.1 desc",
+  "code": 3000.3
+} 
+----
