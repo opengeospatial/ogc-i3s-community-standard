@@ -36,18 +36,18 @@ files. A 3D object scene layer can be represented as a scene layer
 package (*.slpk) or a I3S service. A 3D object scene layer contains the
 following:
 
-* link:3DSceneLayer.cmn.md[3DSceneLayer]
-* link:nodePage.cmn.md[nodePage]
+* link:3DSceneLayer.cmn.adoc[3DSceneLayer]
+* link:nodePage.cmn.adoc[nodePage]
 * geometryBuffer (binary)
 * attributesBuffer (binary)
 * textures (binary)
-* link:statsInfo.cmn.md[statistics]
-* link:3DNodeIndexDocument.cmn.md[3DNodeIndexDocument]*
-* link:sharedResource.cmn.md[sharedResource]*
+* link:statsInfo.cmn.adoc[statistics]
+* link:3DNodeIndexDocument.cmn.adoc[3DNodeIndexDocument]*
+* link:sharedResource.cmn.adoc[sharedResource]*
 * features^
 
 3D object scene layer packages can optionally contain a
-link:slpk_hashtable.cmn.md[hash table] for faster indexing.
+link:slpk_hashtable.cmn.adoc[hash table] for faster indexing.
 
 _Example of 3DObject layer structure_
 
@@ -104,7 +104,7 @@ to the entire layer. `layerID`: Integer. ID of the associated layer. Esri
 products expect this to be `0`.
 |===
 
-link:3DSceneLayer.cmn.md[3DSceneLayer]
+link:3DSceneLayer.cmn.adoc[3DSceneLayer]
 
 *Node page*
 
@@ -117,7 +117,7 @@ to be `0`. +
 `nodePageID`: Integer. ID of the associated node page.
 |===
 
-link:nodePage.cmn.md[nodePage]
+link:nodePage.cmn.adoc[nodePage]
 
 *Texture*
 
@@ -178,7 +178,7 @@ Integer. ID of the associated layer. Esri products expect this to be
 `attributeID` Integer. ID of the specific attribute for the layer.
 |===
 
-link:statsInfo.cmn.md[Statistics]
+link:statsInfo.cmn.adoc[Statistics]
 
 === HTTP API included for backward compatibility with OGC Community Standrd version 1.1
 
@@ -195,7 +195,7 @@ Integer. ID of the associated layer. ArcGIS clients expect this to be
 `nodeID` Integer. ID of the associated node.
 |===
 
-link:sharedResource.cmn.md[Shared Resources]
+link:sharedResource.cmn.adoc[Shared Resources]
 
 *3D node index document*
 
@@ -209,4 +209,4 @@ associated layer. Esri clients expect this to be `0`. +
 `nodeID` Integer. ID of the associated resource.
 |===
 
-link:3DNodeIndexDocument.cmn.md[3DNodeIndexDocument]
+link:3DNodeIndexDocument.cmn.adoc[3DNodeIndexDocument]
