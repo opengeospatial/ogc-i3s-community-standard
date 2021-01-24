@@ -68,8 +68,10 @@ Integer values of 3,10,7.
 
 ==== Related:
 
-link:3DSceneLayer.cmn.md[cmn::3DSceneLayer],
-link:3DSceneLayer.psl.md[psl::3DSceneLayer] ### Properties
+link:3DSceneLayer.cmn.adoc[cmn::3DSceneLayer],
+link:3DSceneLayer.psl.adoc[psl::3DSceneLayer] 
+
+=== Properties
 
 [cols=",,",options="header",]
 |===
@@ -78,9 +80,8 @@ link:3DSceneLayer.psl.md[psl::3DSceneLayer] ### Properties
 
 |*name* |string |The name of the field.
 
-|*header* |link:headerValue.cmn.md[headerValue][] |Declares the headers
+|*header* |link:headerValue.cmn.adoc[headerValue][] |Declares the headers
 of the binary attribute data.
-|===
 
 | ordering | string[] |
 
@@ -93,12 +94,13 @@ data types.
 
 `ObjectIds`
 
-| | attributeValues | link:value.cmn.md[value] | Represents the
+| attributeValues | link:value.cmn.adoc[value] | Represents the
 description for value encoding. For example: scalar or vector encoding.
-| | attributeByteCounts | link:value.cmn.md[value] | For string types
+| attributeByteCounts | link:value.cmn.adoc[value] | For string types
 only. Represents the byte count of the string, including the null
-character. | | objectIds | link:value.cmn.md[value] | Stores the
+character. | objectIds | link:value.cmn.adoc[value] | Stores the
 object-id values of each feature within the node. |
+|===
 
 _Note: properties in *bold* are required_
 
