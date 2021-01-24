@@ -30,7 +30,7 @@ link:../1.7/geometryFaceRange.cmn.md[range] of the mesh triangles
 belonging to each feature in the featureID array.
 
 |region |UINT16[4*vertex count] |UV
-link:../1.7/geometryUVRegion.cmn.md[region] for repeated textures.
+link:../1.7/geometryUVRegion.cmn.adoc[region] for repeated textures.
 |===
 
 === Related:
@@ -51,8 +51,8 @@ Must be:
 `triangles`
 
 | *topology* | string | Declares the topology of embedded geometry
-attributes. When `Indexed', the indices must also be declared in the
-geometry schema (`faces') and precede the vertexAttribute data.
+attributes. When `Indexed`, the indices must also be declared in the
+geometry schema (`faces`) and precede the vertexAttribute data.
 
 Possible values are:
 
