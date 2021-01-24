@@ -81,11 +81,11 @@ link:3DSceneLayer.psl.adoc[psl::3DSceneLayer]
 |*name* |string |The name of the field.
 
 |*header* |link:headerValue.cmn.adoc[headerValue][] |Declares the headers
-of the binary attribute data.
+of the binary attribute data. One of {count, attributeValuesByteCount}. `count` should always be present and indicates the count of features in the attribute storage. `attributeValuesByteCount` will only be present for strings data type and indicates the total byte count of the string data for all features in the binary attribute buffer.
 
 | ordering | string[] |
 
-Possible values for each array string:
+Indicates the order in which the array of attribute byte counts and the array of attribute values are stored in the binary attribute data.Possible values for each array string:
 
 `attributeByteCounts`: Should only be present when working with string
 data types.
