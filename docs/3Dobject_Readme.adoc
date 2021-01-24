@@ -100,7 +100,7 @@ The following API methods are available for 3D Object scene layer:
 |URL Template |http://serviceURL/layers/\{layerID}
 |Example |http://my.server.com/3DObjectSceneLayer/SceneServer/layers/0
 |Description |This is the root document for the service containing properties common
-to the entire layer. layerID: Integer. ID of the associated layer. Esri
+to the entire layer. `layerID`: Integer. ID of the associated layer. Esri
 products expect this to be `0`.
 |===
 
@@ -112,8 +112,9 @@ link:3DSceneLayer.cmn.md[3DSceneLayer]
 |Type |JSON
 |URL Template |http://serviceURL/layers/\{layerID}/nodepages/\{nodePageID}
 |Example |http://my.server.com/3DObjectSceneLayer/SceneServer/layers/0/nodepages/8
-|Description |layerID: Integer. ID of the associated layer. Esri products expect this
-to be `0`. nodePageID: Integer. ID of the associated node page.
+|Description |`layerID`: Integer. ID of the associated layer. Esri products expect this
+to be `0`. +
+`nodePageID`: Integer. ID of the associated node page.
 |===
 
 link:nodePage.cmn.md[nodePage]
@@ -124,120 +125,88 @@ link:nodePage.cmn.md[nodePage]
 |Type |JPG, PNG, DDS, KTX
 |URL Template |http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/textures/\{textureID}
 |Example |http://my.server.com/3DObjectSceneLayer/SceneServer/layers/0/nodes/98/textures/0_0_1
-|Description |The texture resource (image). layerID Integer. ID of the associated
-layer. Esri products expect this to be `0`. nodeID Integer. ID of the
-associated node. textureID String. This ID returns one of the textures
+|Description |The texture resource (image). +
+`layerID` Integer. ID of the associated
+layer. Esri products expect this to be `0`. +
+`nodeID` Integer. ID of the
+associated node. +
+`textureID` String. This ID returns one of the textures
 available for this node. The same texture may be available in different
 formats.
 |===
 
 *Geometry*
 
-Type
-
-bin, draco
-
-URL Template
-
-http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/geometries/\{geometryID}
-
-Example
-
-http://my.server.com/3DObjectSceneLayer/SceneServer/layers/0/nodes/98/geometries/1
-
-Description
-
-The geometry resource (mesh information). layerID Integer. ID of the
-associated layer. Esri products expect this to be `0`. nodeID Integer.
-ID of the associated node. geometryID Integer. This ID returns one of
+|===
+|Type |bin, draco
+|URL Template |http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/geometries/\{geometryID}
+|Example |http://my.server.com/3DObjectSceneLayer/SceneServer/layers/0/nodes/98/geometries/1
+|Description |The geometry resource (mesh information). +
+`layerID` Integer. ID of the
+associated layer. Esri products expect this to be `0`. +
+`nodeID` Integer.
+ID of the associated node. +
+`geometryID` Integer. This ID returns one of
 the geometries available for this node. The same geometry may be
 available in a different format.
+|===
 
 *Attributes*
 
-Type
-
-bin
-
-URL Template
-
-http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/attributes/f_\{attributeID}/0
-
-Example
-
-http://my.server.com/3DObjectSceneLayer/SceneServer/layers/0/nodes/2/attributes/f_5/0
-
-Description
-
-The value for a specific attribute within a node. layerID Integer. ID of
-the associated layer. Esri products expect this to be `0`. nodeID
+|===
+|Type |bin
+|URL Template |http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/attributes/f_\{attributeID}/0
+|Example |http://my.server.com/3DObjectSceneLayer/SceneServer/layers/0/nodes/2/attributes/f_5/0
+|Description |The value for a specific attribute within a node. +
+`layerID` Integer. ID of
+the associated layer. Esri products expect this to be `0`. +
+`nodeID`
 Integer. ID of the associated node. attributeID Integer. ID of the
 specific attribute for the layer.
+|===
 
 *Statistics*
 
-Type
-
-JSON
-
-URL Template
-
-http://serviceURL/layers/\{layerID}/statistics/f_\{attributeID}/0
-
-Example
-
-http://my.server.com/3DObjectSceneLayer/SceneServer/layers/0/statistics/f_5/0
-
-Description
-
-The statistics for the entire layer for a specific attribute. layerID
+|===
+|Type |JSON
+|URL Template |http://serviceURL/layers/\{layerID}/statistics/f_\{attributeID}/0
+|Example |http://my.server.com/3DObjectSceneLayer/SceneServer/layers/0/statistics/f_5/0
+|Description |The statistics for the entire layer for a specific attribute. +
+`layerID`
 Integer. ID of the associated layer. Esri products expect this to be
-`0`. attributeID Integer. ID of the specific attribute for the layer.
+`0`. +
+`attributeID` Integer. ID of the specific attribute for the layer.
+|===
 
 link:statsInfo.cmn.md[Statistics]
 
-=== HTTP API included for backward compatibility with 1.6
+=== HTTP API included for backward compatibility with OGC Community Standrd version 1.1
 
 *Shared resources*
 
-Type
-
-JSON
-
-URL Template
-
-http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/shared
-
-Example
-
-http://my.server.com/3DObjectSceneLayer/SceneServer/layers/0/nodes/98/shared
-
-Description
-
-Legacy texture and material description. *Not used in 1.7.*. layerID
+|===
+|Type |JSON
+|URL Template |http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/shared
+|Example |http://my.server.com/3DObjectSceneLayer/SceneServer/layers/0/nodes/98/shared
+|Description |Legacy texture and material description. *Should not be used in OGC Community Standard version 1.2.*. +
+`layerID`
 Integer. ID of the associated layer. ArcGIS clients expect this to be
-`0`. nodeID Integer. ID of the associated node.
+`0`. +
+`nodeID` Integer. ID of the associated node.
+|===
 
 link:sharedResource.cmn.md[Shared Resources]
 
 *3D node index document*
 
-Type
-
-JSON
-
-URL Template
-
-http://serviceURL/layers/\{layerID}/nodes/\{nodeID}
-
-Example
-
-http://my.server.com/3DObjectSceneLayer/SceneServer/layers/0/nodes/98
-
-Description
-
-Description of the node. **Not used in 1.7.** layerID Integer. ID of the
-associated layer. Esri clients expect this to be `0`. nodeID Integer. ID
-of the associated resource.
+|===
+|Type |JSON
+|URL Template |http://serviceURL/layers/\{layerID}/nodes/\{nodeID}
+|Example |http://my.server.com/3DObjectSceneLayer/SceneServer/layers/0/nodes/98
+|Description |Description of the node. **Should not be used in OGC Version 1.2.** +
+`layerID` Integer. ID of the
+associated layer. Esri clients expect this to be `0`. +
+`nodeID` Integer. ID of the associated resource.
+|===
 
 link:3DNodeIndexDocument.cmn.md[3DNodeIndexDocument]
