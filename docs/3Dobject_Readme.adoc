@@ -1,4 +1,4 @@
-== 3D Object Scene Layer (1.7)
+== 3D Object Scene Layer (1.2)
 
 A 3D object scene layer is used to visualize 3D objects. 3D object scene
 layers are often created from GIS data with attributes and explicitly
@@ -108,46 +108,28 @@ link:3DSceneLayer.cmn.md[3DSceneLayer]
 
 *Node page*
 
-Type
-
-JSON
-
-URL Template
-
-http://serviceURL/layers/\{layerID}/nodepages/\{nodePageID}
-
-Example
-
-http://my.server.com/3DObjectSceneLayer/SceneServer/layers/0/nodepages/8
-
-Description
-
-layerID: Integer. ID of the associated layer. Esri products expect this
+|===
+|Type |JSON
+|URL Template |http://serviceURL/layers/\{layerID}/nodepages/\{nodePageID}
+|Example |http://my.server.com/3DObjectSceneLayer/SceneServer/layers/0/nodepages/8
+|Description |layerID: Integer. ID of the associated layer. Esri products expect this
 to be `0`. nodePageID: Integer. ID of the associated node page.
+|===
 
 link:nodePage.cmn.md[nodePage]
 
 *Texture*
 
-Type
-
-JPG, PNG, DDS, KTX
-
-URL Template
-
-http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/textures/\{textureID}
-
-Example
-
-http://my.server.com/3DObjectSceneLayer/SceneServer/layers/0/nodes/98/textures/0_0_1
-
-Description
-
-The texture resource (image). layerID Integer. ID of the associated
+|===
+|Type |JPG, PNG, DDS, KTX
+|URL Template |http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/textures/\{textureID}
+|Example |http://my.server.com/3DObjectSceneLayer/SceneServer/layers/0/nodes/98/textures/0_0_1
+|Description |The texture resource (image). layerID Integer. ID of the associated
 layer. Esri products expect this to be `0`. nodeID Integer. ID of the
 associated node. textureID String. This ID returns one of the textures
 available for this node. The same texture may be available in different
 formats.
+|===
 
 *Geometry*
 
