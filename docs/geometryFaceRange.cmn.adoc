@@ -17,7 +17,7 @@ image:../docs/img/faceRange.png[width=800,align="center"]
 
 _Mesh with 2 features._
 
-image::images/faceRange_Triangles.png[width=800,align="center"]
+image:../images/faceRange_Triangles.png[width=800,align="center"]
 
 _Grouped vertices in the geometry buffer._
 
