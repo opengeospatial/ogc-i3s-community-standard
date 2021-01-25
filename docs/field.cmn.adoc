@@ -1,0 +1,76 @@
+== field
+
+A collection of objects describing each attribute field.
+
+=== Related:
+
+link:3DSceneLayer.cmn.adoc[cmn::3DSceneLayer],
+link:3DSceneLayer.psl.adoc[psl::3DSceneLayer]
+
+=== Properties
+
+[cols=",,",options="header",]
+|===
+|Property |Type |Description
+|*name* |string |Name of the field.
+| *type* | string | Type of the field.
+
+Possible values are:
+
+- `FieldTypeDate`
+
+- `FieldTypeSingle`
+
+- `FieldTypeDouble`
+
+- `FieldTypeGUID`
+
+- `FieldTypeGlobalID`
+
+- `FieldTypeInteger`
+
+- `FieldTypeOID`
+
+- `FieldTypeSmallInteger`
+
+- `FieldTypeString`
+
+| alias | string | Alias of the field. | domain |
+link:domain.cmn.adoc[domain] | Array of domains defined for a field. 
+|===
+
+_Note: properties in *bold* are required_
+
+=== Examples
+
+==== Example: Fields example
+
+[source,json]
+----
+ {
+  "name": "CreatedPhase",
+  "type": "FieldTypeInteger",
+  "alias": "CreatedPhase",
+  "domain": {
+    "type": "codedValue",
+    "name": "Phases",
+    "description": "Phases",
+    "codedValues": [
+      {
+        "name": "Existing",
+        "code": 0
+      },
+      {
+        "name": "Baby Room Overhaul",
+        "code": 1
+      },
+      {
+        "name": "Roof Garden",
+        "code": 2
+      }
+    ],
+    "mergePolicy": "esriMPTDefaultValue",
+    "splitPolicy": "esriSPTDefaultValue"
+  }
+} 
+----
