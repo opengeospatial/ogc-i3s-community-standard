@@ -23,7 +23,9 @@ _Grouped vertices in the geometry buffer._
 
 === Related:
 
-link:geometryBuffer.cmn.adoc[cmn::geometryBuffer] ### Properties
+link:geometryBuffer.cmn.adoc[cmn::geometryBuffer] 
+
+=== Properties
 
 [cols=",,",options="header",]
 |===
