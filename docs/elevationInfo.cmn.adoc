@@ -12,9 +12,7 @@ link:3DSceneLayer.psl.adoc[psl::3DSceneLayer]
 [cols=",,",options="header",]
 |===
 |Property |Type |Description
-| mode | string |
-
-Possible values are:
+| mode | string | Possible values are:
 
 - `relativeToGround`
 
