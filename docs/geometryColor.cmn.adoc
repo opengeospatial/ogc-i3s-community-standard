@@ -1,0 +1,54 @@
+== geometryColor
+
+The color vertex attribute. Assumed to be Standard RGB (sRGB space).
+sRGB is a color space that defines a range of colors that can be
+displayed on screen on in print. It is the most widely used color space
+and is supported by most operating systems, software programs, monitors,
+and printers.
+
+=== Related:
+
+link:geometryBuffer.cmn.adoc[cmn::geometryBuffer]
+
+=== Properties
+
+[cols=",,",options="header",]
+|===
+|Property |Type |Description
+| *type* | string | The color channel values.
+
+Must be:
+
+* `UInt8`
+
+| *component* | integer | Number of colors. Must be `1` (opaque
+grayscale: `{R,R,R,255}`),`3`(opaque color `{R,G,B,255}`) or `4` (
+transparent color `{R,G,B,A}`). | encoding | string | Encoding of the
+vertex attribute.
+
+Must be:
+
+- `normalized`: Default. Assumes 8-bit unsigned color per channel [0,255]
+-> [0,1].
+
+| binding | string |
+
+Must be:
+
+- `per-vertex`
+
+|
+
+_Note: properties in *bold* are required_
+
+=== Examples
+
+==== Example: RGB colors per vertex
+
+[source,json]
+----
+ {
+  "type": "UInt8",
+  "component": 3
+} 
+----
