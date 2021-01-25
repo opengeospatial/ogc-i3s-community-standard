@@ -37,7 +37,7 @@ GeometryAttributes.
 |layer |string |The name of the Feature Class this feature belongs to.
 
 |attributes |link:featureAttribute.cmn.adoc[featureAttribute] |The list of
-GIS attributes the feature has.
+attributes the feature has.
 
 |geometries |link:geometry.cmn.adoc[geometry] |The list of geometries the
 feature has. A feature always has at least one Geometry.
