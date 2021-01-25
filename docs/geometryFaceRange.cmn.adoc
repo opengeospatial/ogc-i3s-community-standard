@@ -13,7 +13,7 @@ _un-indexed triangle meshes_, `vertex_index = face_index * 3`
 
 *Example*
 
-image:../images/faceRange.png[width=800,align="center"]
+image:../images/faceRange.png[width=400,align="center"]
 
 _Mesh with 2 features._
 
