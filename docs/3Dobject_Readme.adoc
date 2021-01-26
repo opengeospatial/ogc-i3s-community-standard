@@ -21,12 +21,12 @@ https://www.arcgis.com/home/item.html?id=77611df5dfae41019d5b57d89229e1d3[servic
 
 _Realistic 3D Object Scene Layer with textures_
 
-image:../img/LyonTextured.png[Realistic 3D Object Scene Layer with
+image:../images/LyonTextured.png[Realistic 3D Object Scene Layer with
 textures]
 
 _Thematic 3D Object Scene Layer without textures_
 
-image:../img/LyonThematic.png[Thematic 3D Object Scene Layer without
+image:../images/LyonThematic.png[Thematic 3D Object Scene Layer without
 textures]
 
 === 3D Object Scene Layer Structure
