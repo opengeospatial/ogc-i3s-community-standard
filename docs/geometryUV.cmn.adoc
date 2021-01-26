@@ -1,0 +1,32 @@
+== geometryUV
+
+Defines the texture coordinates of the geometry.
+
+=== Related:
+
+link:geometryBuffer.cmn.adoc[cmn::geometryBuffer]
+
+=== Properties
+
+[cols=",,",options="header",]
+|===
+|Property |Type |Description
+|*type* |string |Must be: `Float32`
+|*component* |integer |Number of texture coordinates. Must be 2.
+|encoding |string |Must be: `none`
+|binding |string |Must be: `per-vertex`
+|===
+
+_Note: properties in *bold* are required_
+
+=== Examples
+
+==== Example: Float 32 UV
+
+[source,json]
+----
+ {
+  "type": "Float32",
+  "component": 2
+} 
+----
