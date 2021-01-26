@@ -27,7 +27,7 @@ reference (geometryReference), as a reference to a shared Resource
 belongs to this feature.
 
 |lodGeometry |boolean |True if this geometry participates in an LoD
-tree. Always true in mesh-pyramids profile.
+tree. Shall always true in mesh-pyramids profile.
 |===
 
 _Note: properties in *bold* are required_
