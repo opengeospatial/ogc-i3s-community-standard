@@ -1,0 +1,37 @@
+== headerValue
+
+Value for attributeByteCount, attributeValues and objectIds.
+
+=== Related:
+
+link:attributeStorageInfo.cmn.adoc[cmn::attributeStorageInfo]
+
+=== Properties
+
+[cols=",,",options="header",]
+|===
+|Property |Type |Description
+| *valueType* | string | Defines the value type. Possible values are:
+
+- `Int8` +
+- `UInt8` +
+- `Int16` +
+- `UInt16` +
+- `Int32` +
+- `UInt32` +
+- `Float32` +
+- `Float64` +
+- `String`
+
+| *property* | string | Encoding method for the value.
+
+Possible values are: +
+
+- `count`: Should always be present and indicates the count of features in
+the attribute storage. +
+
+- `attributeValuesByteCount`
+
+|===
+
+_Note: properties in *bold* are required_
