@@ -1,0 +1,57 @@
+== geometryFeatureID
+
+FeatureID attribute helps to identify a part of a mesh belonging to a
+particular GIS `feature`. This ID may be used to query additional
+information from a `FeatureService`. For example, if a 3D Object scene
+layer has a building with ID 1 all triangles in the faceRange for this
+feature will belong to this feature_id.
+
+=== Related:
+
+link:geometryBuffer.cmn.adoc[cmn::geometryBuffer]
+
+=== Properties
+
+[cols=",,",options="header",]
+|===
+|Property |Type |Description
+| *type* | string | A feature integer ID.
+
+Possible values are:
+
+* `UInt16` +
+* `UInt32` +
+* `UInt64` 
+
+| *component* | integer | must be 1 
+
+| encoding | string |
+
+Must be: `none`
+
+| binding | string |
+
+Must be:
+
+`per-feature`: Default for `geometryBuffer.featureId`. One `feature_id`
+per feature. *Requirement*: a)
+link:geometryFaceRange.cmn.adoc[`FaceRange`] attribute must be *present*
+to map features-to-faces and vertices must _be grouped by feature_. *OR*
+b) link:compressedAttributes.cmn.adoc[`compressedAttribute.attributes`]
+has `uvRegionIndex`. Important: a) and b) are mutually exlusive.
+
+|===
+
+_Note: properties in *bold* are required_
+
+=== Examples
+
+==== Example: Feature_id less than 65k, per-feature. `faceRange` attribute will be required
+
+[source,json]
+----
+ {
+  "type": "UInt16",
+  "component": 1
+} 
+----
