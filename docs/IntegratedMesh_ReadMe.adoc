@@ -15,7 +15,7 @@ https://www.arcgis.com/home/item.html?id=4028eb46e12e42f7889367bafcd6866d[servic
 
 _Example of integrated mesh scene layer_
 
-image:../img/IM.PNG[Integrated Mesh Scene Layer]
+image:../images/IM.PNG[Integrated Mesh Scene Layer]
 
 === Integrated Mesh Scene Layer Structure
 
