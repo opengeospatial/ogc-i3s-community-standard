@@ -1,0 +1,38 @@
+== materialTexture
+
+The material texture definition.
+
+=== Related:
+
+link:materialDefinitions.cmn.adoc[cmn::materialDefinitions],
+link:pbrMetallicRoughness.cmn.adoc[cmn::pbrMetallicRoughness]
+
+=== Properties
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Property |Type |Description
+|*textureSetDefinitionId* |integer |The index in
+link:3DSceneLayer.cmn.adoc[layer.textureSetDefinitions].
+
+|texCoord |integer |The set index of texture’s TEXCOORD attribute used
+for texture coordinate mapping. Default is 0. Deprecated.
+
+|factor |number |The _normal texture_: scalar multiplier applied to each
+normal vector of the normal texture. For _occlusion texture_,scalar
+multiplier controlling the amount of occlusion applied. Default=`1`
+|===
+
+_Note: properties in *bold* are required_
+
+=== Examples
+
+==== Example: materialTexture
+
+[source,json]
+----
+ {
+  "textureSetDefinitionId": 0,
+  "texCoord": 0
+} 
+----
