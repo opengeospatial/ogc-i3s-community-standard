@@ -1,0 +1,84 @@
+== popupInfo
+
+Defines the look and feel of popup windows when a user clicks or queries
+a feature.
+https://developers.arcgis.com/web-scene-specification/objects/popupInfo/[See
+more] information on popup information in ArcGIS clients.
+
+=== Related:
+
+link:3DSceneLayer.cmn.adoc[cmn::3DSceneLayer], +
+link:3DSceneLayer.psl.adoc[psl::3DSceneLayer]
+
+=== Properties
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Property |Type |Description
+|title |string |A string that appears at the top of the popup window as
+a title
+
+|description |string |A string that appears in the body of the popup
+window as a description. The description can be provided as HTML-formatted content.
+
+|expressionInfos |[] | Reserved for future use.
+
+|fieldInfos |[] |Array of fieldInfo information properties. This information is provided by the service layer definition. A fieldInfo class defines a set of properties that relate to the Attribute Data of an I3S layer. The fieldInfo class contains properties such as 'fieldName'{the name of the field the fieldinfo relates to}, 'isEditable' {indicates if the fieldInfo property is editable}, lable {typically used to store a user-friendly name} and visible {indicates if this fieldInfo should be visible}. The fieldName of a fieldInfo class directly refrences the 'name' object of the fields array (layers[id].fields[id]) as declared in the 3dSceneLayerInfo class.
+
+|mediaInfos |[] |Array of various mediaInfo to display. Can be of type image, piechart, barchart, columnchart, or linechart. The order given is the order in which it displays.
+
+|popupElements |[] |An array of popupElement objects that represent an
+ordered list of popup elements.
+
+|===
+
+=== Examples
+
+==== Example: popupInfo
+
+[source,json]
+----
+ {
+  "title": "Buildings",
+  "mediaInfos": [],
+  "description": "Buidlings on campus A.",
+  "fieldInfos": [
+    {
+      "fieldName": "OBJECTID",
+      "visible": true,
+      "isEditable": false,
+      "label": "OID"
+    },
+    {
+      "fieldName": "Name",
+      "visible": true,
+      "isEditable": true,
+      "label": "Name"
+    }
+  ],
+  "popupElements": [
+    {
+      "text": "Buidlings on campus A.",
+      "type": "text"
+    },
+    {
+      "fieldInfos": [
+        {
+          "fieldName": "OBJECTID",
+          "visible": true,
+          "isEditable": false,
+          "label": "OID"
+        },
+        {
+          "fieldName": "Name",
+          "visible": true,
+          "isEditable": true,
+          "label": "Name"
+        }
+      ],
+      "type": "fields"
+    }
+  ],
+  "expressionInfos": []
+} 
+----
