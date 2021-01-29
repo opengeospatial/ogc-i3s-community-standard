@@ -9,8 +9,9 @@ contain less). An integer ID is used to map a node to its page as follow:
 
 === Related:
 
-link:3DSceneLayer.cmn.adoc[cmn::3DSceneLayer],
-link:3DSceneLayer.psl.adoc[psl::3DSceneLayer], link:node.cmn.md[cmn::node]
+link:3DSceneLayer.cmn.adoc[cmn::3DSceneLayer], +
+link:3DSceneLayer.psl.adoc[psl::3DSceneLayer], +
+link:node.cmn.adoc[cmn::node]
 
 === Properties
 
