@@ -1,0 +1,30 @@
+== meshAttribute
+
+Mesh attributes for a node.
+
+=== Related:
+
+link:mesh.cmn.adoc[cmn::mesh]
+
+=== Properties
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Property |Type |Description
+|*resource* |integer |The resource identifier to be used to locate
+attribute resources of this mesh.
+i.e. `layers/0/nodes/<resource id>/attributes/...`
+|===
+
+_Note: properties in *bold* are required_
+
+=== Examples
+
+==== Example: Attribute buffer(s) will be at `/layers/0/nodes/6/attributes/(…)
+
+[source,json]
+----
+ {
+  "resource": 6
+} 
+----
