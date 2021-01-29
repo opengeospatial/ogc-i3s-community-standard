@@ -1,0 +1,49 @@
+== mesh
+
+Mesh object. Mesh geometry for a node. Clients have to use the
+`resource` identifiers written in each node to access the resources.
+While content creator may choose to match `resource` with the node id
+this is not required by the I3S specification and clients should not
+make this assumption.
+
+=== Related:
+
+link:node.cmn.adoc[cmn::node]
+
+=== Properties
+
+[cols=",,",options="header",]
+|===
+|Property |Type |Description
+|material |link:meshMaterial.cmn.adoc[meshMaterial] |The material
+definition.
+
+|geometry |link:meshGeometry.cmn.adoc[meshGeometry] |The geometry
+definition.
+
+|attribute |link:meshAttribute.cmn.adoc[meshAttribute] |The attribute set
+definition.
+|===
+
+=== Examples
+
+==== Example: Textured mesh with attributes and features.
+
+[source,json]
+----
+ {
+  "material": {
+    "definition": 0,
+    "resource": 6
+  },
+  "geometry": {
+    "definition": 0,
+    "resource": 6,
+    "vertexCount": 1092,
+    "featureCount": 7
+  },
+  "attribute": {
+    "resource": 6
+  }
+} 
+----
