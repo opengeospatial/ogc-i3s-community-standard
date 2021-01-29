@@ -1,0 +1,37 @@
+== statisticsInfo
+
+Describes the attribute statistics for the scene layer.
+
+=== Related:
+
+link:3DSceneLayer.cmn.adoc[cmn::3DSceneLayer], +
+link:3DSceneLayer.psl.adoc[psl::3DSceneLayer]
+
+=== Properties
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Property |Type |Description
+|*key* |string |Key indicating the resource of the statistics. For
+example f_1 for ./statistics/f_1
+
+|*name* |string |Name of the field of the statistical information.
+
+|*href* |string |The URL to the statistics information. For example
+./statistics/f_1
+|===
+
+_Note: properties in *bold* are required_
+
+=== Examples
+
+==== Example: statisticsInfo for 3D Object scene layer.
+
+[source,json]
+----
+ {
+  "key": "f_1",
+  "name": "Category",
+  "href": "./statistics/f_1"
+} 
+----
