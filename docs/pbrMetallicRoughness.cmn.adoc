@@ -1,0 +1,28 @@
+== PBR Metalic Roughness Material Model
+
+Feature-compatible with
+https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#materials[glTF
+material]. With the exception of emissive texture.
+
+=== Related:
+
+link:materialDefinitions.cmn.adoc[cmn::materialDefinitions]
+
+=== Properties
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Property |Type |Description
+|baseColorFactor |number[4] |The material’s base color factor.
+default=`[1,1,1,1]`
+
+|baseColorTexture |link:materialTexture.cmn.adoc[materialTexture] |The
+base color texture.
+
+|metallicFactor |number |the metalness of the material. default=`1.0`
+
+|roughnessFactor |number |the roughness of the material. default=`1.0`
+
+|metallicRoughnessTexture |link:materialTexture.cmn.adoc[materialTexture]
+|the metallic-roughness texture.
+|===
