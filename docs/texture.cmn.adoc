@@ -18,16 +18,16 @@ texture atlas. Textures are expected in the following formats: 0_0.jpg
 for JPEG, 0.bin for PNG, 0_0_1.bin.dds for S3TC, and 0_0_2.ktx for ETC2.
 The texture resource must include either a JPEG or PNG texture file.
 
-In I3S version 1.6, the size property will give you the width of a
-texture. In version 1.7, the texelCountHint can be used to determine the
+In OGC I3S version 1.1, the size property specifies the width of a
+texture. In OGC version 1.2, the texelCountHint can be used to determine the
 cost of loading a node as well as for use in texel-resolution based LoD
 switching. (A texel, texture element, or texture pixel is the
 fundamental unit of a texture map.) Compressed textures such as S3TC and
-ETC may contain mipmaps. Mipmaps (also MIP maps) or pyramids are
+ETC may contain mipmaps. From Wikipedia `Mipmaps (also MIP maps) or pyramids are
 pre-calculated, optimized sequences of images, each of which is a
 progressively lower resolution representation of the same image. The
 height and width of each image, or level, in the mipmap is a power of
-two smaller than the previous level. When compressing textures with
+two smaller than the previous level.` When compressing textures with
 mipmaps, the texture dimensions must of size 2n and the smallest size
 allowed is 4x4, where n is 2. The number and volume of textures tends to
 be the limiting display factor, especially for web and mobile clients.
@@ -40,7 +40,7 @@ compressed textures for performance reasons.
 === Atlas Usage and Regions
 
 Individual textures should be aggregated into texture atlases (e.g. 2048
-x 2048 pixel). A node can only have one texture atlas. Each individual
+x 2048 pixels). A node can only have one texture atlas. Each individual
 texture becomes a subtexture. As with all texture resources, the atlas
 has to be of size 2n on both dimensions, where n ranges from 3 to 12,
 inclusive. Width and height do not need to be equal. Subtextures also
@@ -58,13 +58,7 @@ into 4 UInt16 values.
 
 === Texture Coordinates
 
-Texture coordinates do not take atlas regions into account directly.
-They range from 0 to 1 in U and V, except when using the `repeat'
-wrapping mode. In repeat mode, U and V range from 0 to n, where n is the
-number of repeats. Repeating textures may repeat vertically,
-horizontally, or both. The client is expected to use the sub-image
-region values and the texture coordinates to best handle repeating
-textures in atlases.
+Client capabilities for handling complex UV cases vary widely, so texture coordinates are used. Texture coordinates do not directly take atlas regions into account. They always range from 0…​1 in U and V, except when using the "repeat" wrapping mode, where they may range from 0…​n (n being the number of repeats). The client is expected to use the subimageRegion values and the texture coordinates to best handle repeating textures in atlases. This approach has been selected since client capabilities in dealing with more complex UV cases vary greatly.
 
 ==== Related:
 
