@@ -1,0 +1,37 @@
+== statsInfo
+
+Contains statistics about each attribute. Statistics are useful to
+estimate attribute distribution and range.
+
+=== Related:
+
+link:stats.cmn.adoc[cmn::stats]
+
+=== Properties
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Property |Type |Description
+|totalValuesCount |number |Represents the count of the value.
+
+|min |number |Minimum attribute value for the entire layer.
+
+|max |number |Maximum attribute value for the entire layer.
+
+|count |number |Count for the entire layer.
+
+|sum |number |Sum of the attribute values over the entire layer.
+
+|avg |number |Representing average or mean value. For example,
+sum/count.
+
+|stddev |number |Representing the standard deviation.
+
+|variance |number |Representing variance. For example, stats.stddev
+*stats.stddev.
+
+|histogram |link:histogram.cmn.adoc[histogram] |Represents the histogram.
+
+|mostFrequentValues |link:valuecount.cmn.adoc[valuecount][] |An array of
+most frequently used values within the point cloud scene layer.
+|===
