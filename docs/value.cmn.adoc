@@ -1,0 +1,20 @@
+== value [common profiles]
+
+Value for attributeByteCount, attributeValues and objectIds.
+
+=== Related:
+
+link:attributeStorageInfo.cmn.adoc[cmn::attributeStorageInfo], +
+link:featureAttribute.cmn.adoc[cmn::featureAttribute]
+
+=== Properties
+
+[cols=",,",options="header",]
+|===
+|Property |Type |Description
+|*valueType* |string |Defines the value type.
+|encoding |string |Encoding method for the value.
+|valuesPerElement |number |Number of values per element.
+|===
+
+_Note: properties in *bold* are required_
