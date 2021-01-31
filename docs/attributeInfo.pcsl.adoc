@@ -1,0 +1,68 @@
+== attributeInfo [point cloud profile]
+
+List of attributes included for this layer.
+
+=== Related:
+
+link:layer.pcsl.adoc[pcsl::layer] ### Properties
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Property |Type |Description
+|*key* |string |Represents the attribute key. Key is the same as
+`id' used in the resource URL to fetch the binary buffers. | **name** | string | The attribute name. Must be unique for this layer. | ordering | string[] | Mapping between attribute to point. Only 1-to-1 is currently supported. Possible values for each array string:`attributeValues`| encoding | string | Encoding (i.e. compression) for the attribute binary buffer if different from GZIP or no-compression. Possible values are:`embedded-elevation`: No binary buffer but stats for this pseudo attribute will be available. For example, point.z from the geometry should be used.`lepcc-intensity`: LEPCC compression for scaled integral type.`lepcc-rgb`:
+LEPCC color compression for 3-channel RGB 8 bit.
+
+|attributeValues |link:value.pcsl.adoc[value] |Represents the description
+for value encoding, for example scalar or vector encoding.
+|===
+
+_Note: properties in *bold* are required_
+
+=== Examples
+
+==== Example: Elevation pseudo-attribute
+
+[source,json]
+----
+ {
+  "key": "1",
+  "name": "ELEVATION",
+  "encoding": "embedded-elevation"
+} 
+----
+
+==== Example: Color attribute
+
+[source,json]
+----
+ {
+  "key": "4",
+  "name": "RGB",
+  "ordering": [
+    "attributeValues"
+  ],
+  "attributeValues": {
+    "valueType": "UInt8",
+    "valuesPerElement": 3
+  },
+  "encoding": "lepcc-rgb"
+} 
+----
+
+==== Example: 8-bit uncompressed/GZIP compressed class-codes
+
+[source,json]
+----
+ {
+  "key": "8",
+  "name": "CLASS_CODE",
+  "ordering": [
+    "attributeValues"
+  ],
+  "attributeValues": {
+    "valueType": "UInt8",
+    "valuesPerElement": 1
+  }
+} 
+----
