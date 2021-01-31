@@ -1,0 +1,130 @@
+== Point Cloud Scene Layer
+
+Point cloud scene layers quickly display large volumes of symbolized and
+filtered point cloud data. They are optimized for the displaying and
+sharing a variety of sensor data, including LiDAR.
+
+Point cloud scene layers are scalable, which allows for efficiency when
+working with large datasets. While rendering very large point cloud
+datasets can be slow and limited by hardware, point cloud scene layers
+are efficient because they are rendered at an optimized point resolution
+for the specified area.
+
+Point cloud scene layers also support caching attributes like RGB,
+Intensity, Flags, Class Code, Returns, User Data, Point Source ID, GPS
+Time, Scan Angle and Near Infrared. This allows client applications to
+update the symbology as well as query point information.
+
+*Examples*:
+
+Morro Bay LiDAR data sample
+https://www.arcgis.com/home/item.html?id=496552d059644b4892c51ad06bdba8e2[SLPK].
++ Morro Bay LiDAR data sample
+https://www.arcgis.com/home/item.html?id=908d6b986f314d51b1ff50b3bc321dfd[service].
+
+_Example of point cloud rendering_
+
+image:../img/point-cloud-scene-layer.png[Point Cloud Scene Layer]
+
+=== Point Cloud Scene Layer Structure
+
+The point cloud scene layer is structured into a tree of multiple JSON
+files. Point cloud scene layers can be represented as a scene layer
+package (_.slpk) or an I3S service. Since an _.slpk file can contain
+millions of documents, an link:slpk_hashtable.pcsl.md[SLPK hash table]
+improves performance when scanning the slpk. A point cloud scene layer
+contains the following:
+
+* link:layer.pcsl.adoc[Layer description]
+* Nodes containing link:defaultGeometrySchema.pcsl.adoc[Geometry] and
+link:attributeInfo.pcsl.adoc[Attributes]
+* link:nodePageDefinition.pcsl.adoc[Node pages]
+* link:statistics.pcsl.adoc[Statistics]
+
+_Example of point cloud layer structure_
+
+....
+.<host>/SceneServer/layers
+    +--0 // scene layer document
+    +-- nodepages
+    |  +-- 0
+    |  +-- 1   
+    |  +-- 2  
+    |  +-- (...)
+    +-- nodes
+    |  +--0
+    |  |  +-- attributes
+    |  |  |  +--2 
+    |  |  |  +--4
+    |  |  |  +--(...)
+    |  |  +-- geometries
+    |  |  |  +-- 0
+    +-- (...) 
+    +--statistics
+    |  +-- 2
+    |  +-- 4
+    |  +-- (...)
+....
+
+== HTTP API Overview
+
+The following API methods are available for point cloud scene layer:
+
+*Scene Layer Document*
+
+|=== |Type | JSON |URL Template| http://serviceURL/layers/\{layerID}
+|Example |http://my.server.com/PointCloudSceneLayer/SceneServer/layers/0
+| Description |This is the root document for the service that will
+contain properties common to the entire layer. layerID: Integer. ID of
+the associated layer. Esri products expect this to be 
+|===
+
+link:layer.pcsl.adoc[Layer description]
+
+*Node Page*
+
+|=== |Type |JSON |URL Template
+|http://serviceURL/layers/\{layerID}/nodepages/\{nodePageID} |Example
+|>http://my.server.com/PointCloudSceneLayer/SceneServer/layers/0/nodepages/8
+|Description |A page of nodes. layerID: Integer. ID of the associated
+layer. Esri products expect this to be `0`. nodePageID: Integer. ID of
+the associated node page. 
+|===
+
+link:nodePageDefinition.pcsl.adoc[Node pages]
+
+*Geometries*
+
+|=== |Type |lepcc |URL Template |
+http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/geometries/0
+|Example
+|http://my.server.com/PointCloudSceneLayer/SceneServer/layers/0/nodes/98/geometries/0
+|Description |The point coordinate values within the node. + -
+`layerID`: Integer. ID of the associated layer. Esri products expect
+this to be `0`. - `nodeID`: Integer. ID of the associated node. 
+|===
+
+*Attributes*
+
+|=== |Type |bin |URL Templace
+|http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/attributes/\{attributeID}
+|Example
+|http://my.server.com/PointCloudSceneLayer/SceneServer/layers/0/nodes/20/attributes/64
+|Description |The value for a specific attribute within a node. + -
+`layerID`: Integer. ID of the associated layer. Esri products expect
+this to be `0`. + - `nodeID`: Integer. ID of the associated node. + -
+`attributeID`: Integer. ID of the specific attribute for the layer. 
+|===
+
+*Statistics*
+
+|=== Type |JSON |URL Template
+|http://serviceURL/layers/\{layerID}/statistics/\{attributeID} |Example
+|http://my.server.com/PointCloudSceneLayer/SceneServer/layers/0/statistics/64
+Description |The statistics for the entire layer for a specific
+attribute. + - `layerID`: Integer. ID of the associated layer. Esri
+products expect this to be `0`. + - `attributeID`: Integer. ID of the
+specific attribute for the layer. 
+|===
+
+link:statistics.pcsl.adoc[Statistics]
