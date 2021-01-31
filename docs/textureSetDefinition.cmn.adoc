@@ -12,7 +12,7 @@ link:3DSceneLayer.cmn.adoc[cmn::3DSceneLayer]
 |===
 |Property |Type |Description
 |*formats*
-|link:textureSetDefinitionFormat.cmn.md[textureSetDefinitionFormat][]
+|link:textureSetDefinitionFormat.cmn.adoc[textureSetDefinitionFormat][]
 |List of formats that are available for this texture set.
 
 |atlas |boolean |Set to `true` if this texture is a texture atlas. It is
