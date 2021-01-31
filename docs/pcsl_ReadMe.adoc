@@ -123,8 +123,8 @@ this to be `0`. +
 
 *Statistics*
 
-|=== |
-Type |JSON 
+|=== 
+|Type |JSON 
 |URL Template |http://serviceURL/layers/\{layerID}/statistics/\{attributeID} 
 |Example |http://my.server.com/PointCloudSceneLayer/SceneServer/layers/0/statistics/64
 |Description |The statistics for the entire layer for a specific attribute. + 
