@@ -24,7 +24,7 @@ https://www.arcgis.com/home/item.html?id=908d6b986f314d51b1ff50b3bc321dfd[servic
 
 _Example of point cloud rendering_
 
-image:../img/point-cloud-scene-layer.png[Point Cloud Scene Layer]
+image:../images/point-cloud-scene-layer.png[Point Cloud Scene Layer]
 
 === Point Cloud Scene Layer Structure
 
