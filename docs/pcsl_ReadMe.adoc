@@ -18,8 +18,8 @@ update the symbology as well as query point information.
 *Examples*:
 
 Morro Bay LiDAR data sample
-https://www.arcgis.com/home/item.html?id=496552d059644b4892c51ad06bdba8e2[SLPK].
-+ Morro Bay LiDAR data sample
+https://www.arcgis.com/home/item.html?id=496552d059644b4892c51ad06bdba8e2[SLPK]. +
+Morro Bay LiDAR data sample
 https://www.arcgis.com/home/item.html?id=908d6b986f314d51b1ff50b3bc321dfd[service].
 
 _Example of point cloud rendering_
@@ -72,7 +72,9 @@ The following API methods are available for point cloud scene layer:
 
 *Scene Layer Document*
 
-|=== |Type | JSON |URL Template| http://serviceURL/layers/\{layerID}
+|=== 
+|Type | JSON 
+|URL Template| http://serviceURL/layers/\{layerID}
 |Example |http://my.server.com/PointCloudSceneLayer/SceneServer/layers/0
 | Description |This is the root document for the service that will
 contain properties common to the entire layer. layerID: Integer. ID of
@@ -83,9 +85,10 @@ link:layer.pcsl.adoc[Layer description]
 
 *Node Page*
 
-|=== |Type |JSON |URL Template
-|http://serviceURL/layers/\{layerID}/nodepages/\{nodePageID} |Example
-|>http://my.server.com/PointCloudSceneLayer/SceneServer/layers/0/nodepages/8
+|=== 
+|Type |JSON 
+|URL Template |http://serviceURL/layers/\{layerID}/nodepages/\{nodePageID} 
+|Example |http://my.server.com/PointCloudSceneLayer/SceneServer/layers/0/nodepages/8
 |Description |A page of nodes. layerID: Integer. ID of the associated
 layer. Esri products expect this to be `0`. nodePageID: Integer. ID of
 the associated node page. 
@@ -95,10 +98,10 @@ link:nodePageDefinition.pcsl.adoc[Node pages]
 
 *Geometries*
 
-|=== |Type |lepcc |URL Template |
-http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/geometries/0
-|Example
-|http://my.server.com/PointCloudSceneLayer/SceneServer/layers/0/nodes/98/geometries/0
+|=== 
+|Type |lepcc 
+|URL Template | http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/geometries/0
+|Example |http://my.server.com/PointCloudSceneLayer/SceneServer/layers/0/nodes/98/geometries/0
 |Description |The point coordinate values within the node. + -
 `layerID`: Integer. ID of the associated layer. Esri products expect
 this to be `0`. - `nodeID`: Integer. ID of the associated node. 
@@ -106,10 +109,10 @@ this to be `0`. - `nodeID`: Integer. ID of the associated node.
 
 *Attributes*
 
-|=== |Type |bin |URL Templace
-|http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/attributes/\{attributeID}
-|Example
-|http://my.server.com/PointCloudSceneLayer/SceneServer/layers/0/nodes/20/attributes/64
+|=== 
+|Type |bin 
+|URL Template |http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/attributes/\{attributeID}
+|Example |http://my.server.com/PointCloudSceneLayer/SceneServer/layers/0/nodes/20/attributes/64
 |Description |The value for a specific attribute within a node. + -
 `layerID`: Integer. ID of the associated layer. Esri products expect
 this to be `0`. + - `nodeID`: Integer. ID of the associated node. + -
@@ -118,10 +121,11 @@ this to be `0`. + - `nodeID`: Integer. ID of the associated node. + -
 
 *Statistics*
 
-|=== Type |JSON |URL Template
-|http://serviceURL/layers/\{layerID}/statistics/\{attributeID} |Example
-|http://my.server.com/PointCloudSceneLayer/SceneServer/layers/0/statistics/64
-Description |The statistics for the entire layer for a specific
+|=== |
+Type |JSON 
+|URL Template http://serviceURL/layers/\{layerID}/statistics/\{attributeID} 
+|Example |http://my.server.com/PointCloudSceneLayer/SceneServer/layers/0/statistics/64
+|Description |The statistics for the entire layer for a specific
 attribute. + - `layerID`: Integer. ID of the associated layer. Esri
 products expect this to be `0`. + - `attributeID`: Integer. ID of the
 specific attribute for the layer. 
