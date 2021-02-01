@@ -4,7 +4,7 @@ Describes the index (i.e. bounding volume tree) of the layer.
 
 === Related:
 
-link:store.pcsl.md[pcsl::store]
+link:store.pcsl.adoc[pcsl::store]
 
 === Properties
 
@@ -12,23 +12,13 @@ link:store.pcsl.md[pcsl::store]
 |===
 |Property |Type |Description
 |*nodeVersion* |integer |The version of the individual nodes format.
+|*nodesPerPage* |integer |The page size describes the number of nodesper paged index document. 64 is currently expected.
+| boundingVolumeType | string | The bounding volume type. Only OBB is currently supported. Must be: +
 
-|*nodesPerPage* |integer |The page size describes the number of nodes
-per paged index document. 64 is currently expected.
+- `obb`: Oriented bounding box
+|lodSelectionMetricType | string | Defines how `node.lodThreshold` should be interpreted. Must be: +
 
-| boundingVolumeType | string | The bounding volume type. Only OBB is
-currently supported.
-
-Must be:
-
-`obb`: Oriented bounding box
-
-|lodSelectionMetricType | string | Defines how `node.lodThreshold`
-should be interpreted
-
-Must be:
-
-`density-threshold`: nodes[i].lodThreshold will represent an `effective'
+-`density-threshold`: nodes[i].lodThreshold will represent an _effective_
 2D area for the node. This estimation works best when the point cloud
 scene layer represents a surface and is not volumetric. World space
 density is defined as Dw = node.pointCount / node.effectiveArea. Ds is
