@@ -1,6 +1,6 @@
 == drawingInfo [point cloud profile]
 
-The drawingInfo object contains drawing information for a point cloud scene layer. This is a restricted instance of the common link:drawingInfo.mnc.adoc[cmn:drawingInfo]
+The drawingInfo object contains drawing information for a point cloud scene layer. This is a restricted instance of the common link:drawingInfo.cmn.adoc[cmn:drawingInfo]
 
 === Related:
 
@@ -11,9 +11,7 @@ link:layer.pcsl.adoc[pcsl::layer]
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Property |Type |Description
-|*renderer* | |An object defining the symbology for the layer.
-https://developers.arcgis.com/web-scene-specification/objects/pointCloudRenderers/[See
-more] information about supported renderer types in ArcGIS clients.
+|*renderer* | |An object defining the symbology for the layer. There are many possible types and rules for rendering point clouds. Examples are defineing the color of each point in a Point Cloud based on the value of a color attribute or defineing the color of each point in a Point Cloud based on the value of a numeric attribute. The latter approach allows the client to easily map continuous color ramps to minimum and maximum data values of one of the layer's numeric attribute fields.
 |===
 
 _Note: properties in *bold* are required_
