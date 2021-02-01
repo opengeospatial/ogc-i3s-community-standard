@@ -1,0 +1,30 @@
+== label [point cloud profile]
+
+Label object for the statistics labels in the point cloud profile.
+
+=== Related:
+
+link:labels.pcsl.adoc[pcsl::labels]
+
+=== Properties
+
+[cols=",,",options="header",]
+|===
+|Property |Type |Description
+|*value* |number |Value
+|*label* |string |Label string
+|===
+
+_Note: properties in *bold* are required_
+
+=== Examples
+
+==== Example: Class Code label
+
+[source,json]
+----
+ {
+  "value": 2,
+  "label": "Ground"
+} 
+----
