@@ -14,7 +14,7 @@ link:statistics.pcsl.adoc[pcsl::statistics]
 |labels |link:label.pcsl.adoc[label][] |Array of string label/value pairs.
 Used when attribute represents a set of values. For example, ClassCode.
 
-|bitfieldLabels |link:bitfieldlabel.pcsl.adoc[bitfieldlabel][] |Array of
+|bitfieldLabels |link:bitFieldLabel.pcsl.adoc[bitfieldlabel][] |Array of
 string label/bitNumber pairs. This is useful when the attribute
 represent a bitfield. For example, FLAGS.
 |===
