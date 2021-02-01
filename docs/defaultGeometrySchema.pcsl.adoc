@@ -1,0 +1,60 @@
+== I3S point cloud scene layer: defaultGeometrySchema
+
+Attribute description as field.
+
+=== Related:
+
+link:store.pcsl.adoc[pcsl::store]
+
+=== Properties
+
+[cols=",,",options="header",]
+|===
+|Property |Type |Description
+| *geometryType* | string | The type of primitive. Only points are supported for point cloud scene layer. Must be:
+
+- `points`
+
+| header | [] | The header in binary buffers. Currently not supported for point cloud scene layers. 
+| *topology* | string | This property is
+currently **ignored* for point cloud scene layers since it only contains
+geometry position without vertex attributes. Must be: +
+
+- `PerAttributeArray`
+
+| *encoding* | string | Only `lepcc-xyz` compression is currently supported. Must be:
+
+- `lepcc-xyz`
+
+| ordering | string[] | Currently the geometry contains XYZ only, so vertex attribute must only list `position`.
+Possible values for each array string: +
+
+- `position`: vertex coordinates
+
+| *vertexAttributes* | link:vertexAttributes.pcsl.adoc[vertexAttributes] | The vertex buffer description. 
+|===
+
+_Note: properties in *bold* are required_
+
+=== Examples
+
+==== Example: defaultGeometrySchema
+
+[source,json]
+----
+ {
+  "geometryType": "points",
+  "header": [],
+  "topology": "PerAttributeArray",
+  "encoding": "lepcc-xyz",
+  "vertexAttributes": {
+    "position": {
+      "valueType": "Float64",
+      "valuesPerElement": 3
+    }
+  },
+  "ordering": [
+    "position"
+  ]
+} 
+----
