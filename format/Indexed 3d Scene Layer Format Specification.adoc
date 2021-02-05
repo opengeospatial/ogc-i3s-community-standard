@@ -1,5 +1,5 @@
 :Title: OGC Indexed 3d Scene Layer (I3S) and Scene Layer Package (*.slpk) Format Community Standard
-:titletext: 1.2
+:titletext: OGC Indexed 3d Scene Layer (I3S) and Scene Layer Package (*.slpk) Format Community Standard
 :doctype: book
 :encoding: utf-8
 :lang: en
@@ -22,7 +22,7 @@
 |Internal reference number of this OGC(R) document:    17-014r8
 |Version: 1.2
 |Category: OGC(R) <Implementation / Abstract Specification / Best Practice>
-|Editor:   <Name(s) of Editor or Editors>
+|Editor:   Carl Reed, Tamrat Belayneh
 |===
 
 [cols = "^", frame = "none"]
