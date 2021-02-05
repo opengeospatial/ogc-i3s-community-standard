@@ -1,0 +1,57 @@
+== value [point cloud profile]
+
+A scalar or vector value.
+
+=== Related:
+
+link:attributeInfo.pcsl.adoc[pcsl::attributeInfo], +
+link:vertexAttributes.pcsl.adoc[pcsl::vertexAttributes]
+
+=== Properties
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Property |Type |Description
+|*valueType* |string |Type of the attribute values after decompression,
+if applicable. Please note that `string` is not supported for point
+cloud scene layer attributes. Possible values are: +
+
+-`Int8` +
+- `UInt8` +
+- `Int16` +
+- `UInt16` +
+- `Int32` +
+- `UInt32` +
+- `Float32` +
+- `Float64`
+
+|*valuesPerElement* |number |Number of components.
+|===
+
+_Note: properties in *bold* are required_
+
+=== Examples
+
+==== Example: Scalar value definition
+
+An unsigned 16 bit value.
+
+[source,json]
+----
+ {
+  "valueType": "UInt16",
+  "valuesPerElement": 1
+} 
+----
+
+==== Example: Vector value definition
+
+The vector value can only be RGB-8 value.
+
+[source,json]
+----
+ {
+  "valueType": "UInt8",
+  "valuesPerElement": 3
+} 
+----
