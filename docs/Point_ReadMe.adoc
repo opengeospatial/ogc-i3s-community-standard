@@ -60,110 +60,65 @@ The following API methods are available for Point Scene Layer:
 
 *Scene layer document*
 
-Type
-
-JSON
-
-URL Template
-
-http://serviceURL/layers/\{layerID}
-
-Example
-
-http://my.server.com/PointSceneLayer/SceneServer/layers/0
-
-Description
-
-This is the root document for the service containing properties common
+|===
+| Type | JSON
+|URL Template |http://serviceURL/layers/\{layerID}
+|Example | http://my.server.com/PointSceneLayer/SceneServer/layers/0
+|Description |This is the root document for the service containing properties common
 to the entire layer. layerID: Integer. ID of the associated layer. Esri
 products expect this to be `0`.
+|===
 
-link:3DSceneLayer.psl.md[3DSceneLayer]
+link:3DSceneLayer.psl.adoc[3DSceneLayer]
 
 *3D node index document*
 
-Type
-
-JSON
-
-URL Template
-
-http://serviceURL/layers/\{layerID}/nodes/\{nodeID}
-
-Example
-
-http://my.server.com/PointSceneLayer/SceneServer/layers/0/nodes/98
-
-Description
-
-Description of the node. layerID: Integer. ID of the associated layer.
+|===
+| Type | JSON
+|URL Template | http://serviceURL/layers/\{layerID}/nodes/\{nodeID}
+|Example | http://my.server.com/PointSceneLayer/SceneServer/layers/0/nodes/98
+|Description | Description of the node. layerID: Integer. ID of the associated layer.
 Esri clients expect this to be `0`. nodeID: Integer. ID of the
 associated resource.
+|===
 
-link:3DNodeIndexDocument.cmn.md[3DNodeIndexDocument]
+link:3DNodeIndexDocument.cmn.adoc[3DNodeIndexDocument]
 
 *Attributes*
 
-Type
-
-bin
-
-URL Template
-
-http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/attributes/f_\{attributeID}/0
-
-Example
-
-http://my.server.com/PointSceneLayer/SceneServer/layers/0/nodes/98/attributes/f_8/0
-
-Description
-
-The value for a specific attribute within a node. layerID: Integer. ID
+|===
+| Type | JSON
+|URL Template | http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/attributes/f_\{attributeID}/0
+|Example | http://my.server.com/PointSceneLayer/SceneServer/layers/0/nodes/98/attributes/f_8/0
+|Description | The value for a specific attribute within a node. layerID: Integer. ID
 of the associated layer. Esri products expect this to be `0`. nodeID:
 Integer. ID of the associated resource. attributeID: Integer. ID of the
 specific attribute for the layer.
+|===
 
 *Feature*
 
-Type
-
-JSON
-
-URL Template
-
-http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/features/0
-
-Example
-
-http://my.server.com/PointSceneLayer/SceneServer/layers/0/nodes/98/features/0
-
-Description
-
-Point location and feature IDs. layerID: Integer. ID of the associated
+|===
+| Type | JSON
+|URL Template | http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/features/0
+|Example | http://my.server.com/PointSceneLayer/SceneServer/layers/0/nodes/98/features/0
+|Description | Point location and feature IDs. layerID: Integer. ID of the associated
 layer. Esri products expect this to be `0`. nodeID: Integer. ID of the
 associated resource. attributeID: Integer. ID of the specific attribute
 for the layer.
+|===
 
-link:featureData.cmn.md[featureData]
+link:featureData.cmn.adoc[featureData]
 
 *Statistics*
 
-Type
-
-JSON
-
-URL Template
-
-http://serviceURL/layers/\{layerID}/statistics/f_\{attributeID}/0
-
-Example
-
-http://my.server.com/PointSceneLayer/SceneServer/layers/0/statistics/f_8/0
-
-Description
-
-The statistics for the entire layer for a specific attribute. layerID:
+|===
+| Type | JSON
+|URL Template | http://serviceURL/layers/\{layerID}/statistics/f_\{attributeID}/0
+|Example | http://my.server.com/PointSceneLayer/SceneServer/layers/0/statistics/f_8/0
+|Description | The statistics for the entire layer for a specific attribute. layerID:
 Integer. ID of the associated layer. Esri products expect this to be
 `0`. attributeID: Integer. ID of the specific attribute for the layer
+|===
 
-link:statisticsInfo.cmn.md[statistics]
+link:statisticsInfo.cmn.adoc[statistics]
