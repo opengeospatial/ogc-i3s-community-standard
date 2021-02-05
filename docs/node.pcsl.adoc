@@ -4,8 +4,7 @@ A single bounding volume hierarchy node
 
 === Related:
 
-link:nodePageDefinition.pcsl.adoc[pcsl::nodePageDefinition] +
-link:node.pcsl.adoc[pcsl::node]
+link:nodePageDefinition.pcsl.adoc[pcsl::nodePageDefinition] 
 
 === Properties
 
