@@ -21,7 +21,7 @@
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/CS/i3s/1.2
 |Internal reference number of this OGC(R) document:    17-014r8
 |Version: 1.2
-|Category: OGC(R) <Implementation / Abstract Specification / Best Practice>
+|Category: OGC(R) Community Standard
 |Editor:   Carl Reed, Tamrat Belayneh
 |===
 
