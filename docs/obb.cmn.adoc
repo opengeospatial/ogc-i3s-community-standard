@@ -55,9 +55,10 @@ layers’.
 
 ==== Related:
 
-link:3DNodeIndexDocument.cmn.adoc[cmn::3DNodeIndexDocument],
-link:node.cmn.adoc[cmn::node],
-link:nodeReference.cmn.adoc[cmn::nodeReference] 
+link:3DNodeIndexDocument.cmn.adoc[cmn::3DNodeIndexDocument], +
+link:node.cmn.adoc[cmn::node], +
+link:nodeReference.cmn.adoc[cmn::nodeReference] +
+link:node.pcsl.adoc[pcsl::node]
 
 === Properties
 
