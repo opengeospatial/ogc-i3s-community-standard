@@ -1,0 +1,30 @@
+== vertexAttributes [point cloud profile]
+
+The vertex buffer description.
+
+=== Related:
+
+link:defaultGeometrySchema.pcsl.adoc[pcsl::defaultGeometrySchema]
+
+=== Properties
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Property |Type |Description
+|position |link:value.pcsl.adoc[value] |Only LEPCC compressed (X,Y,Z) is
+supported. Decompressed data will be absolute `Float64` position.
+|===
+
+=== Examples
+
+==== Example: vertexAttributes
+
+[source,json]
+----
+ {
+  "position": {
+    "valueType": "Float64",
+    "valuesPerElement": 3
+  }
+} 
+----
