@@ -14,7 +14,7 @@ https://www.arcgis.com/home/item.html?id=7aba674fae86425694b21723d2680fa4[servic
 
 _Example of a point scene layer_
 
-image:../img/PointSceneLayer.png[Point Scene Layer]
+image:../images/PointSceneLayer.png[Point Scene Layer]
 
 === Point Scene Layer Structure
 
@@ -22,11 +22,11 @@ The point scene layer is structured into a tree of multiple JSON files.
 Point scene layers can be represented as a scene layer package (*.slpk)
 or a I3S service. A point scene layer contains the following:
 
-* link:3DSceneLayer.psl.md[3DSceneLayer]
-* link:featureData.cmn.md[featureData]
+* link:3DSceneLayer.psl.adoc[3DSceneLayer]
+* link:featureData.cmn.adoc[featureData]
 * attribute (binary)
-* link:3DNodeIndexDocument.cmn.md[3DNodeIndexDocument]
-* link:statisticsInfo.cmn.md[statistics]
+* link:3DNodeIndexDocument.cmn.adoc[3DNodeIndexDocument]
+* link:statisticsInfo.cmn.adoc[statistics]
 
 _Example of point scene layer structure_
 
