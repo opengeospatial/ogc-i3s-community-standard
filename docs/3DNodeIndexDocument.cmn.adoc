@@ -1,7 +1,7 @@
 == 3D Node Index Document
 
 The 3dNodeIndexDocument JSON file describes a single index node within a
-link:store.cmn.md[store]. The store object describes the exact physical
+link:store.cmn.adoc[store]. The store object describes the exact physical
 storage of a layer and enables the client to detect when multiple layers
 are served from the same store. The file includes links to other nodes
 (e.g. children, sibling, and parent), links to feature data, geometry
