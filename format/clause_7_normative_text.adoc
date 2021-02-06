@@ -1,0 +1,105 @@
+== I3S Standard - Normative
+
+This section contains the normative clauses and requirements for implementing I3S. In the property tables, any property highlighted with a bold font is mandatory.
+
+=== Coordinate Reference Systems
+
+The I3S standard supports specifying the Coordinate Reference System and refers to two OGC standards for describing a CRS as Well Known Text. These are WKT1 as defined in the OGC Coordinate Transformation Service Standard (01-009) and WKT2 as defined in OGC Geographic Information – Well known text representation of coordinate reference systems (12-063r5). CRS as OGC Well Known Text was originally defined in clause 6.4 in the http://portal.opengeospatial.org/files/?artifact_id=13227[OGC Simple Features 99-036/ISO 19125] standard. 
+
+I3S also supports specifying CRS in the ISO/OGC WKT standard http://docs.opengeospatial.org/is/12-063r5/12-063r5.html[ISO 19162:2015], Geographic information – Well-known text representation of coordinate reference systems. This new ISO/OGC Standard specifies an update to the original WKT representation. The two standards are referred to as WKT1 and WKT2 respectively.
+
+==== (7.1.1)	A note on OGC Standards for CRS and Well Known Text. 
+
+The two standards are referred to as WKT1 and WKT2
+
+. WKT1: Refers to Well Known Text (WKT) for expressing a CRS as originally defined in clause 6.4 in http://portal.opengeospatial.org/files/?artifact_id=13227[OGC Simple Features [99-036/ISO 19125]. This original definition was extended in OGC Coordinate Transformation Service [01-009];
+.	WKT2: Refers to WKT as defined in OGC WKT CRS/ISO 19162:2015 Geographic information -- Well-known text representation of coordinate reference systems [12-063r5]. From the document, “This Standard provides an updated version of WKT representation of coordinate reference systems that follows the provisions of ISO 19111:2007 and ISO 19111-2:2009. It extends the earlier WKT to allow for the description of coordinate operations.”
+
+The text in this paragraph is extracted verbatim from 12-063r5. OGC 12-063r5 makes several references to backward compatibility. “Backward compatibility means that an implementation of the text strings in this International Standard would be able to read CRS WKT strings conforming to the old (ISO 19125-1:2004) syntax. It does not mean that a parser of a string compliant to ISO 19125-1:2004 could read WKT strings written in conformance with this International Standard. It also does not require an implementation of the text strings in this International Standard to be able to output an object according to the old syntax. Annex B.8 gives guidance on determining the version of a CRS WKT string. A mapping of older syntaxes to this International Standard is given in Annex C.”
+
+Please note that in an I3S implementation the CRS MAY be represented using either WKT1 or WKT2. While WKT1 has been in use for many years, WKT1 has been superseded by WKT2. Although implementations of OGC standards using WKT2 are not yet widely available the guidance from the OGC/ISO community is to implement WKT2. Important Note: WKT1 does not support explicit definition of axis order.
+
+Therefore, _*I3S implementers need to note for their implementations if they support WKT1 only or both (as WKT2 requires continued support of WKT1)*_.
+
+==== CRS Use and Requirements in I3S
+
+Indexed 3D Scene Layers have to fulfill a number of requirements when it comes to the selection of Coordinate Reference Systems (CRS) to use:
+
+-	Minimize the need for re-projection on the client side
+-	Support data sets with a global extent
+-	Render easily in coordinate reference systems for projected CRSs as well as for geographic CRSs
+-	Support local and global data with very high positional accuracy.
+
+_NOTE:_ A Projected CRS is defined on a flat, two-dimensional surface. Unlike a Geographic CRS, a Projected CRS has constant lengths, angles, and areas across the two dimensions. A Projected CRS is always based on a Geographic CRS that is based on an ellipse. Geographic CRSs are based on a Geodetic datum. The EPSG dataset contains three subtypes of Geodetic CRS: Geocentric, Geographic 3D, Geographic 2D. ISO 19111 Compliance Note: In ISO19111, geog2D, geog3D and geocentric are all considered to be "geodetic CRSs".
+
+These use cases lead to the following implementation requirements. Note that all I3S profiles support writing 3D content in two modes: global and local. In global mode, only the geographic CRS WGS84 (EPSG 4326) is supported for both index and vertex positions.
+
+- The location of all index-related data structures such as node bounding spheres SHALL be specified using a single, global geographic WGS 84 CRS. Coordinate bounds for such structures SHALL be in the range (-180.0000, -90.0000, 180.0000, 90.0000). Height and node minimum bounding sphere (MBS) radius SHALL be specified in meters. Allowed CRS specified using an EPSG code is EPSG:4326 
+- All vertex positions SHALL be specified using a geodetic CRS (including Cartesian coordinate reference systems), where x,y,z axes are all in same unit, and with a per-node offset (from the center point of the node's minimum bounding sphere) for all vertex positions. 
+- Axis Order: Axis order explicitly defined by the CRS SHALL be used when present. When the axis order is not defined by the CRS, Easting, Northing, Height axis order SHALL be used. The Height axis SHALL always point upwards towards the sky (away from the center of the earth).
+
+All I3S layers indicate the coordinate system used by the layer with the <<spatialReference>> property in the 3dSceneLayerInfo resource. This property is normative.
+
+The spatial reference object is common to all I3S profile types.
+
+=== Height Models
+
+The I3S standard accommodates declaration of a vertical coordinate reference system that may either be ellipsoidal (height defined with respect to a reference ellipsoid) or gravity-related height (height defined with respect to a reference geoid/gravity surface). This allows the I3S approach to be applied across a diverse range of fields and applications where the particular definition of height is of importance. 
+ 
+The Well-known Text (WKT) string representation of the CRS now includes the vertical coordinate reference system utilized by the layer. The _spatialReference_ property also includes a well-known Id (wkid) and a Vertical Coordinate Reference System Well-known ID (_vcsWkid_) representation, which could alternatively be utilized by a client application consuming the layer instead of the WKT. In addition to the detailed _spatialReference_ property that describes the layers horizontal and vertical CRSs, the 3dSceneLayerInfo resource also includes a coarse metadata property called _heightModelInfo_, which can be used by a client application to quickly identify if the layers' height model is either gravity-related or ellipsoidal.
+
+The following is a WKT1 description of WGS 84, EPSG 4326.
+
+```
+    
+"spatialReference": // the horizontal and vertical coordinate reference system of the layer
+    {
+        "wkid": 4326,
+        "latestWkid": 4326,
+        "vcsWkid": 3855,
+        "latestVcsWkid": 3855,
+        "wkt": "GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.017453292519943295]],
+        VERTCS[\"EGM2008_Geoid\",VDATUM[\"EGM2008_Geoid\"],PARAMETER[\"Vertical_Shift\",0.0],PARAMETER[\"Direction\",1.0],UNIT[\"Meter\",1.0]]}"
+    }
+```
+
+The following is a WKT2 description of a compound WGS 84, EPSG 4326 and EPSG 3855.
+
+```
+COMPOUNDCRS ["I3S Compound CRS",
+GEODCRS["WGS 84",
+  DATUM["World Geodetic System 1984",
+    ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1.0]]],
+  CS[ellipsoidal,2],
+    AXIS["latitude",north,ORDER[1]],
+    AXIS["longitude",east,ORDER[2]],
+    ANGLEUNIT["degree",0.01745329252],
+  ID["EPSG",4326]]
+VERTCRS["EGM2008 height",
+  VDATUM["EGM2008 geoid"],
+  CS[vertical,1],
+    AXIS["gravity-related height (H)",up],
+    LENGTHUNIT["metre",1.0],
+  ID["EPSG",3855]]]
+```
+
+The following is an example of heightModelInfo.
+
+```
+HeightModelInfo
+
+    "heightModelInfo":  // a coarse metadata indicating the layers height Model
+    {
+        "heightModel": "gravity_related_height", //one of {*" gravity_related_height"*, "ellipsoidal"};
+        "ellipsoid": "wgs84 (G1674)/", //datum realization
+        "heightUnit": "meter" //units
+        }
+```
+
+The above examples illustrate the coordinate reference system and height model of a layer in an I3S payload. The _spatialReference_ object includes a Well-known Text (WKT) string representation of the CRS for both horizontal and vertical coordinate reference systems. The examples provided above show both WKT1 and WKT2 WKT encodings as defined in OGC 12-063r5 - either may be encoded in the spatialReference object. The _heightModelInfo_ object is coarse metadata that could be used by client application to quickly determine if the layers' horizontal and vertical coordinate reference systems align with that of any base map data used by the application. 
+
+See Class 3dSceneLayerInfo (Clause 7.5.4) for more information on the use of the heightModelInfo object.
+
+=== (7.3)	Indexed Scene Layers - Organization and Structure
+
+I3S organizes information using a hierarchical, node-based spatial index structure in which each node’s payload may contain features with associated geometry, textures and attributes. The following sections define this structure.
