@@ -21,11 +21,13 @@ The Indexed 3d Scene layer (I3S) format and the corresponding Scene Layer Packag
 
 A single I3S data set, referred to as a Scene Layer, is a container for arbitrarily large amounts of heterogeneously distributed 3D geographic data. Scene Layers provide clients access to data and allow them to visualize it according to their needs.   Data here refers to vertex geometry, texture as well as any associated attributes. 
 
+An I3S data set is organized as nodes and layers. Nodes are structured into node pages. The node page includes the bounding volume, child reference, count and the level of detail selection. Nodes contain all the information to describe features including geometry, attributes and textures. Scene Layers can be created in cartesian 3D or in global 3D world coordinate reference systems. I3S Scene Layers can be delivered to web, mobile and desktop clients. Most users will interact with Scene Layers using applications with cloud or server-based information. In these cases, the scene layer content is on the server and is provided to clients through a RESTful interface. These web addressable resources provide access to the scene layer, nodes, and associated resources. Alternatively, a scene layer can be delivered as a Scene Layer Package. This is a single file that includes the complete node tree and all necessary resources in an archive.
+
 An I3S Layer is characterized by a combination of layer type and profile. The _layer type_ describes the kind of geospatial data stored within it. The _layer profile_ includes additional details on the specific I3S implementation. 
 
-The requirements specified below apply to the following layer types defined in this standard:
+The requirements specified below apply to the current scene layer profile types:
 
-- 3D Objects such as Building Exteriors from geospatial data and 3D models.
+- link:../docs/3Dobject_Readme.adoc[3D Object] such as Building Exteriors from geospatial data and 3D models.
 -	Integrated Meshs such as a mesh surface with high resolution imagery textures representing the skin of the Earth, typically created from satellite, aerial or drone imagery. 
 -	Points such as geolocated hospitals or schools, trees, street furniture, and signs.
 -	Point Clouds such as LiDAR data. 
