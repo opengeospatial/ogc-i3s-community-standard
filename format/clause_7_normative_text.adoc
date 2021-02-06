@@ -114,11 +114,11 @@ irregular (e.g. R-tree) organizations of data are supported.
 The bounding volume is defined either as minimum bounding sphere (MBS)
 or oriented bounding box (OBB) representation.
 
-image:../docs/img/MBS_Example.png[Minimum bounding sphere..]
+image:../docs/image/MBS_Example.png[Minimum bounding sphere..]
 
 _3D objects enclosed in minimum bounding spheres._
 
-image:../docs/img/OBB_Example.png[Oriented bounding box.]
+image:../docs/image/OBB_Example.png[Oriented bounding box.]
 
 _3D objects enclosed in the smallest bounding box._
 
@@ -130,7 +130,7 @@ In order to provide a scalable representation of the original data,
 parent nodes contain a simplified representation of their children
 creating link:LevelofDetail.md[Level of Details].
 
-image:../docs/img/BoundingVolumeHierarchy.png[Create bounding volume
+image:../docs/image/BoundingVolumeHierarchy.png[Create bounding volume
 hierarchy.]
 
 _Schematic view of spatially distributed data and recursive grouping of
