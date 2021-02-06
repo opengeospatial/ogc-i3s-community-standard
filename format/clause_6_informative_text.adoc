@@ -39,7 +39,7 @@ The following table shows the layer types and profiles. For each row the table i
 [width="90%",options="header"]
 |===
 |Layer Type (example) |	Profile |	Annex |	Features with Identity |Attributes
-|3D Objects|	mesh-pyramids	|Annex H |Yes	|Yes
+|link3D Objects|	mesh-pyramids	|Annex H |Yes	|Yes
 |Integrated Mesh|mesh-pyramids	|Annex H |No	|Triangle Attributes (planned)
 |Point| points	|Annex G |Yes	|Yes
 |Point Cloud	|pointclouds |Annex I |	No|Vertex Attributes
