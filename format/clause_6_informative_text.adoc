@@ -40,7 +40,7 @@ The following table shows the layer types and profiles. For each row the table i
 |===
 |Layer Type (example) |	Profile |	Features with Identity |Attributes
 |link:../docs/3Dobject_Readme.adoc[3D Object] |	mesh-pyramids	|Yes	|Yes
-|Integrated Mesh|mesh-pyramids	 |No	|Triangle Attributes (planned)
+|link:../docs/IntegratedMesh_ReadMe.adoc[Integrated Mesh] |mesh-pyramids	 |No	|Triangle Attributes (planned)
 |Point| points	 |Yes	|Yes
 |Point Cloud	|pointclouds  |	No|Vertex Attributes
 |===
