@@ -38,10 +38,10 @@ The following table shows the layer types and profiles. For each row the table i
 .*3D Layer Types Supported in I3S*
 [width="90%",options="header"]
 |===
-|Layer Type (example) |	Profile |	Annex |	Features with Identity |Attributes
-|link3D Objects|	mesh-pyramids	|Annex H |Yes	|Yes
-|Integrated Mesh|mesh-pyramids	|Annex H |No	|Triangle Attributes (planned)
-|Point| points	|Annex G |Yes	|Yes
-|Point Cloud	|pointclouds |Annex I |	No|Vertex Attributes
+|Layer Type (example) |	Profile |	Features with Identity |Attributes
+|link:docs/3Dobject_ReadMe[3D Objects]|	mesh-pyramids	|Yes	|Yes
+|Integrated Mesh|mesh-pyramids	 |No	|Triangle Attributes (planned)
+|Point| points	 |Yes	|Yes
+|Point Cloud	|pointclouds  |	No|Vertex Attributes
 |===
 
