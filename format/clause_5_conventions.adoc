@@ -1,0 +1,3 @@
+== Conventions
+
+There are no mandatory conventions defined in this Community Standard.
