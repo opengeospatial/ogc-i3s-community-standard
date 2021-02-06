@@ -23,7 +23,7 @@ point features.
 |===
 |Property |Type |Description
 |*id* |string |Tree-key ID. A unique identifier of a node within the
-scene layer. At 1.7 the tree-key is the integer id of the node
+scene layer. In OGC version 1.2, the tree-key is the integer id of the node
 represented as a string.
 
 |level |integer |Explicit level of this node within the index tree. The
