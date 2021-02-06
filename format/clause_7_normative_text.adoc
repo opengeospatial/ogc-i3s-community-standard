@@ -115,10 +115,10 @@ The bounding volume is defined either as minimum bounding sphere (MBS)
 or oriented bounding box (OBB) representation.
 
 _3D objects enclosed in minimum bounding spheres._
-image:../docs/images/MBS_Example.png[width=800,align="center"]
+image:../images/MBS_Example.png[width=800,align="center"]
 
 _3D objects enclosed in the smallest bounding box._
-image:../docs/images/OBB_Example.png[width=800,align="center"]
+image:../images/OBB_Example.png[width=800,align="center"]
 
 OBB is the more optimal representation and implementers are encouraged
 to output node bounding volumes in OBB format. Point cloud profile
@@ -128,13 +128,12 @@ In order to provide a scalable representation of the original data,
 parent nodes contain a simplified representation of their children
 creating link:LevelofDetail.md[Level of Details].
 
-image:../docs/images/BoundingVolumeHierarchy.png[width=800,align="center"]
-.Create bounding volume hierarchy.
+image:../images/BoundingVolumeHierarchy.png[width=800,align="center"]
 
 _Schematic view of spatially distributed data and recursive grouping of
 nodes into a bounding volume hierarchy._
 
-image:../docs/img/BoundingVolumeHierarchyTree.png[Bounding volume
+image:../images/BoundingVolumeHierarchyTree.png[Bounding volume
 hierarchy represented as a tree of nodes.]
 
 _Example of bounding volume hierarchy represented as a tree of nodes._
