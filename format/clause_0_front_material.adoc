@@ -1,5 +1,5 @@
 
-image::../images/sceneLayers.jpg[width=800,align="center"]
+image::../images/sceneLayers.jpg[width=600,align="center"]
 
 [big]*i.     Abstract*
 
