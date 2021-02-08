@@ -207,20 +207,18 @@ geometry representations are used. For example, an integrated mesh scene
 layer geometry data includes all vertex attributes, feature counts, and
 mesh segmentation.
 
-In I3S version 1.7 3D Objects and Integrated Mesh scene layer are using
-link:../docs/1.7/geometryBuffer.cmn.md[geometryBuffer] with draco
+In OGC I3S version 1.2, 3D Objects and Integrated Mesh scene layers are using
+link:../docs/1.7/geometryBuffer.cmn.adoc[geometryBuffer] with _draco_
 compression to describe the geometry. Previous versions of 3D Object and
-Integrated Mesh scene layers (1.6 and earlier) define geometry in the
-link:../docs/1.6/defaultGeometrySchema.cmn.md[defaultGeometrySchema].
+Integrated Mesh scene layers (OGC  version 1.1 and earlier) define geometry in the
+link:../docs/1.6/defaultGeometrySchema.cmn.adoc[defaultGeometrySchema].
 The expected triangle/face winding order in all geometry resources is
 counterclockwise.
 
-Point and Point cloud layers model geometries as points. Point scene
-layer define the geometry in
-link:../docs/1.6/featureData.cmn.md[featureData]. For a Point Cloud
-Scene Layer the binary
-link:../docs/2.0/defaultGeometrySchema.pcsl.md%22[geometry] is lepcc-xyz
-compressed.
+Point and Point cloud layers model geometries as points. A point scene
+layer defines the geometry in
+link:../docs/1.6/featureData.cmn.adoc[featureData]. For a Point Cloud Scene Layer, the binary
+link:../docs/2.0/defaultGeometrySchema.pcsl.adoc[geometry] is lepcc-xyz compressed.
 
 ===== Attributes 
 
