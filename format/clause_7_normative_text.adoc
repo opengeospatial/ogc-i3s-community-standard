@@ -191,10 +191,10 @@ _Node resource for backward compatibility with 1.6_
 [cols=",,",options="header",]
 |===
 |Node Resources |Integrated Mesh |3D Object
-|sharedResources |image:images/checkmark.png[yes]
+|sharedResources |image:../images/checkmark.png[yes]
 |image:../images/checkmark.png[yes]
 
-|3dNodeIndexDocument |image:images/checkmark.png[yes]
+|3dNodeIndexDocument |image:../images/checkmark.png[yes]
 |image:../images/checkmark.png[yes]
 |===
 
