@@ -13,7 +13,7 @@ image:../images/markyes.png
 [cols=",,,,",options="header",]
 |===
 |Node Resources |Integrated Mesh |3D Object |Points |Point Clouds
-|geometry buffer | icon:check[] |image:../images/checkmark.png[yes] |  |image:../images/checkmark.png[yes]
+|geometry buffer | image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  |image:../images/checkmark.png[yes]
 
 |attribute |  |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
 
