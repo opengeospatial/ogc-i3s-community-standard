@@ -28,11 +28,11 @@ featureData. Only valueType and valuesPerElement are required.
 |id |UInt64[feature count] |Feature IDs.
 
 |faceRange |UInt32[2*feature count |Inclusive
-link:../geometryFaceRange.cmn.adoc[range] of the mesh triangles
+link:geometryFaceRange.cmn.adoc[range] of the mesh triangles
 belonging to each feature in the featureID array.
 
 |region |UINT16[4*vertex count] |UV
-link:../geometryUVRegion.cmn.adoc[region] for repeated textures.
+link:geometryUVRegion.cmn.adoc[region] for repeated textures.
 |===
 
 === Related:
