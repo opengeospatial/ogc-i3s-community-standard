@@ -179,15 +179,13 @@ specification. As such, clients should not make this assumption.
 [cols=",,,,",options="header",]
 |===
 |Node Resources |Integrated Mesh |3D Object |Points |Point Clouds
-|geometry buffer |image:images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |  |image:images/checkmark.png[yes]
+|geometry buffer | image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  |image:../images/checkmark.png[yes]
 
-|attribute |  |image:images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |image:images/checkmark.png[yes]
+|attribute |  |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
 
-|texture |image:images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |  | 
+|texture |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  | 
 |===
+
 
 _Node resource for backward compatibility with 1.6_
 
