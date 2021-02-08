@@ -237,8 +237,8 @@ object-id based attribute lookups.
 
 Metadata on each attribute resource is made available to clients via the
 scene service layer. When attributes are present within the scene layer,
-additional metadata in the link:../docs/1.7/field.cmn.md[fields] array
-and link:../docs/1.7/attributeStorageInfo.cmn.md[attributeStorageInfo]
+additional metadata in the link:../docs/field.cmn.adoc[fields] array
+and link:../docs/attributeStorageInfo.cmn.md[attributeStorageInfo]
 array further describe each attribute resource. The
 link:../docs/2.0/attributeInfo.pcsl.md[attributeInfo] of the Point Cloud
 scene layer contains the description of the attributes.
