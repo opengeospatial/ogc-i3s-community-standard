@@ -218,7 +218,7 @@ counterclockwise.
 Point and Point cloud layers model geometries as points. A point scene
 layer defines the geometry in
 link:../docs/1.6/featureData.cmn.adoc[featureData]. For a Point Cloud Scene Layer, the binary
-link:../docs/2.0/defaultGeometrySchema.pcsl.adoc[geometry] is lepcc-xyz compressed.
+link:../docs/defaultGeometrySchema.pcsl.adoc[geometry] is lepcc-xyz compressed.
 
 ===== Attributes 
 
