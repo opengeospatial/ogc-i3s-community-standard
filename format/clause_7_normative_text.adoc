@@ -162,8 +162,7 @@ features:
 [cols=",,,,",options="header",]
 |===
 |Feature |Integrated Mesh |3D Object |Points |Point Clouds
-|support |  |image:../images/checkmark.png
-|image:../images/checkmark.png | 
+|support |  | image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] | 
 |===
 
 ==== Node resources 
