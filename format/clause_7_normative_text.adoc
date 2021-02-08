@@ -126,7 +126,7 @@ supports OBB representation only.
 
 In order to provide a scalable representation of the original data,
 parent nodes contain a simplified representation of their children
-creating link:LevelofDetail.md[Level of Details].
+creating link:LevelofDetail.adoc[Level of Details].
 
 image:../images/BoundingVolumeHierarchy.png[width=800,align="center"]
 
