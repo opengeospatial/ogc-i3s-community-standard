@@ -208,7 +208,7 @@ layer geometry data includes all vertex attributes, feature counts, and
 mesh segmentation.
 
 In OGC I3S version 1.2, 3D Objects and Integrated Mesh scene layers are using
-link:../docs/1.7/geometryBuffer.cmn.adoc[geometryBuffer] with _draco_
+link:../docs/geometryBuffer.cmn.adoc[geometryBuffer] with _draco_
 compression to describe the geometry. Previous versions of 3D Object and
 Integrated Mesh scene layers (OGC  version 1.1 and earlier) define geometry in the
 link:../docs/1.6/defaultGeometrySchema.cmn.adoc[defaultGeometrySchema].
