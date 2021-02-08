@@ -162,8 +162,8 @@ features:
 [cols=",,,,",options="header",]
 |===
 |Feature |Integrated Mesh |3D Object |Points |Point Clouds
-|support |  |image:images/checkmark.png[yes]
-|image:images/checkmark.png[yes] | 
+|support |  |image:../images/checkmark.png
+|image:../images/checkmark.png | 
 |===
 
 ==== Node resources 
@@ -180,13 +180,13 @@ specification. As such, clients should not make this assumption.
 |===
 |Node Resources |Integrated Mesh |3D Object |Points |Point Clouds
 |geometry buffer |image:images/checkmark.png[yes]
-|image:images/checkmark.png[yes] |  |image:images/checkmark.png[yes]
+|image:../images/checkmark.png[yes] |  |image:images/checkmark.png[yes]
 
 |attribute |  |image:images/checkmark.png[yes]
-|image:images/checkmark.png[yes] |image:images/checkmark.png[yes]
+|image:../images/checkmark.png[yes] |image:images/checkmark.png[yes]
 
 |texture |image:images/checkmark.png[yes]
-|image:images/checkmark.png[yes] |  | 
+|image:../images/checkmark.png[yes] |  | 
 |===
 
 _Node resource for backward compatibility with 1.6_
@@ -195,10 +195,10 @@ _Node resource for backward compatibility with 1.6_
 |===
 |Node Resources |Integrated Mesh |3D Object
 |sharedResources |image:images/checkmark.png[yes]
-|image:images/checkmark.png[yes]
+|image:../images/checkmark.png[yes]
 
 |3dNodeIndexDocument |image:images/checkmark.png[yes]
-|image:images/checkmark.png[yes]
+|image:../images/checkmark.png[yes]
 |===
 
 _Note: All binary data is stored in little endian._
