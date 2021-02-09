@@ -19,7 +19,7 @@ Possible values are: +
 * FieldTypeSmallInteger +
 * FieldTypeString
 |range	|number[2]	|Range of the domain (numeric types only)
-|codedValues	|<<domainCodedValue>>[] |Range of the domain (string types only)
+|codedValues	|link:domainCodedValue.cmn.adoc[] |Range of the domain (string types only)
 |===
 
 Note: properties in bold are mandatory.
