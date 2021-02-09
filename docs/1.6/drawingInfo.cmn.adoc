@@ -1,0 +1,15 @@
+== Class_DrawingInfo
+DrawingInfo and the associated classes contain the default symbology (drawing information) of an Indexed 3D Scene Layer. 
+
+When the DrawingInfo object is present in the _3dSceneLayerInfo_ Class, a client application may symbolize an I3S layer by utilizing the *Renderer* information. Indexed 3d Scene Layers also supports capturing the DrawingInfo object as part of the binary I3S representation This is to support applications that may not be able to dynamically symbolize/override a given I3S layer based on its drawing information. Such a behavior, when present, is indicated by the _CachedDrawingInfo_ Class, indicating the component of the DrawingInfo object that's captured as part of the binary I3S representation. The Class DrawingInfo has the following structure: 
+
+.*Attributes of the Class CachedDrawingInfo within the 3dSceneLayerInfo document*
+[width="90%",options="header"]
+|===
+|Name	|Type	|Description
+|*renderer*|	<<Class Renderer>> |The renderer object encapsulates the drawing information of the layer.
+|===
+
+Table 9 Attributes of the Class CachedDrawingInfo within the 3dSceneLayerInfo document
+
+For more details regarding point cloud scene, see _drawing info point cloud scene layer_.
