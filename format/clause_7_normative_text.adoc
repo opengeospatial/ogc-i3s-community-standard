@@ -42,6 +42,7 @@ All I3S layers indicate the coordinate system used by the layer with the <<spati
 
 The spatial reference object is common to all I3S profile types.
 
+[[heightsmodels]]
 === Height Models
 
 The I3S standard accommodates declaration of a vertical coordinate reference system that may either be ellipsoidal (height defined with respect to a reference ellipsoid) or gravity-related height (height defined with respect to a reference geoid/gravity surface). This allows the I3S approach to be applied across a diverse range of fields and applications where the particular definition of height is of importance. 
