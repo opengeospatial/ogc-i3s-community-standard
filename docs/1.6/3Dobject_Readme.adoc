@@ -1,4 +1,4 @@
-====9.3.1	3D Object Scene Layer Structure
+==9.3.1	3D Object Scene Layer Structure
 The 3D object scene layer is structured into a tree of multiple JSON files. Besides storing information in the JSON format, some are also provided as binary buffer. A 3D object scene layer can be used to create a scene layer package (*.slpk) or an I3S service. A 3D object scene layer contains the following:
 
 - Layer description(3DSceneLayerInfo)
@@ -6,7 +6,30 @@ The 3D object scene layer is structured into a tree of multiple JSON files. Besi
 - Node Index Document (3DNodeIndexDocument)
 - Statistics (statsInfo)
 
-==== 9.3.2	Example of 3D Object layer structure
+*Examples*:
+
+New York LoD2 3D Buildings
+http://www.arcgis.com/home/item.html?id=44039155906640438c906d47fac50301[SLPK].
+New York LoD2 3D Buildings
+https://www.arcgis.com/home/item.html?id=a457834a6cb449cd958502d6e98ba305[service].
+
+Montreal, Canada textured buildings
+https://www.arcgis.com/home/item.html?id=5a575b5ab50845c2bfd071c593e9fc40[SLPK].
+Montreal, Canada textured buildings
+https://www.arcgis.com/home/item.html?id=77611df5dfae41019d5b57d89229e1d3[service].
+
+_Realistic 3D Object Scene Layer with textures_
+
+image:../../images/LyonTextured.png[Realistic 3D Object Scene Layer with
+textures]
+
+_Thematic 3D Object Scene Layer without textures_
+
+image:../../images/LyonThematic.png[Thematic 3D Object Scene Layer without
+textures]
+
+
+== 9.3.2	Example of 3D Object layer structure
 
 .<host>/SceneServer/layers
 	+--0 // scene layer document
