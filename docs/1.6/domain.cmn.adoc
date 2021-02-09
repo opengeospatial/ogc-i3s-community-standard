@@ -1,0 +1,53 @@
+=== domain
+(I3S Attribute (i.e. Field) domain)
+
+Attribute domains are rules that describe the legal values of a field type, providing a method for enforcing data integrity. Attribute domains are used to constrain the values allowed in a particular attribute. Using domains helps ensure data integrity by limiting the choice of values for a particular field. Attribute domains can be shared across scene layers like 3D Object Scene Layers or Building Scene Layers.
+
+|===
+|Property	|Type	|Description
+|*type*	|string	|Type of domain. Possible values are: +
+* codedValue +
+* range
+|*name*	|string	|Name of the domain. Must be unique per Scene Layer.
+|description	|string	|Description of the domain
+|fieldType	|string	|The field type is the type of attribute field with which the domain can be associated.
+Possible values are: +
+* FieldTypeDate +
+* FieldTypeSingle +
+* FieldTypeDouble +
+* FieldTypeInteger +
+* FieldTypeSmallInteger +
+* FieldTypeString
+|range	|number[2]	|Range of the domain (numeric types only)
+|codedValues	|<<domainCodedValue>>[] |Range of the domain (string types only)
+|===
+
+Note: properties in bold are mandatory.
+
+A range domain specifies a valid range of values for a numeric attribute. When creating a range domain, you enter a minimum and maximum valid value. A range domain can be applied to short-integer, long-integer, float, double, and date attribute types.
+
+A coded value domain can apply to any type of attribute—text, numeric, date, and so on. Coded value domains specify a valid set of values for an attribute.
+
+The following is a JSON example of a domain encoding.
+
+```
+{
+  "type": "codedValue",
+  "name": "Phases",
+  "description": "Phases",
+  "codedValues": [
+    {
+      "name": "Existing",
+      "code": 0
+    },
+    {
+      "name": "Baby Room Overhaul",
+      "code": 1
+    },
+    {
+      "name": "Roof Garden",
+      "code": 2
+    }
+  ],
+} 
+```
