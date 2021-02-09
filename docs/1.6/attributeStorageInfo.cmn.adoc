@@ -1,0 +1,135 @@
+== attributeStorageInfo
+
+The attributeStorageInfo object describes the structure of the binary
+attribute data resource of a node. The following examples show how
+different attribute types are represented as a binary buffer.
+
+== Examples of attribute resources
+
+=== String
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Field |Type |Description
+|String count |UINT32 |Number of strings in the buffer.
+
+|Total number of bytes |UINT32 |Total number of bytes for all the
+stings, including NULL terminating character.
+
+|String size |UINT32[n] |Size of each string in bytes.
+
+|String data |byte[m] |String values. All strings are UTF8 encoded and
+NULL terminated.
+|===
+
+A string object contains the following: { ``Bratislava'', ``Berlin'',
+``Wien'', `<empty>`, "" }
+
+[cols=",,,,,,,,,,,",options="header",]
+|===
+|5 |24 |11 |7 |5 |0 |1 |Bratislava\0 |Berlin\0 |Wien\0 | |\0
+|===
+
+=== Double
+
+[cols=",,",options="header",]
+|===
+|Field |Type |Description
+|Count |UINT32 |Number of values in the buffer.
+
+|Padding* |bytes[4] |Padding to preserve 8 byte alignement for double
+values.
+
+|value |Double [count] |Double values.
+|===
+
+Representing double values `2.5`, `44.67`,`0.5` .
+
+[cols=",,,,",options="header",]
+|===
+|3 |- |2.5 |44.67 |0.5
+|===
+
+=== Short Integer
+
+[cols=",,",options="header",]
+|===
+|Field |Type |Description
+|Count |UINT32 |Number of values in the buffer.
+|value |UINT16 [count] |16 bit integer values.
+|===
+
+Integer values of 3,10,7.
+
+[cols=",,,",options="header",]
+|===
+|3 |3 |10 |7
+|===
+
+==== Related:
+
+link:3DSceneLayer.cmn.adoc[cmn::3DSceneLayer],
+link:3DSceneLayer.psl.adoc[psl::3DSceneLayer] 
+
+=== Properties
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Property |Type |Description
+|*key* |string |The unique field identifier key.
+
+|*name* |string |The name of the field.
+
+|*header* |link:headerValue.cmn.md[headerValue][] |Declares the headers
+of the binary attribute data.
+
+|ordering |string[] |Possible values for each array string:
+`attributeByteCounts`: Should only be present when working with string
+data types. `attributeValues`: Should always be present. `ObjectIds`
+
+|attributeValues |link:value.cmn.adoc[value] |Represents the description
+for value encoding. For example: scalar or vector encoding.
+
+|attributeByteCounts |link:value.cmn.adoc[value] |For string types only.
+Represents the byte count of the string, including the null character.
+
+|objectIds |link:value.cmn.adoc[value] |Stores the object-id values of
+each feature within the node.
+|===
+
+_Note: properties in *bold* are required_
+
+==== Examples
+
+===== Example: attributeStorageInfo for 3d object scene layer
+
+[source,json]
+----
+ {
+  "key": "f_2",
+  "name": "Family",
+  "header": [
+    {
+      "property": "count",
+      "valueType": "UInt32"
+    },
+    {
+      "property": "attributeValuesByteCount",
+      "valueType": "UInt32"
+    }
+  ],
+  "ordering": [
+    "attributeByteCounts",
+    "attributeValues"
+  ],
+  "attributeByteCounts": {
+    "valueType": "UInt32",
+    "valuesPerElement": 1
+  },
+  "attributeValues": {
+    "valueType": "String",
+    "encoding": "UTF-8",
+    "valuesPerElement": 1
+  }
+} 
+----
