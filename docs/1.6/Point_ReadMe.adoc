@@ -3,7 +3,7 @@ Point scene layers contain point features and their attributes. Point scene laye
 
 [#fig_pointscenelayer,reftext='{figure-caption} {counter:figure-num}']
 .Example of a point scene layer
-image::figures/FIG20.png[width=400,align="center"]
+image::../../images/PointSceneLayer.png[width=500,align="center"]
 
 ====	Point Scene Layer Structure
 Point scene layers contain point features and their attributes. Point scene layers are often used to visualize large amounts of 3D data like trees or buildings. Most phenomena that can be visualized by 3D symbols can be displayed with a point scene layers.
