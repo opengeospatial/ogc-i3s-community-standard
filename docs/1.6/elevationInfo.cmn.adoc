@@ -1,0 +1,16 @@
+== elevationInfo
+(was 7.6.4.11 in version 1.1)
+
+The elevationInfo defines how content in a scene layer is aligned to the ground. For example, the feature is on the ground or at an absolute height.
+
+[width="90%",options="header"]
+|===
+|Property	|Type	|Description
+|mode	|string	|The mode of the elevation. Possible values are: +
+*	relativeToGround +
+*	absoluteHeight +
+*	onTheGround +
+*	relativeToScene +
+|offset	|number	|Offset is always added to the result of the above logic except for onTheGround where offset is ignored.
+unit	string	A string value indicating the unit for the values in elevationInfo
+|===
