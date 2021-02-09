@@ -6,7 +6,7 @@ textures and shared resources.
 
 === Related:
 
-link:3DNodeIndexDocument.cmn.md[cmn::3DNodeIndexDocument]
+link:3DNodeIndexDocument.cmn.adoc[cmn::3DNodeIndexDocument]
 
 === Properties
 
