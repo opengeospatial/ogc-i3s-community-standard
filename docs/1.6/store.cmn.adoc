@@ -39,7 +39,7 @@ Possible values are: +
 `Clustering`: Used by point scene layer. Indicates the ‘cooker’ used data clustering algorithims to build interior nodes (non-leaf nodes). +
 `Generalizing`: Also used by point scene layer. Indicates the ‘cooker’ used data generalization algorithims/techniques to build interior nodes (non-leaf nodes). 
 |lodModel	|String	|optional field to indicate which LoD Switching mode clients have to use. One of {*node-switching*, none}.
-|*defaultGeometrySchema*	|link:defaultGeometrySchema |A common, global ArrayBufferView definition that can be used if the schema of vertex attributes and face attributes is consistent in an entire cache; this is a requirement for meshpyramids caches.
+|*defaultGeometrySchema*	|link:defaultGeometrySchema.adoc[defaultGeometrySchema] |A common, global ArrayBufferView definition that can be used if the schema of vertex attributes and face attributes is consistent in an entire cache; this is a requirement for meshpyramids caches.
 |defaultTextureDefinition	|_texture_ | A common, global TextureDefinition  to be used for all textures in this store. The default texture definition uses a reduced profile of the full TextureDefinition, with the following attributes being mandatory: encoding, uvSet, wrap and channels.
 |defaultMaterialDefinition	|_material_ |If a store uses only one material, it can be defined here entirely as a MaterialDefinition 
 |===
