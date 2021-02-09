@@ -1,0 +1,72 @@
+== popupInfo
+
+(Was 7.6.4.12 in version 1.1)
+
+The properties in the popupInfo class define the look and feel of popup windows when a user clicks or queries a feature.
+
+[width="90%",options="header"]
+|===
+|Property	|Type	|Description
+|title	|string	|A string that appears at the top of the popup window as a title
+|description	|string	|A string that appears in the body of the popup window as a description. It is also possible to specify the description as HTML-formatted content.
+|expressionInfos	|[]	|Reserved for future use. 
+|fieldInfos	|[]	|Array of fieldInfo information properties. This information is provided by the service layer definition. A fieldInfo class defines a set of properties that relate to the Attribute Data of an I3S layer. +
+
+The fieldInfo class contains properties such as _fieldName_ {the name of the field the fieldinfo relates to}, _isEditable_ {indicates if the fieldInfo property is editable}, _label_ {typically used to store a user-friendly name} and _visible_ {indicates if this fieldInfo should be visible}. +
+
+The fieldName of a fieldInfo class directly refrences the _name_ object of the fields array (layers[id].fields[id]) as declared in the 3dSceneLayerInfo class.
+
+|mediaInfos	|[] |	Array of various mediaInfo to display. Can be of type image, piechart, barchart, columnchart, or linechart. The order given is the order in which it displays. 
+|popupElements	|[]	|An array of popupElement objects that represent an ordered list of popup elements
+|===
+
+=== Examples 
+
+==== Example: popupInfo 
+
+```json
+ {
+  "title": "Buildings",
+  "mediaInfos": [],
+  "description": "Buidlings on campus A.",
+  "fieldInfos": [
+    {
+      "fieldName": "OBJECTID",
+      "visible": true,
+      "isEditable": false,
+      "label": "OID"
+    },
+    {
+      "fieldName": "Name",
+      "visible": true,
+      "isEditable": true,
+      "label": "Name"
+    }
+  ],
+  "popupElements": [
+    {
+      "text": "Buidlings on campus A.",
+      "type": "text"
+    },
+    {
+      "fieldInfos": [
+        {
+          "fieldName": "OBJECTID",
+          "visible": true,
+          "isEditable": false,
+          "label": "OID"
+        },
+        {
+          "fieldName": "Name",
+          "visible": true,
+          "isEditable": true,
+          "label": "Name"
+        }
+      ],
+      "type": "fields"
+    }
+  ],
+  "expressionInfos": []
+} 
+```
+
