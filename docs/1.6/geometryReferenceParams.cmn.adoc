@@ -1,0 +1,29 @@
+==	geometryReferenceParams
+
+Instead of owning a Geometry exclusively, a Feature can also reference a (or part of a) Geometry defined for the node. This allows pre-aggregating Geometries for many features. In this case, a GeometryReferenceParams has to be used.
+
+=== Related
+link:geometryParams.cmn.adoc[geometryParams]
+
+.*Attributes of the Class GeometryReferenceParams within the FeatureData document*
+[width="90%",options="header"]
+|===
+|Name	|Type	|Description
+|*href*	|String	|In-document absolute reference to full geometry definition (Embedded or ArrayBufferView) using the I3S json pointer syntax.
+|Type	|String	|The type denotes whether the following geometry is defined by using array buffer views (ArrayBufferView), as an internal reference (GeometryReference), as a reference to a shared Resource (SharedResourceReference) or embedded (Embedded).
+|faceRange	|Number[2]	|Inclusive range of faces in this geometry that belongs to this feature.
+|lodGeometry	|Boolean	|True if this geometry participates in a LoD tree. This value SHALL always be true for the mesh-pyramids profile.
+|===
+
+*Example*: geometryReferenceParams
+
+```
+ {
+  "type": "GeometryReference",
+  "href": "/geometryData/1",
+  "faceRange": [
+    0,
+    195
+  ]
+}
+```
