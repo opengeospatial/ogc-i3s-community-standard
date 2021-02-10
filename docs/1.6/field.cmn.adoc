@@ -1,0 +1,45 @@
+==== field
+
+(was clause 7.6.4.5 in v 1.1)
+
+The Field class is used to provide schema information for this 3dSceneLayer.
+
+
+.*Attributes of the Class Field within the 3dSceneLayerInfo document*
+[width="90%",options="header"]
+|===
+|Name	|Type	|Description
+|name	|String	|The name of the field.
+|*type*	|String	|The type of the field, from this enum: {_FieldTypeBlob, FieldTypeGeometry, FieldTypeDate, FieldTypeFloat, FieldTypeDouble, FieldTypeGeometry, FieldTypeGlobalID, FieldTypeGUID, FieldTypeInteger, FieldTypeOID, FieldTypeSmallInteger, FieldTypeString, FieldTypeGroup_}
+|alias	|String[] 	|The display alias to be used for this field.
+|domain	|link:domain.cmn.adoc[domain] |Array of domains defined for a field.
+|===
+
+The following is a JSON example of the field class.
+
+```
+{
+  "name": "CreatedPhase",
+  "type": "FieldTypeInteger",
+  "alias": "CreatedPhase",
+  "domain": {
+    "type": "codedValue",
+    "name": "Phases",
+    "description": "Phases",
+    "codedValues": [
+      {
+        "name": "Existing",
+        "code": 0
+      },
+      {
+        "name": "Baby Room Overhaul",
+        "code": 1
+      },
+      {
+        "name": "Roof Garden",
+        "code": 2
+      }
+    ],
+  }
+} 
+```
