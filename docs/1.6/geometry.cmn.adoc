@@ -1,4 +1,4 @@
-==	Class_geometry
+==	Geometry
 (was 7.6.6.3)
 This is the common container class for all types of I3S geometry definitions.
 
