@@ -1,0 +1,8 @@
+==== 7.6.6.4	Class GeometryParams
+This is the abstract parent class for all GeometryParams classes (GeometryReferenceParams, VestedGeometryParamas, SingleComponentParams). It does not have properties of its own.
+
+This is one of:
+
+- link:geometryReferenceParams.cmn.adoc[geometryReferenceParams]
+-	link:vestedGeometryParams.cmn.adoc[vestedGeometryParams]
+-	link:singleComponentParams.cmn.adoc[singleComponentParams]
