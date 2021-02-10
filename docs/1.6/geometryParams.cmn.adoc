@@ -1,0 +1,42 @@
+==	Class_geometry
+(was 7.6.6.3)
+This is the common container class for all types of I3S geometry definitions.
+
+.*Attributes of the Class Geometry within the FeatureData document*
+[width="90%",options="header"]
+|===
+|Name	|Type	|Description
+|*id*	|Number	|Reference-able, unique ID of the Geometry in this store.
+|type	|String	|The type denotes whether the following geometry is defined by using array buffer views (ArrayBufferView), as an internal reference (GeometryReference), as a reference to a shared Resource (SharedResourceReference) or embedded (Embedded).
+|transformation	|number[16]	|3D (4x4) transformation matrix expressed as a linear array of 16 values.
+|params	|link:geometryParams.cmn.adoc[geometryParams]	|The parameters for a geometry, as an Embedded GeometryParams object, an ArrayBufferView, a GeometryReference object, or a SharedResourceReference object.
+|===
+
+Note: properties in bold are mandatory
+
+*Example*: Geometry
+
+```
+ {
+  "id": 0,
+  "type": "ArrayBufferView",
+  "transformation": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  ]
+} 
+```
