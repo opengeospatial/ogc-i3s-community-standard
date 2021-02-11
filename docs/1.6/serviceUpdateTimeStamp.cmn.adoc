@@ -1,0 +1,32 @@
+== serviceUpdateTimeStamp
+
+Object to provide time stamp when the I3S service or the source of the
+service was created or updated.
+
+=== Related:
+
+link:3DSceneLayer.cmn.adoc[cmn::3DSceneLayer], +
+link:3DSceneLayer.psl.adoc[psl::3DSceneLayer]
+
+=== Properties
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Property |Type |Description
+|*lastUpdate* |number |Specifies the Unix epoch counting from 1 January
+1970 in milliseconds. Time stamp is created when the I3S service was
+created or updated.
+|===
+
+_Note: properties in *bold* are required_
+
+=== Examples
+
+==== Example: serviceUpdateTimeStamp
+
+[source,json]
+----
+ {
+  "lastUpdate": 1518827901690
+} 
+----
