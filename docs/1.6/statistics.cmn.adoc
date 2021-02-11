@@ -1,0 +1,14 @@
+== statistics [common profiles]
+
+Contains statistics about each attribute. Statistics are useful to
+estimate attribute distribution and range.
+
+=== Properties
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Property |Type |Description
+|stats |link:statsInfo.cmn.adoc[statsInfo] |Contains statistics about each
+attribute. Statistics are useful to estimate attribute distribution and
+range.
+|===
