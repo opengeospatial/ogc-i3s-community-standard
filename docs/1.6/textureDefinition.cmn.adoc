@@ -1,0 +1,69 @@
+== textureDefinition
+
+A texture is a set of images, with some parameters specific to the
+texture/uv mapping to geometries.
+
+Part of link:sharedResource.cmn.adoc[sharedResource] that is deprecated
+in OGC vrsion 1.2.
+
+=== Related:
+
+link:sharedResource.cmn.adoc[cmn::sharedResource]
+
+=== Properties
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Property |Type |Description
+|*(identifier)*
+|link:textureDefinitionInfo.cmn.adoc[textureDefinitionInfo] |A texture is
+a set of images, with some parameters specific to the texture/uv mapping
+to geometries. Part of link:sharedResource.cmn.adoc[sharedResource] that
+is deprecated with OGC version 1.2.
+|===
+
+_Note: properties in *bold* are required_
+
+_Note: properties in (parentheses) require a unique identifier_
+
+=== Examples
+
+==== Example: textureDefinition
+
+[source,json]
+----
+ {
+  "44": {
+    "encoding": [
+      "image/jpeg",
+      "image/vnd-ms.dds"
+    ],
+    "wrap": [
+      "none",
+      "none"
+    ],
+    "atlas": false,
+    "uvSet": "uv0",
+    "channels": "rgb",
+    "images": [
+      {
+        "id": "1161930902884843552",
+        "size": 512,
+        "pixelInWorldUnits": 0,
+        "href": [
+          "../textures/0_0",
+          "../textures/0_0_1"
+        ],
+        "byteOffset": [
+          0,
+          0
+        ],
+        "length": [
+          7461,
+          174904
+        ]
+      }
+    ]
+  }
+} 
+----
