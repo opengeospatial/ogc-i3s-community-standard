@@ -5,7 +5,9 @@ estimate attribute distribution and range.
 
 === Related:
 
-link:stats.cmn.adoc[cmn::stats] ### Properties
+link:stats.cmn.adoc[cmn::stats] 
+
+=== Properties
 
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
