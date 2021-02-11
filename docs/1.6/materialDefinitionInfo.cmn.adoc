@@ -1,0 +1,71 @@
+== materialDefinitionInfo
+
+Material information describes how a feature or a set of features is to
+be rendered, including shading and color. The following table provides
+the set of attributes and parameters for the `type`: `standard`
+material.
+
+Part of link:sharedResource.cmn.adoc[sharedResource] that is deprecated
+in OGC version 1.2.
+
+=== Related:
+
+link:materialDefinition.cmn.adoc[cmn::materialDefinition]
+
+=== Properties
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Property |Type |Description
+|*name* |string |A name for the material as assigned in the creating
+application.
+
+|type |string |Indicates the material type, chosen from the supported
+values. Possible values are: +
+- `standard` +
+- `water` +
+- `billboard` +
+- `leafcard` +
+- `reference`
+
+|$ref |string |The href that resolves to the shared resource bundle in
+which the material definition is contained.
+
+|params |link:materialParams.cmn.adoc[materialParams] |Parameter defined
+for the material.
+|===
+
+_Note: properties in *bold* are required_
+
+=== Examples
+
+==== Example: 3D Scene Layer info for 3D object scene layer
+
+[source,json]
+----
+ {
+  "type": "standard",
+  "name": "standard",
+  "params": {
+    "reflectivity": 0,
+    "ambient": [
+      0,
+      0,
+      0
+    ],
+    "diffuse": [
+      1,
+      1,
+      1
+    ],
+    "specular": [
+      0.09803921568627451,
+      0.09803921568627451,
+      0.09803921568627451
+    ],
+    "shininess": 1,
+    "renderMode": "solid",
+    "cullFace": "none"
+  }
+} 
+----
