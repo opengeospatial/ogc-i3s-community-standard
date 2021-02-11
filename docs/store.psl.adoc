@@ -131,10 +131,10 @@ _Note: properties in *bold* are required_
   ],
   "indexCRS": "http://www.opengis.net/def/crs/EPSG/0/4326",
   "vertexCRS": "http://www.opengis.net/def/crs/EPSG/0/4326",
-  "nidEncoding": "application/vnd.esri.i3s.json+gzip; version=1.4",
-  "featureEncoding": "application/vnd.esri.i3s.json+gzip; version=1.4",
-  "geometryEncoding": "application/octet-stream; version=1.4",
-  "attributeEncoding": "application/octet-stream; version=1.4",
+  "nidEncoding": "application/vnd.ogc.i3s.json+gzip; version=1.2",
+  "featureEncoding": "application/vnd.ogc.i3s.json+gzip; version=1.2",
+  "geometryEncoding": "application/octet-stream; version=1.2",
+  "attributeEncoding": "application/octet-stream; version=1.2",
   "textureEncoding": [
     "image/jpeg",
     "image/vnd-ms.dds"
