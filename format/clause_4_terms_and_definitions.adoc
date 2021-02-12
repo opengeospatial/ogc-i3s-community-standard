@@ -55,6 +55,9 @@ In I3S, specific implementation instances for specific layer definitions (point,
 === *S3TC* footnoteref:[note8, https://www.khronos.org/opengl/wiki/S3_Texture_Compression (February 7, 2017). Please note that S3TC is patented technology and is usage is subject to license restrictions. The patent expires October 7, 2017.]
 S3TC is a technique for compressing images for use as textures. Standard image compression techniques like JPEG and PNG can achieve greater compression ratios than S3TC. However, S3TC is designed to be implemented in high-performance hardware. JPEG and PNG decompress images all-at-once, while S3TC allows specific sections of the image to be decompressed independently.
 
+=== *Scene Layer*
+A scene layer is a type of layer that is optimized for displaying large amounts of 3D data in a scene. A scene layer displays one of four data types: points, a point cloud, 3D objects, or an integrated mesh.
+
 === *Shader*
 A small program or set of algorithms that determines how 3-D surface properties of objects are rendered, and how light interacts with the object within a 3-D computer program.
 
