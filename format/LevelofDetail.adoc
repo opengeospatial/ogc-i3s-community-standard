@@ -91,7 +91,7 @@ example, clients need to weigh the options of screen size, resolution,
 bandwidth, and memory to reach the target quality. Publishers can add as
 many LodSelection objects as desired but must provide one if the layer’s
 lodType is not null. Of the three min/avg/max values, typically only one
-or two are used.
+or two are used. Selection criteria include constraints such as resolution, screen size, bandwidth and available memory and target minimum quality goals.
 
-For more details regarding Integrated Mesh, 3D objects and point scene
-layer, see the link:../docs/lodSelection.cmn.adoc[LoD selection].
+For more details regarding LoD Selection for Integrated Mesh, 3D objects and point scene
+layers, see the link:../docs/lodSelection.cmn.adoc[LoD selection].
