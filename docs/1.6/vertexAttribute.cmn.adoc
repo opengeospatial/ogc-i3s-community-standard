@@ -1,0 +1,62 @@
+== vertexAttribute [common profile]
+
+The vertexAttribute object describes valid properties for a single
+vertex.
+
+=== Related:
+
+link:defaultGeometrySchema.cmn.adoc[cmn::defaultGeometrySchema], +
+link:vestedGeometryParams.cmn.adoc[cmn::vestedGeometryParams]
+
+=== Properties
+
+[cols=",,",options="header",]
+|===
+|Property |Type |Description
+|*position* |link:geometryAttribute.cmn.adoc[geometryAttribute] |The
+vertex position.
+
+|*normal* |link:geometryAttribute.cmn.adoc[geometryAttribute] |The vertex
+normal.
+
+|*uv0* |link:geometryAttribute.cmn.adoc[geometryAttribute] |The first set
+of UV coordinates.
+
+|*color* |link:geometryAttribute.cmn.adoc[geometryAttribute] |The color
+attribute.
+
+|region |link:geometryAttribute.cmn.adoc[geometryAttribute] |The region
+attribute.
+|===
+
+_Note: properties in *bold* are required_
+
+=== Examples
+
+==== Example: Vertex attributes for 3dObject
+
+[source,json]
+----
+ {
+  "position": {
+    "byteOffset": 8,
+    "valueType": "Float32",
+    "valuesPerElement": 3
+  },
+  "normal": {
+    "byteOffset": 2672,
+    "valueType": "Float32",
+    "valuesPerElement": 3
+  },
+  "uv0": {
+    "byteOffset": 5336,
+    "valueType": "Float32",
+    "valuesPerElement": 2
+  },
+  "color": {
+    "byteOffset": 7112,
+    "valueType": "UInt8",
+    "valuesPerElement": 4
+  }
+} 
+----
