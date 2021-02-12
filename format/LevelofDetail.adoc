@@ -67,18 +67,18 @@ depends on the Scene Layer type.
 |===
 |  |Integrated Mesh |3D Object |Points |Point Clouds |Building Scene
 Layer
-|meshpyramids |image:images/checkmark.png[yes]
+|meshpyramids |image:../images/checkmark.png[yes]
 |image:../images/checkmark.png[yes] |  |  |image:../images/checkmark.png[yes]
 
-|Thinning |image:images/checkmark.png[yes]
+|Thinning |image:../images/checkmark.png[yes]
 |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
 |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
 
-|Clustering |image:images/checkmark.png[yes]
+|Clustering |image:../images/checkmark.png[yes]
 |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
 |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
 
-|Generalization |image:images/checkmark.png[yes]
+|Generalization |image:../images/checkmark.png[yes]
 |image:../images/checkmark.png[yes] |  |  |image:../images/checkmark.png[yes]
 |===
 
