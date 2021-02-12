@@ -1,6 +1,6 @@
 == lodSelection
 
-The link:../../format/LevelofDetail.md[LoD (Level of Detail)] document
+The link:../format/LevelofDetail.md[LoD (Level of Detail)] document
 describes in detail the supported LoD model in I3S. The Lod selection
 metrics described below provide information for a client application to
 determine whether a node’s contents are ``good enough'' to render in the
