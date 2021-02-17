@@ -134,8 +134,7 @@ image:../images/BoundingVolumeHierarchy.png[width=800,align="center"]
 _Schematic view of spatially distributed data and recursive grouping of
 nodes into a bounding volume hierarchy._
 
-image:../images/BoundingVolumeHierarchyTree.png[Bounding volume
-hierarchy represented as a tree of nodes.]
+image:../images/BoundingVolumeHierarchyTree.png[[width=600,align="center"]
 
 _Example of bounding volume hierarchy represented as a tree of nodes._
 
@@ -241,7 +240,7 @@ scene service layer. When attributes are present within the scene layer,
 additional metadata in the link:../docs/field.cmn.adoc[fields] array
 and link:../docs/attributeStorageInfo.cmn.md[attributeStorageInfo]
 array further describe each attribute resource. The
-link:../docs/2.0/attributeInfo.pcsl.md[attributeInfo] of the Point Cloud
+link:../docs/attributeInfo.pcsl.md[attributeInfo] of the Point Cloud
 scene layer contains the description of the attributes.
 
 ===== Textures 
@@ -255,30 +254,30 @@ account directly. The client is expected to use the sub-image region
 values and the texture coordinates to best handle repeating textures in
 atlases.
 
-For more details, see the link:../docs/1.7/texture.cmn.md[texture] and
-link:../docs/1.7/textureSetDefinition.cmn.md[textureSetDefinition].
+For more details, see the link:../docs/texture.cmn.md[texture] and
+link:../docs/textureSetDefinition.cmn.md[textureSetDefinition].
 
-==== Node resources for I3S 1.6 and earlier 
+==== Node resources for OGC I3S 1.1 and earlier 
 
-To ensure backward compatibility with 1.6 clients, a 1.7 scene layer
+To ensure backward compatibility with 1.1 clients, a 1.2 scene layer
 needs to also include the
-link:../docs/1.7/3DNodeIndexDocument.cmn.md[3dNodeIndexDocument]
+link:../docs/3DNodeIndexDocument.cmn.md[3dNodeIndexDocument]
 resource as well as the
-link:../docs/1.7/sharedResource.cmn.md[sharedResources] available for
+link:../docs/sharedResource.cmn.md[sharedResources] available for
 any node. SharedResource includes the material definition of the node.
 
 === Node Page 
 
-In version 1.6 and earlier, each node is stored individually as a
+In OGC version 1.1 and earlier, each node is stored individually as a
 3DNodeIndexDocument, causing the tree traversal performance to be
 negatively impacted due to the large number of small resource requests
-required. Version 1.7 packs many nodes into a single resource called a
+required. OGC version 1.2 packs many nodes into a single resource called a
 node page. These node pages are created by representing the tree as a
 flat array of nodes where internal nodes reference their children by
 their array indices.
 
 I3S creators are free to use any ordering (e.g. breadth first, depth
-first) of the nodes into a flat array of nodes. In version 1.7, the ID
+first) of the nodes into a flat array of nodes. In OGC version 1.2, the ID
 for a node is an integer that represents the index of the node within
 this flattened array.
 
@@ -290,7 +289,7 @@ nodes are addressed by their index in the array._
 
 === Statistics 
 
-link:../docs/1.7/stats.cmn.md[Statistics] are used by clients to define
+link:../docs/stats.cmn.md[Statistics] are used by clients to define
 symbology without having to read all data. For example, if you want to
 define a unique value symbology, statistics are used to collect all
 unique values within the layer and calculate the number of features that
@@ -407,14 +406,14 @@ profile has different components and features. For details on the API of
 a specific profile and version, refer to the individual README
 documents.
 
-Version 1.7 support for link:../docs/1.7/3Dobject_ReadMe.md[3D Objects]
-and link:../docs/1.7/IntegratedMesh_ReadMe.md[Integrated Mesh].
+Version 1.2 support for link:../docs/3Dobject_ReadMe.md[3D Objects]
+and link:../docs/IntegratedMesh_ReadMe.md[Integrated Mesh].
 
-Version 1.6 support for link:../docs/1.6/3Dobject_ReadMe.md[3D Objects],
+Version 1.1 support for link:../docs/1.6/3Dobject_ReadMe.md[3D Objects],
 link:../docs/1.6/IntegratedMesh_ReadMe.md[Integrated Mesh], and
 link:../docs/1.6/Point_ReadMe.md[Point].
 
-Version 2.0 support for link:../docs/2.0/pcsl_ReadMe.md[Point Cloud].
+Version 1.2 support for link:../docs/pcsl_ReadMe.md[Point Cloud].
 
 == I3S Formats 
 
@@ -462,11 +461,11 @@ Here are a few examples of SLPK file extensions:
 *Hash*
 
 In I3S verison 1.7, an https://en.wikipedia.org/wiki/MD5[MD5]
-link:../docs/1.7/slpk_hashtable.cmn.md[hash] is used to improve loading
+link:../docs/slpk_hashtable.cmn.md[hash] is used to improve loading
 time. The hash must be the last item at the end of the central directory
 and named `@specialIndexFileHASH128@`.
 
-==== Example 1.7 SLPK Structure Summary for 3D Objects 
+==== Example 1.2 SLPK Structure Summary for 3D Objects 
 
 ....
 .\example_17.slpk
@@ -518,7 +517,7 @@ Exceptions are:
 |layers/0/nodes/4/shared
 |===
 
-#### Example 1.6 Structure Summary for 3D Objects
+#### Example 1.1 Structure Summary for 3D Objects
 
 ....
 .\example_16.slpk
@@ -578,13 +577,13 @@ is \{STORE}
 
 |resourceCompressionType |One of \{GZIP, NONE}, Default is \{GZIP}
 
-|I3SVersion |One of \{1.2, 1.3, 1.4, 1.6, 1.7, 2.0}, Default is \{1.7}
-(Point cloud is \{2.0})
+|I3SVersion |One of \{1.0, 1.1, 1.2}, Default is \{1.2}
+(Point cloud is \{1.2})
 
 |nodeCount |Total number of nodes in the SLPK
 |===
 
-*Example of 1.7 Metadata json*
+*Example of 1.2 Metadata json*
 
 ....
 .\metadata.json
@@ -597,7 +596,7 @@ is \{STORE}
 }
 ....
 
-*Example of 2.0 Metadata json*
+*Example of 1.2 Metadata json*
 
 ....
 .\metadata.json
@@ -605,7 +604,7 @@ is \{STORE}
     "folderPattern":"BASIC",
     "archiveCompressionType":"STORE",
     "resourceCompressionType":"GZIP",
-    "I3SVersion":"2.0",
+    "I3SVersion":"1.2",
     "nodeCount":1156
 }
 ....
