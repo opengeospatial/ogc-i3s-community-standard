@@ -261,7 +261,14 @@ account directly. The client is expected to use the sub-image region
 values and the texture coordinates to best handle repeating textures in
 atlases.
 
-For more details, see the link:../docs/texture.cmn.adoc[texture] and
+Both integrated mesh and 3D object profile support textures. Authoring applications can provide additional texture formats using textureEncoding declarations.
+
+The mesh-pyramids profile supports either a single texture or a texture atlas per node.
+
+By default, the mesh-pyramids profile allows/supports encoding the same texture resource in multiple formats, catering for bandwidth, memory consumption and optimal performance consideration on different platforms. As a result, the I3S standard supports most commonly used image formats such as JPEG/PNG as well as rendering optimized compressed texture formats such as https://en.wikipedia.org/wiki/S3_Texture_Compression[S3TC]. In all cases, the standard provides flexibility by allowing authoring applications to provide additional texture formats via the textureEncoding declarations that use MIME types. For example, most existing I3S services provide "image/vnd-ms.dds" (for S3TC compressed texture) in addition to the default "image/jpeg" encoding.
+
+
+For more details on texture format, texture coordinate, texture atlas usage and regions discussion, see the link:../docs/texture.cmn.adoc[texture] and
 link:../docs/textureSetDefinition.cmn.adoc[textureSetDefinition].
 
 ==== Node resources for OGC I3S 1.1 and earlier 
