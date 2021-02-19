@@ -309,7 +309,7 @@ link:../docs/IntegratedMesh_ReadMe.md[Integrated Mesh] +
 link:../docs/Point_ReadMe.adoc[Points] +
 link:../docs/pcsl_ReadMe.adoc[Point Cloud]
 
-For backwards compatibility Version 1.1 support for:
+For backwards compatibility Version 1.1 support for: +
 link:../docs/1.6/3Dobject_ReadMe.adoc[3D Objects], +
 link:../docs/1.6/IntegratedMesh_ReadMe.adoc[Integrated Mesh], +
 link:../docs/1.6/Point_ReadMe.adoc[Points].
@@ -360,7 +360,7 @@ Here are a few examples of SLPK file extensions:
 *Hash*
 
 In I3S verison 1.7, an https://en.wikipedia.org/wiki/MD5[MD5]
-link:../docs/slpk_hashtable.cmn.md[hash] is used to improve loading
+link:../docs/slpk_hashtable.cmn.adoc[hash] is used to improve loading
 time. The hash must be the last item at the end of the central directory
 and named `@specialIndexFileHASH128@`.
 
