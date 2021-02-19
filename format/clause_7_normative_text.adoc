@@ -99,7 +99,7 @@ HeightModelInfo
 
 The above examples illustrate the coordinate reference system and height model of a layer in an I3S payload. The _spatialReference_ object includes a Well-known Text (WKT) string representation of the CRS for both horizontal and vertical coordinate reference systems. The examples provided above show both WKT1 and WKT2 WKT encodings as defined in OGC 12-063r5 - either may be encoded in the spatialReference object. The _heightModelInfo_ object is coarse metadata that could be used by client application to quickly determine if the layers' horizontal and vertical coordinate reference systems align with that of any base map data used by the application. 
 
-See Class 3dSceneLayerInfo (Clause 7.5.4) for more information on the use of the heightModelInfo object.
+See link:../docs/3dSceneLayerInfo.cmn.adoc[Class 3dSceneLayerInfo] (Formerly Clause 7.5.4 in version 1.1) for more information on the use of the heightModelInfo object.
 
 == Organization and Structure 
 
