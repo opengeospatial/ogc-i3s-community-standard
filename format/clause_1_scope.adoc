@@ -10,8 +10,8 @@ link:../docs/3Dobject_ReadMe.adoc[*3D Objects*] such as Building Exteriors from 
 
 link:../docs/IntegratedMesh_ReadMe.adoc[*Integrated Meshes*] such as a mesh surface with high resolution imagery textures representing the skin of the Earth, typically created from satellite, aerial or drone imagery.
 
-link:../doc/Point_ReadMe.adoc[*Point Features*] such as geolocated hospitals or schools, trees, street furniture, and signs.
+link:../docs/Point_ReadMe.adoc[*Point Features*] such as geolocated hospitals or schools, trees, street furniture, and signs.
 
-*Point Clouds* such as large point data from LiDAR.
+link:../docs/pcsl_ReadMe.adoc[*Point Clouds]* such as large point data from LiDAR.
 
-The Indexed 3d Scene Layer (I3S) and Scene Layer Package (*.slpk) are open formats and not dependent on any vendor specific solution, technology, or products.[3] The specification for accessing I3S resources as Scene Service REST (Annex D) endpoints is also described in this standard as open formats.
+The Indexed 3d Scene Layer (I3S) and Scene Layer Package (*.slpk) are open formats and not dependent on any vendor specific solution, technology, or products.[3] The specification for accessing I3S resources as Scene Service REST endpoints is also described in this standard as open formats.
