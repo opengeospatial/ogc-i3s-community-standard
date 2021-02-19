@@ -9,10 +9,10 @@ Three-dimensional (3D) models represent a physical body using a collection of po
 === *Array Buffers*
 In JavaScript, the ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer.
 
-=== *Bounding Volume (BV)* [note14,https://en.wikipedia.org/wiki/Bounding_volume (February 19, 2021)]
+=== *Bounding Volume (BV)* footnoteref:[note14,https://en.wikipedia.org/wiki/Bounding_volume (February 19, 2021)]
 A closed volume that completely contains the union of the objects in the set. Bounding volumes are used to improve the efficiency of geometrical operations by using simple volumes to contain more complex objects.
 
-=== *Bounding Volume Hierarchy (BVH)* [note15,https://en.wikipedia.org/wiki/Bounding_volume_hierarchy (February 19, 2021)]
+=== *Bounding Volume Hierarchy (BVH)* footnoteref:[note15,https://en.wikipedia.org/wiki/Bounding_volume_hierarchy (February 19, 2021)]
 A tree structure on a set of geometric objects. All geometric objects are wrapped in bounding volumes that form the leaf nodes of the tree.
 
 === *Community Standard*
