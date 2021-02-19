@@ -61,9 +61,12 @@ Mesh Layers based on the meshpyramid profile. In this case, there are no
 features, and each node contains a generalized version of the mesh
 covered by its descendants.
 
-The bounding volume hierarchy tree is built based on the spatial
-distribution of the features. The method used to create the levels
-depends on the Scene Layer type.
+
+
+The first step in the automatic LoD generation process is to build the I3S bounding volume tree hierarchy based on the spatial distribution of the 3D features. Once this has been completed, generation of the reduced LoD content for interior nodes can proceed.
+
+As shown in the Table below, the method used to create the levels depends on the Scene Layer type.
+
 
 [cols=",,,,,",options="header",]
 |===
