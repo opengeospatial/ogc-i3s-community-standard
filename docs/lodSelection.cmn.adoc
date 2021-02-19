@@ -45,8 +45,8 @@ If a *look-angle independent* LoD switching is desired, viewers may use
 the area of minimum bounding-sphere (MBS) of the node if available or
 the MBS of the OBB otherwise. Note: `maxScreenThresholdSQ` may be
 related to `maxScreenThreshold` as follow:
--`maxScreenThresholdSQ = PI * 0.25 * maxScreenThreshold * maxScreenThreshold`.Used
-by the mesh pyramid profile.
+-`maxScreenThresholdSQ = PI * 0.25 * maxScreenThreshold * maxScreenThreshold`. This is used
+by the mesh pyramid profile. 
 
 - `screenSpaceRelative`: The scale of the node’s minimum bounding volume.
 Used by the point profile.
@@ -57,7 +57,7 @@ node’s minimum bounding volume to the camera. Used by the point profile.
 - `effectiveDensity`: Estimation of the point density covered by the node.
 Used by the point cloud profile.
 
-| | *maxError* | number | Maximum metric value, expressed in the CRS of
+| *maxError* | number | Maximum metric value, expressed in the CRS of
 the vertex coordinates or in reference to other constants such as screen
 size. |
 
