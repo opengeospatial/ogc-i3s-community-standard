@@ -103,17 +103,24 @@ See Class 3dSceneLayerInfo (Clause 7.5.4) for more information on the use of the
 
 == Organization and Structure 
 
+I3S organizes information using a hierarchical, node-based spatial index structure in which each node’s payload may contain features with associated geometry, textures and attributes. 
+
+The purpose of any index is to allow fast access to blocks of relevant data. In an Indexed 3D Scene layer, the spatial extent of the data is split into regions, called nodes. Each node has roughly equal amounts of and is organized into a hierarchical and navigable data structure. The node index allows the client to quickly determine which data it needs and allows the server to quickly locate the data requested by any client. Node creation is capacity driven. For example, the smaller the node capacity is, typically the smaller the spatial extent.
+
+The following clauses detail this structure.
+
 === Tree Structure 
 
 To ensure high performance when visualizing 3D content, data are
 spatially grouped into link:#Nodes[nodes]. The grouping process is
 repeated recursively to create a tree of nodes. The spatial extent of a
 given node encompasses all its children to create a bounding volume
-hierarchy. Both spatially regular (e.g. quadtree) as well as spatially
-irregular (e.g. R-tree) organizations of data are supported.
+hierarchy. 
 
-The bounding volume is defined either as minimum bounding sphere (MBS)
-or oriented bounding box (OBB) representation.
+I3S is agnostic with respect to the model used to index objects/features in 3D space. Both regular partitions of space (e.g. https://en.wikipedia.org/wiki/Quadtree[Quadtrees] and https://en.wikipedia.org/wiki/Octree[Octrees]) as well as density dependent partitioning of space (e.g.  https://en.wikipedia.org/wiki/R-tree[R-Trees]) are supported. The specific partitioning scheme is hidden from clients who navigate the nodes in the tree exposed as web resources. The partitioning results in a hierarchical subdivision of 3D space into regions represented by nodes, organized in a bounding volume tree hierarchy (BVH).
+
+The bounding volume is defined either as minimum bounding spheres (MBS)
+or oriented bounding boxes (OBB).
 
 _3D objects enclosed in minimum bounding spheres._
 image:../images/MBS_Example.png[width=800,align="center"]
