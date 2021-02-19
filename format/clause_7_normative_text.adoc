@@ -238,9 +238,9 @@ object-id based attribute lookups.
 Metadata on each attribute resource is made available to clients via the
 scene service layer. When attributes are present within the scene layer,
 additional metadata in the link:../docs/field.cmn.adoc[fields] array
-and link:../docs/attributeStorageInfo.cmn.md[attributeStorageInfo]
+and link:../docs/attributeStorageInfo.cmn.adoc[attributeStorageInfo]
 array further describe each attribute resource. The
-link:../docs/attributeInfo.pcsl.md[attributeInfo] of the Point Cloud
+link:../docs/attributeInfo.pcsl.adoc[attributeInfo] of the Point Cloud
 scene layer contains the description of the attributes.
 
 ===== Textures 
@@ -254,16 +254,16 @@ account directly. The client is expected to use the sub-image region
 values and the texture coordinates to best handle repeating textures in
 atlases.
 
-For more details, see the link:../docs/texture.cmn.md[texture] and
-link:../docs/textureSetDefinition.cmn.md[textureSetDefinition].
+For more details, see the link:../docs/texture.cmn.adoc[texture] and
+link:../docs/textureSetDefinition.cmn.adoc[textureSetDefinition].
 
 ==== Node resources for OGC I3S 1.1 and earlier 
 
 To ensure backward compatibility with 1.1 clients, a 1.2 scene layer
 needs to also include the
-link:../docs/3DNodeIndexDocument.cmn.md[3dNodeIndexDocument]
+link:../docs/3DNodeIndexDocument.cmn.adoc[3dNodeIndexDocument]
 resource as well as the
-link:../docs/sharedResource.cmn.md[sharedResources] available for
+link:../docs/sharedResource.cmn.adoc[sharedResources] available for
 any node. SharedResource includes the material definition of the node.
 
 === Node Page 
@@ -281,15 +281,15 @@ first) of the nodes into a flat array of nodes. In OGC version 1.2, the ID
 for a node is an integer that represents the index of the node within
 this flattened array.
 
-image:../docs/img/BoundingVolumeHierarchyTree.png[bounding volume
-hierarchy tree] image:../docs/img/NodePageArray.png[node page]
+image:../images/BoundingVolumeHierarchyTree.png[bounding volume
+hierarchy tree] image:../images/NodePageArray.png[node page]
 
 _Example of breadth first ordering of nodes in a flat array. Children
 nodes are addressed by their index in the array._
 
 === Statistics 
 
-link:../docs/stats.cmn.md[Statistics] are used by clients to define
+link:../docs/stats.cmn.adoc[Statistics] are used by clients to define
 symbology without having to read all data. For example, if you want to
 define a unique value symbology, statistics are used to collect all
 unique values within the layer and calculate the number of features that
@@ -303,14 +303,14 @@ profile has different components and features. For details on the API of
 a specific profile and version, refer to the individual README
 documents.
 
-Version 1.2 support for link:../docs/3Dobject_ReadMe.md[3D Objects]
+Version 1.2 support for link:../docs/3Dobject_ReadMe.adoc[3D Objects]
 and link:../docs/IntegratedMesh_ReadMe.md[Integrated Mesh].
 
-Version 1.1 support for link:../docs/1.6/3Dobject_ReadMe.md[3D Objects],
-link:../docs/1.6/IntegratedMesh_ReadMe.md[Integrated Mesh], and
-link:../docs/1.6/Point_ReadMe.md[Point].
+Version 1.1 support for link:../docs/1.6/3Dobject_ReadMe.adoc[3D Objects],
+link:../docs/1.6/IntegratedMesh_ReadMe.adoc[Integrated Mesh], and
+link:../docs/1.6/Point_ReadMe.adoc[Point].
 
-Version 1.2 support for link:../docs/pcsl_ReadMe.md[Point Cloud].
+Version 1.2 support for link:../docs/pcsl_ReadMe.adoc[Point Cloud].
 
 == I3S Formats 
 
@@ -467,15 +467,15 @@ and must be of the specified type.
 [width="100%",cols="54%,46%",options="header",]
 |===
 |Property |Details
-|_folderPattern_ |One of \{BASIC, EXTENDED}, Default is \{BASIC}
+|_folderPattern_ |One of {BASIC, EXTENDED}, Default is {BASIC}
 
-|archiveCompressionType |One of \{STORE, DEFLATE64, [DEFLATE]}, Default
-is \{STORE}
+|archiveCompressionType |One of {STORE, DEFLATE64, [DEFLATE]}, Default
+is {STORE}
 
-|resourceCompressionType |One of \{GZIP, NONE}, Default is \{GZIP}
+|resourceCompressionType |One of {GZIP, NONE}, Default is {GZIP}
 
-|I3SVersion |One of \{1.0, 1.1, 1.2}, Default is \{1.2}
-(Point cloud is \{1.2})
+|I3SVersion |One of {1.0, 1.1, 1.2}, Default is {1.2}
+(Point cloud is {1.2})
 
 |nodeCount |Total number of nodes in the SLPK
 |===
@@ -488,7 +488,7 @@ is \{STORE}
     "folderPattern":"BASIC",
     "archiveCompressionType":"STORE",
     "resourceCompressionType":"GZIP",
-    "I3SVersion":"1.7",
+    "I3SVersion":"1.2",
     "nodeCount":62
 }
 ....
