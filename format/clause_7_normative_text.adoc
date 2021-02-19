@@ -303,14 +303,16 @@ profile has different components and features. For details on the API of
 a specific profile and version, refer to the individual README
 documents.
 
-Version 1.2 support for link:../docs/3Dobject_ReadMe.adoc[3D Objects]
-and link:../docs/IntegratedMesh_ReadMe.md[Integrated Mesh].
+Version 1.2 support for: +
+link:../docs/3Dobject_ReadMe.adoc[3D Objects] +
+link:../docs/IntegratedMesh_ReadMe.md[Integrated Mesh] +
+link:../docs/Point_ReadMe.adoc[Points] +
+link:../docs/pcsl_ReadMe.adoc[Point Cloud]
 
-Version 1.1 support for link:../docs/1.6/3Dobject_ReadMe.adoc[3D Objects],
-link:../docs/1.6/IntegratedMesh_ReadMe.adoc[Integrated Mesh], and
-link:../docs/1.6/Point_ReadMe.adoc[Point].
-
-Version 1.2 support for link:../docs/pcsl_ReadMe.adoc[Point Cloud].
+For backwards compatibility Version 1.1 support for:
+link:../docs/1.6/3Dobject_ReadMe.adoc[3D Objects], +
+link:../docs/1.6/IntegratedMesh_ReadMe.adoc[Integrated Mesh], +
+link:../docs/1.6/Point_ReadMe.adoc[Points].
 
 == I3S Formats 
 
