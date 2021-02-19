@@ -10,7 +10,7 @@ link:../docs/3Dobject_ReadMe.adoc[*3D Objects*] such as Building Exteriors from 
 
 link:../docs/IntegratedMesh_ReadMe.adoc[*Integrated Meshes*] such as a mesh surface with high resolution imagery textures representing the skin of the Earth, typically created from satellite, aerial or drone imagery.
 
-link../doc/Point_ReadMe.adoc[*Point Features*] such as geolocated hospitals or schools, trees, street furniture, and signs.
+link:../doc/Point_ReadMe.adoc[*Point Features*] such as geolocated hospitals or schools, trees, street furniture, and signs.
 
 *Point Clouds* such as large point data from LiDAR.
 
