@@ -45,6 +45,7 @@ If a *look-angle independent* LoD switching is desired, viewers may use
 the area of minimum bounding-sphere (MBS) of the node if available or
 the MBS of the OBB otherwise. Note: `maxScreenThresholdSQ` may be
 related to `maxScreenThreshold` as follow:
+
 -`maxScreenThresholdSQ = PI * 0.25 * maxScreenThreshold * maxScreenThreshold`. This is used
 by the mesh pyramid profile. 
 
