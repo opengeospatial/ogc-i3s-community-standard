@@ -359,7 +359,7 @@ Here are a few examples of SLPK file extensions:
 
 *Hash*
 
-In I3S verison 1.7, an https://en.wikipedia.org/wiki/MD5[MD5]
+In OGC I3S verison 1.2, an https://en.wikipedia.org/wiki/MD5[MD5]
 link:../docs/slpk_hashtable.cmn.adoc[hash] is used to improve loading
 time. The hash must be the last item at the end of the central directory
 and named `@specialIndexFileHASH128@`.
