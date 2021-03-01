@@ -13,9 +13,7 @@ implementer needs to be make based on the Coordinate Reference System
 
 For an I3S layer in WGS84 geographic coordinate system, referred to as a
 _global scene layer_ and identified by the wkid value of 4326 (see
-link:/docs/1.7/spatialReference.cmn.adoc[spatial reference] in
-link:/docs/1.7/3DSceneLayer.cmn.adoc[3DSceneLayer] resource):
-docs/1.7/3DSceneLayer.cmn.adoc 
+link:spatialReference.cmn.adoc[spatial reference] in link:3DSceneLayer.cmn.adoc[3DSceneLayer] resource) 
 
 - the OBB should be constructed in an
 earth-centered, earth-fixed (ECEF) coordinate system equivalent to the
