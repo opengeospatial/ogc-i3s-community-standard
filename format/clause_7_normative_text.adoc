@@ -210,8 +210,7 @@ _Note: All binary data is stored in little endian._
 
 ===== Geometry 
 
-All Scene Layer types make use of the same fundamental set of geometry types: points, lines, and triangles.Depending on the scene layer type and the version of I3S, different geometry representations are used. For example, an integrated mesh scene
-layer geometry data includes all vertex attributes, feature counts, and
+All Scene Layer types make use of the same fundamental set of geometry types: points, lines, and triangles. Depending on the scene layer type and the version of I3S, different geometry representations are used. For example, an integrated mesh scene layer geometry data includes all vertex attributes, feature counts, and
 mesh segmentation. I3S supports storage of triangle meshes via triangles geometry type.
 
 ArrayBufferView geometry property declarations control geometries storage and consumption representation. I3S provides full control over those properties, such as per-vertex layout of components (e.g. position, normal and texture coordinates). This orders the vertex position, normal and texture coordinates to ensure the same pattern across the Scene Layer.
