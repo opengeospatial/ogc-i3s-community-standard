@@ -6,8 +6,8 @@ For the purposes of this document, the following additional terms and definition
 === *3D Model* footnoteref:[note4,https://en.wikipedia.org/wiki/3D_modeling (February 7, 2017)]
 Three-dimensional (3D) models represent a physical body using a collection of points in 3D space, connected by various geometric entities such as triangles, lines, curved surfaces, etc.
 
-=== *Array Buffers*
-In JavaScript, the ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer.
+=== *ArrayBuffer*
+In JavaScript, the https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer[ArrayBuffer] object is used to represent a generic, fixed-length raw binary data buffer. ArrayBuffer is an abstract type that is the base for the following types: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView[DataView], Float32Array, Float64Array, Int8Array, Int16Array, Int32Array, Uint8Array, Uint8ClampedArray, Uint16Array, Uint32Array. 
 
 === *Bounding Volume (BV)* footnoteref:[note14,https://en.wikipedia.org/wiki/Bounding_volume (February 19, 2021)]
 A closed volume that completely contains the union of the objects in the set. Bounding volumes are used to improve the efficiency of geometrical operations by using simple volumes to contain more complex objects.
