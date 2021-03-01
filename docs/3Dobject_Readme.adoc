@@ -82,13 +82,13 @@ _Example of 3DObject layer structure_
     |  +-- (...)
 ....
 
-_* Only required for 1.6 compatability for older clients._ _^ Not used
+_* Only required for OGC version 1.1 compatability for older clients._ _^ Not used
 by client. Human readable version of the features._
 
-== HTTP API Overview 1.7
+== HTTP API Overview 1.2
 
-Version 1.7 is backwards compatible with 1.6. For older clients to be
-able to read 1.7, sharedResources and the 3DNodeIndexDocument resources
+Version 1.2 is backwards compatible with 1.1. For older clients to be
+able to read 1.2, sharedResources and the 3DNodeIndexDocument resources
 are included.
 
 The following API methods are available for 3D Object scene layer:
