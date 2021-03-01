@@ -77,10 +77,12 @@ link:../docs/3dNodeIndexDocument.cmn.adoc[3dNodeIndexDocument]
 === AttributeData
 Attribute data for all features in a node is stored and made available as discrete, per field resource called attribute. The number of attribute resources corresponds to the number of feature data fields that are chosen to be included along with the 3d Scene Layer cache. 
 
-FeatureData
+=== FeatureData
 The FeatureData is optional with this profile.
+
 FeatureData
-SharedResources
+
+=== SharedResources
 SharedResources
 
 ```{
