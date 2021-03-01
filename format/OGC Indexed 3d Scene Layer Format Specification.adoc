@@ -122,6 +122,9 @@ add or remove annexes after "A" as necessary
 ////
 include::annex-a.adoc[]
 
+include::annex-b.adoc[]
+
+include::annex-c.adoc[]
 <<<
 include::annex-n.adoc[]
 
