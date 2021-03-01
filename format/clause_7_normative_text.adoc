@@ -211,10 +211,13 @@ _Note: All binary data is stored in little endian._
 
 ===== Geometry 
 
-Depending on the scene layer type and the version of I3S, different
-geometry representations are used. For example, an integrated mesh scene
+All Scene Layer types make use of the same fundamental set of geometry types: points, lines, and triangles.Depending on the scene layer type and the version of I3S, different geometry representations are used. For example, an integrated mesh scene
 layer geometry data includes all vertex attributes, feature counts, and
-mesh segmentation.
+mesh segmentation. I3S supports storage of triangle meshes via triangles geometry type.
+
+ArrayBufferView geometry property declarations control geometries storage and consumption representation. I3S provides full control over those properties, such as per-vertex layout of components (e.g. position, normal and texture coordinates). This orders the vertex position, normal and texture coordinates to ensure the same pattern across the Scene Layer.
+
+Both 3D Object as well as Integrated Mesh layer type model geometries as triangle meshes using the mesh-pyramids profile. The mesh-pyramids profile uses the triangles geometry type to store triangle meshes with reduced level of detail representations of the mesh, segmented by features, available in the interior nodes as described above.
 
 In OGC I3S version 1.2, 3D Objects and Integrated Mesh scene layers are using
 link:../docs/geometryBuffer.cmn.adoc[geometryBuffer] with _draco_
