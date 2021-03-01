@@ -7,7 +7,9 @@ the data and maintains store consistency.
 
 === Related:
 
-link:3DNodeIndexDocument.cmn.adoc[cmn::3DNodeIndexDocument] ### Properties
+link:3DNodeIndexDocument.cmn.adoc[cmn::3DNodeIndexDocument] 
+
+=== Properties
 
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
