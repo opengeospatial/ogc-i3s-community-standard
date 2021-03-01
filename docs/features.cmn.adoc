@@ -3,6 +3,8 @@
 Declaration of the attributes per feature in the geometry, such as
 feature ID or face range.
 
+NOTE: This class is new in Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
+
 === Related:
 
 link:3DNodeIndexDocument.cmn.adoc[cmn::3DNodeIndexDocument] 
