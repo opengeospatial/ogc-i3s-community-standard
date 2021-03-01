@@ -17,7 +17,7 @@ Must be:
 
 -`triangle`
 
-| *geometryBuffers* | link:geometryBuffer.cmn.md[geometryBuffer][1:2]
+| *geometryBuffers* | link:geometryBuffer.cmn.adoc[geometryBuffer][1:2]
 | Array of geometry representation(s) for this class of meshes. When
 multiple representations are listed, Clients should select the most
 compact they support (e.g. Draco compressed mesh). For compatibility
