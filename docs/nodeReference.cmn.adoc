@@ -17,7 +17,7 @@ link:3DNodeIndexDocument.cmn.adoc[cmn::3DNodeIndexDocument] ### Properties
 |mbs |number[4] |An array of four doubles, corresponding to x, y, z and
 radius of the link:mbs.cmn.md[minimum bounding sphere] of a node.
 
-|href |string |Number of values per element.
+|href |string |The relative URL to the referenced node resource.
 
 |version |string |Version (store update session ID) of the referenced
 node.
