@@ -152,6 +152,8 @@ contain node resources for the bounding volume. Each node has a unique
 identifier, which allows clients to efficiently locate and load the
 resources.
 
+NOTE: Each node has an address and nodes may be thought of as equivalent to tiles. A node has an ID that is unique within a layer. I3S supports two types of node ID formats: string based treekeys or as integers based on a fixed linearization of the nodes. The treekey format is loosely modeled on binary search trees. The key indicates both the level and sibling association of a given node. The key also directly indicates the position of the node in the tree, allowing sorting of all resources on a single dimension.
+
 ==== Feature 
 
 A feature represents a real-world object within a node. For example, an
