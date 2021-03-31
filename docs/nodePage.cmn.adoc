@@ -5,7 +5,9 @@ where internal nodes reference their children by their array indices.
 
 === Related:
 
-link:nodePageDefinition.cmn.adoc[cmn::nodePageDefinition] ### Properties
+link:nodePageDefinition.cmn.adoc[cmn::nodePageDefinition] 
+
+=== Properties
 
 [cols=",,",options="header",]
 |===
