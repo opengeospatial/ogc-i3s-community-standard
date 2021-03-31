@@ -5,7 +5,9 @@ The node object.
 === Related:
 
 link:3DSceneLayer.cmn.adoc[cmn::3DSceneLayer],
-link:nodePage.cmn.adoc[cmn::nodePage] ### Properties
+link:nodePage.cmn.adoc[cmn::nodePage] 
+
+=== Properties
 
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
