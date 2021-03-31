@@ -38,7 +38,7 @@ These use cases lead to the following implementation requirements. Note that all
 - All vertex positions SHALL be specified using a geodetic CRS (including Cartesian coordinate reference systems), where x,y,z axes are all in same unit, and with a per-node offset (from the center point of the node's minimum bounding sphere) for all vertex positions. 
 - Axis Order: Axis order explicitly defined by the CRS SHALL be used when present. When the axis order is not defined by the CRS, Easting, Northing, Height axis order SHALL be used. The Height axis SHALL always point upwards towards the sky (away from the center of the earth).
 
-All I3S layers indicate the coordinate system used by the layer with the _spatialReference_ property in the link:../docs/3dSceneLayer.cmn.adoc[3dSceneLayerInfo] resource. This property is normative.
+All I3S layers indicate the coordinate system used by the layer with the _spatialReference_ property in the link:../docs/3DSceneLayer.cmn.adoc[3dSceneLayerInfo] resource. This property is normative.
 
 The spatial reference object is common to all I3S profile types.
 
