@@ -3,7 +3,7 @@ This document uses the terms defined in Sub-clause 5.3 of [OGC 06-121r8], which 
 
 For the purposes of this document, the following additional terms and definitions apply.
 
-=== *3D Model* footnoteref:[note4,https://en.wikipedia.org/wiki/3D_modeling (February 7, 2017)]
+=== *3D Model* footnote:note4[https://en.wikipedia.org/wiki/3D_modeling (February 7, 2017)]
 Three-dimensional (3D) models represent a physical body using a collection of points in 3D space, connected by various geometric entities such as triangles, lines, curved surfaces, etc.
 
 === *ArrayBuffer*
