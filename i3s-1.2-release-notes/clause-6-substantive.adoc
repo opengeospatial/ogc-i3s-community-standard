@@ -1,0 +1,4 @@
+[[Clause_Substantive]]
+== Description of Substantive Changes
+
+There are substantive changes incorporated into Version 1.2 of the I3S Community Standard. These changes do not impact backwards compatibility. These changes are now described.
