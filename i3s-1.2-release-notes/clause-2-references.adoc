@@ -1,0 +1,8 @@
+[[references]]
+== References
+
+The following normative documents are new or updated references in the standard to which these Release Notes apply.
+
+NOTE: Need to update link to document!!
+
+OGC: http://docs.opengeospatial.org/cs/17-014r7/17-014r7.html[OGC Indexed 3d Scene Layer (I3S) and Scene Layer Package Format Specification Version 1.2]
