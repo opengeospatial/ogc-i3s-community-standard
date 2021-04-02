@@ -7,14 +7,17 @@ It is very important that the names of the file er.adoc will not be changed, as 
 
 * OGC Indexed 3d Scene Layer Format Specification.adoc (Root)
   * clause_0_front_material.adoc
-  * 2-references.adoc
-  * 3-terms.adoc
-  * 4-overview.adoc
-  * 5-example.adoc (some asciidoc syntax help. Use as many copies as you need sections in your document)
+  * clause_1_scope.adoc
+  * clause_2_conformance.adoc
+  * clause_3-references.adoc
+  * clause_4_terms_and_definitions.adoc
+  * clause_6_informative_text.adoc
+  * clause_7_normative_text.adoc
+  * clause_8_media_types.adoc
 
-  * annex-a.adoc  --|
-  * annex-b.adoc    |-- Use as needed
-  * annex-c.adoc  --|
+  * annex-a.adoc
+  * annex-b.adoc    
+  * annex-c.adoc
 
   * annex-history.adoc
   * annex-bibliography.adoc
