@@ -1,0 +1,6 @@
+[[Clause_Critical]]
+== Description of Critical Changes
+
+//If no critical changes are present, use the phrase below.
+
+There are no critical changes in this release.
