@@ -2,3 +2,34 @@
 == Description of Substantive Changes
 
 There are substantive changes incorporated into Version 1.2 of the I3S Community Standard. These changes do not impact backwards compatibility. These changes are now described.
+
+=== Summary of substantive changes
+
+The substantive revisions for I3S version 1.2 include:
+
+•	Introduction of paged node access pattern – which significantly reduces the client-server traffic by bundling individual node metadata resources into compact pages of nodes.
+•	Introduction of a more compact geometry layout for 3D Object and Integrated Mesh layers binary geometry payloads – using a well-known quantization encoding (Draco).
+•	Introduction of an advanced material definitions property such as physically based materials.
+•	More optimal selection strategy – standardizes on Oriented Bounding Boxes (OBBs) based node selection criterion.
+
+Each is now described in more detail.
+
+=== Node Paging
+A major improvement is node paging. Previously, clients received one node per request. In the new version, the nodes are grouped into pages. Clients can determine which node pages are needed and request only the necessary pages. This significantly reduces server-client traffic and improves performance.
+
+Specifically, in earlier versions, each node was stored individually as a 3DNodeIndexDocument, causing the tree traversal performance to be negatively impacted due to the large number of small resource requests required. For version 1.2 many nodes are packed into a single resource called a node page. These node pages are created by representing the tree as a flat array of nodes where internal nodes reference their children by their array indices.
+
+I3S creators are free to use any ordering (e.g. breadth first, depth first) of the nodes into a flat array of nodes. The ID for a node is an integer that represents the index of the node within this flattened array.
+
+Due to the addition of node pages, the shared resources class has been deprecated. The primarily components of the shared resource class, which are texture and material information, are now available in the 3D Scene Layer Resource. However, since the proposed I3S 1.2 CS is backwards compatible, the shared resource component of a node is still included in the specification, even though it is not utilized by newer client application accessing the proposed CS. The presence of the shared resource class in I3S 1.2 guarantees that older client application based on OGC I3S Version 1.1 will still be able to consume the same I3S resource.
+
+=== Geometry compression
+
+The next major enhancement is support for Draco geometry compression. Draco is an open source library for compressing 3D geometries. Draco supports compressing geometry attributes creating more compact nodes, which in turn provides a smaller payload, increasing performance. More specifically, Draco is a library for compressing and decompressing 3D geometric meshes and point clouds. It is intended to improve the storage and transmission of 3D graphics. The Draco encoder and decoder APIs are now available in C++ and Javascript and are provided as an open source solution by Google under an Apache 2.0 license.
+
+===	Advanced Materials Definition 
+
+Another key enhancement for version 1.2 is support for advanced materials. The material definition is now feature compatible with glTF materials. glTF defines materials using a common set of parameters that are based on widely used material representations from Physically-Based Rendering (PBR). Specifically, glTF uses the metallic-roughness material model. Using this declarative representation of materials enables a glTF file to be rendered consistently across platforms.
+
+The materialDefinitions object are feature-compatible with glTF material with the following exceptions. I3S material colors properties (baseColorFactor, emissiveFactor etc.) are assumed to be in the same color space as the textures, most commonly sRGB while in glTF they are interpreted as linear. glTF has separate definitions for properties like strength for occlusionTextureInfo and scale for normalTextureInfo. Further I3S has only one texture definition with factor that replaces strength and scale.
+
