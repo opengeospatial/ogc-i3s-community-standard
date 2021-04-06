@@ -1,6 +1,6 @@
 == 3DSceneLayer [Common Profiles]
 
-The 3DSceneLayerInfo describes the properties of a layer in a store. The
+The 3DSceneLayerInfo class describes the properties of a layer in a store. The
 store object describes the exact physical storage of a layer and enables
 the client to detect when multiple layers are served from the same
 store. Every scene layer contains 3DSceneLayerInfo. If features based
