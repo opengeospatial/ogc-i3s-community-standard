@@ -5,12 +5,13 @@
 
 * Source:
 ** CR - Formal Change Request
-** Issue - GitHub Issue
-** Editor - The GeoPackage document Editor
+** (Ed)itor - The Editor for the standard
+** (Is)sue - GitHub Issue
 ** OGC-NA - OGC Naming Authority review
-** Public - Public Comment period
-** SWG - Approved decision by the Standards Working group (SWG)
-** User - The GeoPackage User Community
+** (Pu)blic - Public Comment period
+** (Su)bmission team - From the source specification as submitted by the Submission Team, usually for a Community Standard.
+** SWG  - Approved decision by the Standards Working group (SWG)
+** User - The standard's User Community
 ** Other
 
 * Identifier: Change Request number or issue number and pull request/commit in GitHub
@@ -30,6 +31,7 @@ See <<Clause_Critical>> for more information on critical changes and
 * Purpose: the reason for the change:
 ** Clarity
 ** Consistency
+** Enhancement
 ** Interoperability
 ** Perfunctory
 ** Readability
@@ -44,9 +46,10 @@ NOTE: The following are examples and need to be replaced with changes for this r
 [cols="1a,1a,1a,2a,6a,2a",options="header"]
 |===
 |Source      |Identifier     |Type                 |Section |Description |Purpose
-| Editor | NA |A   |All sections | Change cover page to reflect Version 1.2 | Consistency
+| Editor | NA | A | All sections | Change cover page to reflect Version 1.2 | Consistency
 | Editor | NA | A | Various | Move source code etc from Esri Git repo into GPKG repo and OGC I3S 1.1 Word document | Consistency
-| Issue  | 553| S | Clause 7, Requirement 14 | Modify Requirement 14 in support of TIFF changes| Resolve Issue 553
-| Editor | NA|A |Intro materials | Add Future Work sub-clause | Information
-| Editor | NA| A |Vol 1 Core, Front Material | Add paragraph on how to submit comments and questions | Usability
+| Editor | NA |A  | Intro materials | Add Future Work sub-clause | Information
+| Su     | NA | S | attributeCompression | New class: supports compressing the geometryBuffer of Integrated Mesh and 3D Object Layers using Draco compression| Enhancement
+| Su     | NA | S | geometryBuffer | New class: Better organize information for geometry buffer and to suppot Draco compression. Note: All 1.1 Geometry capabilities are still supported. | Enhancement
+| Editor | NA | A |Vol 1 Core, Front Material | Add paragraph on how to submit comments and questions | Usability
 |===
