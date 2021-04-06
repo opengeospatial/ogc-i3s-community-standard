@@ -21,15 +21,23 @@ Specifically, in earlier versions, each node was stored individually as a 3DNode
 
 I3S creators are free to use any ordering (e.g. breadth first, depth first) of the nodes into a flat array of nodes. The ID for a node is an integer that represents the index of the node within this flattened array.
 
-Due to the addition of node pages, the shared resources class has been deprecated. The primarily components of the shared resource class, which are texture and material information, are now available in the 3D Scene Layer Resource. However, since the proposed I3S 1.2 CS is backwards compatible, the shared resource component of a node is still included in the specification, even though it is not utilized by newer client application accessing the proposed CS. The presence of the shared resource class in I3S 1.2 guarantees that older client application based on OGC I3S Version 1.1 will still be able to consume the same I3S resource.
+Due to the addition of node pages, the I3S shared resources class has been deprecated. The primarily components of the shared resource class, which are texture and material information, are now available in the 3D Scene Layer Resource. However, since the proposed I3S 1.2 Community Standard is backwards compatible, the shared resource component of a node is still included in the standard, even though it is not utilized by newer client application accessing the proposed CS. The presence of the shared resource class in I3S 1.2 guarantees that older client application based on OGC I3S Version 1.1 will still be able to consume the same I3S resource.
 
 === Geometry compression
 
-The next major enhancement is support for Draco geometry compression. Draco is an open source library for compressing 3D geometries. Draco supports compressing geometry attributes creating more compact nodes, which in turn provides a smaller payload, increasing performance. More specifically, Draco is a library for compressing and decompressing 3D geometric meshes and point clouds. It is intended to improve the storage and transmission of 3D graphics. The Draco encoder and decoder APIs are now available in C++ and Javascript and are provided as an open source solution by Google under an Apache 2.0 license.
+The next major enhancement is support for https://google.github.io/draco/[Draco] geometry compression. Draco is an open-source library for compressing and decompressing 3D geometric meshes and point clouds. Using Draco is intended to improve the storage and transmission of 3D graphics. In I3S, Draco supports compressing geometry attributes creating more compact nodes, which in turn provides a smaller payload, increasing performance. More specifically, Draco is a library for compressing and decompressing 3D geometric meshes and point clouds. It is intended to improve the storage and transmission of 3D graphics. The Draco encoder and decoder APIs are now available in C++ and Javascript and are provided as an open source solution by Google under an Apache 2.0 license.
+
+By using Draco compression, OGC I3S version 1.2 community standard enables deploying I3S instances that have a geometry payload that is ~85% smaller compared to those encoded based on the OGC I3S 1.1 CS. Such a reduction in the geometry payloads is attained by using Draco compression that gets decoded on the client side at runtime. This approach enables I3S 1.2 services to stream content across the wire more efficiently compared to previous versions.
 
 ===	Advanced Materials Definition 
 
-Another key enhancement for version 1.2 is support for advanced materials. The material definition is now feature compatible with glTF materials. glTF defines materials using a common set of parameters that are based on widely used material representations from Physically-Based Rendering (PBR). Specifically, glTF uses the metallic-roughness material model. Using this declarative representation of materials enables a glTF file to be rendered consistently across platforms.
+Another key enhancement for I3S version 1.2 is support for advanced materials. The material definition is now feature compatible with glTF materials. glTF defines materials using a common set of parameters that are based on widely used material representations from https://en.wikipedia.org/wiki/Physically_based_rendering[Physically-Based Rendering] (PBR). Specifically, glTF uses the metallic-roughness material model. Using this declarative representation of materials enables a glTF file to be rendered consistently across platforms.
 
 The materialDefinitions object are feature-compatible with glTF material with the following exceptions. I3S material colors properties (baseColorFactor, emissiveFactor etc.) are assumed to be in the same color space as the textures, most commonly sRGB while in glTF they are interpreted as linear. glTF has separate definitions for properties like strength for occlusionTextureInfo and scale for normalTextureInfo. Further I3S has only one texture definition with factor that replaces strength and scale.
 
+Below is an example of a rendering of I3S encoded content using PBR materials definitions.
+
+image:../images/i3s-pbr-example.png
+
+
+NOTE: https://www.khronos.org/gltf/[glTF] is Khronos’ royalty-free format for widespread, efficient transmission and loading of 3D scenes and models.
