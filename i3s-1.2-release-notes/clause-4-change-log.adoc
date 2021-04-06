@@ -52,8 +52,21 @@ NOTE: The following are examples and need to be replaced with changes for this r
 | Su     | NA | S | 3DSceneLayer | Enhanced to specify three new optional parameters (materialDefinitions, textureSetDefinition, geometryDefinition) in support of PBR materials and Draco compression. | Enhancement
 | Su     | NA | S | attributeCompression | New class: supports compressing the geometryBuffer of Integrated Mesh and 3D Object Layers using Draco compression| Enhancement
 | Su     | NA | S | geometryBuffer | New class: Better organize information for geometry buffer and to support Draco compression. Note: All 1.1 Geometry capabilities are still supported. | Enhancement
-| Su     | NA | S | geometryDefinition | New class: Better organize information for geometry buffer and to suppot Draco compression. Note: All 1.1 Geometry capabilities are still supported. | Enhancement
+| Su     | NA | S | geometryColor | New class: In support of using PBR materials definition and Draco compression. | Enhancement
+| Su     | NA | S | geometryDefinition | New class: Better organize information for geometry buffer and to support Draco compression. Note: All 1.1 Geometry capabilities are still supported. | Enhancement
+| Su     | NA | S | geometryFaceRange | New class: faceRange is an inclusive range of faces in this geometry that belongs to this feature. Aspect of compressing the geometryBuffer of Integrated Mesh and 3D Object Layers using Draco compression| Enhancement
+| Su     | NA | S | geometryFeatureID | New class: FeatureID attribute helps to identify a part of a mesh belonging to a particular GIS feature. Support for enhanced Mesh encoding. Note: All 1.1 Geometry capabilities are still supported. | Enhancement
+| Su     | NA | S | geometryNormals | New class: Better organize information for geometry buffers and to support Draco compression. Note: All 1.1 Geometry capabilities are still supported. | Enhancement
+| Su     | NA | S | geometryPosition | New class: Position vertex attribute relative to the center of oriented-bounded box of the node.Better organize information for geometry buffers and to support Draco compression. Note: All 1.1 Geometry capabilities are still supported. | Enhancement
+| Su     | NA | S | geometryUV | New class: Defines the texture coordinates of the geometry. In support of using PBR materials definition. | Enhancement
+| Su     | NA | S | geometryUVRegion | New class: UV regions are required to properly wrap UV coordinates of repeated-texture in texture atlases. In support of using PBR materials definition. | Enhancement
+| Su     | NA | S | materialDefinition | New class: Describes how a feature or a set of features is to be rendered, including shading and color. In support of using PBR materials definition. Part of the sharedResource class that is deprecated with OGC Version 1.2. | Enhancement
+| Su     | NA | S | materialDefinitionInfo | New class: Describes how a feature or a set of features is to be rendered, including shading and color. In support of using PBR materials definition. | Enhancement
+| Su     | NA | S | materialDefinitions | New class: Specifies all of the necessary properties to be feature compatible with glTF PBR materials. In support of using PBR materials definition. | Enhancement
+| Su     | NA | S | materialParams | New class: Specifies Parameters describing the material. In support of using PBR materials definition. | Enhancement
+| Su     | NA | S | materialTexture | New class: Specifies the material texture definition. In support of using PBR materials definition. | Enhancement
 | Su     | NA | S | node       | New object specifying the node object and how Nodes are stored contiguously in what can be considered a flat array of nodes. Note: All 1.1 Node storage and indexing capabilities are still supported. | Enhancement
 | Su     | NA | S | nodePage   | New class: The node page object representing the tree as a flat array of nodes where internal nodes reference their children by their array indices. Note: All 1.1 Node storage and indexing capabilities are still supported. | Enhancement
 | Su     | NA | S | nodePageDefinition | New class: Specify how Nodes are stored contiguously in what can be considered a flat array of nodes. Note: All 1.1 Node storage and indexing capabilities are still supported. | Enhancement
+| Su     | NA | S | pbrMetallicRoughness | New class: Feature-compatible with glTF material. With the exception of emissive texture.. In support of using PBR materials definition. | Enhancement
 |===
