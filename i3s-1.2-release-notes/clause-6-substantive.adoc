@@ -37,7 +37,7 @@ The materialDefinitions object are feature-compatible with glTF material with th
 
 Below is an example of a rendering of I3S encoded content using PBR materials definitions.
 
-image:../images/i3s-pbr-example.png
+image:images/i3s-pbr-example.png[width=500]
 
 
 NOTE: https://www.khronos.org/gltf/[glTF] is Khronos’ royalty-free format for widespread, efficient transmission and loading of 3D scenes and models.
