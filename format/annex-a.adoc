@@ -1,30 +1,32 @@
-[annex-a]
-:appendix-caption: Annex A
+[appendix]
+[[annex-a]]
+:!numbered:
+:appendix-caption: Annex
 
-== Annex A: I3S Scene Layer Profile - Mesh-pyramids (MP)
+== I3S Scene Layer Profile - Mesh-pyramids (MP)
 This Annex is provided for further guidance and information on Mesh-pyramids.
 
 What this profile is used for: This profile is implemented by the 3D Object and Integrated Mesh layer types.
 
 === Access Pattern
 
-This section describes how a client is expected to load and handle resources from an Indexed 3D Scene Layer using the 
+This section describes how a client is expected to load and handle resources from an Indexed 3D Scene Layer using the
 Mesh-pyramids profile. The general pattern consists of these phases:
 
-.	Handshake & capabilities negotiation: The client ensures that the service has the expected resources and that a client and a server have a common set of capabilities. Within this phase, the client utilizes the following resources: 
+.	Handshake & capabilities negotiation: The client ensures that the service has the expected resources and that a client and a server have a common set of capabilities. Within this phase, the client utilizes the following resources:
 ..	Retrieve SceneServiceInfo: General service information
 ..	Retrieve 3dSceneLayer: Information on available layers, including symbology and encoding
-.	Index exploration: The client retrieves Node Index Documents and decides – based on lodSelection properties – whether it wants to download and render their attached resources. Within this phase, the client utilizes the following resource: 
+.	Index exploration: The client retrieves Node Index Documents and decides – based on lodSelection properties – whether it wants to download and render their attached resources. Within this phase, the client utilizes the following resource:
 ..	NodeIndexDocument: Summary of the content of a single node of the index, references children, parent and neighbor nodes, indicating what can be found there
-.	Rendering: When a client has decided that it wants to render the content of a node, it retrieves the attached resources: 
+.	Rendering: When a client has decided that it wants to render the content of a node, it retrieves the attached resources:
 ..	SharedData: Material definitions, shared geometries for instancing
 ..	GeometryData: Geometry attributes such as positions and indices
 ..	TextureData: Images used as texture maps
 ..	AttributeData: Attribute data of features used for attribute-based symbolization (as indicated by the DrawingInfo object in the 3dSceneLayer resource)
-.	Identify: Additional resources belonging to a node are accessed only if needed, e.g. for an Identify operation. 
+.	Identify: Additional resources belonging to a node are accessed only if needed, e.g. for an Identify operation.
 ..	AttributeData: If the AttributeData resources of the node have not already been fetched (in step 3 above) client application can request the desired attribute data.
 
-A familiar access pattern based on a single tree data structure is proposed for view frustum culling, level-of-detail selection, 
+A familiar access pattern based on a single tree data structure is proposed for view frustum culling, level-of-detail selection,
 and rendering. The following pseudo code illustrates the recommended pattern when navigating an index tree using Mesh Pyramids.
 Node traversal starts at the root node and recursively calls TraverseNodeTree(node):
 
@@ -43,19 +45,19 @@ TraverseNodeTree(node)
 
 === Additional notes:
 
-.	view frustum culling: 
+.	view frustum culling:
 ..	visibility test can include the ‘entirely inside the viewing frustum’ result which can be used to optimize away all further frustum culling tests on the children of the node
 ..	this step can also optionally incorporate a cutoff distance threshold test if desired.
-.	level-of-detail selection: 
+.	level-of-detail selection:
 ..	test used to decide how deep to recurse is based on mbs‘ projected size (diameter) on the screen vs the per node provided ‘maxScreenThreshold’.
-.	Rendering: 
-..	“render the node” potentially includes some, or all, of the following steps: 
+.	Rendering:
+..	“render the node” potentially includes some, or all, of the following steps:
 ...	Requesting the corresponding geometry and texture data if not already requested
 ...	(asynchronously) accessing the corresponding geometry and texture data and loading it into GPU memory if not already loaded
 ...	Binding, if loaded, the geometry VBO
 ...	Binding, if loaded, the texture
 ...	Making a draw() call if, at least, the geometry is loaded
-.	optimized user experience: 
+.	optimized user experience:
 ..	children should be sorted by the ascending distance from the observer…
 
 === Schema
@@ -75,7 +77,7 @@ There is always exactly 1 geometry and texture resource per node.
 link:../docs/3dNodeIndexDocument.cmn.adoc[3dNodeIndexDocument]
 
 === AttributeData
-Attribute data for all features in a node is stored and made available as discrete, per field resource called attribute. The number of attribute resources corresponds to the number of feature data fields that are chosen to be included along with the 3d Scene Layer cache. 
+Attribute data for all features in a node is stored and made available as discrete, per field resource called attribute. The number of attribute resources corresponds to the number of feature data fields that are chosen to be included along with the 3d Scene Layer cache.
 
 === FeatureData
 The FeatureData is optional with this profile.
@@ -185,5 +187,5 @@ SharedResources
       }
     }
   }
-} 
+}
 ```

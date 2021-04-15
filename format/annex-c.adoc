@@ -1,11 +1,12 @@
-[annex-c]
-:appendix-caption: Annex C
+[appendix]
+[[annex-c]]
+:appendix-caption: Annex
 
-== Annex C: JSON Resources Schema and Documentation (Was 7.6 in 1.1)
+== JSON Resources Schema and Documentation (Was 7.6 in 1.1)
 This section provides a detailed, logical-level specification for each of the resource types.
 
-==== Basic Value Types
-A value schema ensures that the JSON properties follow a fixed pattern and support the following data types: 
+=== Basic Value Types
+A value schema ensures that the JSON properties follow a fixed pattern and support the following data types:
 
 .	String: utf8 String.
 .	Float: A Float64 number with an optional fractional component, such as "1.02" or "1.0".
@@ -16,7 +17,7 @@ A value schema ensures that the JSON properties follow a fixed pattern and suppo
 .	Pointer: Any resolvable reference to an object in a JSON document, consisting of a relative or absolute URL and a document path, such as [../Node/51/sharedResource]/materialDefinitions/Mat01 .
 .	NodeID: A treekey string such as “3-0-34-234-2” that is zero-based (first child is "0", root node is "root").
 
-==== Pointers
+=== Pointers
 I3S uses the following Pointer syntax whenever a specific property in the current or another document is to be referenced. The Pointer consists of two elements:
 
 .	mandatory in-document reference: Relative to the currently evaluated property, or document absolute, reference to a property. References are always slash-separated paths through a document tree and can contain wildcards (\*) to indicate that a set or list of properties is to be matched instead of a single property.
