@@ -102,7 +102,7 @@ include::clause_0_front_material.adoc[]
 
 image::images/sceneLayers.jpg[width=600,align="center"]
 
-== [big]*i.     Abstract*
+== [big]*     Abstract*
 
 The Indexed 3D Scene Layer (I3S) format is an open 3D content delivery
 format used to rapidly stream and distribute large volumes of 3D GIS
@@ -130,7 +130,7 @@ conjunction with a rich set of layer types.
 The open community GitHub version of this standard is
 https://github.com/Esri/i3s-spec[here].
 
-[big]*ii.   Source of this document*
+== [big]*   Source of this document*
 
 The majority of the content in this OGC document is a direct copy of the
 content contained at https://github.com/Esri/i3s-spec . No normative
@@ -149,12 +149,12 @@ Scene Layer (e.g. comprehensive building model including building
 components)''. This layer type is not included in this OGC Community
 Standard but may be proposed for inclusion in a future version.
 
-[big]*iii. Validity of content*
+== [big]* Validity of content*
 
 The Submission Team has reviewed and certified that the ``snapshot''
 content in this Community Standard is true and accurate. <>
 
-[big]*iv. Keywords*
+== [big]* Keywords*
 
 The following are keywords to be used by search engines and document
 catalogues.
@@ -162,7 +162,7 @@ catalogues.
 ogcdoc, OGC document, i3s, 3d, point clouds, visualization, scene, scene
 layer, slpk
 
-[big]*vi. Preface*
+== [big]* Preface*
 
 I3S originated from investigations into technologies for rapidly
 streaming and distributing large volumes of 3D content across enterprise
@@ -181,7 +181,7 @@ intellectual property rights of which they may be aware that might be
 infringed by any implementation of the standard set forth in this
 document, and to provide supporting documentation.
 
-[big]*iv. Submitting organizations*
+== [big]* Submitting organizations*
 
 The following organizations submitted this Document to the Open
 Geospatial Consortium (OGC):
@@ -190,7 +190,7 @@ Organization name(s)
 
 Esri, Inc.
 
-[big]*v. Supporting Organizations*
+== [big]* Supporting Organizations*
 
 The following organization support the submission of the I3S Community
 Standard version 1.2 to the OGC:
@@ -227,7 +227,7 @@ Please note that all questions and/or comments regarding this OGC
 Community Standard should be submitted to the OGC via the comment
 submission form. <<insert link here when the OGC actually has one!>>
 
-[big]*vi. Future Work* The I3S community anticipates that revisions to this
+==[big]* Future Work* The I3S community anticipates that revisions to this
 Community Standard will be required to prescribe content appropriate to
 meet new use cases. These use cases may arise from either (or both) the
 external user and developer community or from OGC review and comments.
