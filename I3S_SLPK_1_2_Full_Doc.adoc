@@ -102,7 +102,7 @@ include::clause_0_front_material.adoc[]
 
 image::images/sceneLayers.jpg[width=600,align="center"]
 
-[big]*i.     Abstract*
+== [big]*i.     Abstract*
 
 The Indexed 3D Scene Layer (I3S) format is an open 3D content delivery
 format used to rapidly stream and distribute large volumes of 3D GIS
