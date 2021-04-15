@@ -161,7 +161,7 @@ scene layer. Node resources such as geometry buffer and attributes can
 belong to a feature and can be accessed by an object-ID.
 
 When the same feature is included in more than one node at different
-link:LevelofDetail.md[Levels of Detail], the corresponding attributes
+<<loddetail,Levels of Detail>>, the corresponding attributes
 for the feature are included as attribute resources in each node. This
 redundancy in attribute storage allows each node to be rendered
 independently of other nodes. The following scene layer types support
@@ -207,6 +207,109 @@ _Node resource for backward compatibility with 1.6_
 |===
 
 _Note: All binary data is stored in little endian._
+
+[[loddetail]]
+
+== Level of Detail
+
+Scene Layers include Levels of Detail (LoD) that apply to the whole
+layer and serve to generalize the layer. Scene Layers support LoD in a
+manner that preserves the identity of the individual features that are
+retained within any LoD.
+
+The concept of Level of Detail (LoD) is intrinsic to the I3S standard. Scene Layers may include levels of detail that apply to the layer as whole and serve to generalize or summarize information for the layer. This is similar to image pyramids and also similar to raster and tiled vector data schemes. A node in the I3S scene layer tree could be considered the analog of a tile in a raster or vector tiling scheme. Scene layers support levels of detail in a manner that preserves the identity of the individual features that are retained within any level of detail. Levels of Detail can be used to split heavy features, thin or cluster for better visuals, and integrate externally authored files.
+
+The I3S Level of Detail model covers several use cases, including, splitting very heavy features such as detailed building or very large features (coastlines, rivers, infrastructure), thinning/clustering for optimized visualization as well as support for representing externally authored multiple LoDs.
+
+Note that the I3S Level of Detail concept is orthogonal to the concept of consolidated storage (batches) for a set of geometries within a level of detail. This batching is based on, for example, the concatenation of geometries/meshes into larger geometry collections/meshes to assist in optimal rendering. In all such cases the consolidated storage makes use of Geometry Array Buffers that provide access to individual geometries when needed, preserving the feature to geometry element mapping within the consolidated geometries.
+
+
+=== Discrete Level of Detail
+
+Discrete LoD provide multiple models to display the same object. A
+specific detail level is bound to certain levels of the bounding volume
+hierarchy tree. Leaf nodes typically contain the original feature
+representation with the most detail. The closer a node is to the root of
+the bounding volume hierarchy tree, the lower the LoD. The detail is
+reduced by texture down-sampling, feature reduction/generalization, mesh
+reduction/generalization, clustering or thinning in order to ensure
+inner nodes have a balanced weight. The number of discrete LoD for the
+layer corresponds to the number of levels in the bounding volume
+hierarchy tree.
+
+By using the bounding volume and LoD selection metrics, a client
+traversing an I3S tree can readily decide if it needs to: +
+- Stop traversal to the node’s children if the current node bounding volume is not visible. +
+- Use the data in the node if the quality is appropriate, and then stop traversal to children. +
+- Continue traversal until nodes with higher quality are found.
+
+These decisions are made using the advertised values for LoD selection metrics that are part of the information payload of the node. The I3S standard describes multiple LoD Selection Metrics and permits different LoD Switching Models. An example LoD selection metric is the maximum screen size that the node may occupy before it must be replaced with data from more detailed nodes. This model of discrete LoD rendering (LoD Switching Model) is referred to in I3S as node-switching.
+
+I3S Scene Layers also include additional optional metadata on the LoD generation process (e.g. thinning, clustering and generalization) as non-actionable (to clients) information that is of interest to some service consumers.
+
+I3S supports multiple LoD selection metrics and switching level of detail models. Details about the LoD generation process can be
+optionally included in the Scene Layer’s metadata.
+
+=== Node switching
+
+Node switching lets clients focus on the display of a node as a whole. A node switch occurs when the content from a node’s children is used to replace the content of an existing node. This can include features, geometry, attributes and textures. Node switching can be helpful when the user needs to see more detailed information.
+
+Each interior node in the I3S tree has a set of features that represent the reduced LoD representation of all of the features covered by that interior node. Due to generalization at lower Levels of Detail, not all features are present in reduced level of detail nodes. Omission of a feature at a reduced LoD node indicates that the entire feature has been intentionally generalized away at this level of detail.
+
+The correspondence between a reduced LoD feature in an interior node and the same feature in descendant (children) nodes is based on feature IDs. These are a key part of the storage model. Applications accessing the I3S tree can display all of the features in an internal node and stop there or instead descend further and use the features found in its child nodes, based on desired quality.
+
+The main advantage of this mechanism is that clients can focus on the display criterion associated with nodes as a whole in making the decision to switch representations. node-switching is the default LoD Switching model for layer types that implement the Mesh-pyramids profile.
+
+=== Level of Detail Generation
+
+Integrated Mesh layer types typically come with pre-authored Levels of
+Detail. If the desired LoD does not exist, it can be generated.
+
+For example, 3D Object Layers based on the meshpyramids profile can
+create a LoD pyramid for all features based on generalizing, reducing
+and fusing the geometries of individual features while preserving
+feature identity. The same approach can also be used with Integrated
+Mesh Layers based on the meshpyramid profile. In this case, there are no
+features, and each node contains a generalized version of the mesh
+covered by its descendants.
+
+The first step in the automatic LoD generation process is to build the I3S bounding volume tree hierarchy based on the spatial distribution of the 3D features. Once this has been completed, generation of the reduced LoD content for interior nodes can proceed.
+
+As shown in the Table below, the method used to create the levels depends on the Scene Layer type.
+
+[cols=",,,,,",options="header",]
+|===
+|  |Integrated Mesh |3D Object |Points |Point Clouds |Building Scene
+Layer
+|meshpyramids |image:../images/checkmark.png[yes]
+|image:../images/checkmark.png[yes] |  |  |image:../images/checkmark.png[yes]
+
+|Thinning |image:../images/checkmark.png[yes]
+|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
+|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
+
+|Clustering |image:../images/checkmark.png[yes]
+|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
+|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
+
+|Generalization |image:../images/checkmark.png[yes]
+|image:../images/checkmark.png[yes] |  |  |image:../images/checkmark.png[yes]
+|===
+
+_Example LoD generation methods based on Scene Layer type_
+
+==== Selection Metrics
+
+Selection metrics help clients determine which LoD to render. For
+example, clients need to weigh the options of screen size, resolution,
+bandwidth, and memory to reach the target quality. Publishers can add as
+many LodSelection objects as desired but must provide one if the layer’s
+lodType is not null. Of the three min/avg/max values, typically only one
+or two are used. Selection criteria include constraints such as resolution, screen size, bandwidth and available memory and target minimum quality goals.
+
+For more details regarding LoD Selection for Integrated Mesh, 3D objects and point scene
+layers, see the link:../docs/lodSelection.cmn.adoc[LoD selection].
+
 
 ===== Geometry 
 
