@@ -102,7 +102,9 @@ include::clause_0_front_material.adoc[]
 
 image::images/sceneLayers.jpg[width=600,align="center"]
 
-=== Abstract
+== Abstract and intro clauses
+
+[big]*i.     Abstract*
 
 The Indexed 3D Scene Layer (I3S) format is an open 3D content delivery
 format used to rapidly stream and distribute large volumes of 3D GIS
@@ -130,7 +132,7 @@ conjunction with a rich set of layer types.
 The open community GitHub version of this standard is
 https://github.com/Esri/i3s-spec[here].
 
-== *   Source of this document*
+[big]*ii.   Source of this document*
 
 The majority of the content in this OGC document is a direct copy of the
 content contained at https://github.com/Esri/i3s-spec . No normative
