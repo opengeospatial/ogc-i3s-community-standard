@@ -241,8 +241,28 @@ inclusion in the I3S standard (future work):
 building components)
 
 
-
+////
 include::clause_1_scope.adoc[]
+////
+
+== Introduction
+
+A single I3S data set, referred to as a Scene Layer, is a container for arbitrarily large amounts of heterogeneously distributed 3D geographic data. Scene Layers provide clients access to data and allow them to visualize it according to their needs. The definition of "data" in this case includes the geometry, attributes, and vertex geometry.  I3S organizes information into node hierarchies that contain features with geometry, textures and attributes.
+
+A Scene Layer is characterized by a combination of layer type and profile. The layer type describes the kind of geospatial data stored within it. The layer profile includes additional details on the specific I3S implementation.
+
+The I3S format is declarative and extendable and can be used to represent different types of 3D data. The following layer types have been specified and the standard validated via implementation and production deployments:
+
+link:../docs/3Dobject_ReadMe.adoc[*3D Objects*] such as Building Exteriors from geospatial data and 3D models.
+
+link:../docs/IntegratedMesh_ReadMe.adoc[*Integrated Meshes*] such as a mesh surface with high resolution imagery textures representing the skin of the Earth, typically created from satellite, aerial or drone imagery.
+
+link:../docs/Point_ReadMe.adoc[*Point Features*] such as geolocated hospitals or schools, trees, street furniture, and signs.
+
+link:../docs/pcsl_ReadMe.adoc[*Point Clouds]* such as large point data from LiDAR.
+
+The Indexed 3d Scene Layer (I3S) and Scene Layer Package (*.slpk) are open formats and not dependent on any vendor specific solution, technology, or products.[3] The specification for accessing I3S resources as Scene Service REST endpoints is also described in this standard as open formats.
+
 
 include::clause_2_conformance.adoc[]
 
