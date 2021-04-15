@@ -100,7 +100,7 @@ Make sure to complete each included document
 include::clause_0_front_material.adoc[]
 ////
 
-image::../images/sceneLayers.jpg[width=600,align="center"]
+image::../format/images/sceneLayers.jpg[width=600,align="center"]
 
 [big]*i.     Abstract*
 
