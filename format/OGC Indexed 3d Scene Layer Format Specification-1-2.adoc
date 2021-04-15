@@ -1,5 +1,5 @@
-:Title: OGC Indexed 3d Scene Layer (I3S) and Scene Layer Package (*.slpk) Format Community Standard
-:titletext: OGC Indexed 3d Scene Layer (I3S) and Scene Layer Package (*.slpk) Format Community Standard
+:Title: OGC Indexed 3d Scene Layer (I3S) and Scene Layer Package (*.slpk) Format Community Standard Version 1.2
+:titletext: OGC Indexed 3d Scene Layer (I3S) and Scene Layer Package (*.slpk) Format Community Standard Version 1.2
 :doctype: book
 :encoding: utf-8
 :lang: en
