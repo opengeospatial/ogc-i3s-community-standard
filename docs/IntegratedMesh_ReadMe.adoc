@@ -89,8 +89,7 @@ link:3DSceneLayer.cmn.adoc[3DSceneLayer]
 |Type |JSON
 |URL Template |`http://serviceURL/layers/{layerID}/nodepages/{nodePageID}/`
 |Example |http://my.server.com/IntegratedMeshSceneLayer/SceneServer/layers/0/nodepages/1
-|Description |`layerID`: Integer. ID of the associated layer. Esri products expect this
-to be `0`. +
+|Description |`layerID`: Integer. ID of the associated layer. +
 `nodePageID`: Integer. ID of the associated node page.
 |===
 
@@ -104,7 +103,7 @@ link:nodePage.cmn.adoc[nodePage]
 ID}
 |Example |http://my.server.com/IntegratedMeshSceneLayer/SceneServer/layers/0/nodes/9/textures/0_0_1
 |Description |The texture resource (image). +
-`layerID`: Integer. ID of the associated layer. Esri products expect this to be `0`. +
+`layerID`: Integer. ID of the associated layer. +
 `nodeID`: Integer. ID of the associated node. textureID: String. This ID returns one of the textures
 available for this node. The same texture may be available in different formats.
 |===
@@ -117,7 +116,7 @@ available for this node. The same texture may be available in different formats.
 ID}
 |Example |http://my.server.com/IntegratedMeshSceneLayer/SceneServer/layers/0/nodes/9/geometries/1
 |Description |The geometry resource (mesh information). +
-`layerID`: Integer. ID of the associated layer. Esri products expect this to be `0`. +
+`layerID`: Integer. ID of the associated layer.  +
 `nodeID`: Integer. ID of the associated node. +
 `geometryID`: Integer. This ID returns one of the geometries available for this node. The same geometry may be available in a different format.
 |===
@@ -131,8 +130,7 @@ ID}
 |URL Template |http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/shared
 |Example |http://my.server.com/IntegratedMeshSceneLayer/SceneServer/layers/0/nodes/9/shared
 |Description |Legacy texture and material description. Not used in OGC Version 1.2. +
-`layerID`: Integer. ID of the associated layer. ArcGIS clients expect this to be
-`0`. +
+`layerID`: Integer. ID of the associated layer. +
 `nodeID`: Integer. ID of the associated node.
 |===
 
@@ -145,7 +143,7 @@ link:sharedResource.cmn.adoc[sharedResource]
 |URL Template |http://serviceURL/layers/\{layerID}/nodes/\{nodeID}
 |Example |http://my.server.com/IntegratedMeshSceneLayer/SceneServer/layers/0/nodes/9
 |Description |Description of the node. Not used in OGC Version 1.2. +
-`layerID`: Integer. ID of the associated layer. Esri clients expect this to be `0`. +
+`layerID`: Integer. ID of the associated layer. +
 `nodeID`: Integer. ID of the associated resource.
 |===
 
