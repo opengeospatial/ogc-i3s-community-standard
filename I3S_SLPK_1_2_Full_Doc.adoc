@@ -265,16 +265,196 @@ link:../docs/pcsl_ReadMe.adoc[*Point Clouds]* such as large point data from LiDA
 
 The Indexed 3d Scene Layer (I3S) and Scene Layer Package (*.slpk) are open formats and not dependent on any vendor specific solution, technology, or products.[3] The specification for accessing I3S resources as Scene Service REST endpoints is also described in this standard as open formats.
 
-
+////
 include::clause_2_conformance.adoc[]
+////
 
+== Conformance
+
+Not required in an OGC Community Standard.
+
+////
 include::clause_3_references.adoc[]
+////
 
+== References
+
+The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.
+
+*Normative*
+
+OGC SF [99-036/ISO 19125]: Geographic information - Simple feature access - Part 1: Common architecture. 2005. https://www.iso.org/obp/ui#iso:std:iso:19162:ed-2:v1:en August 17, 2019.
+
+OGC WKT CRS [12-063r5/ISO 19162:2019]: Geographic information — Well-known text representation of coordinate reference systems. 2019. http://portal.opengeospatial.org/files/?artifact_id=4700 (May 15, 2017)
+
+*Informative*
+
+"Octree". https://en.wikipedia.org/wiki/Octree. Not Published (N.P.), 2016. Web. 20 Oct. 2016.
+
+"Quadtree". https://en.wikipedia.org/wiki/Quadtree. N.P. 2017. Web. 20 Jan. 2017
+
+"R-Trees". https://en.wikipedia.org/wiki/R-tree. N.P. 2017. Web. 20 Jan. 2017
+
+////
 include::clause_4_terms_and_definitions.adoc[]
+////
 
+== Terms and Definitions
+This document uses the terms defined in Sub-clause 5.3 of [OGC 06-121r8], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this standard.
+
+For the purposes of this document, the following additional terms and definitions apply.
+
+=== *3D Model* footnote:note4[https://en.wikipedia.org/wiki/3D_modeling (February 7, 2017)]
+Three-dimensional (3D) models represent a physical body using a collection of points in 3D space, connected by various geometric entities such as triangles, lines, curved surfaces, etc.
+
+=== *ArrayBuffer*
+In JavaScript, the https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer[ArrayBuffer] object is used to represent a generic, fixed-length raw binary data buffer. ArrayBuffer is an abstract type that is the base for the following types: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView[DataView], Float32Array, Float64Array, Int8Array, Int16Array, Int32Array, Uint8Array, Uint8ClampedArray, Uint16Array, Uint32Array. 
+
+=== *Bounding Volume (BV)* footnote:note14[https://en.wikipedia.org/wiki/Bounding_volume (February 19, 2021)]
+A closed volume that completely contains the union of the objects in the set. Bounding volumes are used to improve the efficiency of geometrical operations by using simple volumes to contain more complex objects.
+
+=== *Bounding Volume Hierarchy (BVH)* footnote:note15[https://en.wikipedia.org/wiki/Bounding_volume_hierarchy (February 19, 2021)]
+A tree structure on a set of geometric objects. All geometric objects are wrapped in bounding volumes that form the leaf nodes of the tree.
+
+=== *Community Standard*
+An OGC Community Standard is an official position of the OGC endorsing a specification or standard developed external to the OGC. 
+
+=== *Face*
+In solid geometry, a face is a flat (planar) surface that forms part of the boundary of a solid object; a three-dimensional solid bounded exclusively by flat faces is a polyhedron.
+
+=== *faceRanges*
+Indicates the range of triangles associated with a particular object (feature).
+
+=== *Gravity-related height*
+Height dependent on the Earth’s gravity field. NOTE: This refers to in particular orthometric height or normal height, which are both approximations of the distance of a point above the mean sea level. (ISO 19111)
+
+=== *Height*
+Distance of a point from a chosen reference surface measured upward along a line perpendicular to that surface. NOTE: A height below the reference surface will have a negative value.
+
+=== *Integrated Mesh*
+An Integrated Mesh is a type of I3S layer that belongs to the mesh-pyramids profile.
+An Integrated Mesh layer type is typically used to represent and visualize geographic data captured as ‘3D Image’ representing the landscape in a seamless, highly scalable, textured mesh. Such ‘3D Image’ can integrate within its content a multitude of landscape elements including terrain surface, ground imagery, vegetation, man-made objects and structures, and water surfaces. This type of data is typically produced by automated extraction solutions operating on input data from satellite, aerial and/or drone imagery.
+
+=== *Level of Detail (LoD)*
+Using different LoDs involves decreasing the complexity of a 3D model representation as it moves away from the viewer or according to other metrics such as object importance, viewpoint-relative speed or position. There are numerous approaches to defining LoDs. In GIS, LoDs typically refer to maps defined at given scales and resolutions. Typically higher levels of detail provide greater fidelity. A number of OGC standards define approaches to LoD.
+
+=== *LiDAR*
+Light Detection and Ranging, is a remote sensing method that uses light in the form of a pulsed laser to measure ranges (variable distances) to the Earth.
+
+=== *Minimum Bounding Sphere  (MBS, mbs)* footnote:note5[https://en.wikipedia.org/wiki/Bounding_sphere (February  12, 2017)]
+In mathematics, given a non-empty set of objects of finite extension in n-dimensional space, for example a set of points, a bounding sphere, enclosing sphere or enclosing ball for that set is an n-dimensional solid sphere containing all of these objects.
+
+=== *Near Infrared Light*
+Generally refers to light within the wavenumber range of 12,500 to 4,000 cm-1 (wavelengths from 800 to 2,500 nm) (https://www.shimadzu.com/an/ftir/support/tips/letter9/nir1.html, March 2019)
+
+=== *Normal or Normals* footnote:note6[http://mathworld.wolfram.com/NormalVector.html (March 3, 2017)]
+The normal vector, often simply called the "normal," to a surface is a vector which is perpendicular to the surface at a given point. When normals are considered on closed surfaces, the inward-pointing normal (pointing towards the interior of the surface) and outward-pointing normal are usually distinguished. 
+
+=== *Oriented Bounding Box (OBB)* footnote:note7[An Exact Algorithm for Finding Minimum Oriented Bounding Boxes. http://clb.demon.fi/minobb/minobb.html  (June 1, 2015)]
+In geometry, the minimum or smallest bounding or enclosing box for a point set (S) in N dimensions is the box with the smallest measure (area, volume, or hyper-volume in higher dimensions) within which all the points lie. An oriented bounding box is simply a bounding parallelepiped whose faces and edges are not parallel to the basis vectors of the frame in which they're defined. In many applications the bounding box is aligned with the axes of the coordinate reference system and is known as an axis-aligned bounding box (AABB). To distinguish the general case from an AABB, an arbitrary bounding box is called an oriented bounding box (OBB) when an object's local coordinate reference system is used.
+
+=== *Point Cloud* 
+A point cloud is a set of data points in space. Point clouds are generally produced by 3D scanners, which measure a large number of points on the external surfaces of objects around them. (Wikipedia, https://en.wikipedia.org/wiki/Point_cloud, March 2019)
+
+=== *Profile*
+In I3S, specific implementation instances for specific layer definitions (point, mesh, etc.)
+
+=== *S3TC* footnote:note8[https://www.khronos.org/opengl/wiki/S3_Texture_Compression (February 7, 2017). Please note that S3TC is patented technology and is usage is subject to license restrictions. The patent expires October 7, 2017.]
+S3TC is a technique for compressing images for use as textures. Standard image compression techniques like JPEG and PNG can achieve greater compression ratios than S3TC. However, S3TC is designed to be implemented in high-performance hardware. JPEG and PNG decompress images all-at-once, while S3TC allows specific sections of the image to be decompressed independently.
+
+=== *Scene Layer*
+A scene layer is a type of layer that is optimized for displaying large amounts of 3D data in a scene. A scene layer displays one of four data types: points, a point cloud, 3D objects, or an integrated mesh.
+
+=== *Shader*
+A small program or set of algorithms that determines how 3-D surface properties of objects are rendered, and how light interacts with the object within a 3-D computer program.
+
+=== *Texture*
+In 3D graphics, the digital representation of the surface of an object. In addition to two-dimensional qualities, such as color and brightness, a texture is also encoded with three-dimensional properties, such as how transparent and reflective the object is. Once a texture has been defined, it can be wrapped around any 3-dimensional object. This is called texture mapping.
+
+=== *Texture Atlas* footnote:note9[https://en.wikipedia.org/wiki/Texture_atlas (February 19, 2017)]
+A large image containing a collection, or "atlas", of sub-images, each of which is a texture map for some part of a 2D or 3D model.
+
+=== *Texture Mapping* footnote:note10[https://en.wikipedia.org/wiki/Texture_mapping (February 19, 2017)]
+Texture mapping is a method for defining high frequency detail, surface texture, or color information on a computer-generated graphic or 3D model.
+
+=== *Texture Maps*
+A texture map is an image applied (mapped) to the surface of a shape or polygon. This may be a bitmap image or a procedural texture. They may be stored in common image file formats, referenced by 3d model formats or material definitions, and assembled into resource bundles.
+
+=== *Treekey*
+
+Indicates both the level and sibling association of a given node. The key also directly indicates the position of the node in the tree, allowing sorting of all resources on a single dimension. In OGC Version 1.2 node ids are linearized integers converted to strings. This does not change the format of a node index document (was string and remains string). The concept of Treekeys was utilized by node index neighbor property which was deprecated at 1.0
+
+=== *UV Coordinate* footnote:note11[http://www.rozengain.com/blog/2007/08/26/uv-coordinate-basics/ (February 19, 2017)]
+UV coordinates are 2D coordinates that are mapped onto a 3D model. UV coordinates are a texture's x and y coordinates and always range from 0 to 1. Let's take for example a 800×600 image. When we use a UV coordinate with u=0.5 and v=0.5 then the pixel at x=400 and y=300 is targeted.
+
+=== *UV Mapping (aka UV Unwrapping)* footnote:note12[https://en.wikipedia.org/wiki/UV_mapping (February 9, 2017)]
+UV mapping is the 3D modeling process of projecting a 2D image to a 3D model's surface for texture mapping.
+
+=== *Vertex* footnote:note13[https://en.wikipedia.org/wiki/Vertex_(geometry)#Vertices_in_computer_graphics (February 9, 2017)]
+In computer graphics, a vertex is not only associated with three spatial coordinates but also with other graphical information necessary to render the object correctly, such as colors, reflectance properties, textures, and surface normals. These properties are used in rendering by a vertex shader, part of the vertex pipeline.
+
+////
 include::clause_5_conventions.adoc[]
+////
 
+== Conventions
+
+There are no mandatory conventions defined in this Community Standard.
+
+////
 include::clause_6_informative_text.adoc[]
+////
+
+== Introduction to I3S and SLPK
+
+This section provides background information on the design principals and background for I3S
+
+=== I3S Design Principals
+
+The Indexed 3d Scene layer (I3S) format and the corresponding Scene Layer Package format (*.slpk) are specified to fulfill this set of design principles: 
+
+- *User Experience first*: Provide a positive user experience, including high interactivity and fast display;
+- *Scalability*: Support very large scene layers, including scenes with a global extent and many detailed features;
+- *Reusability*: Use as a service delivery format, storage format, and exchange format;
+- *Level of Detail*: Have support for multiple levels of detail;
+- *Distribution*: Allow efficient distribution of very large data sets;
+- *User-controllable symbology*: Support efficient rendering of client-side symbology/styling;
+- *Extensibility*: Support new layer, geometry types and new platforms;
+- *Web Friendliness*: Provide easy to handle data using JSON and current web standards;
+- *Compatibility*: Provide a single structure that is compatible across web, mobile, and desktop clients. Support is also included for cloud and servers;
+- *Declarative*: Communicate clearly to minimize the amount of required domain knowledge to support the format; Follow REST/JSON API best practices: Provide navigable links to all resources.
+
+=== I3S Overview
+
+A single I3S data set, referred to as a Scene Layer, is a container for arbitrarily large amounts of heterogeneously distributed 3D geographic data. Scene Layers provide clients access to data and allow them to visualize it according to their needs.   Data here refers to vertex geometry, texture as well as any associated attributes. 
+
+An I3S data set is organized as nodes and layers. Nodes are structured into node pages. The node page includes the bounding volume, child reference, count and the level of detail selection. Nodes contain all the information to describe features including geometry, attributes and textures. Scene Layers can be created in cartesian 3D or in global 3D world coordinate reference systems. I3S Scene Layers can be delivered to web, mobile and desktop clients. Most users will interact with Scene Layers using applications with cloud or server-based information. In these cases, the scene layer content is on the server and is provided to clients through a RESTful interface. These web addressable resources provide access to the scene layer, nodes, and associated resources. Alternatively, a scene layer can be delivered as a Scene Layer Package. This is a single file that includes the complete node tree and all necessary resources in an archive.
+
+An I3S Layer is characterized by a combination of layer type and profile. The _layer type_ describes the kind of geospatial data stored within it. The _layer profile_ includes additional details on the specific I3S implementation. 
+
+The requirements specified below apply to the current scene layer profile types:
+
+- link:../docs/3Dobject_Readme.adoc[3D Object] such as Building Exteriors from geospatial data and 3D models.
+-	Integrated Meshs such as a mesh surface with high resolution imagery textures representing the skin of the Earth, typically created from satellite, aerial or drone imagery. 
+-	Points such as geolocated hospitals or schools, trees, street furniture, and signs.
+-	Point Clouds such as LiDAR data. 
+
+Layers are described using two properties: type and profile. The type of a layer describes the type of geospatial data stored within it drawing from terms including 3D Objects, Points, Lines, Polygons, and Point Clouds. The profile for a layer includes additional detail on the specific I3S implementation for the layer that is exposed to clients. Each layer has a canonical profile, but in certain cases multiple layers that represent semantically different types of information can make use of the same underlying profile. In other cases the same layer type can support multiple profiles optimized for different use cases. 
+
+The following table shows the layer types and profiles. For each row the table indicates if the layer type represents features (geographic entities) with identity (as opposed to a geospatial field described by a mesh or cloud of geometry elements) and if the specific profile for the layer supports storage of attributes (either feature attributes or attributes of individual geometry elements, depending on the type of the layer).
+
+[#table_layertypes,reftext='{table-caption} {counter:table-num}']
+.*3D Layer Types Supported in I3S*
+[width="90%",options="header"]
+|===
+|Layer Type (example) |	Profile |	Features with Identity |Attributes
+|link:../docs/3Dobject_Readme.adoc[3D Object] |	mesh-pyramids	|Yes	|Yes
+|link:../docs/IntegratedMesh_ReadMe.adoc[Integrated Mesh] |mesh-pyramids	 |No	|Triangle Attributes (planned)
+|link:../docs/Point_ReadMe.adoc[Point]| points	 |Yes	|Yes
+|link:../docs/pcsl_ReadMe.adoc[Point Cloud]	|pointclouds  |	No|Vertex Attributes
+|===
+
+
 
 include::clause_7_normative_text.adoc[]
 
