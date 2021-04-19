@@ -742,7 +742,7 @@ As shown in the Table below, the method used to create the levels depends on the
 |===
 |  |Integrated Mesh |3D Object |Points |Point Clouds |Building Scene
 Layer
-|meshpyramids |image:../images/checkmark.png[yes]
+|meshpyramids |image:images/checkmark.png[yes]
 |image:images/checkmark.png[yes] |  |  |image:images/checkmark.png[yes]
 
 |Thinning |image:../images/checkmark.png[yes]
@@ -835,7 +835,7 @@ The mesh-pyramids profile supports either a single texture or a texture atlas pe
 By default, the mesh-pyramids profile allows/supports encoding the same texture resource in multiple formats, catering for bandwidth, memory consumption and optimal performance consideration on different platforms. As a result, the I3S standard supports most commonly used image formats such as JPEG/PNG as well as rendering optimized compressed texture formats such as https://en.wikipedia.org/wiki/S3_Texture_Compression[S3TC]. In all cases, the standard provides flexibility by allowing authoring applications to provide additional texture formats via the textureEncoding declarations that use MIME types. For example, most existing I3S services provide "image/vnd-ms.dds" (for S3TC compressed texture) in addition to the default "image/jpeg" encoding.
 
 
-For more details on texture format, texture coordinate, texture atlas usage and regions discussion, see the link:../docs/texture.cmn.adoc[texture] and
+For more details on texture format, texture coordinate, texture atlas usage and regions discussion, see the link:docs/texture.cmn.adoc[texture] and
 link:docs/textureSetDefinition.cmn.adoc[textureSetDefinition].
 
 ==== Node resources for OGC I3S 1.1 and earlier 
@@ -923,7 +923,7 @@ using compression level not compressed (`STORE`).
 This is an example of a geometry resource opened in 7-zip. Notice that
 both the Size and the Packed Size are equal. The method is `STORE`.
 
-image:../images/slpk_archive_store.PNG[width=800,align="center"] 
+image:images/slpk_archive_store.PNG[width=800,align="center"] 
 
 _Compressed geometry resource with size and method._
 
@@ -997,7 +997,7 @@ Exceptions are:
 |layers/0/nodes/4/shared
 |===
 
-#### Example 1.1 Structure Summary for 3D Objects
+==== Example 1.1 Structure Summary for 3D Objects
 
 ....
 .\example_16.slpk
