@@ -434,7 +434,7 @@ An I3S Layer is characterized by a combination of layer type and profile. The _l
 
 The requirements specified below apply to the current scene layer profile types:
 
-- link:../docs/3Dobject_Readme.adoc[3D Object] such as Building Exteriors from geospatial data and 3D models.
+- link:docs/3Dobject_Readme.adoc[3D Object] such as Building Exteriors from geospatial data and 3D models.
 -	Integrated Meshs such as a mesh surface with high resolution imagery textures representing the skin of the Earth, typically created from satellite, aerial or drone imagery. 
 -	Points such as geolocated hospitals or schools, trees, street furniture, and signs.
 -	Point Clouds such as LiDAR data. 
@@ -448,15 +448,648 @@ The following table shows the layer types and profiles. For each row the table i
 [width="90%",options="header"]
 |===
 |Layer Type (example) |	Profile |	Features with Identity |Attributes
-|link:../docs/3Dobject_Readme.adoc[3D Object] |	mesh-pyramids	|Yes	|Yes
-|link:../docs/IntegratedMesh_ReadMe.adoc[Integrated Mesh] |mesh-pyramids	 |No	|Triangle Attributes (planned)
-|link:../docs/Point_ReadMe.adoc[Point]| points	 |Yes	|Yes
-|link:../docs/pcsl_ReadMe.adoc[Point Cloud]	|pointclouds  |	No|Vertex Attributes
+|link:docs/3Dobject_Readme.adoc[3D Object] |	mesh-pyramids	|Yes	|Yes
+|link:docs/IntegratedMesh_ReadMe.adoc[Integrated Mesh] |mesh-pyramids	 |No	|Triangle Attributes (planned)
+|link:docs/Point_ReadMe.adoc[Point]| points	 |Yes	|Yes
+|link:docs/pcsl_ReadMe.adoc[Point Cloud]	|pointclouds  |	No|Vertex Attributes
 |===
 
 
-
+////
 include::clause_7_normative_text.adoc[]
+////
+
+== I3S Standard - Normative
+
+This section contains the normative clauses and requirements for implementing I3S. In the property tables, any property highlighted with a bold font is mandatory.
+
+=== Coordinate Reference Systems
+
+The I3S standard supports specifying the Coordinate Reference System and refers to two OGC standards for describing a CRS as Well Known Text. These are WKT1 as defined in the OGC Coordinate Transformation Service Standard (01-009) and WKT2 as defined in OGC Geographic Information – Well known text representation of coordinate reference systems (12-063r5). CRS as OGC Well Known Text was originally defined in clause 6.4 in the http://portal.opengeospatial.org/files/?artifact_id=13227[OGC Simple Features 99-036/ISO 19125] standard. 
+
+I3S also supports specifying CRS in the ISO/OGC WKT standard http://docs.opengeospatial.org/is/12-063r5/12-063r5.html[ISO 19162:2015], Geographic information – Well-known text representation of coordinate reference systems. This new ISO/OGC Standard specifies an update to the original WKT representation. The two standards are referred to as WKT1 and WKT2 respectively.
+
+==== (Was 7.1.1 in Version 1.1)	A note on OGC Standards for CRS and Well Known Text. 
+
+The two standards are referred to as WKT1 and WKT2
+
+. WKT1: Refers to Well Known Text (WKT) for expressing a CRS as originally defined in clause 6.4 in http://portal.opengeospatial.org/files/?artifact_id=13227[OGC Simple Features [99-036/ISO 19125]. This original definition was extended in OGC Coordinate Transformation Service [01-009];
+.	WKT2: Refers to WKT as defined in OGC WKT CRS/ISO 19162:2015 Geographic information -- Well-known text representation of coordinate reference systems [12-063r5]. From the document, “This Standard provides an updated version of WKT representation of coordinate reference systems that follows the provisions of ISO 19111:2007 and ISO 19111-2:2009. It extends the earlier WKT to allow for the description of coordinate operations.”
+
+The text in this paragraph is extracted verbatim from 12-063r5. OGC 12-063r5 makes several references to backward compatibility. “Backward compatibility means that an implementation of the text strings in this International Standard would be able to read CRS WKT strings conforming to the old (ISO 19125-1:2004) syntax. It does not mean that a parser of a string compliant to ISO 19125-1:2004 could read WKT strings written in conformance with this International Standard. It also does not require an implementation of the text strings in this International Standard to be able to output an object according to the old syntax. Annex B.8 gives guidance on determining the version of a CRS WKT string. A mapping of older syntaxes to this International Standard is given in Annex C.”
+
+Please note that in an I3S implementation the CRS MAY be represented using either WKT1 or WKT2. While WKT1 has been in use for many years, WKT1 has been superseded by WKT2. Although implementations of OGC standards using WKT2 are not yet widely available the guidance from the OGC/ISO community is to implement WKT2. Important Note: WKT1 does not support explicit definition of axis order.
+
+Therefore, _*I3S implementers need to note for their implementations if they support WKT1 only or both (as WKT2 requires continued support of WKT1)*_.
+
+==== CRS Use and Requirements in I3S
+
+Indexed 3D Scene Layers have to fulfill a number of requirements when it comes to the selection of Coordinate Reference Systems (CRS) to use:
+
+-	Minimize the need for re-projection on the client side
+-	Support data sets with a global extent
+-	Render easily in coordinate reference systems for projected CRSs as well as for geographic CRSs
+-	Support local and global data with very high positional accuracy.
+
+_NOTE:_ A Projected CRS is defined on a flat, two-dimensional surface. Unlike a Geographic CRS, a Projected CRS has constant lengths, angles, and areas across the two dimensions. A Projected CRS is always based on a Geographic CRS that is based on an ellipse. Geographic CRSs are based on a Geodetic datum. The EPSG dataset contains three subtypes of Geodetic CRS: Geocentric, Geographic 3D, Geographic 2D. ISO 19111 Compliance Note: In ISO19111, geog2D, geog3D and geocentric are all considered to be "geodetic CRSs".
+
+These use cases lead to the following implementation requirements. Note that all I3S profiles support writing 3D content in two modes: global and local. In global mode, only the geographic CRS WGS84 (EPSG 4326) is supported for both index and vertex positions.
+
+- The location of all index-related data structures such as node bounding spheres SHALL be specified using a single, global geographic WGS 84 CRS. Coordinate bounds for such structures SHALL be in the range (-180.0000, -90.0000, 180.0000, 90.0000). Height and node minimum bounding sphere (MBS) radius SHALL be specified in meters. Allowed CRS specified using an EPSG code is EPSG:4326 
+- All vertex positions SHALL be specified using a geodetic CRS (including Cartesian coordinate reference systems), where x,y,z axes are all in same unit, and with a per-node offset (from the center point of the node's minimum bounding sphere) for all vertex positions. 
+- Axis Order: Axis order explicitly defined by the CRS SHALL be used when present. When the axis order is not defined by the CRS, Easting, Northing, Height axis order SHALL be used. The Height axis SHALL always point upwards towards the sky (away from the center of the earth).
+
+All I3S layers indicate the coordinate system used by the layer with the _spatialReference_ property in the link:../docs/3DSceneLayer.cmn.adoc[3dSceneLayerInfo] resource. This property is normative.
+
+The spatial reference object is common to all I3S profile types.
+
+[[heightsmodels]]
+=== Height Models
+
+The I3S standard accommodates declaration of a vertical coordinate reference system that may either be ellipsoidal (height defined with respect to a reference ellipsoid) or gravity-related height (height defined with respect to a reference geoid/gravity surface). This allows the I3S approach to be applied across a diverse range of fields and applications where the particular definition of height is of importance. 
+ 
+The Well-known Text (WKT) string representation of the CRS now includes the vertical coordinate reference system utilized by the layer. The _spatialReference_ property also includes a well-known Id (wkid) and a Vertical Coordinate Reference System Well-known ID (_vcsWkid_) representation, which could alternatively be utilized by a client application consuming the layer instead of the WKT. In addition to the detailed _spatialReference_ property that describes the layers horizontal and vertical CRSs, the 3dSceneLayerInfo resource also includes a coarse metadata property called _heightModelInfo_, which can be used by a client application to quickly identify if the layers' height model is either gravity-related or ellipsoidal.
+
+The following is a WKT1 description of WGS 84, EPSG 4326.
+
+```
+    
+"spatialReference": // the horizontal and vertical coordinate reference system of the layer
+    {
+        "wkid": 4326,
+        "latestWkid": 4326,
+        "vcsWkid": 3855,
+        "latestVcsWkid": 3855,
+        "wkt": "GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.017453292519943295]],
+        VERTCS[\"EGM2008_Geoid\",VDATUM[\"EGM2008_Geoid\"],PARAMETER[\"Vertical_Shift\",0.0],PARAMETER[\"Direction\",1.0],UNIT[\"Meter\",1.0]]}"
+    }
+```
+
+The following is a WKT2 description of a compound WGS 84, EPSG 4326 and EPSG 3855.
+
+```
+COMPOUNDCRS ["I3S Compound CRS",
+GEODCRS["WGS 84",
+  DATUM["World Geodetic System 1984",
+    ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1.0]]],
+  CS[ellipsoidal,2],
+    AXIS["latitude",north,ORDER[1]],
+    AXIS["longitude",east,ORDER[2]],
+    ANGLEUNIT["degree",0.01745329252],
+  ID["EPSG",4326]]
+VERTCRS["EGM2008 height",
+  VDATUM["EGM2008 geoid"],
+  CS[vertical,1],
+    AXIS["gravity-related height (H)",up],
+    LENGTHUNIT["metre",1.0],
+  ID["EPSG",3855]]]
+```
+
+The following is an example of heightModelInfo.
+
+```
+HeightModelInfo
+
+    "heightModelInfo":  // a coarse metadata indicating the layers height Model
+    {
+        "heightModel": "gravity_related_height", //one of {*" gravity_related_height"*, "ellipsoidal"};
+        "ellipsoid": "wgs84 (G1674)/", //datum realization
+        "heightUnit": "meter" //units
+        }
+```
+
+The above examples illustrate the coordinate reference system and height model of a layer in an I3S payload. The _spatialReference_ object includes a Well-known Text (WKT) string representation of the CRS for both horizontal and vertical coordinate reference systems. The examples provided above show both WKT1 and WKT2 WKT encodings as defined in OGC 12-063r5 - either may be encoded in the spatialReference object. The _heightModelInfo_ object is coarse metadata that could be used by client application to quickly determine if the layers' horizontal and vertical coordinate reference systems align with that of any base map data used by the application. 
+
+See link:../docs/3DSceneLayer.cmn.adoc[Class 3DSceneLayerInfo] (Formerly Clause 7.5.4 in version 1.1) for more information on the use of the heightModelInfo object.
+
+== Organization and Structure 
+
+I3S organizes information using a hierarchical, node-based spatial index structure in which each node’s payload may contain features with associated geometry, textures and attributes. 
+
+The purpose of any index is to allow fast access to blocks of relevant data. In an Indexed 3D Scene layer, the spatial extent of the data is split into regions, called nodes. Each node has roughly equal amounts of and is organized into a hierarchical and navigable data structure. The node index allows the client to quickly determine which data it needs and allows the server to quickly locate the data requested by any client. Node creation is capacity driven. For example, the smaller the node capacity is, typically the smaller the spatial extent.
+
+The following clauses detail this structure.
+
+=== Tree Structure 
+
+To ensure high performance when visualizing 3D content, data are
+spatially grouped into link:#Nodes[nodes]. The grouping process is
+repeated recursively to create a tree of nodes. The spatial extent of a
+given node encompasses all its children to create a bounding volume
+hierarchy. 
+
+I3S is agnostic with respect to the model used to index objects/features in 3D space. Both regular partitions of space (e.g. https://en.wikipedia.org/wiki/Quadtree[Quadtrees] and https://en.wikipedia.org/wiki/Octree[Octrees]) as well as density dependent partitioning of space (e.g.  https://en.wikipedia.org/wiki/R-tree[R-Trees]) are supported. The specific partitioning scheme is hidden from clients who navigate the nodes in the tree exposed as web resources. The partitioning results in a hierarchical subdivision of 3D space into regions represented by nodes, organized in a bounding volume tree hierarchy (BVH).
+
+The bounding volume hierarchy (BVH) is based on minimum bounding sphere (MBS) or oriented bounding boxes (OBB). The mesh-pyramids profile supports specifying the bounding volume in either MBS or OBB representation. OBB is the more optimal representation and implementers are encouraged to output node bounding volume in OBB format. Point cloud profile supports OBB representation only.
+
+_3D objects enclosed in minimum bounding spheres._
+image:../images/MBS_Example.png[width=700,align="center"]
+
+_3D objects enclosed in the smallest bounding box._
+image:../images/OBB_Example.png[width=700,align="center"]
+
+OBB is the more optimal representation and implementers are encouraged
+to output node bounding volumes in OBB format. Point cloud profile
+supports OBB representation only.
+
+In order to provide a scalable representation of the original data,
+parent nodes contain a simplified representation of their children
+creating link:LevelofDetail.adoc[Level of Details].
+
+image:../images/BoundingVolumeHierarchy.png[width=700,align="center"]
+
+_Schematic view of spatially distributed data and recursive grouping of
+nodes into a bounding volume hierarchy._
+
+image:../images/BoundingVolumeHierarchyTree.png[[width=600,align="center"]
+
+_Example of bounding volume hierarchy represented as a tree of nodes._
+
+=== Nodes 
+
+In a Scene Layer, data are spatially grouped into nodes. The nodes
+contain node resources for the bounding volume. Each node has a unique
+identifier, which allows clients to efficiently locate and load the
+resources.
+
+NOTE: Each node has an address and nodes may be thought of as equivalent to tiles. A node has an ID that is unique within a layer. I3S supports two types of node ID formats: string based treekeys or as integers based on a fixed linearization of the nodes. The treekey format is loosely modeled on binary search trees. The key indicates both the level and sibling association of a given node. The key also directly indicates the position of the node in the tree, allowing sorting of all resources on a single dimension.
+
+==== Feature 
+
+A feature represents a real-world object within a node. For example, an
+individual point in a point scene layer or a building within a 3D object
+scene layer. Node resources such as geometry buffer and attributes can
+belong to a feature and can be accessed by an object-ID.
+
+When the same feature is included in more than one node at different
+<<loddetail,Levels of Detail>>, the corresponding attributes
+for the feature are included as attribute resources in each node. This
+redundancy in attribute storage allows each node to be rendered
+independently of other nodes. The following scene layer types support
+features:
+
+[cols=",,,,",options="header",]
+|===
+|Feature |Integrated Mesh |3D Object |Points |Point Clouds
+|support |  | image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] | 
+|===
+
+==== Node resources 
+
+In addition to a bounding volume, each node contains references to node
+resources. The type of resource available, such as geometry buffer,
+texture and attribute, depends on the original data and layer type.
+Clients must use the resource identifiers (id) written in each node to
+access the resources. While content creators may choose to match a
+resource id with the node id this is not required by the I3S
+specification. As such, clients should not make this assumption.
+
+[cols=",,,,",options="header",]
+|===
+|Node Resources |Integrated Mesh |3D Object |Points |Point Clouds
+|geometry buffer | image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  |image:../images/checkmark.png[yes]
+
+|attribute |  |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
+
+|texture |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  | 
+|===
+
+
+_Node resource for backward compatibility with 1.6_
+
+[cols=",,",options="header",]
+|===
+|Node Resources |Integrated Mesh |3D Object
+|sharedResources |image:../images/checkmark.png[yes]
+|image:../images/checkmark.png[yes]
+
+|3dNodeIndexDocument |image:../images/checkmark.png[yes]
+|image:../images/checkmark.png[yes]
+|===
+
+_Note: All binary data is stored in little endian._
+
+[[loddetail]]
+
+== Level of Detail
+
+Scene Layers include Levels of Detail (LoD) that apply to the whole
+layer and serve to generalize the layer. Scene Layers support LoD in a
+manner that preserves the identity of the individual features that are
+retained within any LoD.
+
+The concept of Level of Detail (LoD) is intrinsic to the I3S standard. Scene Layers may include levels of detail that apply to the layer as whole and serve to generalize or summarize information for the layer. This is similar to image pyramids and also similar to raster and tiled vector data schemes. A node in the I3S scene layer tree could be considered the analog of a tile in a raster or vector tiling scheme. Scene layers support levels of detail in a manner that preserves the identity of the individual features that are retained within any level of detail. Levels of Detail can be used to split heavy features, thin or cluster for better visuals, and integrate externally authored files.
+
+The I3S Level of Detail model covers several use cases, including, splitting very heavy features such as detailed building or very large features (coastlines, rivers, infrastructure), thinning/clustering for optimized visualization as well as support for representing externally authored multiple LoDs.
+
+Note that the I3S Level of Detail concept is orthogonal to the concept of consolidated storage (batches) for a set of geometries within a level of detail. This batching is based on, for example, the concatenation of geometries/meshes into larger geometry collections/meshes to assist in optimal rendering. In all such cases the consolidated storage makes use of Geometry Array Buffers that provide access to individual geometries when needed, preserving the feature to geometry element mapping within the consolidated geometries.
+
+
+=== Discrete Level of Detail
+
+Discrete LoD provide multiple models to display the same object. A
+specific detail level is bound to certain levels of the bounding volume
+hierarchy tree. Leaf nodes typically contain the original feature
+representation with the most detail. The closer a node is to the root of
+the bounding volume hierarchy tree, the lower the LoD. The detail is
+reduced by texture down-sampling, feature reduction/generalization, mesh
+reduction/generalization, clustering or thinning in order to ensure
+inner nodes have a balanced weight. The number of discrete LoD for the
+layer corresponds to the number of levels in the bounding volume
+hierarchy tree.
+
+By using the bounding volume and LoD selection metrics, a client
+traversing an I3S tree can readily decide if it needs to: +
+- Stop traversal to the node’s children if the current node bounding volume is not visible. +
+- Use the data in the node if the quality is appropriate, and then stop traversal to children. +
+- Continue traversal until nodes with higher quality are found.
+
+These decisions are made using the advertised values for LoD selection metrics that are part of the information payload of the node. The I3S standard describes multiple LoD Selection Metrics and permits different LoD Switching Models. An example LoD selection metric is the maximum screen size that the node may occupy before it must be replaced with data from more detailed nodes. This model of discrete LoD rendering (LoD Switching Model) is referred to in I3S as node-switching.
+
+I3S Scene Layers also include additional optional metadata on the LoD generation process (e.g. thinning, clustering and generalization) as non-actionable (to clients) information that is of interest to some service consumers.
+
+I3S supports multiple LoD selection metrics and switching level of detail models. Details about the LoD generation process can be
+optionally included in the Scene Layer’s metadata.
+
+=== Node switching
+
+Node switching lets clients focus on the display of a node as a whole. A node switch occurs when the content from a node’s children is used to replace the content of an existing node. This can include features, geometry, attributes and textures. Node switching can be helpful when the user needs to see more detailed information.
+
+Each interior node in the I3S tree has a set of features that represent the reduced LoD representation of all of the features covered by that interior node. Due to generalization at lower Levels of Detail, not all features are present in reduced level of detail nodes. Omission of a feature at a reduced LoD node indicates that the entire feature has been intentionally generalized away at this level of detail.
+
+The correspondence between a reduced LoD feature in an interior node and the same feature in descendant (children) nodes is based on feature IDs. These are a key part of the storage model. Applications accessing the I3S tree can display all of the features in an internal node and stop there or instead descend further and use the features found in its child nodes, based on desired quality.
+
+The main advantage of this mechanism is that clients can focus on the display criterion associated with nodes as a whole in making the decision to switch representations. node-switching is the default LoD Switching model for layer types that implement the Mesh-pyramids profile.
+
+=== Level of Detail Generation
+
+Integrated Mesh layer types typically come with pre-authored Levels of
+Detail. If the desired LoD does not exist, it can be generated.
+
+For example, 3D Object Layers based on the meshpyramids profile can
+create a LoD pyramid for all features based on generalizing, reducing
+and fusing the geometries of individual features while preserving
+feature identity. The same approach can also be used with Integrated
+Mesh Layers based on the meshpyramid profile. In this case, there are no
+features, and each node contains a generalized version of the mesh
+covered by its descendants.
+
+The first step in the automatic LoD generation process is to build the I3S bounding volume tree hierarchy based on the spatial distribution of the 3D features. Once this has been completed, generation of the reduced LoD content for interior nodes can proceed.
+
+As shown in the Table below, the method used to create the levels depends on the Scene Layer type.
+
+[cols=",,,,,",options="header",]
+|===
+|  |Integrated Mesh |3D Object |Points |Point Clouds |Building Scene
+Layer
+|meshpyramids |image:../images/checkmark.png[yes]
+|image:../images/checkmark.png[yes] |  |  |image:../images/checkmark.png[yes]
+
+|Thinning |image:../images/checkmark.png[yes]
+|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
+|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
+
+|Clustering |image:../images/checkmark.png[yes]
+|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
+|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
+
+|Generalization |image:../images/checkmark.png[yes]
+|image:../images/checkmark.png[yes] |  |  |image:../images/checkmark.png[yes]
+|===
+
+_Example LoD generation methods based on Scene Layer type_
+
+==== Selection Metrics
+
+Selection metrics help clients determine which LoD to render. For
+example, clients need to weigh the options of screen size, resolution,
+bandwidth, and memory to reach the target quality. Publishers can add as
+many LodSelection objects as desired but must provide one if the layer’s
+lodType is not null. Of the three min/avg/max values, typically only one
+or two are used. Selection criteria include constraints such as resolution, screen size, bandwidth and available memory and target minimum quality goals.
+
+For more details regarding LoD Selection for Integrated Mesh, 3D objects and point scene
+layers, see the link:../docs/lodSelection.cmn.adoc[LoD selection].
+
+
+===== Geometry 
+
+All Scene Layer types make use of the same fundamental set of geometry types: points, lines, and triangles. Depending on the scene layer type and the version of I3S, different geometry representations are used. For example, an integrated mesh scene layer geometry data includes all vertex attributes, feature counts, and
+mesh segmentation. I3S supports storage of triangle meshes via triangles geometry type.
+
+ArrayBufferView geometry property declarations control geometries storage and consumption representation. I3S provides full control over those properties, such as per-vertex layout of components (e.g. position, normal and texture coordinates). This orders the vertex position, normal and texture coordinates to ensure the same pattern across the Scene Layer.
+
+Both 3D Object as well as Integrated Mesh layer type model geometries as triangle meshes using the <<annex-a,mesh-pyramids profile>>. The mesh-pyramids profile uses the triangles geometry type to store triangle meshes with reduced level of detail representations of the mesh, segmented by features, available in the interior nodes as described above.
+
+In OGC I3S version 1.2, 3D Objects and Integrated Mesh scene layers are using
+link:../docs/geometryBuffer.cmn.adoc[geometryBuffer] with _draco_
+compression to describe the geometry. Previous versions of 3D Object and
+Integrated Mesh scene layers (OGC  version 1.1 and earlier) define geometry in the
+link:../docs/1.6/defaultGeometrySchema.cmn.adoc[defaultGeometrySchema].
+The expected triangle/face winding order in all geometry resources is
+counterclockwise.
+
+Point and Point cloud layers model geometries as points. A point scene
+layer defines the geometry in
+link:../docs/1.6/featureData.cmn.adoc[featureData]. For a Point Cloud Scene Layer, the binary
+link:../docs/defaultGeometrySchema.pcsl.adoc[geometry] is lepcc-xyz compressed.
+
+===== Attributes 
+
+Attribute data for all features in a node are represented as discrete,
+per field resource called attribute. Attributes are used to visualize or
+query features within a scene layer. For example, each attribute
+resource, such as land use codes, can be assigned to a unique color to
+visualize the different types of land use in the scene layer. The number
+of attribute resources corresponds to the number of fields in the scene
+layer.
+
+Attributes values are stored in the attribute resource in the same order
+as feature geometries are in the geometry buffer. This allows clients to
+render each node efficiently through direct array access instead of
+object-id based attribute lookups.
+
+Metadata on each attribute resource is made available to clients via the
+scene service layer. When attributes are present within the scene layer,
+additional metadata in the link:../docs/field.cmn.adoc[fields] array
+and link:../docs/attributeStorageInfo.cmn.adoc[attributeStorageInfo]
+array further describe each attribute resource. The
+link:../docs/attributeInfo.pcsl.adoc[attributeInfo] of the Point Cloud
+scene layer contains the description of the attributes.
+
+===== Textures 
+
+The texture resource contains texture image files. Textures are stored
+as a binary resource. Individual textures should be aggregated into
+texture atlases (An image containing a collection of smaller images.).
+Client capabilities for handling complex UV cases may vary, so texture
+coordinates are used. Texture coordinates do not take atlas regions into
+account directly. The client is expected to use the sub-image region
+values and the texture coordinates to best handle repeating textures in
+atlases.
+
+Both integrated mesh and 3D object profile support textures. Authoring applications can provide additional texture formats using textureEncoding declarations.
+
+The mesh-pyramids profile supports either a single texture or a texture atlas per node.
+
+By default, the mesh-pyramids profile allows/supports encoding the same texture resource in multiple formats, catering for bandwidth, memory consumption and optimal performance consideration on different platforms. As a result, the I3S standard supports most commonly used image formats such as JPEG/PNG as well as rendering optimized compressed texture formats such as https://en.wikipedia.org/wiki/S3_Texture_Compression[S3TC]. In all cases, the standard provides flexibility by allowing authoring applications to provide additional texture formats via the textureEncoding declarations that use MIME types. For example, most existing I3S services provide "image/vnd-ms.dds" (for S3TC compressed texture) in addition to the default "image/jpeg" encoding.
+
+
+For more details on texture format, texture coordinate, texture atlas usage and regions discussion, see the link:../docs/texture.cmn.adoc[texture] and
+link:../docs/textureSetDefinition.cmn.adoc[textureSetDefinition].
+
+==== Node resources for OGC I3S 1.1 and earlier 
+
+To ensure backward compatibility with 1.1 clients, a 1.2 scene layer
+needs to also include the
+link:../docs/3DNodeIndexDocument.cmn.adoc[3dNodeIndexDocument]
+resource as well as the
+link:../docs/sharedResource.cmn.adoc[sharedResources] available for
+any node. SharedResource includes the material definition of the node.
+
+=== Node Page 
+
+In OGC version 1.1 and earlier, each node is stored individually as a
+3DNodeIndexDocument, causing the tree traversal performance to be
+negatively impacted due to the large number of small resource requests
+required. OGC version 1.2 packs many nodes into a single resource called a
+node page. These node pages are created by representing the tree as a
+flat array of nodes where internal nodes reference their children by
+their array indices.
+
+I3S creators are free to use any ordering (e.g. breadth first, depth
+first) of the nodes into a flat array of nodes. In OGC version 1.2, the ID
+for a node is an integer that represents the index of the node within
+this flattened array.
+
+image:../images/BoundingVolumeHierarchyTree.png[bounding volume
+hierarchy tree] image:../images/NodePageArray.png[node page]
+
+_Example of breadth first ordering of nodes in a flat array. Children
+nodes are addressed by their index in the array._
+
+=== Statistics 
+
+link:../docs/stats.cmn.adoc[Statistics] are used by clients to define
+symbology without having to read all data. For example, if you want to
+define a unique value symbology, statistics are used to collect all
+unique values within the layer and calculate the number of features that
+are included in a unique value. Beside symbology, statistics are also
+used to filter data.
+
+== I3S Services 
+
+A RESTful API allows access to I3S scene layers. Each scene layer
+profile has different components and features. For details on the API of
+a specific profile and version, refer to the individual README
+documents.
+
+Version 1.2 support for: +
+link:../docs/3Dobject_ReadMe.adoc[3D Objects] +
+link:../docs/IntegratedMesh_ReadMe.md[Integrated Mesh] +
+link:../docs/Point_ReadMe.adoc[Points] +
+link:../docs/pcsl_ReadMe.adoc[Point Cloud]
+
+For backwards compatibility Version 1.1 support for: +
+link:../docs/1.6/3Dobject_ReadMe.adoc[3D Objects], +
+link:../docs/1.6/IntegratedMesh_ReadMe.adoc[Integrated Mesh], +
+link:../docs/1.6/Point_ReadMe.adoc[Points].
+
+== I3S Formats 
+
+=== Scene Layer Packages 
+
+Scene Layer Package (SLPK) consolidates an I3S layer into a single file.
+SLPKs are designed to be directly consumed by applications.
+
+An SLPK is a https://en.wikipedia.org/wiki/Zip_(file_format)[zip]
+archive containing compressed files and resources. The compression level
+for a SLPK file is not compressed. For example, if using 7-zip to create
+a scene layer package the compression level is `STORE`. The individual
+resources within the SLPK may be compressed using the compression method
+`GZIP`. For example, `.json.gz`. The exception is for jpg and png files.
+We recommend compressing all resources.
+
+Both 64-bit and 32-bit zip archives are supported. 64-bit is required
+for datasets larger than 2GB.
+
+Please note that this method is slightly different than a typical zip
+archive. In general, when a file is added to a zip archive, the new file
+is individually compressed, and the overall archive is compressed. *That
+is not the case for SLPK.* When adding files to an SLPK, the new file is
+compressed, but the overall archive remains uncompressed and is archived
+using compression level not compressed (`STORE`).
+
+This is an example of a geometry resource opened in 7-zip. Notice that
+both the Size and the Packed Size are equal. The method is `STORE`.
+
+image:../images/slpk_archive_store.PNG[width=800,align="center"] 
+
+_Compressed geometry resource with size and method._
+
+*File Extensions*
+
+SLPK require file extensions to determine the file type.
+
+Here are a few examples of SLPK file extensions:
+
+* .jpg
+* .png
+* .bin.dds
+* .json
+
+*Hash*
+
+In OGC I3S verison 1.2, an https://en.wikipedia.org/wiki/MD5[MD5]
+link:../docs/slpk_hashtable.cmn.adoc[hash] is used to improve loading
+time. The hash must be the last item at the end of the central directory
+and named `@specialIndexFileHASH128@`.
+
+==== Example 1.2 SLPK Structure Summary for 3D Objects 
+
+....
+.\example_17.slpk
+    +--nodePages
+    |  +--0.json.gz
+    |  +-- (...)
+    +--nodes
+    |  +--root
+    |  |  +--3dNodeIndexDocument.json.gz
+    |  +--0
+    |  |  +--attributes
+    |  |  |  +--f_0
+    |  |  |  |  +--0.bin.gz
+    |  |  |  +--(...)
+    |  |  +--features
+    |  |  |  +-- 0.json.gz
+    |  |  |  +--(...)
+    |  |  +--geometries
+    |  |  |  +-- 0.bin.gz
+    |  |  |  +--(...)
+    |  |  +--textures
+    |  |  |  +--0.jpg
+    |  |  |  +--0_0_1.bin.dds.gz
+    |  |  |  +--(...)
+    |  |  +--shared
+    |  |  |  +--sharedResource.json.gz
+    |  |  + 3dNodeIndexDocument.json.gz
+    |  +--(...)
+    +--statistics
+    |  +--f_1
+    |  |  +--0.json.gz
+    |  +--(...)
+    +--3dSceneLayer.json.gz
+    +--@specialIndexFileHASH128@
+....
+
+Paths are the same as in the API, but without the `layers/0` prefix.
+Exceptions are:
+
+[width="100%",cols="37%,21%,42%",options="header",]
+|===
+|Resource |SLPK |Service
+|Scene layer document |3dSceneLayer.json.gz |layers/0
+
+|Legacy node resource |/nodes/4/3dNodeIndexDocument.json.gz
+|layers/0/nodes/4
+
+|Legacy shared resource |/nodes/4/shared/sharedResource.json.gz
+|layers/0/nodes/4/shared
+|===
+
+#### Example 1.1 Structure Summary for 3D Objects
+
+....
+.\example_16.slpk
+    +--nodes
+    |  +--root
+    |  |  +--3dNodeIndexDocument.json.gz
+    |  +--0
+    |  |  +--attributes
+    |  |  |  +--f_0
+    |  |  |  |  +--0.bin.gz
+    |  |  |  +--(...)
+    |  |  +--features
+    |  |  |  +--0.json.gz
+    |  |  |  +--(...)
+    |  |  +--geometries
+    |  |  |  +--0.bin.gz
+    |  |  |  +--(...)
+    |  |  +--textures
+    |  |  |  +--0.jpg
+    |  |  |  +--0_0_1.bin.dds.gz
+    |  |  |  +--(...)
+    |  |  +--shared
+    |  |  |  +--sharedResource.json.gz
+    |  |  +--3dNodeIndexDocument.json.gz
+    |  +--0-0
+    |  |  +--(...)
+    |  +--0-0-0
+    |  |  +--(...)
+    |  +--1
+    |  |  +--(...)
+    |  +--1-0
+    |  |  +--(...)
+    |  +--1-0-0
+    |  |  +--(...)
+    |  +--(...)
+    +--statistics
+    |  +--f_1
+    |  |  +--0.json.gz
+    |  +-- (...)
+    +--3dSceneLayer.json.gz
+    +--metadata.json
+....
+
+**Metadata**
+
+Scene layer packages (SLPK) contain metadata information regarding its
+content in the metadata.json file. The following entries are required
+and must be of the specified type.
+
+[width="100%",cols="54%,46%",options="header",]
+|===
+|Property |Details
+|_folderPattern_ |One of {BASIC, EXTENDED}, Default is {BASIC}
+
+|archiveCompressionType |One of {STORE, DEFLATE64, [DEFLATE]}, Default
+is {STORE}
+
+|resourceCompressionType |One of {GZIP, NONE}, Default is {GZIP}
+
+|I3SVersion |One of {1.0, 1.1, 1.2}, Default is {1.2}
+(Point cloud is {1.2})
+
+|nodeCount |Total number of nodes in the SLPK
+|===
+
+*Example of 1.2 Metadata json*
+
+....
+.\metadata.json
+{
+    "folderPattern":"BASIC",
+    "archiveCompressionType":"STORE",
+    "resourceCompressionType":"GZIP",
+    "I3SVersion":"1.2",
+    "nodeCount":62
+}
+....
+
+*Example of 1.2 Metadata json*
+
+....
+.\metadata.json
+{
+    "folderPattern":"BASIC",
+    "archiveCompressionType":"STORE",
+    "resourceCompressionType":"GZIP",
+    "I3SVersion":"1.2",
+    "nodeCount":1156
+}
+....
+
+
 
 include::clause_8_media_types.adoc[]
 
