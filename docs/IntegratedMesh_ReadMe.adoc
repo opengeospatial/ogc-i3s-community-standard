@@ -31,7 +31,7 @@ contains the following:
 * link:sharedResource.cmn.adoc[sharedResource]*
 * link:3DNodeIndexDocument.cmn.adoc[3DNodeIndexDocument]*
 
-**Shared resources are deprecated as of version 1.7 and are only
+**Shared resources are deprecated as of version 1.2 and are only
 included for backwards compatibility.*
 
 Integrated mesh scene layer packages can optionally contain a
