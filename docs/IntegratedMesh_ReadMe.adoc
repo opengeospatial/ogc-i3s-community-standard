@@ -78,7 +78,7 @@ The following API methods are available for integrated mesh scene layer:
 |Example |http://my.server.com/IntegratedMeshSceneLayer/SceneServer/layers/0
 |Description |This is the root document for the service containing properties common
 to the entire layer. +
-`layerID`: Integer. ID of the associated layer. Esri products expect this to be `0`.
+`layerID`: Integer. ID of the associated layer.
 |===
 
 link:3DSceneLayer.cmn.adoc[3DSceneLayer]
