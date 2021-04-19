@@ -21,6 +21,8 @@ image:../images/faceRange_Triangles.png[width=800,align="center"]
 
 _Grouped vertices in the geometry buffer._
 
+NOTE: This class is new in Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
+
 === Related:
 
 link:geometryBuffer.cmn.adoc[cmn::geometryBuffer] 
