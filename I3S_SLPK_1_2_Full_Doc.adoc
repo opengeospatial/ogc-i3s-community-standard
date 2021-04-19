@@ -434,7 +434,7 @@ An I3S Layer is characterized by a combination of layer type and profile. The _l
 
 The requirements specified below apply to the current scene layer profile types:
 
-- link:docs/3Dobject_Readme.adoc[3D Object] such as Building Exteriors from geospatial data and 3D models.
+-   link:docs/3Dobject_ReadMe.adoc[3D Object] such as Building Exteriors from geospatial data and 3D models.
 -	Integrated Meshs such as a mesh surface with high resolution imagery textures representing the skin of the Earth, typically created from satellite, aerial or drone imagery. 
 -	Points such as geolocated hospitals or schools, trees, street furniture, and signs.
 -	Point Clouds such as LiDAR data. 
@@ -448,7 +448,7 @@ The following table shows the layer types and profiles. For each row the table i
 [width="90%",options="header"]
 |===
 |Layer Type (example) |	Profile |	Features with Identity |Attributes
-|link:docs/3Dobject_Readme.adoc[3D Object] |	mesh-pyramids	|Yes	|Yes
+|link:docs/3Dobject_ReadMe.adoc[3D Object] |	mesh-pyramids	|Yes	|Yes
 |link:docs/IntegratedMesh_ReadMe.adoc[Integrated Mesh] |mesh-pyramids	 |No	|Triangle Attributes (planned)
 |link:docs/Point_ReadMe.adoc[Point]| points	 |Yes	|Yes
 |link:docs/pcsl_ReadMe.adoc[Point Cloud]	|pointclouds  |	No|Vertex Attributes
