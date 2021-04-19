@@ -583,10 +583,10 @@ I3S is agnostic with respect to the model used to index objects/features in 3D s
 The bounding volume hierarchy (BVH) is based on minimum bounding sphere (MBS) or oriented bounding boxes (OBB). The mesh-pyramids profile supports specifying the bounding volume in either MBS or OBB representation. OBB is the more optimal representation and implementers are encouraged to output node bounding volume in OBB format. Point cloud profile supports OBB representation only.
 
 _3D objects enclosed in minimum bounding spheres._
-image:../images/MBS_Example.png[width=700,align="center"]
+image:images/MBS_Example.png[width=700,align="center"]
 
 _3D objects enclosed in the smallest bounding box._
-image:../images/OBB_Example.png[width=700,align="center"]
+image:images/OBB_Example.png[width=700,align="center"]
 
 OBB is the more optimal representation and implementers are encouraged
 to output node bounding volumes in OBB format. Point cloud profile
@@ -596,12 +596,12 @@ In order to provide a scalable representation of the original data,
 parent nodes contain a simplified representation of their children
 creating [[loddetail,Level of Details]].
 
-image:../images/BoundingVolumeHierarchy.png[width=700,align="center"]
+image:images/BoundingVolumeHierarchy.png[width=700,align="center"]
 
 _Schematic view of spatially distributed data and recursive grouping of
 nodes into a bounding volume hierarchy._
 
-image:../images/BoundingVolumeHierarchyTree.png[[width=600,align="center"]
+image:images/BoundingVolumeHierarchyTree.png[[width=600,align="center"]
 
 _Example of bounding volume hierarchy represented as a tree of nodes._
 
@@ -647,11 +647,11 @@ specification. As such, clients should not make this assumption.
 [cols=",,,,",options="header",]
 |===
 |Node Resources |Integrated Mesh |3D Object |Points |Point Clouds
-|geometry buffer | image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  |image:../images/checkmark.png[yes]
+|geometry buffer | image:images/checkmark.png[yes] |image:images/checkmark.png[yes] |  |image:images/checkmark.png[yes]
 
-|attribute |  |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
+|attribute |  |image:images/checkmark.png[yes] |image:images/checkmark.png[yes] |image:images/checkmark.png[yes]
 
-|texture |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  | 
+|texture |image:images/checkmark.png[yes] |image:images/checkmark.png[yes] |  | 
 |===
 
 
@@ -661,10 +661,10 @@ _Node resource for backward compatibility with 1.6_
 |===
 |Node Resources |Integrated Mesh |3D Object
 |sharedResources |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes]
+|image:images/checkmark.png[yes]
 
-|3dNodeIndexDocument |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes]
+|3dNodeIndexDocument |image:images/checkmark.png[yes]
+|image:images/checkmark.png[yes]
 |===
 
 _Note: All binary data is stored in little endian._
@@ -743,18 +743,18 @@ As shown in the Table below, the method used to create the levels depends on the
 |  |Integrated Mesh |3D Object |Points |Point Clouds |Building Scene
 Layer
 |meshpyramids |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |  |  |image:../images/checkmark.png[yes]
+|image:images/checkmark.png[yes] |  |  |image:images/checkmark.png[yes]
 
 |Thinning |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
+|image:images/checkmark.png[yes] |image:images/checkmark.png[yes]
+|image:images/checkmark.png[yes] |image:images/checkmark.png[yes]
 
-|Clustering |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
+|Clustering |image:images/checkmark.png[yes]
+|image:images/checkmark.png[yes] |image:images/checkmark.png[yes]
+|image:images/checkmark.png[yes] |image:images/checkmark.png[yes]
 
-|Generalization |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |  |  |image:../images/checkmark.png[yes]
+|Generalization |image:images/checkmark.png[yes]
+|image:images/checkmark.png[yes] |  |  |image:images/checkmark.png[yes]
 |===
 
 _Example LoD generation methods based on Scene Layer type_
@@ -862,8 +862,8 @@ first) of the nodes into a flat array of nodes. In OGC version 1.2, the ID
 for a node is an integer that represents the index of the node within
 this flattened array.
 
-image:../images/BoundingVolumeHierarchyTree.png[bounding volume
-hierarchy tree] image:../images/NodePageArray.png[node page]
+image:images/BoundingVolumeHierarchyTree.png[bounding volume
+hierarchy tree] image:images/NodePageArray.png[node page]
 
 _Example of breadth first ordering of nodes in a flat array. Children
 nodes are addressed by their index in the array._
@@ -941,7 +941,7 @@ Here are a few examples of SLPK file extensions:
 *Hash*
 
 In OGC I3S verison 1.2, an https://en.wikipedia.org/wiki/MD5[MD5]
-link:../docs/slpk_hashtable.cmn.adoc[hash] is used to improve loading
+link:docs/slpk_hashtable.cmn.adoc[hash] is used to improve loading
 time. The hash must be the last item at the end of the central directory
 and named `@specialIndexFileHASH128@`.
 
@@ -1097,6 +1097,7 @@ include::clause_8_media_types.adoc[]
 ////
 add or remove annexes after "A" as necessary
 ////
+
 include::annex-a.adoc[]
 
 include::annex-b.adoc[]
