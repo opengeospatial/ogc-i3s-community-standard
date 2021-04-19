@@ -2,6 +2,8 @@
 
 The geometry definitions used in OGC I3S version 1.2.
 
+NOTE: This class is new in Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
+
 === Related:
 
 link:3DSceneLayer.cmn.adoc[cmn::3DSceneLayer]
