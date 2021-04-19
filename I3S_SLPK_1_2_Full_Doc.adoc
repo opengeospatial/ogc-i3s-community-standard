@@ -499,7 +499,7 @@ These use cases lead to the following implementation requirements. Note that all
 - All vertex positions SHALL be specified using a geodetic CRS (including Cartesian coordinate reference systems), where x,y,z axes are all in same unit, and with a per-node offset (from the center point of the node's minimum bounding sphere) for all vertex positions. 
 - Axis Order: Axis order explicitly defined by the CRS SHALL be used when present. When the axis order is not defined by the CRS, Easting, Northing, Height axis order SHALL be used. The Height axis SHALL always point upwards towards the sky (away from the center of the earth).
 
-All I3S layers indicate the coordinate system used by the layer with the _spatialReference_ property in the link:../docs/3DSceneLayer.cmn.adoc[3dSceneLayerInfo] resource. This property is normative.
+All I3S layers indicate the coordinate system used by the layer with the _spatialReference_ property in the link:docs/3DSceneLayer.cmn.adoc[3dSceneLayerInfo] resource. This property is normative.
 
 The spatial reference object is common to all I3S profile types.
 
@@ -560,7 +560,7 @@ HeightModelInfo
 
 The above examples illustrate the coordinate reference system and height model of a layer in an I3S payload. The _spatialReference_ object includes a Well-known Text (WKT) string representation of the CRS for both horizontal and vertical coordinate reference systems. The examples provided above show both WKT1 and WKT2 WKT encodings as defined in OGC 12-063r5 - either may be encoded in the spatialReference object. The _heightModelInfo_ object is coarse metadata that could be used by client application to quickly determine if the layers' horizontal and vertical coordinate reference systems align with that of any base map data used by the application. 
 
-See link:../docs/3DSceneLayer.cmn.adoc[Class 3DSceneLayerInfo] (Formerly Clause 7.5.4 in version 1.1) for more information on the use of the heightModelInfo object.
+See link:docs/3DSceneLayer.cmn.adoc[Class 3DSceneLayerInfo] (Formerly Clause 7.5.4 in version 1.1) for more information on the use of the heightModelInfo object.
 
 == Organization and Structure 
 
@@ -594,7 +594,7 @@ supports OBB representation only.
 
 In order to provide a scalable representation of the original data,
 parent nodes contain a simplified representation of their children
-creating link:LevelofDetail.adoc[Level of Details].
+creating [[loddetail,Level of Details]].
 
 image:../images/BoundingVolumeHierarchy.png[width=700,align="center"]
 
@@ -769,7 +769,7 @@ lodType is not null. Of the three min/avg/max values, typically only one
 or two are used. Selection criteria include constraints such as resolution, screen size, bandwidth and available memory and target minimum quality goals.
 
 For more details regarding LoD Selection for Integrated Mesh, 3D objects and point scene
-layers, see the link:../docs/lodSelection.cmn.adoc[LoD selection].
+layers, see the link:docs/lodSelection.cmn.adoc[LoD selection].
 
 
 ===== Geometry 
@@ -782,17 +782,17 @@ ArrayBufferView geometry property declarations control geometries storage and co
 Both 3D Object as well as Integrated Mesh layer type model geometries as triangle meshes using the <<annex-a,mesh-pyramids profile>>. The mesh-pyramids profile uses the triangles geometry type to store triangle meshes with reduced level of detail representations of the mesh, segmented by features, available in the interior nodes as described above.
 
 In OGC I3S version 1.2, 3D Objects and Integrated Mesh scene layers are using
-link:../docs/geometryBuffer.cmn.adoc[geometryBuffer] with _draco_
+link:docs/geometryBuffer.cmn.adoc[geometryBuffer] with _draco_
 compression to describe the geometry. Previous versions of 3D Object and
 Integrated Mesh scene layers (OGC  version 1.1 and earlier) define geometry in the
-link:../docs/1.6/defaultGeometrySchema.cmn.adoc[defaultGeometrySchema].
+link:docs/1.6/defaultGeometrySchema.cmn.adoc[defaultGeometrySchema].
 The expected triangle/face winding order in all geometry resources is
 counterclockwise.
 
 Point and Point cloud layers model geometries as points. A point scene
 layer defines the geometry in
-link:../docs/1.6/featureData.cmn.adoc[featureData]. For a Point Cloud Scene Layer, the binary
-link:../docs/defaultGeometrySchema.pcsl.adoc[geometry] is lepcc-xyz compressed.
+link:docs/1.6/featureData.cmn.adoc[featureData]. For a Point Cloud Scene Layer, the binary
+link:docs/defaultGeometrySchema.pcsl.adoc[geometry] is lepcc-xyz compressed.
 
 ===== Attributes 
 
@@ -811,10 +811,10 @@ object-id based attribute lookups.
 
 Metadata on each attribute resource is made available to clients via the
 scene service layer. When attributes are present within the scene layer,
-additional metadata in the link:../docs/field.cmn.adoc[fields] array
-and link:../docs/attributeStorageInfo.cmn.adoc[attributeStorageInfo]
+additional metadata in the link:docs/field.cmn.adoc[fields] array
+and link:docs/attributeStorageInfo.cmn.adoc[attributeStorageInfo]
 array further describe each attribute resource. The
-link:../docs/attributeInfo.pcsl.adoc[attributeInfo] of the Point Cloud
+link:docs/attributeInfo.pcsl.adoc[attributeInfo] of the Point Cloud
 scene layer contains the description of the attributes.
 
 ===== Textures 
@@ -836,15 +836,15 @@ By default, the mesh-pyramids profile allows/supports encoding the same texture 
 
 
 For more details on texture format, texture coordinate, texture atlas usage and regions discussion, see the link:../docs/texture.cmn.adoc[texture] and
-link:../docs/textureSetDefinition.cmn.adoc[textureSetDefinition].
+link:docs/textureSetDefinition.cmn.adoc[textureSetDefinition].
 
 ==== Node resources for OGC I3S 1.1 and earlier 
 
 To ensure backward compatibility with 1.1 clients, a 1.2 scene layer
 needs to also include the
-link:../docs/3DNodeIndexDocument.cmn.adoc[3dNodeIndexDocument]
+link:docs/3DNodeIndexDocument.cmn.adoc[3dNodeIndexDocument]
 resource as well as the
-link:../docs/sharedResource.cmn.adoc[sharedResources] available for
+link:docs/sharedResource.cmn.adoc[sharedResources] available for
 any node. SharedResource includes the material definition of the node.
 
 === Node Page 
@@ -870,7 +870,7 @@ nodes are addressed by their index in the array._
 
 === Statistics 
 
-link:../docs/stats.cmn.adoc[Statistics] are used by clients to define
+link:docs/stats.cmn.adoc[Statistics] are used by clients to define
 symbology without having to read all data. For example, if you want to
 define a unique value symbology, statistics are used to collect all
 unique values within the layer and calculate the number of features that
@@ -885,15 +885,15 @@ a specific profile and version, refer to the individual README
 documents.
 
 Version 1.2 support for: +
-link:../docs/3Dobject_ReadMe.adoc[3D Objects] +
-link:../docs/IntegratedMesh_ReadMe.md[Integrated Mesh] +
-link:../docs/Point_ReadMe.adoc[Points] +
-link:../docs/pcsl_ReadMe.adoc[Point Cloud]
+link:docs/3Dobject_ReadMe.adoc[3D Objects] +
+link:docs/IntegratedMesh_ReadMe.md[Integrated Mesh] +
+link:docs/Point_ReadMe.adoc[Points] +
+link:docs/pcsl_ReadMe.adoc[Point Cloud]
 
 For backwards compatibility Version 1.1 support for: +
-link:../docs/1.6/3Dobject_ReadMe.adoc[3D Objects], +
-link:../docs/1.6/IntegratedMesh_ReadMe.adoc[Integrated Mesh], +
-link:../docs/1.6/Point_ReadMe.adoc[Points].
+link:docs/1.6/3Dobject_ReadMe.adoc[3D Objects], +
+link:docs/1.6/IntegratedMesh_ReadMe.adoc[Integrated Mesh], +
+link:docs/1.6/Point_ReadMe.adoc[Points].
 
 == I3S Formats 
 
