@@ -81,7 +81,7 @@ A texture map is an image applied (mapped) to the surface of a shape or polygon.
 
 === *Treekey*
 
-Indicates both the level and sibling association of a given node. The key also directly indicates the position of the node in the tree, allowing sorting of all resources on a single dimension. In OGC Version 1.2 node ids are linearized integers converted to strings. This does not change the format of a node index document (was string and remains string). The concept of Treekeys was utilized by node index neighbor property which was deprecated at 1.0
+Indicates both the level and sibling association of a given node. The key also directly indicates the position of the node in the tree, allowing sorting of all resources on a single dimension. In OGC Version 1.2, node ids are linearized integers converted to strings. This does not change the format of a node index document (was string and remains string). The concept of Treekeys was utilized by the node index neighbor property which was deprecated at 1.0
 
 === *UV Coordinate* footnote:note11[http://www.rozengain.com/blog/2007/08/26/uv-coordinate-basics/ (February 19, 2017)]
 UV coordinates are 2D coordinates that are mapped onto a 3D model. UV coordinates are a texture's x and y coordinates and always range from 0 to 1. Let's take for example a 800×600 image. When we use a UV coordinate with u=0.5 and v=0.5 then the pixel at x=400 and y=300 is targeted.
