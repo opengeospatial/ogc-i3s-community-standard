@@ -255,7 +255,7 @@ A Scene Layer is characterized by a combination of layer type and profile. The l
 
 The I3S format is declarative and extendable and can be used to represent different types of 3D data. The following layer types have been specified and the standard validated via implementation and production deployments:
 
-link:../docs/3Dobject_ReadMe.adoc[*3D Objects*] such as Building Exteriors from geospatial data and 3D models.
+link:docs/3Dobject_ReadMe.adoc[*3D Objects*] such as Building Exteriors from geospatial data and 3D models.
 
 link:../docs/IntegratedMesh_ReadMe.adoc[*Integrated Meshes*] such as a mesh surface with high resolution imagery textures representing the skin of the Earth, typically created from satellite, aerial or drone imagery.
 
