@@ -594,7 +594,7 @@ supports OBB representation only.
 
 In order to provide a scalable representation of the original data,
 parent nodes contain a simplified representation of their children
-creating [[loddetail,Level of Details]].
+creating <<loddetail,Level of Details>>.
 
 image:images/BoundingVolumeHierarchy.png[width=700,align="center"]
 
@@ -631,7 +631,7 @@ features:
 [cols=",,,,",options="header",]
 |===
 |Feature |Integrated Mesh |3D Object |Points |Point Clouds
-|support |  | image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] | 
+|support |  | image:images/checkmark.png[yes] |image:images/checkmark.png[yes] | 
 |===
 
 ==== Node resources 
@@ -660,7 +660,7 @@ _Node resource for backward compatibility with 1.6_
 [cols=",,",options="header",]
 |===
 |Node Resources |Integrated Mesh |3D Object
-|sharedResources |image:../images/checkmark.png[yes]
+|sharedResources |image:images/checkmark.png[yes]
 |image:images/checkmark.png[yes]
 
 |3dNodeIndexDocument |image:images/checkmark.png[yes]
