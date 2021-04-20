@@ -70,9 +70,9 @@ The first step in the automatic LoD generation process is to build the I3S bound
 As shown in the Table below, the method used to create the levels depends on the Scene Layer type.
 
 
-[cols=",,,,,",options="header",]
+[cols=",,,,",options="header",]
 |===
-|  |Integrated Mesh |3D Object |Points |Point Clouds 
+|             |Integrated Mesh |3D Object |Points |Point Clouds 
 |meshpyramids |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  |  
 
 |Thinning |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] 
