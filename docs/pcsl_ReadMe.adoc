@@ -77,8 +77,8 @@ The following API methods are available for point cloud scene layer:
 |URL Template| http://serviceURL/layers/\{layerID}
 |Example |http://my.server.com/PointCloudSceneLayer/SceneServer/layers/0
 | Description |This is the root document for the service that will
-contain properties common to the entire layer. layerID: Integer. ID of
-the associated layer. Esri products expect this to be 0.
+contain properties common to the entire layer. +
+- `layerID`: Integer. ID of the associated layer. 
 |===
 
 link:layer.pcsl.adoc[Layer description]
@@ -89,9 +89,9 @@ link:layer.pcsl.adoc[Layer description]
 |Type |JSON 
 |URL Template |http://serviceURL/layers/\{layerID}/nodepages/\{nodePageID} 
 |Example |http://my.server.com/PointCloudSceneLayer/SceneServer/layers/0/nodepages/8
-|Description |A page of nodes. layerID: Integer. ID of the associated
-layer. Esri products expect this to be `0`. nodePageID: Integer. ID of
-the associated node page. 
+|Description |A page of nodes. +
+- `layerID`: Integer. ID of the associated layer. +
+- `nodePageID`: Integer. ID of the associated node page. 
 |===
 
 link:nodePageDefinition.pcsl.adoc[Node pages]
@@ -104,7 +104,7 @@ link:nodePageDefinition.pcsl.adoc[Node pages]
 |Example |http://my.server.com/PointCloudSceneLayer/SceneServer/layers/0/nodes/98/geometries/0
 |Description |The point coordinate values within the node. + 
 
-- `layerID`: Integer. ID of the associated layer. Esri products expect this to be `0`. +
+- `layerID`: Integer. ID of the associated layer. +
 - `nodeID`: Integer. ID of the associated node. 
 |===
 
@@ -115,8 +115,7 @@ link:nodePageDefinition.pcsl.adoc[Node pages]
 |URL Template |http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/attributes/\{attributeID}
 |Example |http://my.server.com/PointCloudSceneLayer/SceneServer/layers/0/nodes/20/attributes/64
 |Description |The value for a specific attribute within a node. + 
-- `layerID`: Integer. ID of the associated layer. Esri products expect
-this to be `0`. + 
+- `layerID`: Integer. ID of the associated layer. + 
 - `nodeID`: Integer. ID of the associated node. + 
 - `attributeID`: Integer. ID of the specific attribute for the layer. 
 |===
@@ -128,8 +127,7 @@ this to be `0`. +
 |URL Template |http://serviceURL/layers/\{layerID}/statistics/\{attributeID} 
 |Example |http://my.server.com/PointCloudSceneLayer/SceneServer/layers/0/statistics/64
 |Description |The statistics for the entire layer for a specific attribute. + 
-- `layerID`: Integer. ID of the associated layer. Esri
-products expect this to be `0`. + 
+- `layerID`: Integer. ID of the associated layer. + 
 - `attributeID`: Integer. ID of the specific attribute for the layer. 
 |===
 
