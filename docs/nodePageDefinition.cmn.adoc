@@ -7,6 +7,8 @@ better request efficiency. All pages contains exactly
 contain less). An integer ID is used to map a node to its page as follow:
 `page_id         = floor( node_id / node_per_page) node_id_in_page = modulo( node_id, node_per_page)`
 
+NOTE: This class is new in Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
+
 === Related:
 
 link:3DSceneLayer.cmn.adoc[cmn::3DSceneLayer], +
