@@ -7,7 +7,7 @@ values for the associated Coordinate Reference System (CRS) are used.
 
 A spatial reference can optionally include a definition for a vertical
 coordinate system (VCS), which is used to interpret a geometries z
-values. Note: Please see detailed CRS discussion with examples <<here>>.
+values. Note: Please see detailed CRS discussion with examples https://github.com/opengeospatial/ogc-i3s-community-standard/blob/main/I3S_SLPK_1_2_Full_Doc.adoc#81-coordinate-reference-systems[here].
 
 === Related:
 
@@ -15,7 +15,6 @@ link:3DSceneLayer.cmn.adoc[cmn::3DSceneLayer], +
 link:3DSceneLayer.psl.adoc[psl::3DSceneLayer], +
 link:fullExtent.cmn.adoc[cmn::fullExtent], +
 link:layer.pcsl.adoc[pcsl::layer] +
-link:layer.bld.adoc[bld::layer]
 
 === Properties
 
