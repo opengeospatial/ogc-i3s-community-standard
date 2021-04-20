@@ -2,6 +2,8 @@
 
 The material texture definition.
 
+NOTE: This class is new in Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
+
 === Related:
 
 link:materialDefinitions.cmn.adoc[cmn::materialDefinitions],
@@ -12,11 +14,9 @@ link:pbrMetallicRoughness.cmn.adoc[cmn::pbrMetallicRoughness]
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Property |Type |Description
-|*textureSetDefinitionId* |integer |The index in
-link:3DSceneLayer.cmn.adoc[layer.textureSetDefinitions].
+|*textureSetDefinitionId* |integer |The index in link:3DSceneLayer.cmn.adoc[layer.textureSetDefinitions].
 
-|texCoord |integer |The set index of texture’s TEXCOORD attribute used
-for texture coordinate mapping. Default is 0. Deprecated.
+|texCoord |integer |The set index of texture’s TEXCOORD attribute used for texture coordinate mapping. Default is 0. Deprecated.
 
 |factor |number |The _normal texture_: scalar multiplier applied to each
 normal vector of the normal texture. For _occlusion texture_,scalar
