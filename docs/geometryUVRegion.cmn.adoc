@@ -14,17 +14,18 @@ NOTE: This class is new in Version 1.2. However, this class is optional. Impleme
 
 === Related:
 
-link:../docs/compressedAttributes.cmn.adoc[compressedAttributes.cmn], link:../docs/geometryBuffer.cmn.adoc[geometryBuffer]
+link:../docs/compressedAttributes.cmn.adoc[compressedAttributes.cmn], link:../docs/geometryBuffer.cmn.adoc[geometryBuffer.cmn]
 
 === Properties
 
+|===
 | Property | Type | Description |
-| --- | --- | --- |
 | **type** | string | Color channel values. Must be: `UInt16` |
 | **component** | integer | The `default =4`, must be 4. |
 | encoding | string | Encoding: Must be: `normalized` |
 | binding | string | binding: Possible values are: `per-vertex`: default +
-`per-uvregion`: Only valid in conjonction with link:../docs/compressedAttributes.cmn.adoc[compressedAttributes.cmn] when `uvRegionIndex` attribute is present. |
+`per-uvregion`: Only valid in conjonction with link:../docs/compressedAttributes.cmn.adoc[compressedAttributes.cmn] when `uvRegionIndex` attribute is present. 
+|===
 
 *Note: properties in **bold** are required*
 
