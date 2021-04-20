@@ -72,21 +72,14 @@ As shown in the Table below, the method used to create the levels depends on the
 
 [cols=",,,,,",options="header",]
 |===
-|  |Integrated Mesh |3D Object |Points |Point Clouds |Building Scene
-Layer
-|meshpyramids |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |  |  |image:../images/checkmark.png[yes]
+|  |Integrated Mesh |3D Object |Points |Point Clouds 
+|meshpyramids |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  |  
 
-|Thinning |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
+|Thinning |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] 
 
-|Clustering |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
+|Clustering |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] 
 
-|Generalization |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |  |  |image:../images/checkmark.png[yes]
+|Generalization |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  |  
 |===
 
 _Example LoD generation methods based on Scene Layer type_
