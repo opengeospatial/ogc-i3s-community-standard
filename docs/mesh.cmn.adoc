@@ -2,9 +2,11 @@
 
 Mesh object. Mesh geometry for a node. Clients have to use the
 `resource` identifiers written in each node to access the resources.
-While content creator may choose to match `resource` with the node id
+While the content creator may choose to match `resource` with the node id
 this is not required by the I3S specification and clients should not
 make this assumption.
+
+NOTE: This class is new in Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
 
 === Related:
 
