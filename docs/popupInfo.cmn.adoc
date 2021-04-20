@@ -1,9 +1,8 @@
 == popupInfo
 
-Defines the look and feel of popup windows when a user clicks or queries
-a feature.
-https://developers.arcgis.com/web-scene-specification/objects/popupInfo/[See
-more] information on popup information in ArcGIS clients.
+Defines the look and feel of popup windows when a user clicks or queries a feature.
+
+NOTE: This class is new in Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
 
 === Related:
 
