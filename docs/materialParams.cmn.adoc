@@ -1,6 +1,8 @@
 == materialParams
 
-Parameters describing the material.
+This class defines the parameters describing the material.
+
+NOTE: This class is new in Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
 
 === Related:
 
