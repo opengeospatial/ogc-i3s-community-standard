@@ -1,6 +1,8 @@
 == geometryNormal
 
-Normal attribute. Defines the normals of the geometry.
+Normal attribute. Defines the normals of the geometry. In geometry, a normal is an object such as a line, ray, or vector that is perpendicular to a given object. For example, in two dimensions, the normal line to a curve at a given point is the line perpendicular to the tangent line to the curve at the point. (Wikipedia, 4/2021)
+
+NOTE: This class is new in Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
 
 === Related:
 
