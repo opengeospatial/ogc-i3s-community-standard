@@ -71,7 +71,7 @@ size.
 
 _Note: properties in *bold* are required_
 
-NOTE: maxValue, avgValue, and minValue are deprectated elements. The deprecated properties are highlighted. These deprecated elements will remain in the OGC I3S Community Standard until such time as version 2 of this Community Standard is approved. At that time, these deprecated elements will be removed from the standard.
+NOTE: *WARNING* maxValue, avgValue, and minValue are deprectated elements. The deprecated properties are highlighted. These deprecated elements will remain in the OGC I3S Community Standard until such time as version 2 of this Community Standard is approved. At that time, these deprecated elements will be removed from the standard.
 
 === Examples
 
