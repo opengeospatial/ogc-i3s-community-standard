@@ -62,11 +62,11 @@ Used by the point cloud profile.
 the vertex coordinates or in reference to other constants such as screen
 size. 
 
-| _maxValue_ | Float[0..1] | Maximum metric value, expressed in the CRS of the vertex coordinates or in reference to other constants such as screen size
+| _maxValue_ | Float[0..1] | Maximum metric value, expressed in the CRS of the vertex coordinates or in reference to other constants such as screen size.
 
-| _avgValue_ |Float[0..1] |Average metric value, expressed in the CRS of the vertex coordinates or in reference to other constants such as screen size
+| _avgValue_ |Float[0..1] |Average metric value, expressed in the CRS of the vertex coordinates or in reference to other constants such as screen size.
 
-| _minValue_ | Float[0..1] Minimum metric value, expressed in the CRS of the vertex coordinates or in reference to other constants such as screen size
+| _minValue_ | Float[0..1] |Minimum metric value, expressed in the CRS of the vertex coordinates or in reference to other constants such as screen size.
 |===
 
 _Note: properties in *bold* are required_
