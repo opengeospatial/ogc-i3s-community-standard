@@ -63,19 +63,16 @@ geometry schema (faces) and precede the vertexAttribute data.
 
 | *header* | link:headerAttribute.cmn.adoc[headerAttribute][] | Defines
 header fields in the geometry resources of this store that precede the
-vertex (and index) data. | *ordering* | string[] | Defines the
-ordering of the vertex Attributes. | *vertexAttributes* |
-link:vertexAttribute.cmn.adoc[vertexAttribute] | Declaration of the
+vertex (and index) data. 
+| *ordering* | string[] | Defines the ordering of the vertex Attributes. Provides the order of the keys in vertexAttributes and faceAttributes, if present.
+| *vertexAttributes* | link:vertexAttribute.cmn.adoc[vertexAttribute] | Declaration of the
 attributes per vertex in the geometry, such as position, normals or
-texture coordinates. | faces |
-link:vertexAttribute.cmn.adoc[vertexAttribute] | Declaration of the
-indices into vertex attributes that define faces in the geometry, such
-as position, normals or texture coordinates. | *featureAttributeOrder*
-| string[] | Provides the order of the keys in featureAttributes, if
-present. | *featureAttributes* |
-link:featureAttribute.cmn.adoc[featureAttribute] | Declaration of the
-attributes per feature in the geometry, such as feature ID or face
-range. 
+texture coordinates. 
+| faces | link:vertexAttribute.cmn.adoc[vertexAttribute] | Declaration of the indices into vertex attributes that define faces in the geometry, such as position, normals or texture coordinates. 
+| *featureAttributeOrder* | string[] | Provides the order of the keys in featureAttributes, if
+present. 
+| *featureAttributes* |link:featureAttribute.cmn.adoc[featureAttribute] | Declaration of the
+attributes per feature in the geometry, such as feature ID or face range. 
 |===
 
 _Note: properties in *bold* are required_
