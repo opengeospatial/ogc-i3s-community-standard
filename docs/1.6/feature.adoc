@@ -1,0 +1,17 @@
+== class feature
+
+NOTE: *Warning* This Class has been deprecated for version 1.1. This Class is no longer supported. The properties specified in this class have been integrated into the 3dNodeIndexDocument as FeatureData. This deprecated class will remain in the OGC I3S Community Standard until such time as version 2 of this Community Standard is approved. At that time, this deprecated class will be removed from the standard.
+
+Features are representations of the geographic objects stored in a layer. In the 3dNodeIndexDocument, these objects define relationships, e.g. for linking feature representations of multiple LoDs.
+
+Attributes of the Class Feature within the NodeIndexDocument
+
+|===
+|Name 	|Type 	|Description
+|id |Number |An ID of the Feature object, unique within the store (important to note when using Features from multiple stores!). The ID SHALL not be re-used e.g. for multiple representation of an input feature that are present in different nodes.
+|mbs |Number[4] |An array of four doubles, corresponding to x, y, z and radius of the minimum bounding sphere of the referenced node.
+|lodChildFeatures | Number[0..*] |IDs of features in a higher LoD level which together make up this feature.
+|lodChildNodes |String[0..*] |Tree Key IDs of the nodes in which the lodChildFeatures are found
+|rank |Number[0..1] |The LoD level of this feature. Only required for features that participate in a LoD tree. The lowest rank SHALL be 1.
+|rootFeature |String |The Tree Key ID of the root node of a feature LoD tree that this feature participates in. Only required if the feature participates in a LoD tree and if it is not the rootFeature itself.
+|===
