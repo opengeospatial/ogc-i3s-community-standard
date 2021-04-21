@@ -2,6 +2,10 @@
 
 Value for attributeByteCount, attributeValues and objectIds.
 
+_attributeValues_ represents the description for value encoding. For example: scalar or vector encoding. +
+_attributeByteCount_ is used for string types only. Represents the byte count of the string, including the null character. +
+_objectIds_ stores the object-id values of each feature within the node.
+
 === Related:
 
 link:attributeStorageInfo.cmn.adoc[cmn::attributeStorageInfo], +
