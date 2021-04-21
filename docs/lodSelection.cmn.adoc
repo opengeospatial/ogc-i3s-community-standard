@@ -60,11 +60,18 @@ Used by the point cloud profile.
 
 | *maxError* | number | Maximum metric value, expressed in the CRS of
 the vertex coordinates or in reference to other constants such as screen
-size. |
+size. 
 
+| _maxValue_ | Float[0..1] | Maximum metric value, expressed in the CRS of the vertex coordinates or in reference to other constants such as screen size
+
+| _avgValue_ |Float[0..1] |Average metric value, expressed in the CRS of the vertex coordinates or in reference to other constants such as screen size
+
+| _minValue_ | Float[0..1] Minimum metric value, expressed in the CRS of the vertex coordinates or in reference to other constants such as screen size
 |===
 
 _Note: properties in *bold* are required_
+
+NOTE: maxValue, avgValue, and minValue are deprectated elements. The deprecated properties are highlighted. These deprecated elements will remain in the OGC I3S Community Standard until such time as version 2 of this Community Standard is approved. At that time, these deprecated elements will be removed from the standard.
 
 === Examples
 
