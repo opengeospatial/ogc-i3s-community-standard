@@ -119,7 +119,7 @@ hierarchy.
 
 I3S is agnostic with respect to the model used to index objects/features in 3D space. Both regular partitions of space (e.g. https://en.wikipedia.org/wiki/Quadtree[Quadtrees] and https://en.wikipedia.org/wiki/Octree[Octrees]) as well as density dependent partitioning of space (e.g.  https://en.wikipedia.org/wiki/R-tree[R-Trees]) are supported. The specific partitioning scheme is hidden from clients who navigate the nodes in the tree exposed as web resources. The partitioning results in a hierarchical subdivision of 3D space into regions represented by nodes, organized in a bounding volume tree hierarchy (BVH).
 
-The bounding volume hierarchy (BVH) is based on minimum bounding sphere (link:../docs/mbs.cmn.adoc[MBS] or oriented bounding boxes (link:../docs/obb.cmn.adoc[OBB]). The mesh-pyramids profile supports specifying the bounding volume in either MBS or OBB representation. OBB is the more optimal representation and implementers are encouraged to output node bounding volume in OBB format. Point cloud profile supports OBB representation only.
+The bounding volume hierarchy (BVH) is based on minimum bounding sphere (link:../docs/mbs.cmn.adoc[MBS]) or oriented bounding boxes (link:../docs/obb.cmn.adoc[OBB]). The mesh-pyramids profile supports specifying the bounding volume in either MBS or OBB representation. OBB is the more optimal representation and implementers are encouraged to output node bounding volume in OBB format. Point cloud profile supports OBB representation only.
 
 _3D objects enclosed in minimum bounding spheres._
 image:../images/MBS_Example.png[width=700,align="center"]
