@@ -417,7 +417,7 @@ used to filter data.
 A RESTful API allows access to I3S scene layers. Each scene layer
 profile has different components and features. For details on the API of
 a specific profile and version, refer to the individual README
-documents.
+documents as provided below.
 
 Version 1.2 support for: +
 link:../docs/3Dobject_ReadMe.adoc[3D Objects] +
