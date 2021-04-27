@@ -1,4 +1,4 @@
-== Point Cloud Scene Layer
+== Point Cloud Scene Layer (OGC Version 1.2)
 
 Point cloud scene layers quickly display large volumes of symbolized and
 filtered point cloud data. They are optimized for the displaying and
