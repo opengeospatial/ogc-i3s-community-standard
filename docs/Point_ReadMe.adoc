@@ -1,4 +1,4 @@
-== Point Scene Layer
+== Point Scene Layer (OGC Version 1.2)
 
 Point scene layers contain point features and their attributes. Point
 scene layers are often used to visualize large amounts of 3D data like
