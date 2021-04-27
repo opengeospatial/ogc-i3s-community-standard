@@ -421,7 +421,7 @@ documents.
 
 Version 1.2 support for: +
 link:../docs/3Dobject_ReadMe.adoc[3D Objects] +
-link:../docs/IntegratedMesh_ReadMe.md[Integrated Mesh] +
+link:../docs/IntegratedMesh_ReadMe.adoc[Integrated Mesh] +
 link:../docs/Point_ReadMe.adoc[Points] +
 link:../docs/pcsl_ReadMe.adoc[Point Cloud]
 
