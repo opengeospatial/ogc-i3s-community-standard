@@ -3,94 +3,91 @@ This document uses the terms defined in Sub-clause 5.3 of [OGC 06-121r8], which 
 
 For the purposes of this document, the following additional terms and definitions apply.
 
- *3D Model* footnote:note4[https://en.wikipedia.org/wiki/3D_modeling (February 7, 2017)]
+*3D Model* footnote:note4[https://en.wikipedia.org/wiki/3D_modeling (February 7, 2017)]
 Three-dimensional (3D) models represent a physical body using a collection of points in 3D space, connected by various geometric entities such as triangles, lines, curved surfaces, etc.
-
- *ArrayBuffer*
+*ArrayBuffer*
 In JavaScript, the https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer[ArrayBuffer] object is used to represent a generic, fixed-length raw binary data buffer. ArrayBuffer is an abstract type that is the base for the following types: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView[DataView], Float32Array, Float64Array, Int8Array, Int16Array, Int32Array, Uint8Array, Uint8ClampedArray, Uint16Array, Uint32Array. 
 
- *Bounding Volume (BV)* footnote:note14[https://en.wikipedia.org/wiki/Bounding_volume (February 19, 2021)]
+*Bounding Volume (BV)* footnote:note14[https://en.wikipedia.org/wiki/Bounding_volume (February 19, 2021)]
 A closed volume that completely contains the union of the objects in the set. Bounding volumes are used to improve the efficiency of geometrical operations by using simple volumes to contain more complex objects.
 
- *Bounding Volume Hierarchy (BVH)* footnote:note15[https://en.wikipedia.org/wiki/Bounding_volume_hierarchy (February 19, 2021)]
+*Bounding Volume Hierarchy (BVH)* footnote:note15[https://en.wikipedia.org/wiki/Bounding_volume_hierarchy (February 19, 2021)]
 A tree structure on a set of geometric objects. All geometric objects are wrapped in bounding volumes that form the leaf nodes of the tree.
 
- *Community Standard*
+*Community Standard*
 An OGC Community Standard is an official position of the OGC endorsing a specification or standard developed external to the OGC. 
 
- *Face*
+*Face*
 In solid geometry, a face is a flat (planar) surface that forms part of the boundary of a solid object; a three-dimensional solid bounded exclusively by flat faces is a polyhedron.
 
- *faceRanges*
+*faceRanges*
 Indicates the range of triangles associated with a particular object (feature).
 
- *Gravity-related height*
+*Gravity-related height*
 Height dependent on the Earth’s gravity field. NOTE: This refers to in particular orthometric height or normal height, which are both approximations of the distance of a point above the mean sea level. (ISO 19111)
 
- *Height*
+*Height*
 Distance of a point from a chosen reference surface measured upward along a line perpendicular to that surface. NOTE: A height below the reference surface will have a negative value.
 
- *Integrated Mesh*
+*Integrated Mesh*
 An Integrated Mesh is a type of I3S layer that belongs to the mesh-pyramids profile.
 An Integrated Mesh layer type is typically used to represent and visualize geographic data captured as ‘3D Image’ representing the landscape in a seamless, highly scalable, textured mesh. Such ‘3D Image’ can integrate within its content a multitude of landscape elements including terrain surface, ground imagery, vegetation, man-made objects and structures, and water surfaces. This type of data is typically produced by automated extraction solutions operating on input data from satellite, aerial and/or drone imagery.
 
- *Level of Detail (LoD)*
+*Level of Detail (LoD)*
 Using different LoDs involves decreasing the complexity of a 3D model representation as it moves away from the viewer or according to other metrics such as object importance, viewpoint-relative speed or position. There are numerous approaches to defining LoDs. In GIS, LoDs typically refer to maps defined at given scales and resolutions. Typically higher levels of detail provide greater fidelity. A number of OGC standards define approaches to LoD.
-
- *LiDAR*
+*LiDAR*
 Light Detection and Ranging, is a remote sensing method that uses light in the form of a pulsed laser to measure ranges (variable distances) to the Earth.
 
- *Minimum Bounding Sphere  (MBS, mbs)* footnote:note5[https://en.wikipedia.org/wiki/Bounding_sphere (February  12, 2017)]
+*Minimum Bounding Sphere  (MBS, mbs)* footnote:note5[https://en.wikipedia.org/wiki/Bounding_sphere (February  12, 2017)]
 In mathematics, given a non-empty set of objects of finite extension in n-dimensional space, for example a set of points, a bounding sphere, enclosing sphere or enclosing ball for that set is an n-dimensional solid sphere containing all of these objects.
 
- *Near Infrared Light*
+*Near Infrared Light*
 Generally refers to light within the wavenumber range of 12,500 to 4,000 cm-1 (wavelengths from 800 to 2,500 nm) (https://www.shimadzu.com/an/ftir/support/tips/letter9/nir1.html, March 2019)
 
- *Normal or Normals* footnote:note6[http://mathworld.wolfram.com/NormalVector.html (March 3, 2017)]
+*Normal or Normals* footnote:note6[http://mathworld.wolfram.com/NormalVector.html (March 3, 2017)]
 The normal vector, often simply called the "normal," to a surface is a vector which is perpendicular to the surface at a given point. When normals are considered on closed surfaces, the inward-pointing normal (pointing towards the interior of the surface) and outward-pointing normal are usually distinguished. 
 
- *Oriented Bounding Box (OBB)* footnote:note7[An Exact Algorithm for Finding Minimum Oriented Bounding Boxes. http://clb.demon.fi/minobb/minobb.html  (June 1, 2015)]
+*Oriented Bounding Box (OBB)* footnote:note7[An Exact Algorithm for Finding Minimum Oriented Bounding Boxes. http://clb.demon.fi/minobb/minobb.html  (June 1, 2015)]
 In geometry, the minimum or smallest bounding or enclosing box for a point set (S) in N dimensions is the box with the smallest measure (area, volume, or hyper-volume in higher dimensions) within which all the points lie. An oriented bounding box is simply a bounding parallelepiped whose faces and edges are not parallel to the basis vectors of the frame in which they're defined. In many applications the bounding box is aligned with the axes of the coordinate reference system and is known as an axis-aligned bounding box (AABB). To distinguish the general case from an AABB, an arbitrary bounding box is called an oriented bounding box (OBB) when an object's local coordinate reference system is used.
 
- *Point Cloud* 
+*Point Cloud* 
 A point cloud is a set of data points in space. Point clouds are generally produced by 3D scanners, which measure a large number of points on the external surfaces of objects around them. (Wikipedia, https://en.wikipedia.org/wiki/Point_cloud, March 2019)
 
- *Profile*
+*Profile*
 In I3S, specific implementation instances for specific layer definitions (point, mesh, etc.)
 
 *S3TC* footnote:note8[https://www.khronos.org/opengl/wiki/S3_Texture_Compression (February 7, 2017). Please note that S3TC is patented technology and is usage is subject to license restrictions. The patent expires October 7, 2017.]
 S3TC is a technique for compressing images for use as textures. Standard image compression techniques like JPEG and PNG can achieve greater compression ratios than S3TC. However, S3TC is designed to be implemented in high-performance hardware. JPEG and PNG decompress images all-at-once, while S3TC allows specific sections of the image to be decompressed independently.
 
- *Scene Layer*
+*Scene Layer*
 A scene layer is a type of layer that is optimized for displaying large amounts of 3D data in a scene. A scene layer displays one of four data types: points, a point cloud, 3D objects, or an integrated mesh.
 
- *Shader*
+*Shader*
 A small program or set of algorithms that determines how 3-D surface properties of objects are rendered, and how light interacts with the object within a 3-D computer program.
 
- *Texture*
+*Texture*
 In 3D graphics, the digital representation of the surface of an object. In addition to two-dimensional qualities, such as color and brightness, a texture is also encoded with three-dimensional properties, such as how transparent and reflective the object is. Once a texture has been defined, it can be wrapped around any 3-dimensional object. This is called texture mapping.
 
- *Texture Atlas* footnote:note9[https://en.wikipedia.org/wiki/Texture_atlas (February 19, 2017)]
+*Texture Atlas* footnote:note9[https://en.wikipedia.org/wiki/Texture_atlas (February 19, 2017)]
 A large image containing a collection, or "atlas", of sub-images, each of which is a texture map for some part of a 2D or 3D model.
 
 *Texture Coordinates* 
 Texture coordinates define how an image (or portion of an image) gets mapped to a geometry. A texture coordinate is associated with each vertex on the geometry, and it indicates what point within the texture image should be mapped to that vertex.(SAFE Software, 4/2021)
 
- *Texture Mapping* footnote:note10[https://en.wikipedia.org/wiki/Texture_mapping (February 19, 2017)]
+*Texture Mapping* footnote:note10[https://en.wikipedia.org/wiki/Texture_mapping (February 19, 2017)]
 Texture mapping is a method for defining high frequency detail, surface texture, or color information on a computer-generated graphic or 3D model.
 
- *Texture Maps*
+*Texture Maps*
 A texture map is an image applied (mapped) to the surface of a shape or polygon. This may be a bitmap image or a procedural texture. They may be stored in common image file formats, referenced by 3d model formats or material definitions, and assembled into resource bundles.
 
- *Treekey*
-
+*Treekey*
 Indicates both the level and sibling association of a given node. The key also directly indicates the position of the node in the tree, allowing sorting of all resources on a single dimension. In OGC Version 1.2, node ids are linearized integers converted to strings. This does not change the format of a node index document (was string and remains string). The concept of Treekeys was utilized by the node index neighbor property which was deprecated at 1.0
 
- *UV Coordinate* footnote:note11[http://www.rozengain.com/blog/2007/08/26/uv-coordinate-basics/ (February 19, 2017)]
+*UV Coordinate* footnote:note11[http://www.rozengain.com/blog/2007/08/26/uv-coordinate-basics/ (February 19, 2017)]
 UV coordinates are 2D coordinates that are mapped onto a 3D model. UV coordinates are a texture's x and y coordinates and always range from 0 to 1. Let's take for example a 800×600 image. When we use a UV coordinate with u=0.5 and v=0.5 then the pixel at x=400 and y=300 is targeted.
 
- *UV Mapping (aka UV Unwrapping)* footnote:note12[https://en.wikipedia.org/wiki/UV_mapping (February 9, 2017)]
+*UV Mapping (aka UV Unwrapping)* footnote:note12[https://en.wikipedia.org/wiki/UV_mapping (February 9, 2017)]
 UV mapping is the 3D modeling process of projecting a 2D image to a 3D model's surface for texture mapping.
 
- *Vertex* footnote:note13[https://en.wikipedia.org/wiki/Vertex_(geometry)#Vertices_in_computer_graphics (February 9, 2017)]
+*Vertex* footnote:note13[https://en.wikipedia.org/wiki/Vertex_(geometry)#Vertices_in_computer_graphics (February 9, 2017)]
 In computer graphics, a vertex is not only associated with three spatial coordinates but also with other graphical information necessary to render the object correctly, such as colors, reflectance properties, textures, and surface normals. These properties are used in rendering by a vertex shader, part of the vertex pipeline.
