@@ -49,6 +49,7 @@ NOTE: All of the new classes identified below are optional! Further, new propert
 | Editor | NA | A | All sections | Change cover page to reflect Version 1.2 | Consistency
 | Editor | NA | A | Various | Move source code etc from Esri Git repo into GPKG repo and OGC I3S 1.1 Word document | Consistency
 | Editor | NA |A  | Intro materials | Add Future Work sub-clause | Information
+| Editor | NA |A  | Terms and Definitions | Add definition for texture coordinates | Information
 | Su     | NA | S | 3DSceneLayer | Enhanced to specify three new optional parameters (materialDefinitions, textureSetDefinition, geometryDefinition) in support of PBR materials and Draco compression. | Enhancement
 | Su     | NA | S | compressedAttributes | New class: supports compressing the geometryBuffer of Integrated Mesh and 3D Object Layers using Draco compression| Enhancement
 | Su     | NA | S | features | New class: Declaration of the attributes per feature in the geometry, such as feature ID or face range.| Enhancement
