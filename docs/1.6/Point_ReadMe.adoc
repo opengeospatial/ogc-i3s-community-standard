@@ -1,4 +1,4 @@
-=== Point Scene Layer
+=== Point Scene Layer (Backwards compatible with Version 1.1)
 Point scene layers contain point features and their attributes. Point scene layers are often used to visualize large amounts of 3D data like trees or buildings. Most phenomena that can be visualized by 3D symbols can be displayed with a point scene layers.
 
 [#fig_pointscenelayer,reftext='{figure-caption} {counter:figure-num}']
