@@ -2,7 +2,7 @@
 [[annex-c]]
 :appendix-caption: Annex
 
-== JSON Resources Schema and Documentation (Was 7.6 in 1.1)
+== JSON Resources Schema and Documentation (Was Clause 7.6 in 1.1)
 This section provides a detailed, logical-level specification for each of the resource types.
 
 === Basic Value Types
