@@ -15,14 +15,14 @@
 |===
 |{set:cellbgcolor:#FFFFFF}
 |[big]*Open Geospatial Consortium*
-|Submission Date: <2021-mm-dd>
+|Submission Date: <2021-05-11>
 |Approval Date:   <2021-11-02>
 |Publication Date:   <2021-mm-dd>
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/CS/i3s/1.2
 |Internal reference number of this OGC(R) document:    17-014r8
 |Version: 1.2
 |Category: OGC(R) Community Standard
-|Editor:   Carl Reed, Tamrat Belayneh
+|Editors:   Carl Reed, Tamrat Belayneh
 |===
 
 [cols = "^", frame = "none"]
@@ -42,7 +42,7 @@
 |*Warning*
 |===
 
-This document is an OGC Member endorsed international Community standard. This Community standard was developed outside of the OGC and the originating party may continue to update their work; however, this document is fixed in content. This document is available on a royalty free, non-discriminatory basis.
+This document is an OGC Member endorsed international Community Standard. This Community Standard was developed outside of the OGC and the originating party may continue to update their work. However, this document is fixed in content. This document is available on a royalty free, non-discriminatory basis.
 
 Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.
 
@@ -50,7 +50,7 @@ Recipients of this document are invited to submit, with their comments, notifica
 |===
 |Document type:   	OGC® Community Standard
 |Document subtype:   	if applicable
-|Document stage:   	Draft
+|Document stage:   	Approved
 |Document language: 	English
 |===
 
