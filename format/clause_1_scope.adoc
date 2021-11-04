@@ -2,9 +2,9 @@
 
 A single I3S data set, referred to as a Scene Layer, is a container for arbitrarily large amounts of heterogeneously distributed 3D geographic data. Scene Layers provide clients access to data and allow them to visualize it according to their needs. The definition of "data" in this case includes the geometry, attributes, and vertex geometry.  I3S organizes information into node hierarchies that contain features with geometry, textures and attributes.
 
-A Scene Layer is characterized by a combination of layer type and profile. The layer type describes the kind of geospatial data stored within it. The layer profile includes additional details on the specific I3S implementation.
+A Scene Layer is characterized by a combination of `layer type` and `profile`. The layer type describes the kind of geospatial data stored within it. The layer profile includes additional details on the specific I3S rules for implementation.
 
-The I3S format is declarative and extendable and can be used to represent different types of 3D data. The following layer types have been specified and the standard validated via implementation and production deployments:
+The I3S format is declarative and extendable and can be used to represent different types of 3D data. The following layer types have been specified and the validated via implementation and production deployments:
 
 link:../docs/3Dobject_ReadMe.adoc[*3D Objects*] such as Building Exteriors from geospatial data and 3D models.
 
