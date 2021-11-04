@@ -51,7 +51,7 @@ Standard but may be proposed for inclusion in a future version.
 [big]*iii. Validity of content*
 
 The Submission Team has reviewed and certified that the `snapshot`
-content in this Community Standard is true and accurate. The `snapshot` for OGC I3S Version 1.2 was taken on .
+content in this Community Standard is true and accurate. The `snapshot` for OGC I3S Version 1.2 was taken on February 8, 2021.
 
 [big]*iv. Keywords*
 
@@ -118,13 +118,12 @@ Policies and Procedures:
 * Any http://www.opengeospatial.org/standards/community[Community
 Standard] submission requires that three or more distinct Member
 organizations support the submission. In addition to the submission team
-lead, each other organization supporting the submission shall provide
-the TCC with an email stating their organization’s support of the
+lead, each organization supporting the submission shall provide
+the OGC with an email stating their organization’s support of the
 submission.
 
 Please note that all questions and/or comments regarding this OGC
-Community Standard should be submitted to the OGC via the comment
-submission form. <<insert link here when the OGC actually has one!>>
+Community Standard should be documented by submitting a GitHub issue in the https://github.com/opengeospatial/ogc-i3s-community-standard/issues[OGC I3S GitHub repository]. 
 
 [big]*vi. Future Work* The I3S community anticipates that revisions to this
 Community Standard will be required to prescribe content appropriate to
