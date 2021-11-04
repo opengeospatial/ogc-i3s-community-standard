@@ -26,7 +26,7 @@ scalability. I3S is designed to support 3D geospatial content and
 supports the requisite coordinate reference systems and height models in
 conjunction with a rich set of layer types.
 
-The open community GitHub version of this standard is
+The open community GitHub source for this Community Standard is
 https://github.com/Esri/i3s-spec[here].
 
 [big]*ii.   Source of this document*
@@ -43,15 +43,15 @@ https://github.com/Esri/i3s-spec[Esri I3S repository]. The Terms and
 Definitions and References sections may be added into the Esri community
 GitHub repository in the future.
 
-Please note that the Esri I3S Github repository includes a ``Building
+Please note that the Esri I3S Github repository includes a Building
 Scene Layer (e.g. comprehensive building model including building
-components)''. This layer type is not included in this OGC Community
+components). This layer type is not included in this OGC Community
 Standard but may be proposed for inclusion in a future version.
 
 [big]*iii. Validity of content*
 
-The Submission Team has reviewed and certified that the ``snapshot''
-content in this Community Standard is true and accurate. <>
+The Submission Team has reviewed and certified that the `snapshot`
+content in this Community Standard is true and accurate. The `snapshot` for OGC I3S Version 1.2 was taken on .
 
 [big]*iv. Keywords*
 
