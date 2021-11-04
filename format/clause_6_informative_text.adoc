@@ -41,7 +41,7 @@ The following table shows the layer types and profiles. For each row the table i
 [width="90%",options="header"]
 |===
 |Layer Type (example) |	Profile |	Features with Identity |Attributes
-|link:../docs/3Dobject_Readme.adoc[3D Object] |	mesh-pyramids	|Yes	|Yes
+|link:../docs/3Dobject_ReadMe.adoc[3D Object] |	mesh-pyramids	|Yes	|Yes
 |link:../docs/IntegratedMesh_ReadMe.adoc[Integrated Mesh] |mesh-pyramids	 |No	|Triangle Attributes (planned)
 |link:../docs/Point_ReadMe.adoc[Point]| points	 |Yes	|Yes
 |link:../docs/pcsl_ReadMe.adoc[Point Cloud]	|pointclouds  |	No|Vertex Attributes
