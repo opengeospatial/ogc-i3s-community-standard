@@ -15,9 +15,9 @@
 |===
 |{set:cellbgcolor:#FFFFFF}
 |[big]*Open Geospatial Consortium*
-|Submission Date: <2021-05-11>
-|Approval Date:   <2021-11-02>
-|Publication Date:   <2021-mm-dd>
+|Submission Date: 2021-05-11
+|Approval Date:   2021-11-02
+|Publication Date:   2021-11-dd
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/CS/i3s/1.2
 |Internal reference number of this OGC(R) document:    17-014r8
 |Version: 1.2
