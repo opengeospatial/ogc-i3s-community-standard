@@ -1,4 +1,4 @@
-== 9.3.1	3D Object Scene Layer Structure
+== 3D Object Scene Layer Structure (Backwards compatible with Version 1.1)
 The 3D object scene layer is structured into a tree of multiple JSON files. Besides storing information in the JSON format, some are also provided as binary buffer. A 3D object scene layer can be used to create a scene layer package (*.slpk) or an I3S service. A 3D object scene layer contains the following:
 
 - Layer description(3DSceneLayerInfo)
