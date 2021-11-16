@@ -91,14 +91,19 @@ You do not have to comply with the license for elements of the material in the p
 No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.
 
 toc::[]
+<<Abstract,Abstract>>
+<<docsource,Source of this document>>
+<<Introduction,Introduction>>
 
 <<<
 
 ////
 Make sure to complete each included document
 ////
+
 image::../images/sceneLayers.jpg[width=600,align="center"]
 
+[[Abstract]]
 [big]*i.     Abstract*
 
 The Indexed 3D Scene Layer (I3S) format is an open 3D content delivery
@@ -127,6 +132,7 @@ conjunction with a rich set of layer types.
 The open community GitHub source for this Community Standard is
 https://github.com/Esri/i3s-spec[here].
 
+[[docsource]]
 [big]*ii.   Source of this document*
 
 The majority of the content in this OGC document is a direct copy of the
@@ -233,11 +239,10 @@ requests that document community uses cases and requirements.
 Currently, the following layer type may be considered for future
 inclusion in the I3S standard (future work):
 
-* Building Scene Layer (e.g. comprehensive building model including
-building components)
+* Building Scene Layer (e.g. comprehensive building model including building components)
 
 
-
+[[Introduction]]
 == Introduction
 
 A single I3S data set, referred to as a Scene Layer, is a container for arbitrarily large amounts of heterogeneously distributed 3D geographic data. Scene Layers provide clients access to data and allow them to visualize it according to their needs. The definition of "data" in this case includes the geometry, attributes, and vertex geometry.  I3S organizes information into node hierarchies that contain features with geometry, textures and attributes.
