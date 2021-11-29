@@ -427,8 +427,8 @@ https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/pcsl
 
 For backwards compatibility Version 1.1 support for: +
 https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/1.6/3Dobject_ReadMe.adoc[3D Objects], +
-https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/1.6IntegratedMesh_ReadMe.adoc[Integrated Mesh], +
-https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/1.6Point_ReadMe.adoc[Points].
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/1.6/IntegratedMesh_ReadMe.adoc[Integrated Mesh], +
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/1.6/Point_ReadMe.adoc[Points].
 
 == I3S Formats 
 
