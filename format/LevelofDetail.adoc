@@ -94,4 +94,4 @@ lodType is not null. Of the three min/avg/max values, typically only one
 or two are used. Selection criteria include constraints such as resolution, screen size, bandwidth and available memory and target minimum quality goals.
 
 For more details regarding LoD Selection for Integrated Mesh, 3D objects and point scene
-layers, see the link:../docs/lodSelection.cmn.adoc[LoD selection].
+layers, see the https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/lodSelection.cmn.adoc[LoD selection].
