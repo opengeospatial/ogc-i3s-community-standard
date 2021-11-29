@@ -7,4 +7,5 @@
 |Date |Release |Editor | Primary clauses modified |Description
 |2021-04-01| 1.2 | C. Reed | all | Changes for minor revision. See revision notes
 |2021-04-20| 1.2 | C. Reed | all | Various editorial changes, added more informative text.
+|2021-11-28| 1.2 | C. Reed | all | Various editorial changes for publication
 |===
