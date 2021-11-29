@@ -38,7 +38,7 @@ These use cases lead to the following implementation requirements. Note that all
 - All vertex positions SHALL be specified using a geodetic CRS (including Cartesian coordinate reference systems), where x,y,z axes are all in same unit, and with a per-node offset (from the center point of the node's minimum bounding sphere) for all vertex positions. 
 - Axis Order: Axis order explicitly defined by the CRS SHALL be used when present. When the axis order is not defined by the CRS, Easting, Northing, Height axis order SHALL be used. The Height axis SHALL always point upwards towards the sky (away from the center of the earth).
 
-All I3S layers indicate the coordinate system used by the layer with the _spatialReference_ property in the link:../docs/3DSceneLayer.cmn.adoc[3dSceneLayerInfo] resource. This property is normative.
+All I3S layers indicate the coordinate system used by the layer with the _spatialReference_ property in the https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/3DSceneLayer.cmn.adoc[3dSceneLayerInfo] resource. This property is normative.
 
 The spatial reference object is common to all I3S profile types.
 
@@ -99,7 +99,7 @@ HeightModelInfo
 
 The above examples illustrate the coordinate reference system and height model of a layer in an I3S payload. The _spatialReference_ object includes a Well-known Text (WKT) string representation of the CRS for both horizontal and vertical coordinate reference systems. The examples provided above show both WKT1 and WKT2 WKT encodings as defined in OGC 12-063r5 - either may be encoded in the spatialReference object. The _heightModelInfo_ object is coarse metadata that could be used by client application to quickly determine if the layers' horizontal and vertical coordinate reference systems align with that of any base map data used by the application. 
 
-See link:../docs/3DSceneLayer.cmn.adoc[Class 3DSceneLayerInfo] (Formerly Clause 7.5.4 in version 1.1) for more information on the use of the heightModelInfo object.
+See https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/3DSceneLayer.cmn.adoc[Class 3DSceneLayerInfo] (Formerly Clause 7.5.4 in version 1.1) for more information on the use of the heightModelInfo object.
 
 == Organization and Structure 
 
@@ -119,7 +119,7 @@ hierarchy.
 
 I3S is agnostic with respect to the model used to index objects/features in 3D space. Both regular partitions of space (e.g. https://en.wikipedia.org/wiki/Quadtree[Quadtrees] and https://en.wikipedia.org/wiki/Octree[Octrees]) as well as density dependent partitioning of space (e.g.  https://en.wikipedia.org/wiki/R-tree[R-Trees]) are supported. The specific partitioning scheme is hidden from clients who navigate the nodes in the tree exposed as web resources. The partitioning results in a hierarchical subdivision of 3D space into regions represented by nodes, organized in a bounding volume tree hierarchy (BVH).
 
-The bounding volume hierarchy (BVH) is based on minimum bounding spheres (link:../docs/mbs.cmn.adoc[MBS]) or oriented bounding boxes (link:../docs/obb.cmn.adoc[OBB]). The mesh-pyramids profile supports specifying the bounding volume in either MBS or OBB representation. OBB is the more optimal representation and implementers are encouraged to output node bounding volume in OBB format. Point cloud profile supports OBB representation only.
+The bounding volume hierarchy (BVH) is based on minimum bounding spheres (https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/mbs.cmn.adoc[MBS]) or oriented bounding boxes (https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/obb.cmn.adoc[OBB]). The mesh-pyramids profile supports specifying the bounding volume in either MBS or OBB representation. OBB is the more optimal representation and implementers are encouraged to output node bounding volume in OBB format. Point cloud profile supports OBB representation only.
 
 _3D objects enclosed in minimum bounding spheres._
 image:../images/MBS_Example.png[width=700,align="center"]
@@ -304,7 +304,7 @@ lodType is not null. Of the three min/avg/max values, typically only one
 or two are used. Selection criteria include constraints such as resolution, screen size, bandwidth and available memory and target minimum quality goals.
 
 For more details regarding LoD Selection for Integrated Mesh, 3D objects and point scene
-layers, see the link:../docs/lodSelection.cmn.adoc[LoD selection].
+layers, see the https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/lodSelection.cmn.adoc[LoD selection].
 
 
 ===== Geometry 
@@ -317,17 +317,17 @@ ArrayBufferView geometry property declarations control geometries storage and co
 Both 3D Object as well as Integrated Mesh layer type model geometries as triangle meshes using the <<annex-a,mesh-pyramids profile>>. The mesh-pyramids profile uses the triangles geometry type to store triangle meshes with reduced level of detail representations of the mesh, segmented by features, available in the interior nodes as described above.
 
 In OGC I3S version 1.2, 3D Objects and Integrated Mesh scene layers are using
-link:../docs/geometryBuffer.cmn.adoc[geometryBuffer] with _draco_
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/geometryBuffer.cmn.adoc[geometryBuffer] with _draco_
 compression to describe the geometry. Previous versions of 3D Object and
 Integrated Mesh scene layers (OGC  version 1.1 and earlier) define geometry in the
-link:../docs/1.6/defaultGeometrySchema.cmn.adoc[defaultGeometrySchema].
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/1.6/defaultGeometrySchema.cmn.adoc[defaultGeometrySchema].
 The expected triangle/face winding order in all geometry resources is
 counterclockwise.
 
 Point and Point cloud layers model geometries as points. A point scene
 layer defines the geometry in
-link:../docs/1.6/featureData.cmn.adoc[featureData]. For a Point Cloud Scene Layer, the binary
-link:../docs/defaultGeometrySchema.pcsl.adoc[geometry] is lepcc-xyz compressed.
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/1.6/featureData.cmn.adoc[featureData]. For a Point Cloud Scene Layer, the binary
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/defaultGeometrySchema.pcsl.adoc[geometry] is lepcc-xyz compressed.
 
 ===== Attributes 
 
@@ -346,10 +346,10 @@ object-id based attribute lookups.
 
 Metadata on each attribute resource is made available to clients via the
 scene service layer. When attributes are present within the scene layer,
-additional metadata in the link:../docs/field.cmn.adoc[fields] array
-and link:../docs/attributeStorageInfo.cmn.adoc[attributeStorageInfo]
+additional metadata in the https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/field.cmn.adoc[fields] array
+and https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/attributeStorageInfo.cmn.adoc[attributeStorageInfo]
 array further describe each attribute resource. The
-link:../docs/attributeInfo.pcsl.adoc[attributeInfo] of the Point Cloud
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/attributeInfo.pcsl.adoc[attributeInfo] of the Point Cloud
 scene layer contains the description of the attributes.
 
 ===== Textures 
@@ -371,15 +371,15 @@ By default, the mesh-pyramids profile allows/supports encoding the same texture 
 
 
 For more details on texture format, texture coordinate, texture atlas usage and regions discussion, see the link:../docs/texture.cmn.adoc[texture] and
-link:../docs/textureSetDefinition.cmn.adoc[textureSetDefinition].
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/textureSetDefinition.cmn.adoc[textureSetDefinition].
 
 ==== Node resources for OGC I3S 1.1 and earlier 
 
 To ensure backward compatibility with 1.1 clients, a 1.2 scene layer
 needs to also include the
-link:../docs/3DNodeIndexDocument.cmn.adoc[3dNodeIndexDocument]
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/3DNodeIndexDocument.cmn.adoc[3dNodeIndexDocument]
 resource as well as the
-link:../docs/sharedResource.cmn.adoc[sharedResources] available for
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/sharedResource.cmn.adoc[sharedResources] available for
 any node. SharedResource includes the material definition of the node.
 
 === Node Page 
@@ -420,15 +420,15 @@ a specific profile and version, refer to the individual README
 documents as provided below.
 
 Version 1.2 support for: +
-link:../docs/3Dobject_ReadMe.adoc[3D Objects] +
-link:../docs/IntegratedMesh_ReadMe.adoc[Integrated Mesh] +
-link:../docs/Point_ReadMe.adoc[Points] +
-link:../docs/pcsl_ReadMe.adoc[Point Cloud]
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/3Dobject_ReadMe.adoc[3D Objects] +
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/IntegratedMesh_ReadMe.adoc[Integrated Mesh] +
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/Point_ReadMe.adoc[Points] +
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/pcsl_ReadMe.adoc[Point Cloud]
 
 For backwards compatibility Version 1.1 support for: +
-link:../docs/1.6/3Dobject_ReadMe.adoc[3D Objects], +
-link:../docs/1.6/IntegratedMesh_ReadMe.adoc[Integrated Mesh], +
-link:../docs/1.6/Point_ReadMe.adoc[Points].
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/1.6/3Dobject_ReadMe.adoc[3D Objects], +
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/IntegratedMesh_ReadMe.adoc[Integrated Mesh], +
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/Point_ReadMe.adoc[Points].
 
 == I3S Formats 
 
@@ -476,7 +476,7 @@ Here are a few examples of SLPK file extensions:
 *Hash*
 
 In OGC I3S verison 1.2, an https://en.wikipedia.org/wiki/MD5[MD5]
-link:../docs/slpk_hashtable.cmn.adoc[hash] is used to improve loading
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/slpk_hashtable.cmn.adoc[hash] is used to improve loading
 time. The hash must be the last item at the end of the central directory
 and named `@specialIndexFileHASH128@`.
 
