@@ -72,12 +72,12 @@ No specific profile.
 === 3dSceneLayer
 Note that in this profile, the DefaultGeometrySchema is mandatory.
 
-link:../docs/3DSceneLayer.cmn.adoc[3dSceneLayer]
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/3DSceneLayer.cmn.adoc[3dSceneLayer]
 
 === 3dNodeIndexDocument
 There is always exactly 1 geometry and texture resource per node.
 
-link:../docs/3DNodeIndexDocument.cmn.adoc[3dNodeIndexDocument]
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/3DNodeIndexDocument.cmn.adoc[3dNodeIndexDocument]
 
 === AttributeData
 Attribute data for all features in a node is stored and made available as discrete, per field resource called attribute. The number of attribute resources corresponds to the number of feature data fields that are chosen to be included along with the 3d Scene Layer cache.
