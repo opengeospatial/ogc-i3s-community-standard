@@ -314,7 +314,7 @@ mesh segmentation. I3S supports storage of triangle meshes via triangles geometr
 
 ArrayBufferView geometry property declarations control geometries storage and consumption representation. I3S provides full control over those properties, such as per-vertex layout of components (e.g. position, normal and texture coordinates). This orders the vertex position, normal and texture coordinates to ensure the same pattern across the Scene Layer.
 
-Both 3D Object as well as Integrated Mesh layer type model geometries as triangle meshes using the <<annex-a,mesh-pyramids profile>>. The mesh-pyramids profile uses the triangles geometry type to store triangle meshes with reduced level of detail representations of the mesh, segmented by features, available in the interior nodes as described above.
+Both 3D Object as well as Integrated Mesh layer type model geometries as triangle meshes using the https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/IntegratedMesh_ReadMe.adoc. The mesh-pyramids profile uses the triangles geometry type to store triangle meshes with reduced level of detail representations of the mesh, segmented by features, available in the interior nodes as described above.
 
 In OGC I3S version 1.2, 3D Objects and Integrated Mesh scene layers are using
 https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/geometryBuffer.cmn.adoc[geometryBuffer] with _draco_
