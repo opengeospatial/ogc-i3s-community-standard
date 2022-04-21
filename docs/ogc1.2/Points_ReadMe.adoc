@@ -1,0 +1,123 @@
+== Point Scene Layer (OGC Version 1.2)
+
+Point scene layers contain point features and their attributes. Point
+scene layers are often used to visualize large amounts of 3D data like
+trees or buildings. Most phenomena that can be visualized by 3D symbols
+can be displayed with a point scene layers.
+
+*Examples*:
+
+NYC 2015 Tree Survey
+https://www.arcgis.com/home/item.html?id=7f3221f2984f49d89a9ef6d114d5f748[SLPK]. +
+NYC 2015 Tree Survey
+https://www.arcgis.com/home/item.html?id=7aba674fae86425694b21723d2680fa4[service].
+
+_Example of a point scene layer_
+
+image:../images/PointSceneLayer.png[Point Scene Layer]
+
+=== Point Scene Layer Structure
+
+The point scene layer is structured into a tree of multiple JSON files.
+Point scene layers can be represented as a scene layer package (*.slpk)
+or a I3S service. A point scene layer contains the following:
+
+* link:3DSceneLayer.psl.adoc[3DSceneLayer]
+* link:featureData.cmn.adoc[featureData]
+* attribute (binary)
+* link:3DNodeIndexDocument.cmn.adoc[3DNodeIndexDocument]
+* link:statisticsInfo.cmn.adoc[statistics]
+
+_Example of point scene layer structure_
+
+....
+.<host>/SceneServer/layers
+    +--0 // scene layer document
+    +-- nodes
+    |  +--root
+    |  |  +-- attributes
+    |  |  |  +--f_2
+    |  |  |  +--f_4
+    |  |  |  +--(...)
+    |  |  +-- features
+    |  |  |  +-- 0
+    |  +-- (...)
+    +--statistics
+    |  +-- f_2
+    |  | +--0
+    |  +-- f_4
+    |  | +--0
+    |  +-- (...)
+    +--resources
+        +-- styles
+        | +-- root
+        | +-- web 
+....
+
+== HTTP API Overview
+
+The following API methods are available for Point Scene Layer:
+
+*Scene layer document*
+
+|===
+| Type | JSON
+|URL Template |http://serviceURL/layers/\{layerID}
+|Example | http://my.server.com/PointSceneLayer/SceneServer/layers/0
+|Description |This is the root document for the service containing properties common
+to the entire layer. layerID: Integer. ID of the associated layer.
+|===
+
+link:3DSceneLayer.psl.adoc[3DSceneLayer]
+
+*3D node index document*
+
+|===
+| Type | JSON
+|URL Template | http://serviceURL/layers/\{layerID}/nodes/\{nodeID}
+|Example | http://my.server.com/PointSceneLayer/SceneServer/layers/0/nodes/98
+|Description | Description of the node. +
+layerID: Integer. ID of the associated layer. +
+nodeID: Integer. ID of the associated resource.
+|===
+
+link:3DNodeIndexDocument.cmn.adoc[3DNodeIndexDocument]
+
+*Attributes*
+
+|===
+| Type | JSON
+|URL Template | http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/attributes/f_\{attributeID}/0
+|Example | http://my.server.com/PointSceneLayer/SceneServer/layers/0/nodes/98/attributes/f_8/0
+|Description | The value for a specific attribute within a node. +
+layerID: Integer. ID of the associated layer.  +
+nodeID: Integer. ID of the associated resource. +
+attributeID: Integer. ID of the specific attribute for the layer.
+|===
+
+*Feature*
+
+|===
+| Type | JSON
+|URL Template | http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/features/0
+|Example | http://my.server.com/PointSceneLayer/SceneServer/layers/0/nodes/98/features/0
+|Description | Point location and feature IDs. +
+layerID: Integer. ID of the associated layer.  +
+nodeID: Integer. ID of the associated resource. +
+attributeID: Integer. ID of the specific attribute
+for the layer.
+|===
+
+link:featureData.cmn.adoc[featureData]
+
+*Statistics*
+
+|===
+| Type | JSON
+|URL Template | http://serviceURL/layers/\{layerID}/statistics/f_\{attributeID}/0
+|Example | http://my.server.com/PointSceneLayer/SceneServer/layers/0/statistics/f_8/0
+|Description | The statistics for the entire layer for a specific attribute. layerID:
+Integer. ID of the associated layer.  attributeID: Integer. ID of the specific attribute for the layer
+|===
+
+link:statisticsInfo.cmn.adoc[statistics]
