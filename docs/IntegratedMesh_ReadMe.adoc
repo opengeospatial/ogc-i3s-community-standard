@@ -1,4 +1,4 @@
-== Integrated Mesh Scene Layer (OGC Version 1.2)
+== Integrated Mesh Scene Layer (OGC Version 1.3)
 
 Integrated mesh scene layers are generally created for citywide 3D
 mapping. Integrated mesh scene layers include an entire surface and
