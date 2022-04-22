@@ -9,9 +9,9 @@ input image information as a textured mesh including 3D objects, such as
 buildings and trees, and elevation information.
 
 *Examples*: Rancho Cucamonga Fire Station No. 3
-https://www.arcgis.com/home/item.html?id=e0dfde9f11054aac8e15edbb8aa1631d[SLPK].
+https://3dcities.maps.arcgis.com/home/item.html?id=95a427c7a6ec4789b03c1a177366b54c)[SLPK].
 Rancho Cucamonga Fire Station No. 3
-https://www.arcgis.com/home/item.html?id=4028eb46e12e42f7889367bafcd6866d[service].
+https://3dcities.maps.arcgis.com/home/item.html?id=01eff699c8404a27a65e0877201136b4[service].
 
 _Example of integrated mesh scene layer_
 
@@ -31,7 +31,7 @@ contains the following:
 * link:sharedResource.cmn.adoc[sharedResource]*
 * link:3DNodeIndexDocument.cmn.adoc[3DNodeIndexDocument]*
 
-**Shared resources are deprecated as of version 1.2 and are only
+**Shared resources are deprecated as of OGC version 1.2 and are only
 included for backwards compatibility.*
 
 Integrated mesh scene layer packages can optionally contain a
