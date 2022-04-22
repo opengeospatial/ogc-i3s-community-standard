@@ -92,7 +92,7 @@ link:materialDefinitions.cmn.adoc[materialDefinitions][] | List of
 materials classes used in this layer. | textureSetDefinitions |
 link:textureSetDefinition.cmn.adoc[textureSetDefinition][] | Defines the
 set of textures that can be referenced by meshes. |
-geometryDefinitions |
+*geometryDefinitions* |
 link:geometryDefinition.cmn.adoc[geometryDefinition][] | Define the
 layouts of mesh geometry and its attributes. |
 
