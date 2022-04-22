@@ -70,9 +70,13 @@ It includes all fields that are included as part of the scene layer as
 derived from a source input feature layer. | attributeStorageInfo |
 link:attributeStorageInfo.cmn.adoc[attributeStorageInfo][] | Provides the
 schema and layout used for storing attribute content in binary format in
-I3S. | statisticsInfo | link:statisticsInfo.cmn.adoc[statisticsInfo][] |
-Contains the statistical information for a layer. |
-
+I3S. 
+| statisticsInfo | link:statisticsInfo.cmn.adoc[statisticsInfo][] |Contains the statistical information for a layer. |
+| nodePages | link:nodePageDefinition.cmn.adoc[nodePageDefinition] | The paged-access index description. |
+| materialDefinitions | linkmaterialDefinitions.cmn.adoc[materialDefinitions][] | List of materials classes used in this layer. |
+| textureSetDefinitions | link:textureSetDefinition.cmn.adoc[textureSetDefinition][] | Defines the set of textures that can be referenced by meshes. |
+| *geometryDefinitions* | link:geometryDefinition.cmn.adoc[geometryDefinition][] | Define the layouts of mesh geometry and its attributes. |
+| fullExtent | link:fullExtent.cmn.adoc[fullExtent] | 3D extent. If ```layer.fullExtent.spatialReference``` is specified, it must match ```layer.spatialReference```. |
 |===
 
 _Note: properties in *bold* are required_
