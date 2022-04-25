@@ -12,7 +12,7 @@ image:../img/buildingSceneLayer.png[Building Scene Layer]
 
 An I3S building scene layer contains discipline, such as architectural, and category layers, such as walls, as sublayers that represent a building and its assets. Building scene layers can be represented as a scene layer package (*.slpk) or an I3S service. A building scene layer contains the following:
 
-* link:layer.bld..adoc[3DSceneLayer]
+* link:layer.bld.adoc[3DSceneLayer]
 * link:sublayer.bld.adoc[sublayer]
 * link:stats.bld.adoc[statistics]
 
