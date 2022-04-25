@@ -8,9 +8,9 @@ can be displayed with a point scene layers.
 *Examples*:
 
 NYC 2015 Tree Survey
-https://www.arcgis.com/home/item.html?id=7f3221f2984f49d89a9ef6d114d5f748[SLPK]. +
+https://3dcities.maps.arcgis.com/home/item.html?id=d013ee07650d4a5192994b1fa1259a69[SLPK] +
 NYC 2015 Tree Survey
-https://www.arcgis.com/home/item.html?id=7aba674fae86425694b21723d2680fa4[service].
+https://3dcities.maps.arcgis.com/home/item.html?id=17b734b164ea47b1802a30ce0eb9c99f[service].
 
 _Example of a point scene layer_
 
