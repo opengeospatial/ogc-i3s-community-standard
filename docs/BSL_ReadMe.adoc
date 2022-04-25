@@ -6,7 +6,7 @@ Building content is often derived from Building Information Modeling (BIM) workf
 
 _Example of a Building Scene Layer_
 
-image:../img/buildingSceneLayer.png[Building Scene Layer]
+image:../imgages/buildingSceneLayer.png[Building Scene Layer]
 
 === Building Scene Layer Structure
 
