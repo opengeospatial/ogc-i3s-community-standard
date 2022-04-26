@@ -4,7 +4,9 @@ This class defines the sublayers of a Building Scene Layer. A Building Scene Lay
 
 === Related:
 
-link:layer.bld.adoc[bld::layer], link:sublayer.bld.adoc[bld::sublayer] ### Properties
+link:layer.bld.adoc[bld::layer], link:sublayer.bld.adoc[bld::sublayer] 
+
+=== Properties
 
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
