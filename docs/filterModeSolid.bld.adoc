@@ -1,0 +1,26 @@
+== filterMode: solid [building profile]
+
+Shows all elements that comply with the filter block of a filter in a building scene layer.
+
+=== Related:
+
+link:filterMode.bld.adoc[bld::filterMode]
+
+=== Properties
+
+[cols=",,",options="header",]
+|===
+|Property |Type |Description
+|type |string |Declares filter mode of type solid. Must be: `solid`
+|===
+
+=== Examples
+
+==== Example: filterMode solid
+
+[source,json]
+----
+ {
+  "type": "solid"
+} 
+----
