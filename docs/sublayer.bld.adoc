@@ -1,0 +1,101 @@
+== sublayer [building profile]
+
+This class defines the sublayers of a Building Scene Layer. A Building Scene Layer is composed of an overview and the full model containing the discipline and category layers. These layer types are represented as sublayers. A sublayer may contain other layers or sublayers (i.e. `group`) to form a nested structure. The order of the layers is inverted, meaning the first layer is on the bottom and the last layer is on the top.
+
+=== Related:
+
+link:layer.bld.adoc[bld::layer], link:sublayer.bld.adoc[bld::sublayer] ### Properties
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Property |Type |Description
+|*id* |integer |Identifier for this sublayer. *If* `layerType != 'group'`, resources will be at `/layers/{bim_layer_id}/sublayers/{this.id}/...`
+|*name* |string |Layer name. *Must be unique* per building scene layer.
+|alias |string |Alias of the layer name. Can be empty if alias and name are identical.
+|discipline |string |Semantics for work discipline groups which can be used to refine the user experience. Possible values are: +
+`Mechanical` + 
+`Architectural` +
+`Piping` +
+`Electrical` +
+`Structural`
+|modelName |string |A fixed string of sublayer information. Used by client applications to define specific behavior for the modelName. See link:subLayerModelName.adoc[list of defined modelNames] for sublayers.
+|*layerType* |string |Possible values are: +
+`group` +
+`3DObject` +
+`Point`
+|visibility |boolean |Visibility of the sublayer. Default is `true`.
+|sublayers |link:sublayer.bld.adoc[sublayer][] |Sublayers contained in this layer.
+|isEmpty |boolean |Returns true if the layer has no features.
+|===
+
+_Note: properties in *bold* are required_
+
+=== Examples
+
+==== Example: Building Scene Layer simple group
+
+[source,json]
+----
+ {
+  "id": 100,
+  "layerType": "group",
+  "name": "architectural",
+  "alias": "Architecture",
+  "modelName": "Architectural",
+  "visibility": true,
+  "sublayers": [
+    {
+      "id": 0,
+      "layerType": "3DObject",
+      "name": "stairs",
+      "alias": "Escaliers",
+      "visibility": true,
+      "isEmpty": false
+    },
+    {
+      "id": 1,
+      "layerType": "3DObject",
+      "name": "roof",
+      "alias": "Toitures",
+      "visibility": true,
+      "isEmpty": false
+    }
+  ]
+} 
+----
+
+==== Example: Building Scene Layer simple group with Point sublayer
+
+[source,json]
+----
+ {
+  "id": 100,
+  "layerType": "group",
+  "name": "architectural",
+  "alias": "Architecture",
+  "modelName": "Architectural",
+  "visibility": true,
+  "sublayers": [
+    {
+      "id": 1,
+      "layerType": "3DObject",
+      "name": "Casework",
+      "alias": "Casework",
+      "modelName": "Casework",
+      "discipline": "Architectural",
+      "visibility": true,
+      "isEmpty": false
+    },
+    {
+      "id": 2,
+      "layerType": "Point",
+      "name": "LocationPoints",
+      "alias": "LocationPoints",
+      "modelName": "LocationPoints",
+      "discipline": "Architectural",
+      "visibility": true,
+      "isEmpty": false
+    }
+  ]
+} 
+----
