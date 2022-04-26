@@ -1,0 +1,34 @@
+== filterBlock [building profile]
+
+A filter block defines what elements will be filtered with a specific filter mode. To ensure performance on client applications, it is not recommended to declare multiple filter blocks with the same filter mode. Filter blocks are contained in a filter for a building scene layer. Each filter includes at least one filter block.
+
+=== Related:
+
+link:filter.bld.adoc[bld::filter]
+
+=== Properties
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Property |Type |Description
+|*title* |string |Title of the filter block.
+|*filterMode* |link:filterMode.bld.adoc[filterMode] |Filter mode defines how features are drawn. For example, the filter mode of a filter can be solid or wire frame.
+|*filterExpression* |string |Filter query expression for a building scene layer.
+|===
+
+_Note: properties in *bold* are required_
+
+=== Examples
+
+==== Example: Filter block
+
+[source,json]
+----
+ {
+  "title": "Created Phase 1",
+  "filterMode": {
+    "type": "solid"
+  },
+  "filterExpression": "CreatedPhase=1"
+} 
+----
