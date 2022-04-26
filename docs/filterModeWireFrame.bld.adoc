@@ -1,0 +1,38 @@
+== filterMode: wire frame [building profile]
+
+Shows all elements that comply with the filter block of a filter in a building scene layer. The elements are drawn with an edge line.
+
+=== Related:
+
+link:filterMode.bld.adoc[bld::filterMode]
+
+=== Properties
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Property |Type |Description
+|type |string |Declares filter mode of type wire frame. Must be: `wireFrame`
+|edges | |An object defining solid edges of a feature. https://developers.arcgis.com/web-scene-specification/objects/edges/[See more] information on supported edges in ArcGIS clients.
+|===
+
+=== Examples
+
+==== Example: Filter mode wire frame
+
+[source,json]
+----
+ {
+  "type": "wireFrame",
+  "edges": {
+    "type": "solid",
+    "color": [
+      255,
+      0,
+      0
+    ],
+    "size": 0.75,
+    "transparency": 10,
+    "extensionLength": 5
+  }
+} 
+----
