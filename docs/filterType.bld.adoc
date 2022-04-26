@@ -1,0 +1,32 @@
+== filterType [building profile]
+
+The file authoring information for a filter, including the filter type and its value settings.
+
+=== Related:
+
+link:filterBlockAuthoringInfo.bld.adoc[bld::filterBlockAuthoringInfo]
+
+=== Properties
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Property |Type |Description
+|*filterType* |string |Represents the filter type name. Name is a unique identifier.
+|*filterValues* |string[] |Array of filter values. Filter values are the attributes that can be stored for individual fields in a layer.
+|===
+
+_Note: properties in *bold* are required_
+
+=== Examples
+
+==== Example: Building Scene Layer filter type
+
+[source,json]
+----
+ {
+  "filterType": "CreatedPhase",
+  "filterValues": [
+    "1"
+  ]
+} 
+----
