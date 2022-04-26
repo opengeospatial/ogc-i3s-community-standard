@@ -1,0 +1,10 @@
+== filterMode [building profile]
+
+Filter mode represents the way elements draw when participating in a filter block.
+
+=== Related:
+
+link:filterBlock.bld.adoc[bld::filterBlock] ### oneOf:
+
+* link:filterModeSolid.bld.adoc[filterModeSolid]
+* link:filterModeWireFrame.bld.adoc[filterModeWireFrame]
