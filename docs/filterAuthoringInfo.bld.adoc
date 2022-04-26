@@ -1,0 +1,47 @@
+== filterAuthoringInfo [building profile]
+
+The filter authoring info object contains metadata about the authoring process for creating a filter object. This allows the authoring client to save specific, overridable settings. The next time it is accessed with an authoring client, the selections are remembered. Non-authoring clients can ignore it.
+
+=== Related:
+
+link:filter.bld.adoc[bld::filter]
+
+=== Properties
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Property |Type |Description
+|*type* |string |Declares type or filter authoring info. Must be: `checkbox`: Client UI with checkbox representation for each filter type and filter value.
+|*filterBlocks* |link:filterBlockAuthoringInfo.bld.adoc[filterBlockAuthoringInfo][] |Array of filter block authoring info.
+|===
+
+_Note: properties in *bold* are required_
+
+=== Examples
+
+==== Example: Building Scene Layer filter authoring info
+
+[source,json]
+----
+ {
+  "type": "checkbox",
+  "filterBlocks": [
+    {
+      "filterTypes": [
+        {
+          "filterType": "BldgLevel",
+          "filterValues": [
+            "3"
+          ]
+        },
+        {
+          "filterType": "CreatedPhase",
+          "filterValues": [
+            "1"
+          ]
+        }
+      ]
+    }
+  ]
+} 
+----
