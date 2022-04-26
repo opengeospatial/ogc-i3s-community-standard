@@ -64,7 +64,9 @@ Building scene layer is envisioned to represent individual buildings or a campus
 
 === Related:
 
-link:stats.bld.md[bld::stats] ### Properties
+link:stats.bld.adoc[bld::stats] 
+
+=== Properties
 
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
@@ -76,11 +78,11 @@ link:stats.bld.md[bld::stats] ### Properties
 |*layerType* |string |Must be: `Building`
 |description |string |Description for the layer.
 |copyrightText |string |Copyright information to be displayed.
-|*fullExtent* |link:fullExtent.cmn.md[fullExtent] |3d extent. If `layer.fullExtent.spatialReference` is specified, it *must* match `layer.spatialReference`.
-|*spatialReference* |link:spatialReference.cmn.md[spatialReference] |The spatialReference of the layer including the vertical coordinate system. WKT is included to support custom spatial references.
-|heightModelInfo |link:heightModelInfo.cmn.md[heightModelInfo] |An object containing the vertical coordinate system information.
-|*sublayers* |link:sublayer.bld.md[sublayer][] |List of sublayers or group of sublayers.
-|filters |link:filter.bld.md[filter][] |Array of filters defined for the building scene layer.
+|*fullExtent* |link:fullExtent.cmn.adoc[fullExtent] |3d extent. If `layer.fullExtent.spatialReference` is specified, it *must* match `layer.spatialReference`.
+|*spatialReference* |link:spatialReference.cmn.adoc[spatialReference] |The spatialReference of the layer including the vertical coordinate system. WKT is included to support custom spatial references.
+|heightModelInfo |link:heightModelInfo.cmn.adoc[heightModelInfo] |An object containing the vertical coordinate system information.
+|*sublayers* |link:sublayer.bld.adoc[sublayer][] |List of sublayers or group of sublayers.
+|filters |link:filter.bld.adoc[filter][] |Array of filters defined for the building scene layer.
 |activeFilterID |string |Global ID, filter ID of the currently active filter for the building scene layer.
 |statisticsHRef |string |url to statistic summary for the BIM layer. link:attributestats.bld.md[statistics/summary.json]
 |===
