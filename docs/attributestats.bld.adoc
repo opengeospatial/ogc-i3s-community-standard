@@ -1,0 +1,83 @@
+== attributeStatistics [building profile]
+
+Concatenated attribute statistics. If needed, the type of the attribute (string or number) may be inferred from `mostFrequentValues` and/or `min`/`max` fields.
+
+=== Related:
+
+link:stats.bld.adoc[bld::stats]
+
+=== Properties
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Property |Type |Description
+|*fieldName* |string |Name of the field.
+|label |string |Label of the field name. If label is empty, the label and fieldName are identical.
+|modelName |string |A fixed string of building information, similar to a filter. Used by client applications to define specific behavior for the modelName. The link:./defaultFilterTypes.bld.adoc[default filter types] define the modelName for the attribute statistics. Possible values are: `category` `family` `familyType` `bldgLevel` `createdPhase` `demolishedPhase` `discipline` `assemblyCode` `omniClass` `systemClassifications` `systemType` `systemName` `systemClass` `custom`
+|min |number |Minimum value. Numeric attributes only.
+|max |number |Maximum value. Numeric attributes only.
+|mostFrequentValues |integer[0:256], string[0:256] |Most frequent value, if applicable for this attribute. Truncated to 256 entries.
+|*subLayerIds* |integer[] |List of sublayers where this attribute may be found.
+|===
+
+_Note: properties in *bold* are required_
+
+=== Examples
+
+==== Example: `String` attribute with `modelName` to specify filterable semantic
+
+[source,json]
+----
+ {
+  "fieldName": "fournitures",
+  "label": "Meuble interieur",
+  "modelName": "custom",
+  "mostFrequentValues": [
+    "chair",
+    "table",
+    "cubicle",
+    "boxes"
+  ],
+  "subLayerIds": [
+    10,
+    4,
+    5
+  ]
+} 
+----
+
+==== Example: `Integral` attribute with `modelName` to specify filterable semantic
+
+[source,json]
+----
+ {
+  "fieldName": "floor",
+  "label": "Etages",
+  "modelName": "bldgLevel",
+  "mostFrequentValues": [
+    1,
+    2,
+    3
+  ],
+  "subLayerIds": [
+    10,
+    15
+  ]
+} 
+----
+
+==== Example: `Float` attribute
+
+[source,json]
+----
+ {
+  "fieldName": "diameter",
+  "label": "Diametre de conduit",
+  "min": 0.2566,
+  "max": 2.256,
+  "subLayerIds": [
+    3,
+    5
+  ]
+} 
+----
