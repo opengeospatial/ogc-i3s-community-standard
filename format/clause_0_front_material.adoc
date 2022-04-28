@@ -51,7 +51,7 @@ Standard but may be proposed for inclusion in a future version.
 [big]*iii. Validity of content*
 
 The Submission Team has reviewed and certified that the `snapshot`
-content in this Community Standard is true and accurate. The `snapshot` for OGC I3S Version 1.2 was taken on February 8, 2021.
+content in this Community Standard is true and accurate. The `snapshot` for OGC I3S Version 1.3 was taken on April 23, 2022 from the Esri version 1.7 Git Repository.
 
 [big]*iv. Keywords*
 
@@ -132,9 +132,5 @@ external user and developer community or from OGC review and comments.
 Further, future revisions will be driven by any submitted change
 requests that document community uses cases and requirements.
 
-Currently, the following layer type may be considered for future
-inclusion in the I3S standard (future work):
 
-* Building Scene Layer (e.g. comprehensive building model including
-building components)
 
