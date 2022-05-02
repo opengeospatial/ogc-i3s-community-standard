@@ -98,13 +98,11 @@ Standard version 1.3 to the OGC:
 |Gordon Plunkett |Esri Canada
 |Vijay Kumar |Esri India Technologies
 |Anneley Hadland  | Helyx Secure Information Systems Ltd
-|Howard Butler | Hobu Inc.
 |Volker Coors |Hochschule für Technik Stuttgart
 |Clemens Portele | Interactive Instruments
 |Jeongeun (Bomi) Lee | KoreaLand & Geospatial InformatiX Corporation
 |Cesar Suarez, Hermann Brassard | Presagis
-| Dean Hintz |Safe Software
-| Ib Green | Unfolded
+|Dean Hintz |Safe Software
 |===
 
 Note on supporting organizations. As per the OGC Technical Committee
