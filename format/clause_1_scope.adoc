@@ -14,6 +14,6 @@ https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/Poin
 
 https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/pcsl_ReadMe.adoc[*Point Clouds]* such as large point data from LiDAR.
 
-https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/bsl_ReadMe.adoc[*Building scene layer*] - comprehensive building model including building components.
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/BSL_ReadMe.adoc[*Building Ccene Layer*] - comprehensive building model including building components.
 
 The Indexed 3d Scene Layer (I3S) and Scene Layer Package (*.slpk) are open formats and not dependent on any vendor specific solution, technology, or products.[3] The specification for accessing I3S resources as Scene Service REST endpoints is also described in this standard as open formats.
