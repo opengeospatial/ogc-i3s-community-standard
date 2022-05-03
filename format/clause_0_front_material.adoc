@@ -6,7 +6,7 @@ image::../images/sceneLayers.jpg[width=600,align="center"]
 The Indexed 3D Scene Layer (I3S) format is an open 3D content delivery
 format used to rapidly stream and distribute large volumes of 3D GIS
 data to mobile, web and desktop clients. I3S content can be shared
-across enterprise systems using both physical and cloud servers.
+across enterprise systems using both physical and cloud servers. 
 
 A single I3S data set, referred to as a Scene Layer, is a container for
 arbitrarily large amounts of heterogeneously distributed 3D geographic
