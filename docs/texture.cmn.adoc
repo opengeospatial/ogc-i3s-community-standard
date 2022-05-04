@@ -60,7 +60,7 @@ into 4 UInt16 values.
 
 Client capabilities for handling complex UV cases vary widely, so texture coordinates are used. "Texture coordinates define how an image (or portion of an image) gets mapped to a geometry. A texture coordinate is associated with each vertex on the geometry, and it indicates what point within the texture image should be mapped to that vertex." (SAFE Software, 4/2021).
 
-Texture coordinates do not directly take atlas regions into account. They always range from 0…​1 in U and V, except when using the "repeat" wrapping mode, where they may range from 0…​n (n being the number of repeats). The client is expected to use the subimageRegion values and the texture coordinates to best handle repeating textures in atlases. This approach has been selected since client capabilities in dealing with more complex UV cases vary greatly.
+Texture coordinates do not directly take atlas regions into account. They always range from 0…​1 in U and V, except when using the "repeat" wrapping mode, where they may range from 0…​n (n being the number of repeats). In repeat mode, U and V  range from 0 to $n$, where n is the number of repeats. Repeating textures may repeat vertically, horizontally, or both. The client is expected to use the sub-image region values and the texture coordinates to best handle repeating textures in atlases. This approach has been selected since client capabilities in dealing with more complex UV cases vary greatly.
 
 ==== Related:
 
