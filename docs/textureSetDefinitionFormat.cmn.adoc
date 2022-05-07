@@ -25,7 +25,9 @@ the beginning of the alpha stream (little-endian). +
 - `png`: PNG format, no mipmaps +
 - `dds`: The DDS header will specify the type of compression and number of mipmaps. *WARNING:* Only DXT1 (no alpha) and DXT5 (alpha channel) are supported. +
 - `ktx-etc2`: Khronos group container for ETC2 compressed texture. Mipmap may be available. +
-- `ktx2`: Khronos group container for Basis Universal Supercompressed GPU Texture. Mipmap may be available. Note: KTX (https://github.com/KhronosGroup/KTX-Software[Khronos Texture]) is a lightweight file format for OpenGL® textures, designed around how textures are loaded in OpenGL. +
+- `ktx2`: Khronos group container for Basis Universal Supercompressed GPU Texture. +
+
+Note: Note: KTX (Khronos Texture) is an efficient, lightweight container format for reliably distributing GPU textures to diverse platforms and applications. [KTX2](https://www.khronos.org/registry/KTX/specs/2.0/ktxspec_v2.html) is the container format that supports Basis Universal SuperCompressed GPU texture. |
 |===
 
 _Note: properties in *bold* are required_
