@@ -31,6 +31,7 @@ The requirements specified below apply to the current scene layer profile types:
 -	Integrated Meshs such as a mesh surface with high resolution imagery textures representing the skin of the Earth, typically created from satellite, aerial or drone imagery. A profile for integrated meshes is described in <<annex-a,I3S Scene Layer Profile - Mesh-pyramids (MP)>>
 -	Points such as geolocated hospitals or schools, trees, street furniture, and signs.
 -	Point Clouds such as LiDAR data. 
+- Building Scene Layers such as comprehensive building model including building components.
 
 Layers are described using two properties: type and profile. The type of a layer describes the type of geospatial data stored within it drawing from terms including 3D Objects, Points, Lines, Polygons, and Point Clouds. The profile for a layer includes additional detail on the specific I3S implementation for the layer that is exposed to clients. Each layer has a canonical profile, but in certain cases multiple layers that represent semantically different types of information can make use of the same underlying profile. In other cases the same layer type can support multiple profiles optimized for different use cases. 
 
