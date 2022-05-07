@@ -16,7 +16,7 @@ An I3S building scene layer contains discipline, such as architectural, and cate
 * link:sublayer.bld.adoc[sublayer]
 * link:stats.bld.adoc[statistics]
 
-_Buildinf Scene Layers and Filters
+=== Building Scene Layers and Filters
 
 Building scene layers are visually complex. As such, being able to filter elements or parts of a building to see only the relevant or important information that you are looking for is very useful.
 
@@ -25,7 +25,7 @@ For example, if you want to see parts of a building that are on the second floor
 Using the I3S Filter Classes, the user can define a building filter. A building filter allows the user and/or client to make elements of a building visible as solid or wireframe. Each building filter contains one or many filter blocks. Filter blocks define what is visible in the building scene layer. Any filter mode created by other ArcGIS clients that is not set to the solid or wireframe type is shown as solid by default. For example, the Scene Viewer might have an x-ray filter mode. When visualizing a building with this filter mode the filter will be shown as solid.
 
 
-_Example of building scene scene layer structure_
+=== Example of building scene scene layer structure
 
 ....
 .<host>/SceneServer/layers
