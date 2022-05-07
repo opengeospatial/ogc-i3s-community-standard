@@ -163,10 +163,10 @@ redundancy in attribute storage allows each node to be rendered
 independently of other nodes. The following scene layer types support
 features:
 
-[cols=",,,,",options="header",]
+[cols=",,,,,",options="header",]
 |===
-|Feature |Integrated Mesh |3D Object |Points |Point Clouds
-|support |  | image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] | 
+|Feature |Integrated Mesh |3D Object |Points |Point Clouds | Building Scene Layer
+|support |  | image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  | image:../images/checkmark.png[yes]
 |===
 
 ==== Node resources 
@@ -179,27 +179,25 @@ access the resources. While content creators may choose to match a
 resource id with the node id this is not required by the I3S
 specification. As such, clients should not make this assumption.
 
-[cols=",,,,",options="header",]
+[cols=",,,,,",options="header",]
 |===
-|Node Resources |Integrated Mesh |3D Object |Points |Point Clouds
-|geometry buffer | image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  |image:../images/checkmark.png[yes]
+|Node Resources |Integrated Mesh |3D Object |Points |Point Clouds | Building Scene Layer
+|geometry buffer | image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  |image:../images/checkmark.png[yes] | image:../images/checkmark.png[yes] 
 
-|attribute |  |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
+|attribute |  |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] | image:../images/checkmark.png[yes]
 
-|texture |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  | 
+|texture |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  |  | image:../images/checkmark.png[yes]
 |===
 
 
 _Node resource for backward compatibility with 1.6_
 
-[cols=",,",options="header",]
+[cols=",,'",options="header",]
 |===
-|Node Resources |Integrated Mesh |3D Object
-|sharedResources |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes]
+|Node Resources |Integrated Mesh |3D Object | Building Scene Layer
+|sharedResources |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
 
-|3dNodeIndexDocument |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes]
+|3dNodeIndexDocument |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] | image:../images/checkmark.png[yes]
 |===
 
 _Note: All binary data is stored in little endian._
