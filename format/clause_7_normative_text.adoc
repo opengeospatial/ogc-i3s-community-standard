@@ -418,6 +418,13 @@ profile has different components and features. For details on the API of
 a specific profile and version, refer to the individual README
 documents as provided below.
 
+Version 1.3 support for: +
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/3Dobject_ReadMe.adoc[3D Objects] +
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/IntegratedMesh_ReadMe.adoc[Integrated Mesh] +
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/Point_ReadMe.adoc[Points] +
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/pcsl_ReadMe.adoc[Point Cloud] +
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/BSL_ReadMe.adoc[Buildings]
+
 Version 1.2 support for: +
 https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/3Dobject_ReadMe.adoc[3D Objects] +
 https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/IntegratedMesh_ReadMe.adoc[Integrated Mesh] +
