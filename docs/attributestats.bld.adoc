@@ -13,7 +13,7 @@ link:stats.bld.adoc[bld::stats]
 |Property |Type |Description
 |*fieldName* |string |Name of the field.
 |label |string |Label of the field name. If label is empty, the label and fieldName are identical.
-|modelName |string |A fixed string of building information, similar to a filter. Used by client applications to define specific behavior for the modelName. The link:./defaultFilterTypes.bld.adoc[default filter types] define the modelName for the attribute statistics. Possible values are: `category` `family` `familyType` `bldgLevel` `createdPhase` `demolishedPhase` `discipline` `assemblyCode` `omniClass` `systemClassifications` `systemType` `systemName` `systemClass` `custom`
+|modelName |string |A fixed string of building information, similar to a filter. Used by client applications to define specific behavior for the modelName. The link:defaultFilterTypes.bld.adoc[default filter types] define the modelName for the attribute statistics. Possible values are: `category` `family` `familyType` `bldgLevel` `createdPhase` `demolishedPhase` `discipline` `assemblyCode` `omniClass` `systemClassifications` `systemType` `systemName` `systemClass` `custom`
 |min |number |Minimum value. Numeric attributes only.
 |max |number |Maximum value. Numeric attributes only.
 |mostFrequentValues |integer[0:256], string[0:256] |Most frequent value, if applicable for this attribute. Truncated to 256 entries.
