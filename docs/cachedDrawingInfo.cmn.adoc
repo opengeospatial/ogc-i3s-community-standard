@@ -3,7 +3,7 @@
 The cachedDrawingInfo object indicates if the _drawingInfo_ object is
 captured as part of the binary scene layer representation. This object
 is used for the 3D Object and Integrated Mesh scene layer if no
-link:drawingInfo.cmn.md[drawingInfo] is defined.
+link:drawingInfo.cmn.adoc[drawingInfo] is defined.
 
 === Related:
 
