@@ -1,6 +1,6 @@
 == Building Scene Layer (1.3)
 
-Building content is often derived from Building Information Modeling (BIM) workflows. BIM is a best-practice process for optimizing design and construction. BIM processes can produce 3D virtual representations of real-world assets that are commonly used for construction, documentation, and evaluation. BIM processes are applied in multiple domains including architecture, buildings, energy, utilities, and transportation. A building scene layer can represent the 3D model content based on BIM structuring disciplines such as architectural or structural, and categories such as windows or walls.
+Building content is often derived from https://en.wikipedia.org/wiki/Building_information_modeling[Building Information Modeling] (BIM) workflows. BIM is a best-practice process for optimizing design and construction. BIM processes can produce 3D virtual representations of real-world assets that are commonly used for construction, documentation, and evaluation. BIM processes are applied in multiple domains including architecture, buildings, energy, utilities, and transportation. A Building Scene Layer (BSL) can represent the 3D model content based on BIM structuring disciplines such as architectural or structural, and categories such as windows or walls.
 
 *Examples*: Building Scene Layer example https://3dcities.maps.arcgis.com/home/item.html?id=3e6417f6544b422496a022f6e84aeaaa[SLPK]. Building Scene Layer example https://3dcities.maps.arcgis.com/home/item.html?id=bc11dd06a20546509679c1b3bc83380d[service].
 
@@ -10,11 +10,11 @@ image:../images/buildingSceneLayer.png[Building Scene Layer]
 
 === Building Scene Layers and Filters
 
-Building scene layers are visually complex. As such, being able to filter elements or parts of a building to see only the relevant or important information that you are looking for is very useful.
+BSLs are visually complex. As such, being able to filter elements or parts of a building to see only the relevant or important information that you are looking for is very useful.
 
-For example, if you want to see parts of a building that are on the second floor, you can set a filter to only show the second floor as solid. In other cases, you may be interested in seeing only the load barring walls on the second floor and show other elements on that floor as wireframe. You can achieve these different scenarios by applying a building filter to a building scene layer. You can choose one active filter at a time.
+For example, if you want to see parts of a building that are on the second floor, you can set a filter to only show the second floor as solid. In other cases, you may be interested in seeing only the load bearing walls on the second floor and show other elements on that floor as wireframe. You can achieve these different scenarios by applying a building filter to a BSL. You can choose one active filter at a time.
 
-Using the I3S Filter Classes, the user can define a building filter. A building filter allows the user and/or client to make elements of a building visible as solid or wireframe. Each building filter contains one or many filter blocks. Filter blocks define what is visible in the building scene layer. 
+Using the I3S Filter Classes, the user can define a building filter. A building filter enables the user and/or client to make elements of a building visible as either solid or wireframe. Each building filter contains one or many filter blocks. Filter blocks define what is visible in the building scene layer. 
 
 In the filter block, you can define types that represent a field in the category layers. Any field that is defined in all category layers can be selected as a filter type. Each type has a list of values that you can select. By selecting a value, you are making the elements visible that contain this value. The type defines what you can filter on. 
 
@@ -22,7 +22,7 @@ When using filter blocks, remember that the order of the filter blocks is import
 
 === Building Scene Layer Structure
 
-An I3S building scene layer contains discipline, such as architectural, and category layers, such as walls, as sublayers that represent a building and its assets. Building scene layers can be represented as a scene layer package (*.slpk) or an I3S service. A building scene layer contains the following:
+An I3S BSL encoding contains discipline, such as architectural, and category layers, such as walls, as sublayers that represent a building and its assets. Building scene layers can be represented as a scene layer package (*.slpk) or an I3S service. A building scene layer contains the following:
 
 * link:layer.bld.adoc[3DSceneLayer]
 * link:sublayer.bld.adoc[sublayer]
@@ -67,7 +67,7 @@ _* Only required for 1.6 compatability for older clients._
 
 == HTTP API Overview
 
-The following API methods are available for Building Scene Layer:
+The following API methods are available for accessing an I3S Building Scene Layer:
 
 *Scene Layer Document*
 
