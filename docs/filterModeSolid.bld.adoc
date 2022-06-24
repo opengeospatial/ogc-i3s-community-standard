@@ -1,6 +1,6 @@
 == filterMode: solid [building profile]
 
-Shows all elements that comply with the filter block of a filter in a building scene layer.
+Display as "solid" all elements that comply with the filter block of a filter in a building scene layer.
 
 === Related:
 
