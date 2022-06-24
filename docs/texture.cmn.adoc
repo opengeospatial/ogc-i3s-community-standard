@@ -6,7 +6,7 @@ as compressed texture formats S3TC and ETC2 and Basis Universal. When creating a
 using textures for example, a 3D Object scene layer, the appropriate
 texture encoding declaration needs to be provided. This is done using
 MIME types such as image/jpeg (for JPEG) and image/vnd-ms.dds (for
-S3TC) image/ktx2 (for Basis Universal). Textures should be in RGBA format. RGBA is a three-channel RGB
+S3TC) and image/ktx2 (for Basis Universal). Textures should be in RGBA format. RGBA is a three-channel RGB
 color model supplemented with a 4th alpha chanel.
 
 The integrated mesh and 3D object profile types support textures. The
