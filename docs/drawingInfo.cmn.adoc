@@ -13,7 +13,7 @@ link:3DSceneLayer.psl.adoc[psl::3DSceneLayer]
 |===
 |Property |Type |Description
 |*renderer* | |An object defining the symbology and other visualization rules for a scene layer.
-https://developers.arcgis.com/web-scene-specification/objects/drawingInfo/[Examples] of renderer types. This parameter is the name of the renderer rules to use.
+Examples of renderer types might be one for a shaded relief map or one for rendering point cloud data. This parameter is the name of the renderer rules to use.
 
 |scaleSymbols |boolean |Scale symbols for the layer.
 |===
