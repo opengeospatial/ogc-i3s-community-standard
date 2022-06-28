@@ -46,5 +46,6 @@ The following table shows the layer types and profiles. For each row the table i
 |https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/IntegratedMesh_ReadMe.adoc[Integrated Mesh] |mesh-pyramids	 |No	|Triangle Attributes (planned)
 |https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/Point_ReadMe.adoc[Point]| points	 |Yes	|Yes
 |https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/pcsl_ReadMe.adoc[Point Cloud]	|pointclouds  |	No|Vertex Attributes
+|link../docs/BSL_ReadMe.adoc[Building Scene Layer]	|Building Scene Layer |	Yes| Yes
 |===
 
