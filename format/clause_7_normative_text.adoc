@@ -309,7 +309,7 @@ or two are used. Selection criteria include constraints such as resolution, scre
 For more details regarding LoD Selection for Integrated Mesh, 3D objects and point scene
 layers, see the https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/lodSelection.cmn.adoc[LoD selection].
 
-
+[[i3sgeometry]]
 ===== Geometry 
 
 All Scene Layer types make use of the same fundamental set of geometry types: points, lines, and triangles. Depending on the scene layer type and the version of I3S, different geometry representations are used. For example, an integrated mesh scene layer geometry data includes all vertex attributes, feature counts, and
