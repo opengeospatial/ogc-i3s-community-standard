@@ -140,6 +140,7 @@ image:../images/BoundingVolumeHierarchyTree.png[[width=600,align="center"]
 
 _Example of bounding volume hierarchy represented as a tree of nodes._
 
+[[i3snodes]]
 === Nodes 
 
 In a Scene Layer, data are spatially grouped into nodes. The nodes
@@ -149,6 +150,7 @@ resources.
 
 NOTE: Each node has an address and nodes may be thought of as equivalent to tiles. A node has an ID that is unique within a layer. I3S supports two types of node ID formats: string based treekeys or as integers based on a fixed linearization of the nodes. The treekey format is loosely modeled on binary search trees. The key indicates both the level and sibling association of a given node. The key also directly indicates the position of the node in the tree, allowing sorting of all resources on a single dimension.
 
+[[i3sfeature]]
 ==== Feature 
 
 A feature represents a real-world object within a node. For example, an
@@ -169,6 +171,7 @@ features:
 |support |  | image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  | image:../images/checkmark.png[yes]
 |===
 
+[[i3snoderesources]]
 ==== Node resources 
 
 In addition to a bounding volume, each node contains references to node
@@ -203,7 +206,6 @@ _Node resource for backward compatibility with 1.6_
 _Note: All binary data is stored in little endian._
 
 [[loddetail]]
-
 == Level of Detail
 
 Scene Layers include Levels of Detail (LoD) that apply to the whole
@@ -217,7 +219,7 @@ The I3S Level of Detail model covers several use cases, including, splitting ver
 
 Note that the I3S Level of Detail concept is orthogonal to the concept of consolidated storage (batches) for a set of geometries within a level of detail. This batching is based on, for example, the concatenation of geometries/meshes into larger geometry collections/meshes to assist in optimal rendering. In all such cases the consolidated storage makes use of Geometry Array Buffers that provide access to individual geometries when needed, preserving the feature to geometry element mapping within the consolidated geometries.
 
-
+[[discretelod]]
 === Discrete Level of Detail
 
 Discrete LoD provide multiple models to display the same object. A
@@ -244,6 +246,7 @@ I3S Scene Layers also include additional optional metadata on the LoD generation
 I3S supports multiple LoD selection metrics and switching level of detail models. Details about the LoD generation process can be
 optionally included in the Scene Layer’s metadata.
 
+[nodeswitching]]
 === Node switching
 
 Node switching lets clients focus on the display of a node as a whole. A node switch occurs when the content from a node’s children is used to replace the content of an existing node. This can include features, geometry, attributes and textures. Node switching can be helpful when the user needs to see more detailed information.
@@ -254,6 +257,7 @@ The correspondence between a reduced LoD feature in an interior node and the sam
 
 The main advantage of this mechanism is that clients can focus on the display criterion associated with nodes as a whole in making the decision to switch representations. node-switching is the default LoD Switching model for layer types that implement the Mesh-pyramids profile.
 
+[[lodgeneration]]
 === Level of Detail Generation
 
 Integrated Mesh layer types typically come with pre-authored Levels of
@@ -292,6 +296,7 @@ Layer
 
 _Example LoD generation methods based on Scene Layer type_
 
+[[selectionmetrics]]
 ==== Selection Metrics
 
 Selection metrics help clients determine which LoD to render. For
@@ -327,6 +332,7 @@ layer defines the geometry in
 https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/1.6/featureData.cmn.adoc[featureData]. For a Point Cloud Scene Layer, the binary
 https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/defaultGeometrySchema.pcsl.adoc[geometry] is lepcc-xyz compressed.
 
+[[i3sattributes]]
 ===== Attributes 
 
 Attribute data for all features in a node are represented as discrete,
@@ -350,6 +356,7 @@ array further describe each attribute resource. The
 https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/attributeInfo.pcsl.adoc[attributeInfo] of the Point Cloud
 scene layer contains the description of the attributes.
 
+[[i3stextures]]
 ===== Textures 
 
 The texture resource contains texture image files. Textures are stored
@@ -381,6 +388,7 @@ resource as well as the
 https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/sharedResource.cmn.adoc[sharedResources] available for
 any node. SharedResource includes the material definition of the node.
 
+[[nodepage]]
 === Node Page 
 
 In OGC version 1.1 and earlier, each node is stored individually as a
@@ -402,6 +410,7 @@ hierarchy tree] image:../images/NodePageArray.png[node page]
 _Example of breadth first ordering of nodes in a flat array. Children
 nodes are addressed by their index in the array._
 
+[[statistics]]
 === Statistics 
 
 link:../docs/stats.cmn.adoc[Statistics] are used by clients to define
@@ -411,6 +420,7 @@ unique values within the layer and calculate the number of features that
 are included in a unique value. Beside symbology, statistics are also
 used to filter data.
 
+[[i3sservices]]
 == I3S Services 
 
 A RESTful API allows access to I3S scene layers. Each scene layer
@@ -438,6 +448,7 @@ https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/1.6/
 
 == I3S Formats 
 
+[[i3sslpk]]
 === Scene Layer Packages 
 
 Scene Layer Package (SLPK) consolidates an I3S layer into a single file.
