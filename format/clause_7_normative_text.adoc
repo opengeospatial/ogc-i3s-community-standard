@@ -193,8 +193,77 @@ specification. As such, clients should not make this assumption.
 |texture |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  |  | image:../images/checkmark.png[yes]
 |===
 
+[[i3sgeometry]]
+===== Geometry 
 
-_Node resource for backward compatibility with 1.6_
+All Scene Layer types make use of the same fundamental set of geometry types: points, lines, and triangles. Depending on the scene layer type and the version of I3S, different geometry representations are used. For example, an integrated mesh scene layer geometry data includes all vertex attributes, feature counts, and
+mesh segmentation. I3S supports storage of triangle meshes via triangles geometry type.
+
+ArrayBufferView geometry property declarations control geometries storage and consumption representation. I3S provides full control over those properties, such as per-vertex layout of components (e.g. position, normal and texture coordinates). This orders the vertex position, normal and texture coordinates to ensure the same pattern across the Scene Layer.
+
+Both 3D Object as well as Integrated Mesh layer type model geometries as triangle meshes using the https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/IntegratedMesh_ReadMe.adoc[Integrated Mesh Scene Layer (OGC Version 1.2)]. The mesh-pyramids profile uses the triangles geometry type to store triangle meshes with reduced level of detail representations of the mesh, segmented by features, available in the interior nodes as described above.
+
+In OGC I3S version 1.2, 3D Objects and Integrated Mesh scene layers are using
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/geometryBuffer.cmn.adoc[geometryBuffer] with _draco_
+compression to describe the geometry. Previous versions of 3D Object and
+Integrated Mesh scene layers (OGC  version 1.1 and earlier) define geometry in the
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/1.6/defaultGeometrySchema.cmn.adoc[defaultGeometrySchema].
+The expected triangle/face winding order in all geometry resources is
+counterclockwise.
+
+Point and Point cloud layers model geometries as points. A point scene
+layer defines the geometry in
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/1.6/featureData.cmn.adoc[featureData]. For a Point Cloud Scene Layer, the binary
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/defaultGeometrySchema.pcsl.adoc[geometry] is lepcc-xyz compressed.
+
+[[i3sattributes]]
+===== Attributes 
+
+Attribute data for all features in a node are represented as discrete,
+per field resource called attribute. Attributes are used to visualize or
+query features within a scene layer. For example, each attribute
+resource, such as land use codes, can be assigned to a unique color to
+visualize the different types of land use in the scene layer. The number
+of attribute resources corresponds to the number of fields in the scene
+layer.
+
+Attributes values are stored in the attribute resource in the same order
+as feature geometries are in the geometry buffer. This allows clients to
+render each node efficiently through direct array access instead of
+object-id based attribute lookups.
+
+Metadata on each attribute resource is made available to clients via the
+scene service layer. When attributes are present within the scene layer,
+additional metadata in the https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/field.cmn.adoc[fields] array
+and https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/attributeStorageInfo.cmn.adoc[attributeStorageInfo]
+array further describe each attribute resource. The
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/attributeInfo.pcsl.adoc[attributeInfo] of the Point Cloud
+scene layer contains the description of the attributes.
+
+[[i3stextures]]
+===== Textures 
+
+The texture resource contains texture image files. Textures are stored
+as a binary resource. Individual textures should be aggregated into
+texture atlases (An image containing a collection of smaller images.).
+Client capabilities for handling complex UV cases may vary, so texture
+coordinates are used. Texture coordinates do not take atlas regions into
+account directly. The client is expected to use the sub-image region
+values and the texture coordinates to best handle repeating textures in
+atlases.
+
+As of OGC I3S version 1.3, the recommended compressed texture format is https://github.com/BinomialLLC/basis_universal[Basis Universal] in http://github.khronos.org/KTX-Specification/[Khronos KTX2™️] container format. The benefits of this texture format can be seen https://www.esri.com/arcgis-blog/products/arcgis/3d-gis/esri-collaborates-with-binomial-to-improve-basis-universal-texture-compression-speeds/[in this blog]. 
+
+Both integrated mesh and 3D object profile support textures. Authoring applications can provide additional texture formats using textureEncoding declarations.
+
+The mesh-pyramids profile supports either a single texture or a texture atlas per node.
+
+By default, the mesh-pyramids profile allows/supports encoding the same texture resource in multiple formats, catering for bandwidth, memory consumption and optimal performance consideration on different platforms. As a result, the I3S standard supports most commonly used image formats such as JPEG/PNG as well as rendering optimized compressed texture formats such as https://en.wikipedia.org/wiki/S3_Texture_Compression[S3TC], ETC2, and Basis Universal. In all cases, the standard provides flexibility by allowing authoring applications to provide additional texture formats via the textureEncoding declarations that use MIME types. For example, when creating a scene layer using textures for example, a 3D Object scene layer, the appropriate texture encoding declaration needs to be provided. This is done using MIME types such as `image/jpeg` (for JPEG), `image/vnd-ms.dds` (for S3TC) and `image/ktx2` (for Basis Universal). Textures should be in RGBA format. RGBA is a three-channel RGB color model supplemented with a 4th alpha chanel.
+
+For more details on texture format, texture coordinate, texture atlas usage and regions discussion, see the link:../docs/texture.cmn.adoc[texture] and
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/textureSetDefinition.cmn.adoc[textureSetDefinition].
+
+_Node resource for backward compatibility with 1.2_
 
 [cols=",,,",options="header",]
 |===
@@ -310,75 +379,6 @@ or two are used. Selection criteria include constraints such as resolution, scre
 For more details regarding LoD Selection for Integrated Mesh, 3D objects and point scene
 layers, see the https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/lodSelection.cmn.adoc[LoD selection].
 
-[[i3sgeometry]]
-===== Geometry 
-
-All Scene Layer types make use of the same fundamental set of geometry types: points, lines, and triangles. Depending on the scene layer type and the version of I3S, different geometry representations are used. For example, an integrated mesh scene layer geometry data includes all vertex attributes, feature counts, and
-mesh segmentation. I3S supports storage of triangle meshes via triangles geometry type.
-
-ArrayBufferView geometry property declarations control geometries storage and consumption representation. I3S provides full control over those properties, such as per-vertex layout of components (e.g. position, normal and texture coordinates). This orders the vertex position, normal and texture coordinates to ensure the same pattern across the Scene Layer.
-
-Both 3D Object as well as Integrated Mesh layer type model geometries as triangle meshes using the https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/IntegratedMesh_ReadMe.adoc[Integrated Mesh Scene Layer (OGC Version 1.2)]. The mesh-pyramids profile uses the triangles geometry type to store triangle meshes with reduced level of detail representations of the mesh, segmented by features, available in the interior nodes as described above.
-
-In OGC I3S version 1.2, 3D Objects and Integrated Mesh scene layers are using
-https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/geometryBuffer.cmn.adoc[geometryBuffer] with _draco_
-compression to describe the geometry. Previous versions of 3D Object and
-Integrated Mesh scene layers (OGC  version 1.1 and earlier) define geometry in the
-https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/1.6/defaultGeometrySchema.cmn.adoc[defaultGeometrySchema].
-The expected triangle/face winding order in all geometry resources is
-counterclockwise.
-
-Point and Point cloud layers model geometries as points. A point scene
-layer defines the geometry in
-https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/1.6/featureData.cmn.adoc[featureData]. For a Point Cloud Scene Layer, the binary
-https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/defaultGeometrySchema.pcsl.adoc[geometry] is lepcc-xyz compressed.
-
-[[i3sattributes]]
-===== Attributes 
-
-Attribute data for all features in a node are represented as discrete,
-per field resource called attribute. Attributes are used to visualize or
-query features within a scene layer. For example, each attribute
-resource, such as land use codes, can be assigned to a unique color to
-visualize the different types of land use in the scene layer. The number
-of attribute resources corresponds to the number of fields in the scene
-layer.
-
-Attributes values are stored in the attribute resource in the same order
-as feature geometries are in the geometry buffer. This allows clients to
-render each node efficiently through direct array access instead of
-object-id based attribute lookups.
-
-Metadata on each attribute resource is made available to clients via the
-scene service layer. When attributes are present within the scene layer,
-additional metadata in the https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/field.cmn.adoc[fields] array
-and https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/attributeStorageInfo.cmn.adoc[attributeStorageInfo]
-array further describe each attribute resource. The
-https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/attributeInfo.pcsl.adoc[attributeInfo] of the Point Cloud
-scene layer contains the description of the attributes.
-
-[[i3stextures]]
-===== Textures 
-
-The texture resource contains texture image files. Textures are stored
-as a binary resource. Individual textures should be aggregated into
-texture atlases (An image containing a collection of smaller images.).
-Client capabilities for handling complex UV cases may vary, so texture
-coordinates are used. Texture coordinates do not take atlas regions into
-account directly. The client is expected to use the sub-image region
-values and the texture coordinates to best handle repeating textures in
-atlases.
-
-As of OGC I3S version 1.3, the recommended compressed texture format is https://github.com/BinomialLLC/basis_universal[Basis Universal] in http://github.khronos.org/KTX-Specification/[Khronos KTX2™️] container format. The benefits of this texture format can be seen https://www.esri.com/arcgis-blog/products/arcgis/3d-gis/esri-collaborates-with-binomial-to-improve-basis-universal-texture-compression-speeds/[in this blog]. 
-
-Both integrated mesh and 3D object profile support textures. Authoring applications can provide additional texture formats using textureEncoding declarations.
-
-The mesh-pyramids profile supports either a single texture or a texture atlas per node.
-
-By default, the mesh-pyramids profile allows/supports encoding the same texture resource in multiple formats, catering for bandwidth, memory consumption and optimal performance consideration on different platforms. As a result, the I3S standard supports most commonly used image formats such as JPEG/PNG as well as rendering optimized compressed texture formats such as https://en.wikipedia.org/wiki/S3_Texture_Compression[S3TC], ETC2, and Basis Universal. In all cases, the standard provides flexibility by allowing authoring applications to provide additional texture formats via the textureEncoding declarations that use MIME types. For example, when creating a scene layer using textures for example, a 3D Object scene layer, the appropriate texture encoding declaration needs to be provided. This is done using MIME types such as `image/jpeg` (for JPEG), `image/vnd-ms.dds` (for S3TC) and `image/ktx2` (for Basis Universal). Textures should be in RGBA format. RGBA is a three-channel RGB color model supplemented with a 4th alpha chanel.
-
-For more details on texture format, texture coordinate, texture atlas usage and regions discussion, see the link:../docs/texture.cmn.adoc[texture] and
-https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/textureSetDefinition.cmn.adoc[textureSetDefinition].
 
 ==== Node resources for OGC I3S 1.1 and earlier 
 
