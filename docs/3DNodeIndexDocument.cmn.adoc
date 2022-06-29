@@ -76,8 +76,8 @@ describing a texture resource.
 |attributeData |link:resource.cmn.adoc[resource][] |Resource reference
 describing a featureData document.
 
-|lodSelection |link:lodSelection.cmn.adoc[lodSelection][] |Metrics for LoD
-selection, to be evaluated by the client.
+|*lodSelection* |link:lodSelection.cmn.adoc[lodSelection][] |Metrics for LoD
+selection, to be evaluated by the client. _This property was previously optional in earlier versions._ This was a documentation error.
 
 |features |link:features.cmn.adoc[features][] | A list of
 summary information on the features present in this node, used for
