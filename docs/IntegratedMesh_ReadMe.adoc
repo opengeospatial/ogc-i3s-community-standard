@@ -62,11 +62,11 @@ _Example of integrated mesh scene layer structure_
 
 _* Only required for OGC Version 1.1 compatability for older clients._
 
-== HTTP API Overview OGC Version 1.2
+== HTTP API Overview OGC Version 1.3
 
-OGC Version 1.2  is backwards compatible with Version 1.1. For any
+OGC Version 1.3  is backwards compatible with Versions 1.2 and earlier. For any
 clients to be able to read Version 1.1 files, sharedResources and the
-3DNodeIndexDocument resource are included but not used in Version 1.2.
+3DNodeIndexDocument resource are included but not used in Version 1.2 and later.
 
 The following API methods are available for integrated mesh scene layer:
 
