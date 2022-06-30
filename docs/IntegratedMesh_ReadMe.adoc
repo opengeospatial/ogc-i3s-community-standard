@@ -3,7 +3,7 @@
 Integrated mesh scene layers are generally created for citywide 3D
 mapping. Integrated mesh scene layers include an entire surface and
 cannot be restyled. Three-dimensional mesh data are typically captured
-by an automated process (e.g. drone) for constructing 3D objects out of
+by an automated process (such as from a drone) for constructing 3D objects out of
 large sets of overlapping imagery. The result integrates the original
 input image information as a textured mesh including 3D objects, such as
 buildings and trees, and elevation information.
@@ -68,7 +68,7 @@ OGC Version 1.3  is backwards compatible with Versions 1.2 and earlier. For any
 clients to be able to read Version 1.1 files, sharedResources and the
 3DNodeIndexDocument resource are included but not used in Version 1.2 and later.
 
-The following API methods are available for integrated mesh scene layer:
+The following API methods are available for integrated mesh scene layers:
 
 *Scene layer document*
 
