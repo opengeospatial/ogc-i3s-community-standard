@@ -1,7 +1,7 @@
 == Point Scene Layer (OGC Version 1.3)
 
 Point scene layers contain point features and their attributes. Point
-scene layers are often used to visualize large amounts of 3D data like
+scene layers are often used to visualize large amounts of 3D data such as
 trees or buildings. Most phenomena that can be visualized by 3D symbols
 can be displayed with a point scene layers.
 
