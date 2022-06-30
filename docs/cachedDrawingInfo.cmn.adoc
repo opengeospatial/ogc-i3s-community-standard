@@ -8,7 +8,9 @@ link:drawingInfo.cmn.adoc[drawingInfo] is defined.
 === Related:
 
 link:3DSceneLayer.cmn.adoc[cmn::3DSceneLayer],
-link:3DSceneLayer.psl.adoc[psl::3DSceneLayer] ### Properties
+link:3DSceneLayer.psl.adoc[psl::3DSceneLayer] 
+
+=== Properties
 
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
