@@ -20,4 +20,4 @@ NOTE: There are no critical changes in OGC I3S Version 1.3
 
 change that alters requirements in a way that is not deemed to have a high risk for causing reverse compatibility issues
 
-NOTE: The addition of Buidling Scene Layers is the major substantive change to I3S Version 1.3. The BLS addition does not chnage any of the existing requirements or class descriptions.
+NOTE: The addition of Building Scene Layers is the major substantive change to I3S Version 1.3. The BLS addition does not chnage any of the existing requirements or class descriptions.
