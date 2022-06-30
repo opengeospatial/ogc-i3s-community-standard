@@ -2,7 +2,7 @@
 
 === Scope
 
-//short scope of the standard and the general nature of changes
+This Release Notes document provides information on changes to Version 1.3 of the OGC I3S Community Standard. The addition of the ability to support Building Scene Layers is the key enhancement. Numerous other edits and additions to informative content are also provided in version 1.3.
 
 === Document contributor contact points
 
@@ -12,5 +12,6 @@ All questions regarding this document should be directed to the contacts provide
 [width="80%",options="header"]
 |====================
 |Name |Organization
-|<name> | <organization>
+|Carl Reed | Carl Reed & Associates
+|Tamrat Belayneh | Esri
 |====================
