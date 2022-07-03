@@ -3,5 +3,12 @@
 
 === Addition of Building Scene Layers
 
+A Building Scene Layer is a 3D representation of a building model.  A building model may be derived from 3D construction content, such as BIM data, or from a relational database model that contains 3D spatial information.  The I3S BSL capability is designed to model the organization of construction data and groups content into standard engineering disciplines.  Content in a BSL may represent a partial building, an individual building, or multiple buildings on a campus. 
 
+BIM encapsulates best-practice processes in the Architectural Engineering and Construction (AEC) industry to capture virtual (typically in 3D) representations of real-world assets that are commonly used for construction, documentation, and evaluation. BIM processes are applied in multiple domains including architecture and buildings, energy and utilities, or transportation and are typically captured across the lifecycle of an asset.
 
+A BSL layer captures and optimizes BIM data and is typically sourced from formats/standards such as Autodesk Revit, Industry Foundation Classes (IFCs) or Geodatabase Feature data. The I3S BSL enables a user to efficiently share building 3D data for usage on the web, mobile devices as well as desktop platforms. The I3S BSL capability supports visualization and interactive analysis such as view shade analysis or efficient exploration of the many layers of content associated with a BIM model.
+
+An I3S Building Scene Layer also encapsulates the semantic structure of the information in the building model while capturing geometry and attributes that can be used in an application. The BSL captures standard AEC disciplines such as Mechanical, Architectural, Piping, Electrical, and Structural.  Within each discipline, a BSL groups category layers containing 3D objects representing assets of the building such as doors, windows, pipes and walls.  The assets can contain attributes that directly reflect standard and user defined metadata that are stored in the source BIM content or other 3D data source.
+
+NOTE: The  BSL capability to the I3S 1.3 standard is contained in the addition of a number of new classes (normative) including the BSL Scene Layer Profile and informative content to the OGC 1.2 I3S Standard. The BSL extension *did not* result in changes to any of the existing 1.2 classes. 
