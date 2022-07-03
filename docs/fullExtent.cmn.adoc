@@ -1,6 +1,6 @@
 == fullExtent
 
-This object allows the definition of the full extent of a scene layer.
+This object allows the definition of the full 3D spatial extent of a scene layer.
 
 NOTE: This class is new in Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
 
