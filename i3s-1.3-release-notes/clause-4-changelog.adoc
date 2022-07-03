@@ -1,0 +1,50 @@
+[[change-log]]
+== Change Log
+
+=== KEY
+
+* Source:
+** CR - Formal Change Request
+** (Ed)itor - The Editor for the standard
+** (Is)sue - GitHub Issue
+** OGC-NA - OGC Naming Authority review
+** (Pu)blic - Public Comment period
+** (Su)bmission team - From the source specification as submitted by the Submission Team, usually for a Community Standard.
+** SWG  - Approved decision by the Standards Working group (SWG)
+** User - The standard's User Community
+** Other
+
+* Identifier: Change Request number or issue number and pull request/commit in GitHub
+//if an OGC Change Request, format as follows: URL[Change Request number]
+//if a GitHub issue, format as follows: URL[issue number], URL[pull request or commit short identifier]
+
+* Type:
+** A=Administrative
+** S=Substantive
+** C=Critical
+
+See <<Clause_Critical>> for more information on critical changes and
+<<Clause_Substantive>> for more information on substantive changes.
+
+* Section: Section number in the updated document
+* Description: Brief text describing the change
+* Purpose: the reason for the change:
+** Clarity
+** Consistency
+** Enhancement
+** Interoperability
+** Perfunctory
+** Readability
+** Usability
+** Change Request
+
+NOTE: All of the new classes identified below are optional! Further, new properties added to existing classes are also optional. All of the 1.1 classes, properties, and capabilities are included in version 1.3. This is for backwards compatibility. The majority of the new (optional) classes must be implemented to support the new major enhancements as identified in the Substantive Changes section of this document.
+
+=== Change Table
+[[table_change_log]]
+.Change Log
+[cols="1a,1a,1a,2a,6a,2a",options="header"]
+|===
+|Source      |Identifier     |Type                 |Section |Description |Purpose
+| Editor | NA | A | All sections | Change cover page to reflect Version 1.2 | Consistency
+|===
