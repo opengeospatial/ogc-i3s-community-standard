@@ -3,6 +3,8 @@
 Declaration of the attributes per feature in the geometry, such as
 feature ID or face range.
 
+NOTE: See class link:geometryFaceRange.adoc[geometryFaceRange] for more information on the faceRange property.
+
 === Related:
 
 link:defaultGeometrySchema.cmn.adoc[cmn::defaultGeometrySchema],
