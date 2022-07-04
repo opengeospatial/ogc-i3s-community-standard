@@ -1,0 +1,40 @@
+== geometryDefinition [OGC 1.2 and later PSL]
+
+The geometry definitions used in link:Point_Readme.adoc[Point Scene Layer] for OGC I3S versions 1.2 andlater.
+
+=== Related:
+
+link:3DSceneLayer.psl.adoc[psl::3DSceneLayer]
+
+=== Properties
+
+|===
+| Property | Type | Description |
+| --- | --- | --- |
+| topology | string | Defines the topology type of the point. +
+Must be: `point` |
+| **geometryBuffers** | link:geometryBuffer.psl.adoc[geometryBuffer][1] | Array of geometry representation(s) for this class of points.  Must be compressed. |
+|===
+
+*Note: properties in **bold** are required*
+
+=== Examples 
+
+==== Example: Definition for a OGC 1.2 and later equivalent geometry buffer 
+
+```json
+ {
+  "geometryBuffers": [
+    {
+      "compressedAttributes": {
+        "encoding": "draco",
+        "attributes": [
+          "position",
+          "feature-index"
+        ]
+      }
+    }
+  ]
+} 
+```
+
