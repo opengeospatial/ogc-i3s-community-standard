@@ -48,6 +48,9 @@ NOTE: All of the new classes identified below are optional! Further, new propert
 |Source      |Identifier     |Type                 |Section |Description |Purpose
 | Editor | NA | A | New Cover Page | Change cover page to reflect Version 1.3 | Consistency
 | Editor | NA | A | All sections | Change 1.2 references as needed to version 1.3 | Consistency
-| Editor | NA | A | 3Dobject_ReadMe.adoc | Fix typos and some URLs. | Readability and fix error
+| Editor | NA | A | 3Dobject_ReadMe.adoc | Fix typos and some URLs. | Readability and fix link error
 | Editor | NA | A | 3DNodeIndexDocument.cmn.adoc | lodSelection property is now mandatory. This property was previously optional in earlier versions. This was a documentation error. | Correct error.
+| Editor | NA | A | 3DSceneLayer.cmn.adoc | geometryDefinitions: This property was optional due to typo. Should be mandatory (which it now is). | Correct error.
+| Editor | NA | A | 3DSceneLayer.psl.adoc | geometryDefinitions: This property was optional due to typo. Should be mandatory (which it now is). | Correct error.
+| Editor | NA | A | 3drawingInfo.cmn.adoc | Add more infromative content to the description. Removed link to Esri renderers and added inline examples of renderers. | Readability and clarity
 |===
