@@ -10,6 +10,8 @@ table uses a hash function to compute an index, also called a hash code,
 into an array of buckets or slots, from which the desired value can be
 found (Wikipedia).
 
+An associative array (a.k.a map, and a generalized form dictionary) is an abstract data type consisting of: a collection (set) of unique keys. a collection (set) of values, where each key is associated with one value (map, associative array) or set of values (dictionary) (Emery University Math Department)
+
 === To create SLPK hash table
 
 [arabic]
