@@ -5,7 +5,7 @@ be rendered, including shading and color. The following table provides
 the set of attributes and parameters for the `type`: `standard`
 material.
 
-Part of link:sharedResource.cmn.adoc[sharedResource] that is deprecated
+Part of link:sharedResource.cmn.adoc[sharedResource] that was deprecated
 in OGC version 1.2.
 
 === Related:
