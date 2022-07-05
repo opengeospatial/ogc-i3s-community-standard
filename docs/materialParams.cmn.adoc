@@ -2,7 +2,7 @@
 
 This class defines the parameters describing the material.
 
-NOTE: This class is new in Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work. Also note that the parameters defined in this class were included in the Class Material in the version 1.1 sharedResource Class. 
+NOTE: This class was new in OGC Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work. Also note that the parameters defined in this class were included in the Class Material in the version 1.1 sharedResource Class. 
 
 === Related:
 
