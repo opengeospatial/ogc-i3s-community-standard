@@ -1,6 +1,6 @@
 == statisticsInfo
 
-This class is used to describe the statistics for the scene layer. Statistical information helps clients define symbology, definition queries or other functionality which is depending on statistical information. For more details regarding point cloud scene layers, see <<statistics>>.
+This class is used to attribute describe the statistics for the scene layer. Statistical information helps clients define symbology, definition queries or other functionality which is depending on statistical information. For more details regarding point cloud scene layers, see <<statistics>>.
 
 === Related:
 
