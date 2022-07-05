@@ -3,7 +3,7 @@
 Materials describe how a feature or a set of features is to be rendered,
 including shading and color.
 
-Part of link:sharedResource.cmn.adoc[sharedResource] that is deprecated
+Part of link:sharedResource.cmn.adoc[sharedResource] that was deprecated
 with OGC Version 1.2.
 
 === Related:
