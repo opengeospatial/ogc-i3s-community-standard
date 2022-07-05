@@ -54,5 +54,11 @@ NOTE: All of the new classes identified below are optional! Further, new propert
 | Editor | NA | A | 3DSceneLayer.psl.adoc | geometryDefinitions: This property was optional due to typo. Should be mandatory (which it now is). | Correct error.
 | Editor | NA | A | drawingInfo.cmn.adoc | Add more informative content to the description. Removed link to Esri renderers and added inline examples of renderers. | Readability and clarity
 | Editor | NA | A | drawingInfo.pcsl.adoc | Add more informative content to the description. | Readability and clarity
-
+| Editor | NA | A | elevationInfo.adoc | Add more informative content to the description. | Readability and clarity
+| Editor | NA | A | featureAttribute.cmn.adoc | Added link to `geometryFaceRange` for more information on `faceRange` property| Readability and clarity
+| Editor | NA | A | geometryColor.adoc | Added link to sRGB page on Wikipedia. | Readability and clarity
+| Editor | NA | A | geometryNormal.adoc | Added mathematical definition for `normal". | Readability and clarity
+| Editor | NA | A | featureData.adoc | Rewrote the description. | Readability and clarity
+| Editor | NA | A | lodSelection.cmn.adoc | Add more informative content to the description and fixed ambiguous wording. | Readability and clarity
+| Editor | NA | A | slpk_hashtable.cmn.adoc | Added definition for associative array. | Readability and clarity
 |===
