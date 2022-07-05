@@ -52,5 +52,7 @@ NOTE: All of the new classes identified below are optional! Further, new propert
 | Editor | NA | A | 3DNodeIndexDocument.cmn.adoc | lodSelection property is now mandatory. This property was previously optional in earlier versions. This was a documentation error. | Correct error.
 | Editor | NA | A | 3DSceneLayer.cmn.adoc | geometryDefinitions: This property was optional due to typo. Should be mandatory (which it now is). | Correct error.
 | Editor | NA | A | 3DSceneLayer.psl.adoc | geometryDefinitions: This property was optional due to typo. Should be mandatory (which it now is). | Correct error.
-| Editor | NA | A | 3drawingInfo.cmn.adoc | Add more infromative content to the description. Removed link to Esri renderers and added inline examples of renderers. | Readability and clarity
+| Editor | NA | A | drawingInfo.cmn.adoc | Add more informative content to the description. Removed link to Esri renderers and added inline examples of renderers. | Readability and clarity
+| Editor | NA | A | drawingInfo.pcsl.adoc | Add more informative content to the description. | Readability and clarity
+
 |===
