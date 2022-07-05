@@ -3,7 +3,7 @@
 A texture is a set of images, with some parameters specific to the
 texture/uv mapping to geometries.
 
-Part of link:sharedResource.cmn.adoc[sharedResource] that is deprecated
+Part of link:sharedResource.cmn.adoc[sharedResource] that was deprecated
 in OGC vrsion 1.2.
 
 === Related:
