@@ -91,3 +91,6 @@ UV mapping is the 3D modeling process of projecting a 2D image to a 3D model's s
 
 *Vertex* footnote:note13[https://en.wikipedia.org/wiki/Vertex_(geometry)#Vertices_in_computer_graphics (February 9, 2017)]
 In computer graphics, a vertex is not only associated with three spatial coordinates but also with other graphical information necessary to render the object correctly, such as colors, reflectance properties, textures, and surface normals. These properties are used in rendering by a vertex shader, part of the vertex pipeline.
+
+*Vertex Attribute*
+Computer Graphics.  A vertex attribute is an input variable to a shader that is supplied with per-vertex data. Without vertx attributes, data cannot be rendered.
