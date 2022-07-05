@@ -18,10 +18,10 @@ A tree structure on a set of geometric objects. All geometric objects are wrappe
 An OGC Community Standard is an official position of the OGC endorsing a specification or standard developed external to the OGC. 
 
 *Face*
-In solid geometry, a face is a flat (planar) surface that forms part of the boundary of a solid object; a three-dimensional solid bounded exclusively by flat faces is a polyhedron.
+2-dimensional topological primitive. In solid geometry, a face is a flat (planar) surface that forms part of the boundary of a solid object; a three-dimensional solid bounded exclusively by flat faces is a polyhedron.
 
 *faceRanges*
-Indicates the range of triangles associated with a particular object (feature).
+Indicates the range of faces (triangles in a mesh) associated with a particular object (feature).
 
 *Gravity-related height*
 Height dependent on the Earth’s gravity field. NOTE: This refers to in particular orthometric height or normal height, which are both approximations of the distance of a point above the mean sea level. (ISO 19111)
