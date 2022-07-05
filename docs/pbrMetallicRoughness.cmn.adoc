@@ -3,7 +3,7 @@
 This class is feature-compatible with https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#materials[glTF
 material] except the emissiveTexture (emissive map texture) parameter is not supported in I3S.The emissive map controls the color and intensity of the light being emitted by the material. 
 
-NOTE: This class is new in Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
+NOTE: This class was new in Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
 
 === Related:
 
