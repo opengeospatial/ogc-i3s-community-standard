@@ -6,7 +6,7 @@ texture/uv mapping to geometries.
 This Class was part of link:sharedResource.cmn.adoc[sharedResource] that is deprecated
 in OGC version 1.2.
 
-NOTE: This class is new in Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
+NOTE: This class was new in Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
 
 === Related:
 
