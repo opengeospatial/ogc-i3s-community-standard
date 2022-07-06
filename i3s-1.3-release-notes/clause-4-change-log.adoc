@@ -51,6 +51,7 @@ NOTE: All of the new classes identified below are optional! Further, new propert
 | Editor | NA | A | Clause 4 | Added definitions for `bin size` and `vertex attribute` | Enhancement
 | Editor | NA | A | Clause 6 - informative | Added Building Scene Layer content and updated tables. | Enhancement
 | Editor | NA | A | Clause 7 - normative | Added Building Scene Layer content to tables. | Enhancement
+| Editor | NA | A | Clause 7 - normative | Added more informative text on textures and texture compression. | Clarity
 | Editor | NA | A | 3Dobject_ReadMe.adoc | Fix typos and some URLs. | Readability and fix link error
 | Editor | NA | A | 3DNodeIndexDocument.cmn.adoc | lodSelection property is now mandatory. This property was previously optional in earlier versions. This was a documentation error. | Correct error.
 | Editor | NA | A | 3DSceneLayer.cmn.adoc | geometryDefinitions: This property was optional due to typo. Should be mandatory (which it now is). | Correct error.
