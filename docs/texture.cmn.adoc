@@ -3,7 +3,7 @@
 The texture resource contains texture image files. Textures are stored
 as a binary resource within a node. I3S supports JPEG and PNG, as well
 as compressed texture formats S3TC and ETC2 and Basis Universal. When creating a scene layer
-using textures for example, a 3D Object scene layer, the appropriate
+using textures such as a 3D Object scene layer the appropriate
 texture encoding declaration needs to be provided. This is done using
 MIME types such as image/jpeg (for JPEG) and image/vnd-ms.dds (for
 S3TC) and image/ktx2 (for Basis Universal). Textures should be in RGBA format. RGBA is a three-channel RGB
