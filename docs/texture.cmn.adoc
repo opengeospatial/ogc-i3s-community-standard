@@ -23,7 +23,7 @@ texture. In OGC version 1.2, the texelCountHint can be used to determine the
 cost of loading a node as well as for use in texel-resolution based LoD
 switching. (A texel, texture element, or texture pixel is the
 fundamental unit of a texture map.) Compressed textures S3TC,
-ETC and Basis Universa may contain mipmaps. From Wikipedia `Mipmaps (also MIP maps) or pyramids are
+ETC and Basis Universal may contain mipmaps. From Wikipedia `Mipmaps (also MIP maps) or pyramids are
 pre-calculated, optimized sequences of images, each of which is a
 progressively lower resolution representation of the same image. The
 height and width of each image, or level, in the mipmap is a power of
