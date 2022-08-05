@@ -15,5 +15,6 @@ ogcdoc, I3S, 3D, streaming, scene layers, release notes
 [abstract]
 == Abstract
 
-<Insert Abstract Text here>
+These I3S Release notes document changes incorporated into the OGC I3S Community Standard version 1.3.
+
 
