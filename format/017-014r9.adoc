@@ -16,8 +16,8 @@
 |{set:cellbgcolor:#FFFFFF}
 |[big]*Open Geospatial Consortium*
 |Submission Date: 2022-07-20
-|Approval Date:   2022-12-10
-|Publication Date:   2022-12-30
+|Approval Date:   2022-12-12
+|Publication Date:   YYYY-MM-DD
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/CS/i3s/1.3
 |Internal reference number of this OGC(R) document:    17-014r9
 |Version: 1.3
@@ -33,7 +33,7 @@
 [cols = "^", frame = "none", grid = "none"]
 |===
 |*Copyright notice*
-|Copyright (C) 2022 Open Geospatial Consortium
+|Copyright (C) 2023 Open Geospatial Consortium
 |To obtain additional rights of use, visit http://www.opengeospatial.org/legal/
 |===
 

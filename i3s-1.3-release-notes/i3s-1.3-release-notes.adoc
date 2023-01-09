@@ -17,11 +17,11 @@
 |===
 |{set:cellbgcolor:#FFFFFF}
 |[big]*Open Geospatial Consortium*
-|Submission Date: 2022-xx-xx
-|Approval Date:   2022-xx-xx
-|Publication Date:   2022-xx-xx
+|Submission Date: 2022-07-20
+|Approval Date:   2022-12-12
+|Publication Date:   YYYY-MM-DD
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/NOTE/I3S-notes/1.3
-|Internal reference number of this OGC(R) document:    22-xxx
+|Internal reference number of this OGC(R) document:    22-032r1
 |Version: 1.3
 |Category: OGC® Release Notes
 |Editor:  Carl Reed, PhD
@@ -35,7 +35,7 @@
 [cols = "^", frame = "none", grid = "none"]
 |===
 |*Copyright notice*
-|Copyright (C) 2022 Open Geospatial Consortium
+|Copyright (C) 2023 Open Geospatial Consortium
 |To obtain additional rights of use, visit http://www.ogc.org/legal/
 |===
 
@@ -44,7 +44,7 @@
 |*Warning*
 |===
 
-This document is not an OGC Standard. This document is distributed for review and comment. This document is subject to change without notice and may not be referred to as an OGC Standard.
+This document is not an OGC standard. This document provides release notes for an OGC standard. This document is subject to change without notice and may not be referred to as an OGC Standard.
 
 Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.
 
