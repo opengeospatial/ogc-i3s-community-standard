@@ -14,7 +14,7 @@ Draco.
 NOTE: Check which version your client software supports. The latest version is 1.3.6. Some clients may only still support 1.3.5 of
 https://github.com/google/draco/blob/master/README.md#version-135-release[Draco]._
 
-NOTE: This class is new in Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
+NOTE: This class was new in Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
 
 === Related:
 
