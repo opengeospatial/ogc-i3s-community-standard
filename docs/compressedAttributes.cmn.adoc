@@ -1,6 +1,6 @@
 == compressedAttributes
 
-OGC I3S version 1.2 supports compressing the geometryBuffer of the Integrated
+OGC I3S version 1.2 amd later supports compressing the geometryBuffer of the Integrated
 Mesh and 3D Object Layers using https://github.com/google/draco[Draco]
 compression. Draco compression is optimized for compressing and
 decompressing 3D geometric meshes and point clouds.
