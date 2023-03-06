@@ -81,7 +81,7 @@ selection, to be evaluated by the client. _This property was previously optional
 
 |features |link:features.cmn.adoc[features][] | A list of
 summary information on the features present in this node, used for
-pre-visualisation and LoD switching in featureTree LoD stores. Optional in 1.2. Will be deprecacted in future versions.
+pre-visualisation and LoD switching in featureTree LoD stores. Optional in 1.2. Deprecacted in version 1.3.
 |===
 
 _Note: properties in *bold* are required_
