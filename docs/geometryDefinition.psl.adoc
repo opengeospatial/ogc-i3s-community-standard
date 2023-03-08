@@ -1,6 +1,6 @@
 == geometryDefinition [OGC 1.2 and later PSL]
 
-The geometry definitions used in link:Point_ReadMe.adoc[Point Scene Layer] for OGC I3S versions 1.2 andlater.
+The geometry definitions used in link:Point_ReadMe.adoc[Point Scene Layer] for OGC I3S versions 1.2 and later.
 
 === Related:
 
