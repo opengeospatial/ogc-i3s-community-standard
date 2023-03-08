@@ -2,7 +2,7 @@
 
 Defines the texture coordinates of the geometry.
 
-NOTE: This class is new in Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
+NOTE: This class was new in OGC Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
 
 === Related:
 
