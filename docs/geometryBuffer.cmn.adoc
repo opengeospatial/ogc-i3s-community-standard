@@ -39,7 +39,7 @@ link:geometryDefinition.cmn.adoc[cmn::geometryDefinition]
 |===
 |Property |Type |Description
 |offset |integer |The number of bytes to skip from the beginning of the
-binary buffer. Useful to describe `legacy' buffers that have a header.
+binary buffer. Useful to describe 'legacy' buffers that have a header.
 Default=`0`.
 
 |position |link:geometryPosition.cmn.adoc[geometryPosition] |Vertex
