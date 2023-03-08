@@ -10,7 +10,7 @@ UV could be "wrapped" in the shader such as in the following example:
   // UV for this texel is uv in [0, n]
   uv = frac(uv) * (region.zw - region.xy) + region.xy;
 ```
-NOTE: This class is new in Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
+NOTE: This class was new in OGC Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
 
 === Related:
 
