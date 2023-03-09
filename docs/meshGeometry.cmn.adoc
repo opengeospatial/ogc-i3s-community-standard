@@ -22,7 +22,7 @@ resources:
 
 |vertexCount |integer |Number of vertices in the geometry buffer of this
 mesh for the *umcompressed mesh buffer*. Please note that `Draco`
-compressed meshes may have less vertices due to de-duplication (actual
+compressed meshes may have fewer vertices due to de-duplication (actual
 number of vertices is part of the Draco binary blob). Default=`0`
 
 |featureCount |integer |Number of features for this mesh. Default=`0`.
