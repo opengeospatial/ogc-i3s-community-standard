@@ -3,15 +3,15 @@
 The 3DSceneLayerInfo class describes the properties of a layer in a store. The
 store object describes the exact physical storage of a layer and enables
 the client to detect when multiple layers are served from the same
-store. Every scene layer contains 3DSceneLayerInfo. If features based
+store. Every scene layer contains 3DSceneLayerInfo. Features based
 scene layers, such as 3D objects or point scene layers, may include the
 default symbology. This is as specified in the drawingInfo, which
 contains styling information for a feature layer.
 
 When generating 3D Objects or Integrated Mesh scene layers, the root
-node never has any geometry. Any node’s children represent a higher LoD
+node never has geometry. Any node’s children represent a higher LoD
 quality than an ancestor node. Nodes without geometry at the top of the
-tree are allowable since the lowest LoD of a feature/geometry is not to
+tree are allowable since the lowest LoD of a feature/geometry is not
 shown.
 
 === Related:
