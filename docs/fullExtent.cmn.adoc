@@ -1,6 +1,6 @@
 == fullExtent
 
-This object allows the definition of the full 3D spatial extent of a scene layer.
+The 3D spatial extent of the object it describes in the given spatial reference. The coordinates of the extent can span across the antimeridian (180th meridian). For example, scene layers in a geographic coordinate system covering New Zealand may have a larger xmin value than xmax value. The fullExtent is used by clients to zoom to a scene layer.
 
 NOTE: This class is new in Version 1.2. However, this class is optional. Implementations of previous versions (1.0 and 1.1) will still work.
 
