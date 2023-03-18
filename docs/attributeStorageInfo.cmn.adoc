@@ -1,8 +1,7 @@
 == attributeStorageInfo
 
-The attributeStorageInfo object describes the structure of the binary
-attribute data resource of a node. The following examples show how
-different attribute types are represented as a binary buffer.
+The attributeStorageInfo object describes the structure of the binary attribute data resource of a layer, which is the same for every node in the layer. The following examples show how different attribute types are represented as a binary buffer.
+
 
 == Examples of attribute resources
 
@@ -22,8 +21,17 @@ stings, including NULL terminating character.
 NULL terminated.
 |===
 
-A string object contains the following: \{ ``Bratislava'', ``Berlin'',
-``Wien'', `<empty>`, "" }
+A string object contains the following: 
+
+```
+{ 
+  "Bratislava", 
+  "Berlin",
+  "Wien", 
+  `<empty>`, 
+  "" 
+}
+```
 
 [cols=",,,,,,,,,,,",options="header",]
 |===
