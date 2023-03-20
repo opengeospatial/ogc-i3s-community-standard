@@ -2,7 +2,7 @@
 
 === Building scene layer structure
 
-A Building Scene Layer (BSL) represents a 3D BIM model as a single layer composed of sublayers. A BSL is organized in discipline layers (groups) such as Architectural, Electrical, Mechanical, Piping and Structural and category layers representing content such as walls or windows. An I3S BSL may contain an overview.
+A Building Scene Layer (BSL) represents a 3D BIM model as a single layer composed of sublayers. The 3D BIM model can be any man made structure organized into discipline layers (groups) such as Architectural, Electrical, Mechanical, Piping and Structural and category layers representing content such as walls or windows. An I3S BSL may contain an overview.
 
 The concept of a group (i.e. `layerType='group'`) has been added to organized sublayers into a nested tree structure that can be reflected in the table of contents of 3D Clients. If a BSL does not contain an overview, the structure should not include an overview or full model, only the disciplines directly.
 
