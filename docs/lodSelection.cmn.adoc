@@ -3,14 +3,14 @@
 The link:../format/LevelofDetail.adoc[LoD (Level of Detail)] document
 describes in detail the supported LoD model in I3S. The Lod selection
 metrics described below provide information for a client application to
-determine whether a node’s contents are ``good enough'' to render in the
+determine whether a node’s contents are "good enough" to render in the
 current 3D view, or if switching to children nodes is more appropriate.
 An application could further factor in additional constraints such as
 network bandwidth, available memory and target minimum quality goals to
 achieve an optimal resource access pattern.
 
-The I3S standard supports multiple LoD selection criteria. Each I3S
-profile definition provides additional details on LoD Selection.
+These metrics are used by clients to determine the optimal resource access patterns. Each I3S profile definition provides additional details on LoD Selection.
+
 
 === Related:
 
