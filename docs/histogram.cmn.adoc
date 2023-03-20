@@ -4,7 +4,12 @@ The bin size may be computed as (max-min)/bin count. Please note that
 stats.histo.min/max is not equivalent to stats.min/max since values
 smaller than stats.histo.min and greater than stats.histo.max are
 counted in the first and last bin respectively. The values stats.min and
-stats.max may be conservative estimates.
+stats.max may be conservative estimates. The bins would be distributed as follows:
+
+```
+(-inf, stats.min + bin_size], (stats.min + bin_size, stats.min + 2 * bin_size], ... , +
+(stats.min + (bin_count - 1) * bin_size], (stats.min + (bin_count - 1) * bin_size, +inf)
+```
 
 Note on histograms and bins. The x-axis in a histogram is a number line
 that has been split into number intervals, or bins. The intervals must
