@@ -7,7 +7,7 @@ counted in the first and last bin respectively. The values stats.min and
 stats.max may be conservative estimates. The bins would be distributed as follows:
 
 ```
-(-inf, stats.min + bin_size], (stats.min + bin_size, stats.min + 2 * bin_size], ... , +
+(-inf, stats.min + bin_size], (stats.min + bin_size, stats.min + 2 * bin_size], ... , 
 (stats.min + (bin_count - 1) * bin_size], (stats.min + (bin_count - 1) * bin_size, +inf)
 ```
 
