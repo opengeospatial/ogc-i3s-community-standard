@@ -194,6 +194,18 @@ specification. As such, clients should not make this assumption.
 |texture |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  |  | image:../images/checkmark.png[yes]
 |===
 
+*Node resource for backward compatibility with version 1.2 and earlier*
+
+[cols=",,,,",options="header",]
+|===
+| Node Resources |Integrated Mesh  | 3D Object                    | Building Scene Layer         |
+| sharedResources   | image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] | image:../images/checkmark.png[yes] |
+| 3dNodeIndexDocument|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] | image:../images/checkmark.png[yes] |
+|===
+
+
+*Note: All binary data is stored in little endian.*
+
 [[i3sgeometry]]
 ===== Geometry 
 
