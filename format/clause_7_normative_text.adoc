@@ -21,7 +21,7 @@ The text in this paragraph is extracted verbatim from 12-063r5. OGC 12-063r5 mak
 
 In I3S implementation the CRS may be represented using either WKT1 or WKT2. While WKT1 has been in use for many years, WKT1 has been superseded by WKT2. Although implementations of OGC standards using WKT2 are not yet widely available, the guidance from the OGC/ISO community is to implement WKT2.
 
-WKT1 does not support explicit definition of axis order. Therefore, I3S implementers need to note for their implementations if they support WKT1 only or both (as WKT2 requires continued support of WKT1). In addition, please note that not all ArcGIS clients support WKT2 yet.
+NOTE: WKT1 does not support explicit definition of axis order. Therefore, I3S implementers need to note for their implementations if they support WKT1 only or both. In addition, please note that not all I3S clients may support WKT2 yet.
 
 Therefore, _*I3S implementers need to note for their implementations if they support WKT1 only or both (as WKT2 requires continued support of WKT1)*_.
 
