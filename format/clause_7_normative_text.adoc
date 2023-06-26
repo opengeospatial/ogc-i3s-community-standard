@@ -6,7 +6,7 @@ This section contains the normative clauses and requirements for implementing I3
 
 === Coordinate Reference Systems
 
-The I3S standard supports specifying Coordinate Reference Systems and refers to two OGC standards for describing a CRS as Well Known Text. These are termed `WKT1` as defined in the OGC Coordinate Transformation Service Standard (01-009) and `WKT2` as defined in OGC Geographic Information – Well known text representation of coordinate reference systems (12-063r5). CRS metadata encoded as OGC Well Known Text was originally defined in clause 6.4 in the http://portal.opengeospatial.org/files/?artifact_id=13227[OGC Simple Features 99-036/ISO 19125] Standard. 
+The I3S standard supports specifying Coordinate Reference Systems (CRS) and refers to two OGC standards for describing a CRS as Well Known Text )WKT). These are termed `WKT1` as defined in the OGC Coordinate Transformation Service Standard (01-009) and `WKT2` as defined in https://docs.ogc.org/is/18-010r7/18-010r7.html[OGC Geographic Information – Well known text representation of coordinate reference systems] (18-010r7). CRS metadata encoded as OGC Well Known Text was originally defined in clause 6.4 in the http://portal.opengeospatial.org/files/?artifact_id=13227[OGC Simple Features 99-036/ISO 19125] Standard. 
 
 Again, the two standards for encoding  a CRS are referred to as `WKT1` and `WKT2` respectively.
 
@@ -19,7 +19,9 @@ The two standards are referred to as WKT1 and WKT2
 
 The text in this paragraph is extracted verbatim from 12-063r5. OGC 12-063r5 makes several references to backward compatibility. “Backward compatibility means that an implementation of the text strings in this International Standard would be able to read CRS WKT strings conforming to the old (ISO 19125-1:2004) syntax. It does not mean that a parser of a string compliant to ISO 19125-1:2004 could read WKT strings written in conformance with this International Standard. It also does not require an implementation of the text strings in this International Standard to be able to output an object according to the old syntax. Annex B.8 gives guidance on determining the version of a CRS WKT string. A mapping of older syntaxes to this International Standard is given in Annex C.”
 
-Please note that in an I3S implementation the CRS MAY be represented using either WKT1 or WKT2. While WKT1 has been in use for many years, WKT1 has been superseded by WKT2. Although WKT2 implementations are not as widely available as WKT1 implementation instances, the guidance from the OGC/ISO community is to implement WKT2. Important Note: WKT1 does not support explicit definition of axis order.
+In I3S implementation the CRS may be represented using either WKT1 or WKT2. While WKT1 has been in use for many years, WKT1 has been superseded by WKT2. Although implementations of OGC standards using WKT2 are not yet widely available, the guidance from the OGC/ISO community is to implement WKT2.
+
+WKT1 does not support explicit definition of axis order. Therefore, I3S implementers need to note for their implementations if they support WKT1 only or both (as WKT2 requires continued support of WKT1). In addition, please note that not all ArcGIS clients support WKT2 yet.
 
 Therefore, _*I3S implementers need to note for their implementations if they support WKT1 only or both (as WKT2 requires continued support of WKT1)*_.
 
