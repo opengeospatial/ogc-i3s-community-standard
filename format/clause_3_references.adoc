@@ -6,7 +6,9 @@ The following normative documents contain provisions that, through reference in 
 
 OGC SF [99-036/ISO 19125]: Geographic information - Simple feature access - Part 1: Common architecture. 2005. https://www.iso.org/obp/ui#iso:std:iso:19162:ed-2:v1:en August 17, 2019.
 
-OGC WKT CRS [12-063r5/ISO 19162:2019]: Geographic information — Well-known text representation of coordinate reference systems. 2019. http://portal.opengeospatial.org/files/?artifact_id=4700 (May 15, 2017)
+OGC WKT CRS [12-063r5/ISO 19162:2019]: Geographic information — Well-known text representation of coordinate reference systems. 2015. https://docs.ogc.org/is/12-063r5/12-063r5.html (June 15, 2023)
+
+OGC WKT CRS [18-010r7]: Geographic information — Well-known text representation of coordinate reference systems. 2019. https://docs.ogc.org/is/18-010r7/18-010r7.html (June 15, 2023)
 
 *Informative*
 
