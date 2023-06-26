@@ -9,4 +9,5 @@
 |2021-04-20| 1.2 | C. Reed | all | Various editorial changes, added more informative text.
 |2021-11-28| 1.2 | C. Reed | all | Various editorial changes for publication
 |2022--7-20| 1.3 |C. Reed  | Many| Version 1.3 update
+|2023-6-26 | 1.3 | C. Reed | Many| informative content changes to align with Esri repo as approporiate.
 |===
