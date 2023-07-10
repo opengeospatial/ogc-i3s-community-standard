@@ -14,7 +14,7 @@ Again, the two standards for encoding  a CRS are referred to as `WKT1` and `WKT2
 
 The two standards are referred to as WKT1 and WKT2
 
-. WKT1: Refers to Well Known Text (WKT) for expressing a CRS as originally defined in clause 6.4 in http://portal.opengeospatial.org/files/?artifact_id=13227[OGC Simple Features [99-036/ISO 19125]. This original definition was extended in OGC Coordinate Transformation Service [01-009];
+. WKT1: Refers to Well Known Text (WKT) for expressing a CRS as originally defined in clause 6.4 in http://portal.opengeospatial.org/files/?artifact_id=13227[OGC Simple Features (OGC 99-036/ISO 19125)]. This original definition was extended in OGC Coordinate Transformation Service [01-009];
 .	WKT2: Refers to WKT as defined in OGC WKT CRS/ISO 19162:2015 Geographic information -- Well-known text representation of coordinate reference systems [12-063r5]. From the document, “This Standard provides an updated version of WKT representation of coordinate reference systems that follows the provisions of ISO 19111:2007 and ISO 19111-2:2009. It extends the earlier WKT to allow for the description of coordinate operations.”
 
 The text in this paragraph is extracted verbatim from 12-063r5. OGC 12-063r5 makes several references to backward compatibility. “Backward compatibility means that an implementation of the text strings in this International Standard would be able to read CRS WKT strings conforming to the old (ISO 19125-1:2004) syntax. It does not mean that a parser of a string compliant to ISO 19125-1:2004 could read WKT strings written in conformance with this International Standard. It also does not require an implementation of the text strings in this International Standard to be able to output an object according to the old syntax. Annex B.8 gives guidance on determining the version of a CRS WKT string. A mapping of older syntaxes to this International Standard is given in Annex C.”
@@ -23,7 +23,7 @@ In I3S implementation the CRS may be represented using either WKT1 or WKT2. Whil
 
 NOTE: WKT1 does not support explicit definition of axis order. Therefore, I3S implementers need to note for their implementations if they support WKT1 only or both. In addition, please note that not all I3S clients may support WKT2 yet.
 
-Therefore, _*I3S implementers need to note for their implementations if they support WKT1 only or both (as WKT2 requires continued support of WKT1)*_.
+Therefore, *_I3S implementers need to note for their implementations if they support WKT1 only or both (as WKT2 requires continued support of WKT1)_*.
 
 ==== CRS Use and Requirements in I3S
 
@@ -55,6 +55,7 @@ The WKT representation of the CRS now includes the vertical coordinate reference
 
 The following is a WKT1 description of WGS 84, EPSG 4326.
 
+[%unnumbered%]
 ```
     
 "spatialReference": // the horizontal and vertical coordinate reference system of the layer
@@ -70,6 +71,7 @@ The following is a WKT1 description of WGS 84, EPSG 4326.
 
 The following is a WKT2 description of a compound WGS 84, EPSG 4326 and EPSG 3855.
 
+[%unnumbered%]
 ```
 COMPOUNDCRS ["I3S Compound CRS",
 GEODCRS["WGS 84",
@@ -90,6 +92,7 @@ VERTCRS["EGM2008 height",
 
 The following is an example of heightModelInfo.
 
+[%unnumbered%]
 ```
 HeightModelInfo
 
@@ -125,24 +128,21 @@ I3S is agnostic with respect to the model used to index objects/features in 3D s
 
 The bounding volume hierarchy (BVH) is based on minimum bounding spheres (https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/mbs.cmn.adoc[MBS]) or oriented bounding boxes (https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/obb.cmn.adoc[OBB]). The mesh-pyramids profile supports specifying the bounding volume in either MBS or OBB representation. OBB is the more optimal representation and implementers are encouraged to output node bounding volume in OBB format. Point cloud profile supports OBB representation only.
 
-_3D objects enclosed in minimum bounding spheres._
-image:../images/MBS_Example.png[width=700,align="center"]
+.3D objects enclosed in minimum bounding spheres
+image::../images/MBS_Example.png[width=700,align="center"]
 
-_3D objects enclosed in the smallest bounding box._
-image:../images/OBB_Example.png[width=700,align="center"]
+.3D objects enclosed in the smallest bounding box
+image::../images/OBB_Example.png[width=700,align="center"]
 
 In order to provide a scalable representation of the original data,
 parent nodes contain a simplified representation of their children
 creating link:LevelofDetail.adoc[Level of Details].
 
-image:../images/BoundingVolumeHierarchy.png[width=700,align="center"]
+.Schematic view of spatially distributed data and recursive grouping of nodes into a bounding volume hierarchy
+image::../images/BoundingVolumeHierarchy.png[width=700,align="center"]
 
-_Schematic view of spatially distributed data and recursive grouping of
-nodes into a bounding volume hierarchy._
-
-image:../images/BoundingVolumeHierarchyTree.png[[width=600,align="center"]
-
-_Example of bounding volume hierarchy represented as a tree of nodes._
+.Example of bounding volume hierarchy represented as a tree of nodes
+image::../images/BoundingVolumeHierarchyTree.png[[width=600,align="center"]
 
 [[i3snodes]]
 === Nodes 
@@ -169,10 +169,11 @@ redundancy in attribute storage allows each node to be rendered
 independently of other nodes. The following scene layer types support
 features:
 
+.Scene layer types that support features
 [cols=",,,,,",options="header",]
 |===
 |Feature |Integrated Mesh |3D Object |Points |Point Clouds | Building Scene Layer
-|support |  | image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  | image:../images/checkmark.png[yes]
+|support |  | &#9989; | &#9989;  |  |  &#9989; 
 |===
 
 [[i3snoderesources]]
@@ -186,23 +187,23 @@ access the resources. While content creators may choose to match a
 resource id with the node id this is not required by the I3S
 specification. As such, clients should not make this assumption.
 
+.Node resources
 [cols=",,,,,",options="header",]
 |===
 |Node Resources |Integrated Mesh |3D Object |Points |Point Clouds | Building Scene Layer
-|geometry buffer | image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  |image:../images/checkmark.png[yes] | image:../images/checkmark.png[yes] 
+|geometry buffer |  &#9989;  | &#9989;  |  | &#9989;  |  &#9989;  
 
-|attribute |  |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] | image:../images/checkmark.png[yes]
+|attribute |  | &#9989;  | &#9989;  | &#9989;  |  &#9989; 
 
-|texture |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |  |  | image:../images/checkmark.png[yes]
+|texture | &#9989;  | &#9989;  |  |  |  &#9989; 
 |===
 
-*Node resource for backward compatibility with version 1.2 and earlier*
-
+.Node resource for backward compatibility with version 1.2 and earlier
 [cols=",,,,",options="header",]
 |===
 | Node Resources |Integrated Mesh  | 3D Object                    | Building Scene Layer         |
-| sharedResources   | image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] | image:../images/checkmark.png[yes] |
-| 3dNodeIndexDocument|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] | image:../images/checkmark.png[yes] |
+| sharedResources   |  &#9989;  | &#9989;  |  &#9989;  |
+| 3dNodeIndexDocument| &#9989;  | &#9989;  |  &#9989;  |
 |===
 
 
@@ -278,14 +279,14 @@ By default, the mesh-pyramids profile allows/supports encoding the same texture 
 For more details on texture format, texture coordinate, texture atlas usage and regions discussion, see the link:../docs/texture.cmn.adoc[texture] and
 https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/textureSetDefinition.cmn.adoc[textureSetDefinition].
 
-_Node resource for backward compatibility with 1.2_
 
+.Node resource for backward compatibility with 1.2
 [cols=",,,",options="header",]
 |===
 |Node Resources |Integrated Mesh |3D Object | Building Scene Layer
-|sharedResources |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
+|sharedResources | &#9989;  | &#9989;  | &#9989; 
 
-|3dNodeIndexDocument |image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes] | image:../images/checkmark.png[yes]
+|3dNodeIndexDocument | &#9989;  | &#9989;  |  &#9989; 
 |===
 
 _Note: All binary data is stored in little endian._
@@ -360,26 +361,26 @@ The first step in the automatic LoD generation process is to build the I3S bound
 
 As shown in the Table below, the method used to create the levels depends on the Scene Layer type.
 
+.Example LoD generation methods based on Scene Layer type
 [cols=",,,,,",options="header",]
 |===
 |  |Integrated Mesh |3D Object |Points |Point Clouds |Building Scene
 Layer
-|meshpyramids |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |  |  |image:../images/checkmark.png[yes]
+|meshpyramids | &#9989; 
+| &#9989;  |  |  | &#9989; 
 
-|Thinning |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
+|Thinning | &#9989; 
+| &#9989;  | &#9989; 
+| &#9989;  | &#9989; 
 
-|Clustering |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |image:../images/checkmark.png[yes]
+|Clustering | &#9989; 
+| &#9989;  | &#9989; 
+| &#9989;  | &#9989; 
 
-|Generalization |image:../images/checkmark.png[yes]
-|image:../images/checkmark.png[yes] |  |  |image:../images/checkmark.png[yes]
+|Generalization | &#9989; 
+| &#9989;  |  |  | &#9989; 
 |===
 
-_Example LoD generation methods based on Scene Layer type_
 
 [[selectionmetrics]]
 ==== Selection Metrics
@@ -420,10 +421,13 @@ first) of the nodes into a flat array of nodes. In OGC version 1.2, the ID
 for a node is an integer that represents the index of the node within
 this flattened array.
 
-image:../images/BoundingVolumeHierarchyTree.png[bounding volume
-hierarchy tree] image:../images/NodePageArray.png[node page]
+.Bounding volume hierarchy tree
+image::../images/BoundingVolumeHierarchyTree.png[bounding volume hierarchy tree] 
 
-_Example of breadth first ordering of nodes in a flat array. Children
+.Example of breadth first ordering of nodes in a flat array
+image::../images/NodePageArray.png[node page]
+
+_An example of breadth first ordering of nodes in a flat array is shown above. Children
 nodes are addressed by their index in the array._
 
 [[statistics]]
@@ -491,9 +495,8 @@ using compression level not compressed (`STORE`).
 This is an example of a geometry resource opened in 7-zip. Notice that
 both the Size and the Packed Size are equal. The method is `STORE`.
 
-image:../images/slpk_archive_store.PNG[width=800,align="center"] 
-
-_Compressed geometry resource with size and method._
+.Compressed geometry resource with size and method
+image::../images/slpk_archive_store.PNG[width=800,align="center"] 
 
 *File Extensions*
 
@@ -515,7 +518,9 @@ and named `@specialIndexFileHASH128@`.
 
 ==== Example 1.2 SLPK Structure Summary for 3D Objects 
 
-....
+[%unnumbered%]
+[source]
+----
 .\example_17.slpk
     +--nodePages
     |  +--0.json.gz
@@ -548,12 +553,13 @@ and named `@specialIndexFileHASH128@`.
     |  +--(...)
     +--3dSceneLayer.json.gz
     +--@specialIndexFileHASH128@
-....
+----
 
 Paths are the same as in the API, but without the `layers/0` prefix.
 Exceptions are:
 
-[width="100%",cols="37%,21%,42%",options="header",]
+.Example paths for a 1.2 SLPK Structure
+[width="100%",cols=",,",options="header",]
 |===
 |Resource |SLPK |Service
 |Scene layer document |3dSceneLayer.json.gz |layers/0
@@ -567,7 +573,9 @@ Exceptions are:
 
 #### Example 1.1 Structure Summary for 3D Objects
 
-....
+[%unnumbered%]
+[source]
+----
 .\example_16.slpk
     +--nodes
     |  +--root
@@ -607,7 +615,7 @@ Exceptions are:
     |  +-- (...)
     +--3dSceneLayer.json.gz
     +--metadata.json
-....
+----
 
 **Metadata**
 
@@ -615,6 +623,7 @@ Scene layer packages (SLPK) contain metadata information regarding its
 content in the metadata.json file. The following entries are required
 and must be of the specified type.
 
+.Metadata information regarding Scene layer packages
 [width="100%",cols="54%,46%",options="header",]
 |===
 |Property |Details
@@ -633,7 +642,9 @@ is {STORE}
 
 *Example of 1.2 Metadata json*
 
-....
+[%unnumbered%]
+[source,json]
+----
 .\metadata.json
 {
     "folderPattern":"BASIC",
@@ -642,11 +653,13 @@ is {STORE}
     "I3SVersion":"1.2",
     "nodeCount":62
 }
-....
+----
 
 *Example of 1.2 Metadata json*
 
-....
+[%unnumbered%]
+[source,json]
+----
 .\metadata.json
 {
     "folderPattern":"BASIC",
@@ -655,5 +668,5 @@ is {STORE}
     "I3SVersion":"1.2",
     "nodeCount":1156
 }
-....
+----
 

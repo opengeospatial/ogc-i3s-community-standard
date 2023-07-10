@@ -22,9 +22,3 @@ It is very important that the names of the file er.adoc will not be changed, as 
   * annex-history.adoc
   * annex-bibliography.adoc
 
-# How to compile your raw files
-Command for PDF output:
-asciidoctor-pdf -a pdf-stylesdir=resources -a pdf-style=ogc -a pdf-fontsdir=resources/fonts -r asciidoctor-bibtex er.adoc
-
-Command for HTML output:
-asciidoctor -a stylesheet=rocket-panda.css -a stylesdir=./resources/stylesheets -r asciidoctor-bibtex er.adoc

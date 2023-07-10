@@ -1,0 +1,68 @@
+= OGC Indexed 3d Scene Layer (I3S) and Scene Layer Package (*.slpk) Format Community Standard
+:doctype: community-standard
+:encoding: utf-8
+:lang: en
+:status: draft
+:committee: technical
+:draft: 3.0
+:external-id: http://www.opengis.net/doc/CS/i3s/1.4
+:docnumber: YY-999
+:received-date: 2029-03-30
+:issued-date: 2029-03-30
+:published-date: 2029-03-30
+:fullname: Carl Reed
+:fullname_2: Tamrat Belayneh
+:keywords: ogcdoc, OGC document, i3s, 3d, point clouds, visualization, scene, scene
+layer, slpk, buildings
+:submitting-organizations: Esri, Inc.
+:mn-document-class: ogc
+:mn-output-extensions: xml,html
+:local-cache-only:
+:imagesdir: images
+:data-uri-image:
+:htmltoclevels: 4
+:toclevels: 4
+:edition: 1.4
+
+<<<
+
+////
+Make sure to complete each included document
+////
+include::clause_0_front_material.adoc[]
+
+include::clause_1_scope.adoc[]
+
+include::clause_2_conformance.adoc[]
+
+include::clause_3_references.adoc[]
+
+include::clause_4_terms_and_definitions.adoc[]
+
+include::clause_5_conventions.adoc[]
+
+include::clause_6_informative_text.adoc[]
+
+include::clause_7_normative_text.adoc[]
+
+include::clause_8_media_types.adoc[]
+
+<<<
+////
+add or remove annexes after "A" as necessary
+////
+include::annex-a.adoc[]
+
+include::annex-b.adoc[]
+
+include::annex-c.adoc[]
+
+////
+Revision History should be the last annex before the Bibliography
+Bibliography should be the last annex
+////
+include::annex-history.adoc[]
+
+
+include::annex-bibliography.adoc[]
+

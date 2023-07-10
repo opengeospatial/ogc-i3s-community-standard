@@ -1,4 +1,4 @@
-== Introduction
+== Scope
 
 Scene Layers provide a structured way for clients to store and visualize large volumes of 3D data. I3S organizes information into node hierarchies that contain features with geometry, textures and attributes.
 

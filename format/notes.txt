@@ -1,0 +1,5 @@
+Confirm labeling of Node resources tables in Clause 8.2.2.
+
+Check label of table of example paths in Clause 11.1.1.
+
+There is no published OGC Standard with the number 99-036
