@@ -11,4 +11,4 @@ Please see the README.md file in the _format_ subfolder for information on the I
 
 from this folder, run the following command.
 
-`docker run -v "$(pwd)":/metanorma -v ${HOME}/.fontist/fonts/:/config/fonts metanorma/metanorma metanorma compile --agree-to-terms -t ogc -x xml,html format/m17-014r9.adoc`
+`docker run -v "$(pwd)":/metanorma -v ${HOME}/.fontist/fonts/:/config/fonts metanorma/metanorma metanorma compile --agree-to-terms -t ogc -x xml,html format/017-014r9.adoc`

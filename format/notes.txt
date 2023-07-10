@@ -1,7 +1,9 @@
-Confirm labeling of Node resources tables in Clause 8.2.2.
+* Confirm labeling of Node resources tables in Clause 8.2.2.
 
-Check label of table of example paths in Clause 11.1.1.
+* Check label of table of example paths in Clause 11.1.1.
 
-There is no published OGC Standard with the number 99-036
+* There is no published OGC Standard with the number 99-036. So changed to the ISO equivalent ISO 19125-1. Now waiting on metanorma maintainers to fix missing year from ISO 19125-1 citation. Created a GitHub Issue for it https://github.com/metanorma/metanorma-ogc/issues/572
 
-A script will have to be created to replace the license agreement after each compilation.
+* A script will have to be created to replace the license agreement after each compilation. This is because metanorma is designed to write out the OGC License Agreement when a document is built. Custom license agreements are not supported. For HTML documents, however, we can replace the license agreement after building the document. Note that there is no workaround for PDF documents.
+
+* Introduction section header changed to Scope. The reason is that metanorma enforces a rule that OGC Standards shall have specific sections before others. So the Introduction section is placed after those controlled sections. The least disruptive path was therefore to rename the Introduction to Scope.

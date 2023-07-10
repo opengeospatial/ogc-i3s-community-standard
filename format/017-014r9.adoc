@@ -1,96 +1,28 @@
-:Title: OGC Indexed 3d Scene Layer (I3S) and Scene Layer Package (*.slpk) Format Community Standard Version 1.3
-:titletext: OGC Indexed 3d Scene Layer (I3S) and Scene Layer Package (*.slpk) Format Community Standard Version 1.3
-:doctype: book
+= OGC Indexed 3d Scene Layer (I3S) and Scene Layer Package (*.slpk) Format Community Standard
+:doctype: community-standard
 :encoding: utf-8
 :lang: en
-:toc:
-:toc-placement!:
-:toclevels: 3
-:numbered:
-:sectanchors:
-:source-highlighter: pygments
-
-<<<
-[cols = ">",frame = "none",grid = "none"]
-|===
-|{set:cellbgcolor:#FFFFFF}
-|[big]*Open Geospatial Consortium*
-|Submission Date: 2022-07-20
-|Approval Date:   2022-12-12
-|Publication Date:   2023-01-11
-|External identifier of this OGC(R) document: http://www.opengis.net/doc/CS/i3s/1.3
-|Internal reference number of this OGC(R) document:    17-014r9
-|Version: 1.3
-|Category: OGC(R) Community Standard
-|Editors:   Carl Reed, Tamrat Belayneh
-|===
-
-[cols = "^", frame = "none"]
-|===
-|[big]*{titletext}*
-|===
-
-[cols = "^", frame = "none", grid = "none"]
-|===
-|*Copyright notice*
-|Copyright (C) 2023 Open Geospatial Consortium
-|To obtain additional rights of use, visit http://www.opengeospatial.org/legal/
-|===
-
-[cols = "^", frame = "none"]
-|===
-|*Warning*
-|===
-
-This document is an OGC Member endorsed international Community Standard. This Community Standard was developed outside of the OGC and the originating party may continue to update their work. However, this document is fixed in content. This document is available on a royalty free, non-discriminatory basis.
-
-Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.
-
-[width = "50%", grid = "none"]
-|===
-|Document type:   	OGC® Community Standard
-|Document subtype:   
-|Document stage:   	Approved
-|Document language: 	English
-|===
-
-<<<
-
-Esri (Environmental Systems Research Institute, Inc.)
-
-The companies listed above have granted the Open Geospatial Consortium (OGC) a nonexclusive, royalty-free, paid up, worldwide license to copy and distribute this document and to modify this document and distribute copies of the modified version under a Creative Commons ShareAlike (CC BY-SA) license (see below).
-
-*License Agreement*
-
-The standard is licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).[1] You can implement this standard in services, clients or processing tools without restrictions.
-
-You are directed to the License for specific details.
-
-This is a human-readable summary of (and not a substitute for) the license.
-
-*You are free to:*
-
-    Share — copy and redistribute the material in any medium or format
-
-    Adapt — remix, transform, and build upon the material for any purpose, even commercially.
-
-The licensor cannot revoke these freedoms as long as you follow the license terms.
-
-*Under the following terms:*
-
-. *Attribution* — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-
-. *ShareAlike* — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
-
-. *No additional restrictions* — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
-
-*Notices:*
-
-You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation.
-
-No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.
-
-toc::[]
+:status: draft
+:committee: technical
+:draft: 3.0
+:external-id: http://www.opengis.net/doc/CS/i3s/1.4
+:docnumber: YY-999
+:received-date: 2029-03-30
+:issued-date: 2029-03-30
+:published-date: 2029-03-30
+:fullname: Carl Reed
+:fullname_2: Tamrat Belayneh
+:keywords: ogcdoc, OGC document, i3s, 3d, point clouds, visualization, scene, scene
+layer, slpk, buildings
+:submitting-organizations: Esri, Inc.
+:mn-document-class: ogc
+:mn-output-extensions: xml,html
+:local-cache-only:
+:imagesdir: images
+:data-uri-image:
+:htmltoclevels: 4
+:toclevels: 4
+:edition: 1.4
 
 <<<
 
@@ -131,7 +63,6 @@ Bibliography should be the last annex
 ////
 include::annex-history.adoc[]
 
-<<<
-////
+
 include::annex-bibliography.adoc[]
-////
+
