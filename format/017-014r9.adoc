@@ -6,7 +6,7 @@
 :committee: technical
 :draft: 3.0
 :external-id: http://www.opengis.net/doc/CS/i3s/1.4
-:docnumber: YY-999
+:docnumber: 17-014r11
 :received-date: 2029-03-30
 :issued-date: 2029-03-30
 :published-date: 2029-03-30
