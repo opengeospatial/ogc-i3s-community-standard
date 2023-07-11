@@ -1,0 +1,37 @@
+<bibdata type="standard" schema-version="v1.2.3">
+  <fetched>2023-07-10</fetched>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Geographic information — Well known text representation of coordinate reference systems</title>
+  <title type="main" format="text/plain" language="en" script="Latn">Geographic information — Well known text representation of coordinate reference systems</title>
+  <uri type="obp">https://docs.ogc.org/is/12-063r5/12-063r5.html</uri>
+  <docidentifier type="OGC" primary="true">12-063r5</docidentifier>
+  <date type="published">
+    <on>2015-05-01</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Roger Lott</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+    </organization>
+  </contributor>
+  <edition>5</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">This Standard provides an updated version of WKT representation of coordinate reference systems that follows the provisions of ISO 19111:2007 and ISO 19111-2:2009. It extends the earlier WKT to allow for the description of coordinate operations. This International Standard defines the structure and content of well-known text strings. It does not prescribe how implementations should read or write these strings.
+The jointly developed draft has also been submitted by ISO TC211 for publication as an International Standard document. The version incorporates comments made during both the OGC Public Comment Period as well as the ISO ballot for DIS (ISO TC211 document N3750). 
+</abstract>
+  <ext schema-version="v1.0.1">
+    <doctype>standard</doctype>
+    <subdoctype>implementation</subdoctype>
+    <editorialgroup>
+      <committee>technical</committee>
+    </editorialgroup>
+  </ext>
+</bibdata>

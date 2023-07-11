@@ -1,7 +1,7 @@
 [appendix]
 [[annex-b]]
-
-= Annex B
+:!numbered:
+:appendix-caption: Annex
 
 == Acknowledgements
 

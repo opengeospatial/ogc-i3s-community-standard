@@ -33,6 +33,7 @@ A familiar access pattern based on a single tree data structure is proposed for 
 and rendering. The following pseudo code illustrates the recommended pattern when navigating an index tree using Mesh Pyramids.
 Node traversal starts at the root node and recursively calls TraverseNodeTree(node):
 
+[%unnumbered%]
 ```
 TraverseNodeTree(node)
 {
@@ -90,7 +91,9 @@ FeatureData
 === SharedResources
 SharedResources
 
-```{
+[%unnumbered%]
+```
+{
   "id": 0,
   "version": "3d3c7b51-6336-4893-b484-ad118775bcce",
   "name": "Export2",

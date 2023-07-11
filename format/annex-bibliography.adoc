@@ -1,0 +1,18 @@
+[appendix,obligation=informative]
+[[annex-bibliography]]
+[bibliography]
+== Bibliography
+
+This standard is deeply inspired by concepts defined in the following documents that preceded it. This standard offers an alternative interface to fulfill similar tasks described in these references:
+
+* [[[Octree,1]]], "Octree". https://en.wikipedia.org/wiki/Octree. Not Published (N.P.), 2016. Web. 20 Oct. 2016.
+
+* [[[Quadtree,2]]], "Quadtree". https://en.wikipedia.org/wiki/Quadtree. N.P. 2017. Web. 20 Jan. 2017
+
+* [[[R_Trees,3]]], "R-Trees". https://en.wikipedia.org/wiki/R-tree. N.P. 2017. Web. 20 Jan. 2017
+
+
+
+
+
+
