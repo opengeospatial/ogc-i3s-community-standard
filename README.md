@@ -12,3 +12,7 @@ Please see the README.md file in the _format_ subfolder for information on the I
 from this folder, run the following command.
 
 `docker run -v "$(pwd)":/metanorma -v ${HOME}/.fontist/fonts/:/config/fonts metanorma/metanorma metanorma compile --agree-to-terms -t ogc -x xml,html format/17-014r11.adoc`
+
+After building the document using docker, next add the custom license to the generated HTML document by calling the following command from the same folder.
+
+`python3 format/add_license.py`
