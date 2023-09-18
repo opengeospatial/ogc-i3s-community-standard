@@ -33,4 +33,4 @@ I3S uses the following Pointer syntax whenever a specific property in the curren
 .	optional URL: The pointer may be prefixed with a URL to a different document. This URL may be relative to the document that is being evaluated or absolute. To identify the URL element of a pointer, it is given in square brackets. Examples:
 
 **	relative URL + absolute reference: From FeatureData to 3dSceneLayer.name: ```[../../]/name```
-**	absolute URL + absolute reference: ```[http://<my_server>/<my_service>/rest/services/Buildings_Portland/SceneServer/layers/0/nodes/68](http://<my_server>/tiles/P3ePLMYs2RVChkJx/<my_service>/rest/services/Buildings_Portland/SceneServer/layers/0/nodes/68)```
+**	absolute URL + absolute reference: ```http://my_server/my_service/rest/services/Buildings_Portland/SceneServer/layers/0/nodes/68```
