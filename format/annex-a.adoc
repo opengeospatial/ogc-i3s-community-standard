@@ -7,7 +7,7 @@
 
 This Annex is provided for further guidance and information on Mesh-pyramids. 
 
-NOTE: This Annex was originally provided in OGC I3S Version 1.1. This annex is provided in 1.2 with the caveat that only 1.1 Classes and resources are used in the examples and guidance below. While 1.2 has all of the required 1.1 compatible classes, the enhancements and extensions for node indexing, geometry compression, and materials are not considered in the discussion below.
+NOTE: This Annex was originally provided in OGC I3S Version 1.1. This annex is provided in versions 1.2 and later with the caveat that only 1.1 Classes and resources are used in the examples and guidance below. While 1.2 and later versions have all of the required 1.1 compatible classes, the enhancements and extensions for node indexing, geometry compression, and materials are not considered in the discussion below.
 
 What this profile is used for: This profile is implemented by the 3D Object and Integrated Mesh layer types.
 
@@ -86,10 +86,10 @@ Attribute data for all features in a node is stored and made available as discre
 === FeatureData
 The FeatureData is optional with this profile.
 
-FeatureData
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/featureData.cmn.adoc[FeatureData]
 
 === SharedResources
-SharedResources
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/sharedResource.cmn.adoc[SharedResources]
 
 [%unnumbered%]
 ```
