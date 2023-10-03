@@ -1,4 +1,4 @@
 == Media Types for any data encoding(s)
 
-The following media types are referenced in the I3S Community Standard.
+This version of the I3S Community Standard does not specify any media types for data encodings.
 
