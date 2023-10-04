@@ -67,7 +67,7 @@ https://github.com/Esri/i3s-spec[Esri I3S repository]. The Terms and
 Definitions and References sections may be added into the Esri community
 GitHub repository in the future.
 
-NOTE: The OGC I3S source content can be found and viewed https://github.com/opengeospatial/ogc-i3s-community-standard repository[here]. If you wish to suggest changes, please create a branch. However, given that the Esri I3S Git repository is the source of the normative content, please also coordinate with the Esri I3S team.
+NOTE: The OGC I3S source content can be found and viewed https://github.com/opengeospatial/ogc-i3s-community-standard[here]. If you wish to suggest changes, please create a branch. However, given that the Esri I3S Git repository is the source of the normative content, please also coordinate with the Esri I3S team.
 
 [.preface]
 == Validity of content
