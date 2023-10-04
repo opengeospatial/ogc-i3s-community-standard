@@ -58,14 +58,16 @@ https://github.com/Esri/i3s-spec[here].
 The majority of the content in this OGC document is a direct copy of the
 content contained at https://github.com/Esri/i3s-spec . No normative
 changes have been made to the content. This OGC document does contain
-content not in source Esri GitHub repository. Specifically, while
+content not in the source Esri GitHub repository. Specifically, while
 derived from content on the https://github.com/Esri/i3s-spec[Esri I3S
 repository], the Abstract, Keywords, Preface, Submitting Organizations,
 Endorsers, Terms and Definitions, and References sections and Annex B
-(Bibliography) in this document are not found on the
+(Bibliography) in this document are not found in the
 https://github.com/Esri/i3s-spec[Esri I3S repository]. The Terms and
 Definitions and References sections may be added into the Esri community
 GitHub repository in the future.
+
+NOTE: The OGC I3S source content can be found and viewed https://github.com/opengeospatial/ogc-i3s-community-standard repository[here]. If you wish to suggest changes, please create a branch. However, given that the Esri I3S Git repository is the source of the normative content, please also coordinate with the Esri I3S team.
 
 [.preface]
 == Validity of content
