@@ -129,7 +129,7 @@ ID}
 |Type |JSON
 |URL Template |http://serviceURL/layers/\{layerID}/nodes/\{nodeID}/shared
 |Example |http://my.server.com/IntegratedMeshSceneLayer/SceneServer/layers/0/nodes/9/shared
-|Description |Legacy texture and material description. Not used in OGC Version 1.2. +
+|Description |Legacy texture and material description. Not used in OGC Version 1.2 or later. +
 `layerID`: Integer. ID of the associated layer. +
 `nodeID`: Integer. ID of the associated node.
 |===
@@ -142,7 +142,7 @@ link:sharedResource.cmn.adoc[sharedResource]
 |Type |JSON
 |URL Template |http://serviceURL/layers/\{layerID}/nodes/\{nodeID}
 |Example |http://my.server.com/IntegratedMeshSceneLayer/SceneServer/layers/0/nodes/9
-|Description |Description of the node. Not used in OGC Version 1.2. +
+|Description |Description of the node. Not used in OGC Version 1.2 or later. +
 `layerID`: Integer. ID of the associated layer. +
 `nodeID`: Integer. ID of the associated resource.
 |===
