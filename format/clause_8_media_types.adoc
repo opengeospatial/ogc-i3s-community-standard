@@ -1,4 +1,14 @@
 == Media Types for any data encoding(s)
 
-This version of the I3S Community Standard does not specify any media types for data encodings.
+Various elements, such as attributes, in a I3S store are encoded as JSON and then compressed.
 
+The following table lists the I3S Media Types. Currently, these media types are only use in the Point Scene Layer and the Point Cloud Scene Layer profiles. This table can be extended as required.
+
+|===
+| Media Type             | Description                                                
+| ----------------------------------| ----------------------------------------------------------
+| application/vnd.ogc.I3S.json+gzip | MIME type for the encoding used for the Geometry and Attribute Resources is a PSL.
+| application/octet-stream          | MIME type for the encoding used for the Attribute and Geometry Resources in a PCSL and PSL.
+|===
+
+NOTE: If textures are specified/used, then additional MIME types such as image/png are used.
