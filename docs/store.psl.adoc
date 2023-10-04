@@ -55,17 +55,17 @@ points North. It is only valid for geographic vertexCRS. Earth centered is the d
 - `vertex-reference-frame`: Normals are stored in the same reference frame as vertices and is only valid for projected vertexCRS.
 
 |nidEncoding |string |MIME type for the encoding used for the Node Index
-Documents. Example: application/vnd.ogc.I3S.json+gzip; version=1.2.
+Documents. Example: application/vnd.ogc.I3S.json+gzip; version=1.3.
 
 |featureEncoding |string |MIME type for the encoding used for the
 Feature Data Resources. For example: application/vnd.ogc.I3S.json+gzip;
 version=1.2.
 
 |geometryEncoding |string |MIME type for the encoding used for the
-Geometry Resources. For example: application/octet-stream; version=1.2.
+Geometry Resources. For example: application/octet-stream; version=1.3.
 
 |attributeEncoding |string |MIME type for the encoding used for the
-Attribute Resources. For example: application/octet-stream; version=1.2.
+Attribute Resources. For example: application/octet-stream; version=1.3.
 
 |textureEncoding |string[] |MIME type(s) for the encoding used for the
 Texture Resources.
@@ -131,10 +131,10 @@ _Note: properties in *bold* are required_
   ],
   "indexCRS": "http://www.opengis.net/def/crs/EPSG/0/4326",
   "vertexCRS": "http://www.opengis.net/def/crs/EPSG/0/4326",
-  "nidEncoding": "application/vnd.ogc.i3s.json+gzip; version=1.2",
-  "featureEncoding": "application/vnd.ogc.i3s.json+gzip; version=1.2",
-  "geometryEncoding": "application/octet-stream; version=1.2",
-  "attributeEncoding": "application/octet-stream; version=1.2",
+  "nidEncoding": "application/vnd.ogc.i3s.json+gzip; version=1.3",
+  "featureEncoding": "application/vnd.ogc.i3s.json+gzip; version=1.3",
+  "geometryEncoding": "application/octet-stream; version=1.3",
+  "attributeEncoding": "application/octet-stream; version=1.3",
   "textureEncoding": [
     "image/jpeg",
     "image/vnd-ms.dds"
