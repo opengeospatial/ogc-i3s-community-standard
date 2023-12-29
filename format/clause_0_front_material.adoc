@@ -1,4 +1,4 @@
-.Preface
+== Preface
 
 The original I3S Specification originated from investigations into technologies for rapidly
 streaming and distributing large volumes of 3D content across enterprise
