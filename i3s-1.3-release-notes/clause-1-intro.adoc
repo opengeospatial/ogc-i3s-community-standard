@@ -2,11 +2,11 @@
 
 === Scope
 
-This Release Notes document provides information on changes to Version 1.3 of the OGC I3S Community Standard. The addition of the ability to support Building Scene Layers is the key enhancement. Numerous other edits and additions to informative content are also provided in version 1.3.
+This Release Notes document provides information on changes to Version 1.3 of the OGC I3S Community Standard. The key enhancement is the addition of the ability to support Building Scene Layers. Numerous other edits and additions to informative content are also provided in version 1.3.
 
 === Document contributor contact points
 
-All questions regarding this document should be directed to the contacts provided below or the referenced standard editor(s).
+All questions regarding this document should be directed to the contacts provided below or the referenced Standard editor(s).
 
 .Contacts
 [width="80%",options="header"]
