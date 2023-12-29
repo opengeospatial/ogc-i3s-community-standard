@@ -19,7 +19,7 @@
 |[big]*Open Geospatial Consortium*
 |Submission Date: 2022-07-20
 |Approval Date:   2022-12-12
-|Publication Date:   YYYY-MM-DD
+|Publication Date:   2023-01-11
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/NOTE/I3S-notes/1.3
 |Internal reference number of this OGC(R) document:    22-032r1
 |Version: 1.3
