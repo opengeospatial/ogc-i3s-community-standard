@@ -11,17 +11,17 @@ A BSL layer captures and optimizes BIM data and is typically sourced from format
 
 An I3S Building Scene Layer also encapsulates the semantic structure of the information in the building model while capturing geometry and attributes that can be used in an application. The BSL captures standard AEC disciplines such as Mechanical, Architectural, Piping, Electrical, and Structural.  Within each discipline, a BSL groups category layers containing 3D objects representing assets of the building such as doors, windows, pipes and walls.  The assets can contain attributes that directly reflect standard and user defined metadata that are stored in the source BIM content or other 3D data source.
 
-NOTE: The  BSL capability to the I3S 1.3 standard is contained in the addition of a number of new classes (normative) including the BSL Scene Layer Profile and informative content to the OGC 1.2 I3S Standard. The BSL extension *did not* result in changes to any of the existing 1.2 classes. 
+NOTE: The  BSL enhancement of the I3S 1.3 Standard is contained in the addition of a number of new classes (normative) including the BSL Scene Layer Profile and informative content to the OGC 1.2 I3S Standard. The BSL extension *did not* result in changes to any of the existing 1.2 classes. 
 
 The following classes are added to the OGC I3S version 1.3 in support of Building Scene Layers:
 
 - BSL_ReadMe.adoc - Entry point and introduction for I3S Building Scene Layers
-- layer.bld.adoc - 3DSceneLayer profile for Vuilding Scene Layers
+- layer.bld.adoc - 3DSceneLayer profile for Building Scene Layers
 - sublayer.bld.adoc - This class defines the sublayers of a Building Scene Layer.
-- subLayerModelName.adoc - Model names allow clients to identify entities of a building without having to rely on a specific name of a category layer, for example. 
+- subLayerModelName.adoc - Model names allow clients to identify entities of a building without having to rely on a specific name of a category layer. 
 - stats.bld.adoc - Define statistics for all building scene layer sublayers.
 - attributestats.bld.adoc - Concatenated attribute statistics.
-- filter.bld.adoc - Specify rules for display of content in a Building Scene Layer
+- filter.bld.adoc - Specify rules for display of content contained in a Building Scene Layer.
 - filterBlock.bld.adoc - A filter block defines what elements will be filtered with a specific filter mode. 
 - filterMode.bld.adoc - Filter mode represents the way elements draw when participating in a filter block.
 - filterModeSolid.bld.adoc - Based on rules in filter, display as "solid" if specified.
