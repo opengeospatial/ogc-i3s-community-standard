@@ -2,7 +2,7 @@
 [bibliography]
 == References
 
-* [[[iso19125-1,ISO 19125-1]]]
+* [[[iso19125-1,ISO 19125-1]]] ISO 19125-1:2004 Geographic information Simple feature access Part 1: Common architecture
 
 * [[[ogc12-063r5,OGC 12-063r5]]]
 
