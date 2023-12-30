@@ -1,16 +1,18 @@
 == I3S Standard - Key Concepts and Implementation Requirements
 
-This section contains the normative clauses and requirements for implementing I3S. In the property tables, any property highlighted with a bold font is mandatory.
+This section contains the normative clauses and requirements for implementing the I3S Community Standard. 
+
+NOTE:: In the property tables, any property highlighted with a bold font is mandatory.
 
 [[i3scrs]]
 
 === Coordinate Reference Systems
 
-The I3S standard supports specifying Coordinate Reference Systems (CRS) and refers to two OGC standards for describing a CRS as Well Known Text )WKT). These are termed `WKT1` as defined in the OGC Coordinate Transformation Service Standard (01-009) and `WKT2` as defined in https://docs.ogc.org/is/18-010r7/18-010r7.html[OGC Geographic Information – Well known text representation of coordinate reference systems] (18-010r7). CRS metadata encoded as OGC Well Known Text was originally defined in clause 6.4 in the http://portal.opengeospatial.org/files/?artifact_id=13227[OGC Simple Features 99-036/ISO 19125] Standard. 
+The I3S Community Standard supports specifying Coordinate Reference Systems (CRS) and refers to two OGC Standards for describing a CRS as Well Known Text )WKT). These are termed `WKT1` as defined in the OGC Coordinate Transformation Service Standard (01-009) and `WKT2` as defined in https://docs.ogc.org/is/18-010r7/18-010r7.html[OGC Geographic Information – Well known text representation of coordinate reference systems] (18-010r7). CRS metadata encoded as OGC Well Known Text was originally defined in clause 6.4 in the http://portal.opengeospatial.org/files/?artifact_id=13227[OGC Simple Features 99-036/ISO 19125] Standard. 
 
-Again, the two standards for encoding  a CRS are referred to as `WKT1` and `WKT2` respectively.
+Again, in this document the two standards for encoding  a CRS are referred to as `WKT1` and `WKT2` respectively.
 
-==== (Was 7.1.1 in Version 1.1)	A note on OGC Standards for CRS and Well Known Text. 
+==== (Was Clause 7.1.1 in Version 1.1)	A note on OGC Standards for CRS and Well Known Text. 
 
 The two standards are referred to as WKT1 and WKT2
 
