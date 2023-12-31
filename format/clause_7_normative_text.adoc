@@ -21,7 +21,7 @@ The two standards are referred to as WKT1 and WKT2
 
 The text in this paragraph is extracted verbatim from 12-063r5. OGC 12-063r5 makes several references to backward compatibility. “Backward compatibility means that an implementation of the text strings in this International Standard would be able to read CRS WKT strings conforming to the old (ISO 19125-1:2004) syntax. It does not mean that a parser of a string compliant to ISO 19125-1:2004 could read WKT strings written in conformance with this International Standard. It also does not require an implementation of the text strings in this International Standard to be able to output an object according to the old syntax. Annex B.8 gives guidance on determining the version of a CRS WKT string. A mapping of older syntaxes to this International Standard is given in Annex C.”
 
-In I3S implementation the CRS may be represented using either WKT1 or WKT2. While WKT1 has been in use for many years, WKT1 has been superseded by WKT2. Although implementations of OGC standards using WKT2 are not yet widely available, the guidance from the OGC/ISO community is to implement WKT2.
+In an I3S implementation the CRS may be represented using either WKT1 or WKT2. While WKT1 has been in use for many years, WKT1 has been superseded by WKT2. Although implementations of OGC Standards using WKT2 are not yet widely available (as of the publication date of this Community Standard), the guidance from the OGC/ISO community is to implement WKT2.
 
 NOTE: WKT1 does not support explicit definition of axis order. Therefore, I3S implementers need to note for their implementations if they support WKT1 only or both. In addition, please note that not all I3S clients may support WKT2 yet.
 
@@ -36,7 +36,7 @@ Indexed 3D Scene Layers have to fulfill a number of requirements when it comes t
 -	Render easily in coordinate reference systems for projected CRSs as well as for geographic CRSs
 -	Support local and global data with very high positional accuracy.
 
-_NOTE:_ A Projected CRS is defined on a flat, two-dimensional surface. Unlike a Geographic CRS, a Projected CRS has constant lengths, angles, and areas across the two dimensions. A Projected CRS is always based on a Geographic CRS that is based on an ellipse. Geographic CRSs are based on a Geodetic datum. The EPSG dataset contains three subtypes of Geodetic CRS: Geocentric, Geographic 3D, Geographic 2D. ISO 19111 Compliance Note: In ISO19111, geog2D, geog3D and geocentric are all considered to be "geodetic CRSs".
+_NOTE:_ A Projected CRS is defined on a flat, two-dimensional surface. Unlike a Geographic CRS, a Projected CRS has constant lengths, angles, and areas across the two dimensions. A Projected CRS is always based on a Geographic CRS that is based on an ellipse. Geographic CRSs are based on a Geodetic datum. The https://epsg.org/home.html[EPSG dataset] contains three subtypes of Geodetic CRS: Geocentric, Geographic 3D, Geographic 2D. ISO 19111 Compliance Note: In ISO 19111, geog2D, geog3D and geocentric are all considered to be "geodetic CRSs".
 
 These use cases lead to the following implementation requirements. Note that all I3S profiles support writing 3D content in two modes: global and local. In global mode, only the geographic CRS WGS84 (EPSG 4326) is supported for both index and vertex positions.
 
@@ -51,7 +51,7 @@ The spatial reference object is common to all I3S profile types.
 [[heightsmodels]]
 === Height Models
 
-The I3S standard accommodates declaration of a vertical coordinate reference system that may either be ellipsoidal (height defined with respect to a reference ellipsoid) or gravity-related height (height defined with respect to a reference geoid/gravity surface). This allows the I3S approach for CRS to be applied across a diverse range of fields and applications where the particular definition of height is of importance. 
+The I3S Standard accommodates declaration of a vertical coordinate reference system that may either be ellipsoidal (height defined with respect to a reference ellipsoid) or gravity-related height (height defined with respect to a reference geoid/gravity surface). This allows the I3S approach for CRS to be applied across a diverse range of fields and applications where the particular definition of height is of importance. 
  
 The WKT representation of the CRS now includes the vertical coordinate reference system utilized by the layer. The _spatialReference_ property also includes a well-known Id (wkid) and a Vertical Coordinate Reference System Well-known ID (_vcsWkid_) representation, which could alternatively be utilized by a client application consuming the layer instead of the WKT. In addition to the detailed _spatialReference_ property that describes the layers horizontal and vertical CRSs, the 3dSceneLayerInfo resource also includes a coarse metadata property called _heightModelInfo_, which can be used by a client application to quickly identify if the layers' height model is either gravity-related or ellipsoidal.
 
@@ -106,15 +106,15 @@ HeightModelInfo
         }
 ```
 
-The above examples illustrate the coordinate reference system and height model of a layer in an I3S payload. The _spatialReference_ object includes a Well-known Text (WKT) string representation of the CRS for both horizontal and vertical coordinate reference systems. The examples provided above show both WKT1 and WKT2 WKT encodings as defined in OGC 12-063r5 - either may be encoded in the spatialReference object. The _heightModelInfo_ object is coarse metadata that could be used by client application to quickly determine if the layers' horizontal and vertical coordinate reference systems align with that of any base map data used by the application. 
+The above examples illustrate the coordinate reference system and height model of a layer in an I3S payload. The _spatialReference_ object includes a Well-Known Text (WKT) string representation of the CRS for both horizontal and vertical coordinate reference systems. The examples provided above show both WKT1 and WKT2 WKT encodings as defined in OGC 12-063r5 - either may be encoded in the spatialReference object. The _heightModelInfo_ object is coarse metadata that could be used by client application to quickly determine if the layers' horizontal and vertical coordinate reference systems align with that of any base map data used by the application. 
 
 See https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/3DSceneLayer.cmn.adoc[Class 3DSceneLayerInfo] (Formerly Clause 7.5.4 in version 1.1) for more information on the use of the heightModelInfo object.
 
 == Organization and Structure 
 
-I3S organizes information using a hierarchical, node-based spatial index structure in which each node’s payload may contain features with associated geometry, textures and attributes. 
+I3S organizes information using a hierarchical, node-based spatial index structure in which each node’s payload may contain features with associated geometry, textures, and attributes. 
 
-The purpose of any index is to allow fast access to blocks of relevant data. In an Indexed 3D Scene layer, the spatial extent of the data is split into regions, called nodes. Each node has roughly equal amounts of and is organized into a hierarchical and navigable data structure. The node index allows the client to quickly determine which data it needs and allows the server to quickly locate the data requested by any client. Node creation is capacity driven. For example, the smaller the node capacity is, typically the smaller the spatial extent.
+The purpose of any index is to allow fast access to blocks of relevant data. In an Indexed 3D Scene layer, the spatial extent of the data is split into regions, called nodes. Each node has roughly equal amounts of data and is organized into a hierarchical and navigable data structure. The node index allows the client to quickly determine which data it needs and allows the server to quickly locate the data requested by any client. Node creation is capacity driven. For example, the smaller the node capacity is, typically the smaller the spatial extent.
 
 The following clauses detail this structure.
 
@@ -138,7 +138,7 @@ image::../images/OBB_Example.png[width=700,align="center"]
 
 In order to provide a scalable representation of the original data,
 parent nodes contain a simplified representation of their children
-creating link:LevelofDetail.adoc[Level of Details].
+creating <<loddetail,Levels of Detail>>.
 
 .Schematic view of spatially distributed data and recursive grouping of nodes into a bounding volume hierarchy
 image::../images/BoundingVolumeHierarchy.png[width=700,align="center"]
@@ -183,7 +183,7 @@ features:
 
 In addition to a bounding volume, each node contains references to node
 resources. The type of resource available, such as geometry buffer,
-texture and attribute, depends on the original data and layer type.
+texture, and attribute, depends on the original data and layer type.
 Clients must use the resource identifiers (id) written in each node to
 access the resources. While content creators may choose to match a
 resource id with the node id this is not required by the I3S
@@ -219,9 +219,9 @@ mesh segmentation. I3S supports storage of triangle meshes via triangles geometr
 
 ArrayBufferView geometry property declarations control geometries storage and consumption representation. I3S provides full control over those properties, such as per-vertex layout of components (e.g. position, normal and texture coordinates). This orders the vertex position, normal and texture coordinates to ensure the same pattern across the Scene Layer.
 
-Both 3D Object as well as Integrated Mesh layer type model geometries as triangle meshes using the https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/IntegratedMesh_ReadMe.adoc[Integrated Mesh Scene Layer (OGC Version 1.2)]. The mesh-pyramids profile uses the triangles geometry type to store triangle meshes with reduced level of detail representations of the mesh, segmented by features, available in the interior nodes as described above.
+Both 3D Object as well as Integrated Mesh layer type model geometries as triangle meshes using the https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/IntegratedMesh_ReadMe.adoc[Integrated Mesh Scene Layer (OGC Version 1.3)]. The mesh-pyramids profile uses the triangles geometry type to store triangle meshes with reduced level of detail representations of the mesh, segmented by features, available in the interior nodes as described above.
 
-In OGC I3S version 1.2, 3D Objects and Integrated Mesh scene layers are using
+In OGC I3S version 1.2 and later, 3D Objects and Integrated Mesh scene layers are using
 https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/geometryBuffer.cmn.adoc[geometryBuffer] with _draco_
 compression to describe the geometry. Previous versions of 3D Object and
 Integrated Mesh scene layers (OGC  version 1.1 and earlier) define geometry in the
@@ -232,7 +232,7 @@ counterclockwise.
 Point and Point cloud layers model geometries as points. A point scene
 layer defines the geometry in
 https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/1.6/featureData.cmn.adoc[featureData]. For a Point Cloud Scene Layer, the binary
-https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/defaultGeometrySchema.pcsl.adoc[geometry] is lepcc-xyz compressed.
+https://github.com/opengeospatial/ogc-i3s-community-standard/tree/main/docs/defaultGeometrySchema.pcsl.adoc[geometry] is https://github.com/Esri/lepcc[lepcc-xyz] compressed.
 
 [[i3sattributes]]
 ===== Attributes 
