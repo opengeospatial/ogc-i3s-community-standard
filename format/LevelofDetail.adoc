@@ -5,7 +5,7 @@ layer and serve to generalize the layer. Scene Layers support LoD in a
 manner that preserves the identity of the individual features that are
 retained within any LoD.
 
-The concept of Level of Detail (LoD) is intrinsic to the I3S standard. Scene Layers may include levels of detail that apply to the layer as whole and serve to generalize or summarize information for the layer. This is similar to image pyramids and also similar to raster and tiled vector data schemes. A node in the I3S scene layer tree could be considered the analog of a tile in a raster or vector tiling scheme. Scene layers support levels of detail in a manner that preserves the identity of the individual features that are retained within any level of detail. Levels of Detail can be used to split heavy features, thin or cluster for better visuals, and integrate externally authored files.
+The concept of Level of Detail (LoD) is intrinsic to the I3S Community Standard. Scene Layers may include levels of detail that apply to the layer as whole and serve to generalize or summarize information for the layer. This is similar to image pyramids and also similar to raster and tiled vector data schemes. A node in the I3S scene layer tree could be considered the analog of a tile in a raster or vector tiling scheme. Scene layers support levels of detail in a manner that preserves the identity of the individual features that are retained within any level of detail. Levels of Detail can be used to split heavy features, thin or cluster for better visuals, and integrate externally authored files.
 
 The I3S Level of Detail model covers several use cases, including, splitting very heavy features such as detailed building or very large features (coastlines, rivers, infrastructure), thinning/clustering for optimized visualization as well as support for representing externally authored multiple LoDs.
 
@@ -31,24 +31,22 @@ traversing an I3S tree can readily decide if it needs to: +
 - Use the data in the node if the quality is appropriate, and then stop traversal to children. +
 - Continue traversal until nodes with higher quality are found.
 
-These decisions are made using the advertised values for LoD selection metrics that are part of the information payload of the node. The I3S standard describes multiple LoD Selection Metrics and permits different LoD Switching Models. An example LoD selection metric is the maximum screen size that the node may occupy before it must be replaced with data from more detailed nodes. This model of discrete LoD rendering (LoD Switching Model) is referred to in I3S as node-switching.
+These decisions are made using the advertised values for LoD selection metrics that are part of the information payload of the node. The I3S Standard describes multiple LoD Selection Metrics and permits different LoD Switching Models. An example LoD selection metric is the maximum screen size that the node may occupy before it must be replaced with data from more detailed nodes. This model of discrete LoD rendering (LoD Switching Model) is referred to in the I3S Standard as node-switching.
 
 I3S Scene Layers also include additional optional metadata on the LoD generation process (e.g. thinning, clustering and generalization) as non-actionable (to clients) information that is of interest to some service consumers.
 
-I3S supports multiple LoD selection metrics and switching level of detail models. Details about the LoD generation process can be
+The I3S Standard defines multiple LoD selection metrics and switching level of detail models. Details about the LoD generation process can be
 optionally included in the Scene Layer’s metadata.
 
 === Node switching
 
+Node switching lets clients focus on the display of a node as a whole. A node switch occurs when the content from a node’s children is used to replace the content of an existing node. This can include features, geometry, attributes, and textures. Node switching can be helpful when the user needs to see more detailed information.
 
+Each interior node in an I3S structrued tree has a set of features that represent the reduced LoD representation of all of the features covered by that interior node. Due to generalization at lower Levels of Detail, not all features are present in reduced level of detail nodes. Omission of a feature at a reduced LoD node indicates that the entire feature has been intentionally generalized away at this LoD.
 
-Node switching lets clients focus on the display of a node as a whole. A node switch occurs when the content from a node’s children is used to replace the content of an existing node. This can include features, geometry, attributes and textures. Node switching can be helpful when the user needs to see more detailed information.
+The correspondence between a reduced LoD feature in an interior node and the same feature in descendant (children) nodes is based on feature IDs. These are a key part of the I3S storage model. Applications accessing the an I3S structured tree can display all of the features in an internal node and stop there or instead descend further and use the features found in its child nodes, based on desired quality.
 
-Each interior node in the I3S tree has a set of features that represent the reduced LoD representation of all of the features covered by that interior node. Due to generalization at lower Levels of Detail, not all features are present in reduced level of detail nodes. Omission of a feature at a reduced LoD node indicates that the entire feature has been intentionally generalized away at this level of detail.
-
-The correspondence between a reduced LoD feature in an interior node and the same feature in descendant (children) nodes is based on feature IDs. These are a key part of the storage model. Applications accessing the I3S tree can display all of the features in an internal node and stop there or instead descend further and use the features found in its child nodes, based on desired quality.
-
-The main advantage of this mechanism is that clients can focus on the display criterion associated with nodes as a whole in making the decision to switch representations. node-switching is the default LoD Switching model for layer types that implement the Mesh-pyramids profile.
+The main advantage of this mechanism is that clients can focus on the display criterion associated with nodes as a whole in making the decision to switch representations. Node-switching is the default LoD Switching model for layer types that implement the Mesh-pyramids profile.
 
 === Level of Detail Generation
 
@@ -63,12 +61,9 @@ Mesh Layers based on the meshpyramid profile. In this case, there are no
 features, and each node contains a generalized version of the mesh
 covered by its descendants.
 
-
-
 The first step in the automatic LoD generation process is to build the I3S bounding volume tree hierarchy based on the spatial distribution of the 3D features. Once this has been completed, generation of the reduced LoD content for interior nodes can proceed.
 
 As shown in the Table below, the method used to create the levels depends on the Scene Layer type.
-
 
 [cols=",,,,,",options="header",]
 |===
