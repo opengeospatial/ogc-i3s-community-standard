@@ -2,7 +2,7 @@
 
 Various elements, such as attributes, in a I3S store are encoded as JSON and then compressed.
 
-The following table lists the I3S Media Types. Currently, these media types are only use in the Point Scene Layer and the Point Cloud Scene Layer profiles. This table can be extended as required.
+The following table lists the I3S Media Types. Currently, these media types are only used in the Point Scene Layer and the Point Cloud Scene Layer profiles. This table can be extended as required.
 
 |===
 | Media Type             | Description                                                
