@@ -18,9 +18,9 @@ A value schema ensures that the JSON properties follow a fixed pattern and suppo
 .	NodeID: A treekey string such as “3-0-34-234-2” that is zero-based (first child is "0", root node is "root").
 
 === Pointers
-I3S uses the following Pointer syntax whenever a specific property in the current or another document is to be referenced. The Pointer consists of two elements:
+The I3S Standard specifies the following Pointer syntax whenever a specific property in the current or another document is to be referenced. The Pointer consists of two elements:
 
-.	mandatory in-document reference: Relative to the currently evaluated property, or document absolute, reference to a property. References are always slash-separated paths through a document tree and can contain wildcards (\*) to indicate that a set or list of properties is to be matched instead of a single property.
+.	Mandatory in-document reference: Relative to the currently evaluated property, or document absolute, reference to a property. References are always slash-separated paths through a document tree and can contain wildcards (\*) to indicate that a set or list of properties is to be matched instead of a single property.
 
 **	Absolute references start with a slash (/). Absolute references may only contain upstream path elements; i.e. they may only point to properties of objects enclosing the property that is being evaluated and indicated by a name.
 
@@ -30,7 +30,7 @@ I3S uses the following Pointer syntax whenever a specific property in the curren
 
 ***	Example: ```params/ambient/0```
 
-.	optional URL: The pointer may be prefixed with a URL to a different document. This URL may be relative to the document that is being evaluated or absolute. To identify the URL element of a pointer, it is given in square brackets. Examples:
+.	Optional URL: The pointer may be prefixed with a URL to a different document. This URL may be relative to the document that is being evaluated or absolute. To identify the URL element of a pointer, it is given in square brackets. Examples:
 
 **	relative URL + absolute reference: From FeatureData to 3dSceneLayer.name: ```[../../]/name```
 **	absolute URL + absolute reference: ```http://my_server/my_service/rest/services/Buildings_Portland/SceneServer/layers/0/nodes/68```
