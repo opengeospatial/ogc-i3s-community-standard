@@ -10,4 +10,5 @@
 |2021-11-28| 1.2 | C. Reed | all | Various editorial changes for publication
 |2022--7-20| 1.3 |C. Reed  | Many| Version 1.3 update
 |2023-6-26 | 1.3 | C. Reed | Many| informative content changes to align with Esri repo as approporiate.
+|2023-12-31 | 1.3 |C. Reed  | Many| Update to be consistent with other OGC Standards WRT capitalization, fix various typos, formatting etc.
 |===
