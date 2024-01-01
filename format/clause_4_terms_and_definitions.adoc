@@ -36,6 +36,9 @@ An OGC Community Standard is an official position of the OGC endorsing a specifi
 
 Indicates the range of faces (triangles in a mesh) associated with a particular object (feature).
 
+==== frustrum
+See viewing frustrum
+
 ==== Gravity-related height
 
 Height dependent on the Earth’s gravity field. NOTE: This refers to in particular orthometric height or normal height, which are both approximations of the distance of a point above the mean sea level. (ISO 19111)
@@ -139,3 +142,6 @@ footnote:note13[https://en.wikipedia.org/wiki/Vertex_(geometry)#Vertices_in_comp
 ==== Vertex Attribute
 
 Computer Graphics.  A vertex attribute is an input variable to a shader that is supplied with per-vertex data. Without vertex attributes, data cannot be rendered.
+
+==== Viewing frustrum
+In 3D computer graphics, a viewing frustum[1] or view frustum[2] is the region of space in the modeled world that may appear on the screen; it is the field of view of a perspective virtual camera system. (Wikipedia, January 2024)
